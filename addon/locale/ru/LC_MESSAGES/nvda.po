@@ -1,0 +1,48 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: 'Instant-Translate' '1.0'\n"
+"Report-Msgid-Bugs-To: 'nvda-translations@freelists.org'\n"
+"POT-Creation-Date: 2013-01-01 21:17+0400\n"
+"PO-Revision-Date: 2013-01-01 21:23+0400\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+
+#: addon\globalPlugins\instantTranslate\__init__.py:39
+msgid "no selection"
+msgstr "нет выделения"
+
+#: addon\globalPlugins\instantTranslate\__init__.py:48
+msgid "Error translating text. See log for details"
+msgstr "Ошибка при переводе текста. Подробности смотрите в журнале событий"
+
+#. Add-on description
+#. TRANSLATORS: Summary for this add-on to be shown on installation and add-on informaiton.
+#: buildVars.py:13
+msgid "Instant Translate - Translating selected text via Google Translator"
+msgstr ""
+"Instant Translate - переводчик выделенного текста с помощью сервиса Google "
+"Translator"
+
+#. Add-on description
+#. Translators: Long description to be shown for this add-on on installation and add-on information
+#: buildVars.py:16
+msgid ""
+"This addon translates selected text via Google Translator and says it. Press "
+"NVDA+Shift+T for execute translation operation on selected text in Reech "
+"edit fields. This addon was been repacked and optimized for executing "
+"without standalone Python by Outsider <outsidepro@rambler.ru>."
+msgstr ""
+"Данное дополнение добавляет возможность переводить выделенный текст с "
+"помощью сервиса Google Translate. Выделите текст в полях редактирования и "
+"нажмите NVDA+Shift+T, чтобы услышать переведенный текст. Данное дополнение "
+"было пересобрано и оптимизировано для работы, не требуя отдельно "
+"установленного Python Outsider-ом <outsidepro@rambler.ru>."
