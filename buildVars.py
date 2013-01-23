@@ -17,7 +17,7 @@ addon_info = {
 	# version
 	"addon-version" : "2.1",
 	# Author(s)
-	"addon-author" : "Alexy Sadovoy aka Lex <lex@progger.su>, ruslan <ru2020slan@yandex.ru>, beqa <beqaprogger@gmail.com>",
+	"addon-author" : "Alexy Sadovoy aka Lex <lex@progger.su>, ruslan <ru2020slan@yandex.ru>, beqa <beqaprogger@gmail.com> and other nvda contributors",
 # URL for the add-on documentation support
 "addon-url" : None
 }

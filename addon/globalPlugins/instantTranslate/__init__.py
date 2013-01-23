@@ -3,6 +3,7 @@
 #ruslan <ru2020slan@yandex.ru>,
 #beqa <beqaprogger@gmail.com>
 #Joseph Lee <joseph.lee22590@gmail.com>
+#other nvda contributors
 #This file is covered by the GNU General Public License.
 #See the file COPYING for more details.
 
