@@ -2,6 +2,7 @@
 # Copyright (C) 2012-2013 Aleksey Sadovoy AKA Lex <lex@progger.ru>,
 #ruslan <ru2020slan@yandex.ru>,
 #beqa <beqaprogger@gmail.com>
+#Joseph Lee <joseph.lee22590@gmail.com>
 #This file is covered by the GNU General Public License.
 #See the file COPYING for more details.
 
@@ -80,6 +81,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			threading.Thread(target=self.translate, args=(text,)).run()
 		else:
 			ui.message(_("The clipboard contains a large portion of text. It is %s characters long") % len(text))
+	script_translateClipboardText.__doc__=_("Translates clipboard text from one language to another using Google Translate.")
 
 	def script_translateSelection(self, gesture):
 		global lang_from, lang_to
@@ -98,6 +100,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			lang_from = config["translation"]["from"]
 			lang_to = config["translation"]["into"]
 			threading.Thread(target=self.translate, args=(info.text,)).run()
+	script_translateSelection.__doc__=_("Translates selected text from one language to another using Google Translate.")
 
 	def translate(self, text):
 		try:
