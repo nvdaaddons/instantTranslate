@@ -7,7 +7,7 @@ _ = lambda x : x
 # Add-on information variables
 addon_info = {
 # add-on Name
-	"addon-name" : "Instant-Translate",
+	"addon-name" : "instantTranslate",
 	# Add-on description
 	# TRANSLATORS: Summary for this add-on to be shown on installation and add-on informaiton.
 	"addon-summary" : _("Instant Translate - Translating selected text via Google Translator"),
