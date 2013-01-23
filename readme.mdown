@@ -1,4 +1,4 @@
-[[!meta title="dropbox"]]
+[[!meta title="instantTranslate"]]
 
 * authors: 
 * download [version 2.1][1]
