@@ -32,7 +32,7 @@ from interface import *
 import addonHandler
 addonHandler.initTranslation()
 
-config_file = os.path.join(config.getUserDefaultConfigPath(),"addons\\Instant-Translate\\globalPlugins\\instantTranslate\\instantTranslate.ini")
+config_file = os.path.join(os.path.abspath(os.path.dirname(__file__)), 'instantTranslate.ini')
 lo_lang = getdefaultlocale () # get a language of the OS localization.
 s = lo_lang[0] # get the first element of the tuplet.
 lo_lang = s[0:s.find("_")] # get the default language which is translated into.

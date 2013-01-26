@@ -12,7 +12,7 @@ from langslist import langslist
 import config
 from configobj import *
 
-config_file = os.path.join(config.getUserDefaultConfigPath(),"addons\\Instant-Translate\\globalPlugins\\instantTranslate\\instantTranslate.ini")
+config_file = os.path.join(os.path.abspath(os.path.dirname(__file__)), 'instantTranslate.ini')
 
 class InstantTranslateSettingsDialog(gui.SettingsDialog):
 	title = _("Instant Translate Settings")
