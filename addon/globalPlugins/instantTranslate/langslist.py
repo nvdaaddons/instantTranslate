@@ -10,8 +10,8 @@ def g(code):
 	"""Return an NVDA language description for code, if one is available. Otherwise, return the one from needed_codes. If that fails, return the code."""
 	res = getLanguageDescription(code)
 	if res is not None: return res
-	if res in needed_codes:
-		return needed_codes[res]
+	if code in needed_codes:
+		return needed_codes[code]
 	return code
 
 needed_codes = {
@@ -104,5 +104,4 @@ langcodes = [
 
 langslist = {}
 for code in langcodes:
- langslist[g(code)] = code
- #print langslist
+	langslist[g(code)] = code
