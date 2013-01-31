@@ -5,13 +5,12 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: 'Instant-Translate' '1.0'\n"
+"Project-Id-Version: 'Instant-Translate' '2.1'\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2013-01-26 11:32+0100\n"
-"PO-Revision-Date: 2013-01-22 18:49+0400\n"
-"Last-Translator: nvda-russian-community <beqaprogger@gmail.com>\n"
+"PO-Revision-Date: 2013-01-27 03:38+0100\n"
+"Last-Translator: Bernd Dorer <bernd_dorer@yahoo.de>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,65 +18,74 @@ msgstr ""
 
 #: addon/globalPlugins/instantTranslate/__init__.py:60
 msgid "Instant Translate Settings..."
-msgstr ""
+msgstr "Einstellungen für die sofortübersetzung..."
 
 #: addon/globalPlugins/instantTranslate/__init__.py:60
 msgid "Select Languages from which text will be translated from, and into."
 msgstr ""
+"Wählen Sie die sprachen aus, von denen Bzw. in die übersetzt werden soll."
 
 #: addon/globalPlugins/instantTranslate/__init__.py:76
 msgid "There is no text on the clipboard"
-msgstr ""
+msgstr "In der Zwischenablage befindet sich kein Text."
 
 #: addon/globalPlugins/instantTranslate/__init__.py:84
 #, python-format
 msgid ""
 "The clipboard contains a large portion of text. It is %s characters long"
-msgstr ""
+msgstr "Es befindet sich viel Text (%s Zeichen) in der Zwischenablage."
 
 #: addon/globalPlugins/instantTranslate/__init__.py:85
 msgid ""
 "Translates clipboard text from one language to another using Google "
 "Translate."
 msgstr ""
+"Übersetzt den Text in der Zwischenablage mittels des google-Übersetzers von "
+"einer Sprache in eine andere."
 
 #: addon/globalPlugins/instantTranslate/__init__.py:98
 msgid "no selection"
-msgstr "нет выделения"
+msgstr "keine Auswahl"
 
 #: addon/globalPlugins/instantTranslate/__init__.py:104
 msgid ""
 "Translates selected text from one language to another using Google Translate."
 msgstr ""
+"Übersetzt den markierten Text mittels des google-Übersetzers von einer "
+"Sprache in eine andere."
 
 #: addon/globalPlugins/instantTranslate/__init__.py:111
 msgid "Error translating text. See log for details"
-msgstr "Ошибка при переводе текста. Подробности смотрите в журнале событий"
+msgstr ""
+"Fehler beim Übersetzen, für weitere Informationen sehen Sie im Protokoll "
+"nach."
 
 #: addon/globalPlugins/instantTranslate/interface.py:18
 msgid "Instant Translate Settings"
-msgstr ""
+msgstr "Einstellungen für die sofortübersetzung"
 
 #: addon/globalPlugins/instantTranslate/interface.py:24
 msgid ""
 "Select language from which you want to translate from and into and press ok."
 msgstr ""
+"Wählen Sie die sprachen aus, von denen Bzw. in die übersetzt werden soll und "
+"wählen Sie OK."
 
 #: addon/globalPlugins/instantTranslate/interface.py:28
 msgid "From Language:"
-msgstr ""
+msgstr "Ausgangssprache:"
 
 #: addon/globalPlugins/instantTranslate/interface.py:33
 msgid "Into Language:"
-msgstr ""
+msgstr "Zielsprache:"
 
 #: addon/globalPlugins/instantTranslate/langslist.py:18
 msgid "Automatically detect language"
-msgstr ""
+msgstr "sprache automatisch erkennen"
 
 #: addon/globalPlugins/instantTranslate/langslist.py:19
 msgid "Arabic"
-msgstr ""
+msgstr "arabisch"
 
 #: addon/globalPlugins/instantTranslate/langslist.py:20
 msgid "Bangla"
@@ -85,7 +93,7 @@ msgstr ""
 
 #: addon/globalPlugins/instantTranslate/langslist.py:21
 msgid "Welsh"
-msgstr ""
+msgstr "walisisch"
 
 #: addon/globalPlugins/instantTranslate/langslist.py:22
 msgid "Esperanto"
@@ -101,19 +109,19 @@ msgstr ""
 
 #: addon/globalPlugins/instantTranslate/langslist.py:25
 msgid "Armenian"
-msgstr ""
+msgstr "armenisch"
 
 #: addon/globalPlugins/instantTranslate/langslist.py:26
 msgid "Latin"
-msgstr ""
+msgstr "Latein"
 
 #: addon/globalPlugins/instantTranslate/langslist.py:27
 msgid "Norwegian"
-msgstr ""
+msgstr "norwegisch"
 
 #: addon/globalPlugins/instantTranslate/langslist.py:28
 msgid "Serbian (Latin)"
-msgstr ""
+msgstr "serbisch (latain)"
 
 #: addon/globalPlugins/instantTranslate/langslist.py:29
 msgid "Swahili"
@@ -129,19 +137,18 @@ msgstr ""
 
 #: addon/globalPlugins/instantTranslate/langslist.py:32
 msgid "Chinese (Simplified)"
-msgstr ""
+msgstr "vereinfachtes Chinesisch"
 
 #: addon/globalPlugins/instantTranslate/langslist.py:33
 msgid "Chinese (Traditional)"
-msgstr ""
+msgstr "traditionelles Chinesisch"
 
 #. Add-on description
 #. TRANSLATORS: Summary for this add-on to be shown on installation and add-on informaiton.
 #: buildVars.py:13
 msgid "Instant Translate - Translating selected text via Google Translator"
 msgstr ""
-"Instant Translate - переводчик выделенного текста с помощью сервиса Google "
-"Translator"
+"Sofortübersetzung - übersetzt den ausgewählten Text mit dem Google-Übersetzer"
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on installation and add-on information
@@ -152,8 +159,133 @@ msgid ""
 "edit fields. This addon was been repacked and optimized for executing "
 "without standalone Python by Outsider <outsidepro@rambler.ru>."
 msgstr ""
-"Данное дополнение добавляет возможность переводить выделенный текст с "
-"помощью сервиса Google Translate. Выделите текст в полях редактирования и "
-"нажмите NVDA+Shift+T, чтобы услышать переведенный текст. Данное дополнение "
-"было пересобрано и оптимизировано для работы, не требуя отдельно "
-"установленного Python Outsider-ом <outsidepro@rambler.ru>."
+"Diese Erweiterung benutzt den Google-Übersetzer, um den ausgewählten Text zu "
+"übersetzen. Der übersetzte Text wird anschließend angesagt. Drücken Sie NVDA"
+"+Shift+T, for execute translation um den sofortübersetzer auf Text "
+"anzuwenden, den Sie in richedit-Eingabefeldern ausgewählt haben.. Diese "
+"Erweiterung wurde von Outsider <outsidepro@rambler.ru> überarbeitet und für "
+"die Ausführung ohne installiertes Python optimiert."
+
+#~ msgid "Select Languages from and into to translate selected text"
+#~ msgstr ""
+#~ "Wählen Sie die Sprachen aus, von denen Bzw. in die übersetzt werden soll."
+
+#~ msgid "Afrikaans"
+#~ msgstr "Afrikaans"
+
+#~ msgid "Albanian"
+#~ msgstr "albanisch"
+
+#~ msgid "Basque"
+#~ msgstr "baskisch"
+
+#~ msgid "Belorussian"
+#~ msgstr "weißrussisch"
+
+#~ msgid "Bulgarian"
+#~ msgstr "bulgarisch"
+
+#~ msgid "Czech"
+#~ msgstr "tschechisch"
+
+#~ msgid "Croatian"
+#~ msgstr "kroatisch"
+
+#~ msgid "Danish"
+#~ msgstr "dänisch"
+
+#~ msgid "Dutch"
+#~ msgstr "niederländisch"
+
+#~ msgid "English"
+#~ msgstr "englisch"
+
+#~ msgid "Estonian"
+#~ msgstr "estnisch"
+
+#~ msgid "Finnish"
+#~ msgstr "finnisch"
+
+#~ msgid "French"
+#~ msgstr "französisch"
+
+#~ msgid "Galician"
+#~ msgstr "galicisch"
+
+#~ msgid "Georgian"
+#~ msgstr "georgisch"
+
+#~ msgid "German"
+#~ msgstr "deutsch"
+
+#~ msgid "Greek"
+#~ msgstr "griechisch"
+
+#~ msgid "Hebrew"
+#~ msgstr "hebräisch"
+
+#~ msgid "Hungarian"
+#~ msgstr "ungarisch"
+
+#~ msgid "Indonesian"
+#~ msgstr "indonesisch"
+
+#~ msgid "Irish"
+#~ msgstr "irisch"
+
+#~ msgid "Icelandic"
+#~ msgstr "isländisch"
+
+#~ msgid "Italian"
+#~ msgstr "italienisch"
+
+#~ msgid "Japanese"
+#~ msgstr "japanisch"
+
+#~ msgid "Korean"
+#~ msgstr "koreanisch"
+
+#~ msgid "Macedonian"
+#~ msgstr "mazedonisch"
+
+#~ msgid "Malay"
+#~ msgstr "malaysisch"
+
+#~ msgid "Maltese"
+#~ msgstr "maltesisch"
+
+#~ msgid "Persian"
+#~ msgstr "persisch"
+
+#~ msgid "Polish"
+#~ msgstr "polnisch"
+
+#~ msgid "Portuguese"
+#~ msgstr "portugiesisch"
+
+#~ msgid "Romanian"
+#~ msgstr "romänisch"
+
+#~ msgid "Russian"
+#~ msgstr "russisch"
+
+#~ msgid "Slovak"
+#~ msgstr "slowakisch"
+
+#~ msgid "Slovenian"
+#~ msgstr "slovenisch"
+
+#~ msgid "Spanish"
+#~ msgstr "spanisch"
+
+#~ msgid "Swedish"
+#~ msgstr "schwedisch"
+
+#~ msgid "Turkish"
+#~ msgstr "türkisch"
+
+#~ msgid "Ukrainian"
+#~ msgstr "ukrainisch"
+
+#~ msgid "Vietnamese"
+#~ msgstr "vietnamesisch"

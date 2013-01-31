@@ -1,0 +1,323 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: 'Instant-Translate' '2.1'\n"
+"Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
+"POT-Creation-Date: 2013-01-26 11:32+0100\n"
+"PO-Revision-Date: 2013-01-26 14:07+0100\n"
+"Last-Translator: Juan C. Buño <quetzatl@eresmas.net>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+
+#: addon/globalPlugins/instantTranslate/__init__.py:60
+msgid "Instant Translate Settings..."
+msgstr "Opcións do Instant Translate..."
+
+#: addon/globalPlugins/instantTranslate/__init__.py:60
+msgid "Select Languages from which text will be translated from, and into."
+msgstr "Escolle as linguas das que se traducirá o texto e ás que se traducirá."
+
+#: addon/globalPlugins/instantTranslate/__init__.py:76
+msgid "There is no text on the clipboard"
+msgstr "Non hai texto no portapapeis"
+
+#: addon/globalPlugins/instantTranslate/__init__.py:84
+#, python-format
+msgid ""
+"The clipboard contains a large portion of text. It is %s characters long"
+msgstr ""
+"O portapapeis contén un anaco grande de texto. Ten %s caracteres de longo"
+
+#: addon/globalPlugins/instantTranslate/__init__.py:85
+msgid ""
+"Translates clipboard text from one language to another using Google "
+"Translate."
+msgstr ""
+"Traduce o texto do portapapeis dunha lingua a outra utilizando o Google "
+"Translate."
+
+#: addon/globalPlugins/instantTranslate/__init__.py:98
+msgid "no selection"
+msgstr "non hai selección"
+
+#: addon/globalPlugins/instantTranslate/__init__.py:104
+msgid ""
+"Translates selected text from one language to another using Google Translate."
+msgstr ""
+"Traduce o texto seleccionado dunha lingua a outra utilizando o Google "
+"Translate."
+
+#: addon/globalPlugins/instantTranslate/__init__.py:111
+msgid "Error translating text. See log for details"
+msgstr "Erro ó traducir o texto. Mira o log para detalles"
+
+#: addon/globalPlugins/instantTranslate/interface.py:18
+msgid "Instant Translate Settings"
+msgstr "Opcións do Instant Translate"
+
+#: addon/globalPlugins/instantTranslate/interface.py:24
+msgid ""
+"Select language from which you want to translate from and into and press ok."
+msgstr ""
+"Escolle a lingua da que queres traducir e á que queres que se traduza e "
+"preme Aceptar."
+
+#: addon/globalPlugins/instantTranslate/interface.py:28
+msgid "From Language:"
+msgstr "Lingua Orixinal:"
+
+#: addon/globalPlugins/instantTranslate/interface.py:33
+msgid "Into Language:"
+msgstr "Lingua de traducción:"
+
+#: addon/globalPlugins/instantTranslate/langslist.py:18
+msgid "Automatically detect language"
+msgstr "Detectar lingua automáticamente"
+
+#: addon/globalPlugins/instantTranslate/langslist.py:19
+msgid "Arabic"
+msgstr "Árabe"
+
+#: addon/globalPlugins/instantTranslate/langslist.py:20
+msgid "Bangla"
+msgstr "Bengalés"
+
+#: addon/globalPlugins/instantTranslate/langslist.py:21
+msgid "Welsh"
+msgstr "Galés"
+
+#: addon/globalPlugins/instantTranslate/langslist.py:22
+msgid "Esperanto"
+msgstr "Esperanto"
+
+#: addon/globalPlugins/instantTranslate/langslist.py:23
+msgid "Gujarati"
+msgstr "Gujarati"
+
+#: addon/globalPlugins/instantTranslate/langslist.py:24
+msgid "Creole Haiti"
+msgstr "Creole Haití"
+
+#: addon/globalPlugins/instantTranslate/langslist.py:25
+msgid "Armenian"
+msgstr "Armenio"
+
+#: addon/globalPlugins/instantTranslate/langslist.py:26
+msgid "Latin"
+msgstr "Latín"
+
+#: addon/globalPlugins/instantTranslate/langslist.py:27
+msgid "Norwegian"
+msgstr "Noruego"
+
+#: addon/globalPlugins/instantTranslate/langslist.py:28
+msgid "Serbian (Latin)"
+msgstr "Serbio (Latino)"
+
+#: addon/globalPlugins/instantTranslate/langslist.py:29
+msgid "Swahili"
+msgstr "Swahili"
+
+#: addon/globalPlugins/instantTranslate/langslist.py:30
+msgid "Tagalog"
+msgstr "Tagalo"
+
+#: addon/globalPlugins/instantTranslate/langslist.py:31
+msgid "Yiddish"
+msgstr "Yiddish"
+
+#: addon/globalPlugins/instantTranslate/langslist.py:32
+msgid "Chinese (Simplified)"
+msgstr "Chinese Simplificado"
+
+#: addon/globalPlugins/instantTranslate/langslist.py:33
+msgid "Chinese (Traditional)"
+msgstr "Chinese Tradicional"
+
+#. Add-on description
+#. TRANSLATORS: Summary for this add-on to be shown on installation and add-on informaiton.
+#: buildVars.py:13
+msgid "Instant Translate - Translating selected text via Google Translator"
+msgstr ""
+"Instant Translate - Traduce o texsto seleccionado a través do Traductor de "
+"Google"
+
+#. Add-on description
+#. Translators: Long description to be shown for this add-on on installation and add-on information
+#: buildVars.py:16
+msgid ""
+"This addon translates selected text via Google Translator and says it. Press "
+"NVDA+Shift+T for execute translation operation on selected text in Reech "
+"edit fields. This addon was been repacked and optimized for executing "
+"without standalone Python by Outsider <outsidepro@rambler.ru>."
+msgstr ""
+"Este complemento traduce o texsto seleccionado a través do Traductor de "
+"Google e fálao. Preme NVDA+Shift+T para executar a operación de traducción "
+"no texto seleccionado en campos de edición multiliña. Este complemento "
+"reempaquetouse e optimizouse para executar con independencia do Python por "
+"Outsider <outsidepro@rambler.ru>."
+
+#~ msgid "Select Languages from and into to translate selected text"
+#~ msgstr ""
+#~ "Escolle a lingua orixinal e  a lingua de traducción para o texto "
+#~ "seleccionado"
+
+#~ msgid "Afrikaans"
+#~ msgstr "Afrikaans"
+
+#~ msgid "Albanian"
+#~ msgstr "Albannés"
+
+#~ msgid "Azerbaijani"
+#~ msgstr "Azerbaiano"
+
+#~ msgid "Basque"
+#~ msgstr "Vasco"
+
+#~ msgid "Belorussian"
+#~ msgstr "Bielorruso"
+
+#~ msgid "Bengali"
+#~ msgstr "Bengalí"
+
+#~ msgid "Bulgarian"
+#~ msgstr "Búlgaro"
+
+#~ msgid "Canada"
+#~ msgstr "Canada"
+
+#~ msgid "Catalan"
+#~ msgstr "Catalán"
+
+#~ msgid "Czech"
+#~ msgstr "Checo"
+
+#~ msgid "Croatian"
+#~ msgstr "Croata"
+
+#~ msgid "Danish"
+#~ msgstr "Danés"
+
+#~ msgid "Dutch"
+#~ msgstr "Holandés"
+
+#~ msgid "English"
+#~ msgstr "Inglés"
+
+#~ msgid "Estonian"
+#~ msgstr "Estonio"
+
+#~ msgid "Finnish"
+#~ msgstr "Finlandés"
+
+#~ msgid "French"
+#~ msgstr "Francés"
+
+#~ msgid "Galician"
+#~ msgstr "Galego"
+
+#~ msgid "Georgian"
+#~ msgstr "Xeorxiano"
+
+#~ msgid "German"
+#~ msgstr "Alemán"
+
+#~ msgid "Greek"
+#~ msgstr "Grego"
+
+#~ msgid "Hebrew"
+#~ msgstr "Hebreo"
+
+#~ msgid "Hindi"
+#~ msgstr "Hindi"
+
+#~ msgid "Hungarian"
+#~ msgstr "Húngaro"
+
+#~ msgid "Indonesian"
+#~ msgstr "Indonesio"
+
+#~ msgid "Irish"
+#~ msgstr "Irlandés"
+
+#~ msgid "Icelandic"
+#~ msgstr "Islandés"
+
+#~ msgid "Italian"
+#~ msgstr "Italiano"
+
+#~ msgid "Japanese"
+#~ msgstr "Xaponés"
+
+#~ msgid "Korean"
+#~ msgstr "Coreano"
+
+#~ msgid "Latvian"
+#~ msgstr "Letón"
+
+#~ msgid "Lithuanian"
+#~ msgstr "Lituano"
+
+#~ msgid "Macedonian"
+#~ msgstr "Macedonio"
+
+#~ msgid "Malay"
+#~ msgstr "Malaio"
+
+#~ msgid "Maltese"
+#~ msgstr "Maltés"
+
+#~ msgid "Persian"
+#~ msgstr "Persa"
+
+#~ msgid "Polish"
+#~ msgstr "Polaco"
+
+#~ msgid "Portuguese"
+#~ msgstr "Portugués"
+
+#~ msgid "Romanian"
+#~ msgstr "Rumano"
+
+#~ msgid "Russian"
+#~ msgstr "Ruso"
+
+#~ msgid "Slovak"
+#~ msgstr "Eslovaco"
+
+#~ msgid "Slovenian"
+#~ msgstr "Esloveno"
+
+#~ msgid "Spanish"
+#~ msgstr "Español"
+
+#~ msgid "Swedish"
+#~ msgstr "Sueco"
+
+#~ msgid "Tamil"
+#~ msgstr "Tamil"
+
+#~ msgid "Telugu"
+#~ msgstr "Telugu"
+
+#~ msgid "Thai"
+#~ msgstr "Tailandés"
+
+#~ msgid "Turkish"
+#~ msgstr "Turco"
+
+#~ msgid "Ukrainian"
+#~ msgstr "Ucraniano"
+
+#~ msgid "Urdu"
+#~ msgstr "Urdu"
+
+#~ msgid "Vietnamese"
+#~ msgstr "Vietnamita"

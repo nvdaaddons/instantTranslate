@@ -1,0 +1,298 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: 'Instant-Translate' '2.1'\n"
+"Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
+"POT-Creation-Date: 2013-01-26 11:32+0100\n"
+"PO-Revision-Date: 2013-01-26 17:43+0100\n"
+"Last-Translator: Ondrej Rosík <ondrej.rosik@gmail.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: addon/globalPlugins/instantTranslate/__init__.py:60
+msgid "Instant Translate Settings..."
+msgstr "Nastavenia Instant translate..."
+
+#: addon/globalPlugins/instantTranslate/__init__.py:60
+msgid "Select Languages from which text will be translated from, and into."
+msgstr "Vyberte jazyk, z ktorého chcete prekladať a do ktorého chcete prekladať."
+
+#: addon/globalPlugins/instantTranslate/__init__.py:76
+msgid "There is no text on the clipboard"
+msgstr "Žiadny text v schránke"
+
+#: addon/globalPlugins/instantTranslate/__init__.py:84
+#, python-format
+msgid "The clipboard contains a large portion of text. It is %s characters long"
+msgstr "V schránke je priveľa textu, %s znakov."
+
+#: addon/globalPlugins/instantTranslate/__init__.py:85
+msgid "Translates clipboard text from one language to another using Google Translate."
+msgstr "preloží text v schránke pomocou Google prekladača."
+
+#: addon/globalPlugins/instantTranslate/__init__.py:98
+msgid "no selection"
+msgstr "Žiadny text"
+
+#: addon/globalPlugins/instantTranslate/__init__.py:104
+msgid "Translates selected text from one language to another using Google Translate."
+msgstr "Preloží vybratý text pomocou Google prekladača."
+
+#: addon/globalPlugins/instantTranslate/__init__.py:111
+msgid "Error translating text. See log for details"
+msgstr "pri preklade došlo k chybe. Pozrite log NVDA."
+
+#: addon/globalPlugins/instantTranslate/interface.py:18
+msgid "Instant Translate Settings"
+msgstr "Nastavenia Instant Translate"
+
+#: addon/globalPlugins/instantTranslate/interface.py:24
+msgid "Select language from which you want to translate from and into and press ok."
+msgstr "Vyberte jazyk, z ktorého chcete prekladať, do ktorého chcete prekladať a nastavenie uložte aktivovaním tlačidla OK."
+
+#: addon/globalPlugins/instantTranslate/interface.py:28
+msgid "From Language:"
+msgstr "Z jazyka:"
+
+#: addon/globalPlugins/instantTranslate/interface.py:33
+msgid "Into Language:"
+msgstr "Do jazyka:"
+
+#: addon/globalPlugins/instantTranslate/langslist.py:18
+msgid "Automatically detect language"
+msgstr "Automatická detekcia jazyka"
+
+#: addon/globalPlugins/instantTranslate/langslist.py:19
+msgid "Arabic"
+msgstr "Arabčina"
+
+#: addon/globalPlugins/instantTranslate/langslist.py:20
+msgid "Bangla"
+msgstr "Bengálčin"
+
+#: addon/globalPlugins/instantTranslate/langslist.py:21
+msgid "Welsh"
+msgstr "Waleština"
+
+#: addon/globalPlugins/instantTranslate/langslist.py:22
+msgid "Esperanto"
+msgstr "Esperanto"
+
+#: addon/globalPlugins/instantTranslate/langslist.py:23
+msgid "Gujarati"
+msgstr "Gujaratčina"
+
+#: addon/globalPlugins/instantTranslate/langslist.py:24
+msgid "Creole Haiti"
+msgstr "Haitská kreolčina"
+
+#: addon/globalPlugins/instantTranslate/langslist.py:25
+msgid "Armenian"
+msgstr "Arménčina"
+
+#: addon/globalPlugins/instantTranslate/langslist.py:26
+msgid "Latin"
+msgstr "latinčina"
+
+#: addon/globalPlugins/instantTranslate/langslist.py:27
+msgid "Norwegian"
+msgstr "Nórčina"
+
+#: addon/globalPlugins/instantTranslate/langslist.py:28
+msgid "Serbian (Latin)"
+msgstr "Srbčina (latinka)"
+
+#: addon/globalPlugins/instantTranslate/langslist.py:29
+msgid "Swahili"
+msgstr "Svahilčina"
+
+#: addon/globalPlugins/instantTranslate/langslist.py:30
+msgid "Tagalog"
+msgstr "Tagalčina"
+
+#: addon/globalPlugins/instantTranslate/langslist.py:31
+msgid "Yiddish"
+msgstr "Jidiš"
+
+#: addon/globalPlugins/instantTranslate/langslist.py:32
+msgid "Chinese (Simplified)"
+msgstr "Zjednodušená Čínština"
+
+#: addon/globalPlugins/instantTranslate/langslist.py:33
+msgid "Chinese (Traditional)"
+msgstr "Tradičná Čínština"
+
+#. Add-on description
+#. TRANSLATORS: Summary for this add-on to be shown on installation and add-on informaiton.
+#: buildVars.py:13
+msgid "Instant Translate - Translating selected text via Google Translator"
+msgstr "Instant Translate - prekladanie vybratého textu cez Google prekladač"
+
+#. Add-on description
+#. Translators: Long description to be shown for this add-on on installation and add-on information
+#: buildVars.py:16
+msgid "This addon translates selected text via Google Translator and says it. Press NVDA+Shift+T for execute translation operation on selected text in Reech edit fields. This addon was been repacked and optimized for executing without standalone Python by Outsider <outsidepro@rambler.ru>."
+msgstr "Tento doplnok preloží vybratý text, alebo text, ktorý je v schránke cez Google prekladač. NVDA+shift+t preloží vybratý text vo väčšine editačných polí. NVDA+shift+Y preloží text v schránke. V oboch prípadoch NVDA prečíta preklad a skopíruje ho do schránky. Doplnok bol prerobený tak, aby nevyužíval standalone Python. Zodpovednosť: Outsider <outsidepro@rambler.ru>."
+
+#~ msgid "Select Languages from and into to translate selected text"
+#~ msgstr "Vyberte jazyky na preklad"
+
+#~ msgid "Afrikaans"
+#~ msgstr "Afrikánčina"
+
+#~ msgid "Albanian"
+#~ msgstr "Albánčina"
+
+#~ msgid "Azerbaijani"
+#~ msgstr "Azerbajdžančina"
+
+#~ msgid "Basque"
+#~ msgstr "Baskidčina"
+
+#~ msgid "Belorussian"
+#~ msgstr "Bieloruština"
+
+#~ msgid "Bengali"
+#~ msgstr "Bengálčina"
+
+#~ msgid "Bulgarian"
+#~ msgstr "Bulharčina"
+
+#~ msgid "Canada"
+#~ msgstr "Kanadská angličtina"
+
+#~ msgid "Catalan"
+#~ msgstr "Katalánčina"
+
+#~ msgid "Czech"
+#~ msgstr "Čeština"
+
+#~ msgid "Croatian"
+#~ msgstr "chorvátčina"
+
+#~ msgid "Danish"
+#~ msgstr "Dánčina"
+
+#~ msgid "Dutch"
+#~ msgstr "Holandčina"
+
+#~ msgid "English"
+#~ msgstr "Angličtina"
+
+#~ msgid "Estonian"
+#~ msgstr "Estónčina"
+
+#~ msgid "Finnish"
+#~ msgstr "Fínčina"
+
+#~ msgid "French"
+#~ msgstr "Francúzština"
+
+#~ msgid "Galician"
+#~ msgstr "Galícijčina"
+
+#~ msgid "Georgian"
+#~ msgstr "Gruzínčina"
+
+#~ msgid "German"
+#~ msgstr "Nemčina"
+
+#~ msgid "Greek"
+#~ msgstr "Gréčtina"
+
+#~ msgid "Hebrew"
+#~ msgstr "Hebrejčina"
+
+#~ msgid "Hindi"
+#~ msgstr "Hindčina"
+
+#~ msgid "Hungarian"
+#~ msgstr "Maďarčina"
+
+#~ msgid "Indonesian"
+#~ msgstr "Indonézština"
+
+#~ msgid "Irish"
+#~ msgstr "Írčina"
+
+#~ msgid "Icelandic"
+#~ msgstr "Islandčina"
+
+#~ msgid "Italian"
+#~ msgstr "Taliančina"
+
+#~ msgid "Japanese"
+#~ msgstr "Japončina"
+
+#~ msgid "Korean"
+#~ msgstr "Kórejčina"
+
+#~ msgid "Latvian"
+#~ msgstr "Lotiština"
+
+#~ msgid "Lithuanian"
+#~ msgstr "Litovčina"
+
+#~ msgid "Macedonian"
+#~ msgstr "Macedónčina"
+
+#~ msgid "Malay"
+#~ msgstr "Malayčina"
+
+#~ msgid "Maltese"
+#~ msgstr "Maltčina"
+
+#~ msgid "Persian"
+#~ msgstr "persština"
+
+#~ msgid "Polish"
+#~ msgstr "Poľština"
+
+#~ msgid "Portuguese"
+#~ msgstr "Portugalčina"
+
+#~ msgid "Romanian"
+#~ msgstr "Rumúnčina"
+
+#~ msgid "Russian"
+#~ msgstr "Ruština"
+
+#~ msgid "Slovak"
+#~ msgstr "Slovenčina"
+
+#~ msgid "Slovenian"
+#~ msgstr "Slovinčina"
+
+#~ msgid "Spanish"
+#~ msgstr "Španielčina"
+
+#~ msgid "Swedish"
+#~ msgstr "Švédčina"
+
+#~ msgid "Tamil"
+#~ msgstr "Tamilčina"
+
+#~ msgid "Telugu"
+#~ msgstr "Telugčina"
+
+#~ msgid "Thai"
+#~ msgstr "Thaičina"
+
+#~ msgid "Turkish"
+#~ msgstr "Turečtina"
+
+#~ msgid "Ukrainian"
+#~ msgstr "Ukrajinčina"
+
+#~ msgid "Urdu"
+#~ msgstr "Urdčina"
+
+#~ msgid "Vietnamese"
+#~ msgstr "Vietnamčina"

@@ -5,13 +5,13 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: 'Instant-Translate' '1.0'\n"
+"Project-Id-Version: 'Instant-Translate' '2.1'\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2013-01-26 11:32+0100\n"
-"PO-Revision-Date: 2013-01-22 18:49+0400\n"
-"Last-Translator: nvda-russian-community <beqaprogger@gmail.com>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"PO-Revision-Date: 2013-01-30 10:49+0100\n"
+"Last-Translator: Simone Dal Maso <simone.dalmaso@juvox.it>\n"
+"Language-Team: Simone Dal Maso <simone.dalmaso@juvox.it>\n"
+"Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,129 +19,135 @@ msgstr ""
 
 #: addon/globalPlugins/instantTranslate/__init__.py:60
 msgid "Instant Translate Settings..."
-msgstr ""
+msgstr "Impostazioni di Instant Translate..."
 
 #: addon/globalPlugins/instantTranslate/__init__.py:60
 msgid "Select Languages from which text will be translated from, and into."
-msgstr ""
+msgstr "Seleziona la lingua da e verso cui si desidera tradurre."
 
 #: addon/globalPlugins/instantTranslate/__init__.py:76
 msgid "There is no text on the clipboard"
-msgstr ""
+msgstr "Non è presente testo negli appunti."
 
 #: addon/globalPlugins/instantTranslate/__init__.py:84
 #, python-format
 msgid ""
 "The clipboard contains a large portion of text. It is %s characters long"
 msgstr ""
+"Gli appunti contengono una grande quantità di testo. Il totale ammonta a %s "
+"caratteri"
 
 #: addon/globalPlugins/instantTranslate/__init__.py:85
 msgid ""
 "Translates clipboard text from one language to another using Google "
 "Translate."
 msgstr ""
+"Traduce il testo presente negli appunti da una lingua ad un'altra tramite "
+"Google Translate"
 
 #: addon/globalPlugins/instantTranslate/__init__.py:98
 msgid "no selection"
-msgstr "нет выделения"
+msgstr "Nessuna selezione"
 
 #: addon/globalPlugins/instantTranslate/__init__.py:104
 msgid ""
 "Translates selected text from one language to another using Google Translate."
 msgstr ""
+"Traduce il testo selezionato da una lingua ad un'altra tramite Google "
+"Translate"
 
 #: addon/globalPlugins/instantTranslate/__init__.py:111
 msgid "Error translating text. See log for details"
-msgstr "Ошибка при переводе текста. Подробности смотрите в журнале событий"
+msgstr ""
+"Errore nella traduzione del testo. Vedere il log per ulteriori informazioni"
 
 #: addon/globalPlugins/instantTranslate/interface.py:18
 msgid "Instant Translate Settings"
-msgstr ""
+msgstr "Impostazioni di Instant Translate"
 
 #: addon/globalPlugins/instantTranslate/interface.py:24
 msgid ""
 "Select language from which you want to translate from and into and press ok."
-msgstr ""
+msgstr "Seleziona la lingua da cui si desidera tradurre e premere ok."
 
 #: addon/globalPlugins/instantTranslate/interface.py:28
 msgid "From Language:"
-msgstr ""
+msgstr "Dalla lingua:"
 
 #: addon/globalPlugins/instantTranslate/interface.py:33
 msgid "Into Language:"
-msgstr ""
+msgstr "Alla lingua:"
 
 #: addon/globalPlugins/instantTranslate/langslist.py:18
 msgid "Automatically detect language"
-msgstr ""
+msgstr "Rileva lingua automaticamente"
 
 #: addon/globalPlugins/instantTranslate/langslist.py:19
 msgid "Arabic"
-msgstr ""
+msgstr "Araba"
 
 #: addon/globalPlugins/instantTranslate/langslist.py:20
 msgid "Bangla"
-msgstr ""
+msgstr "Bangla"
 
 #: addon/globalPlugins/instantTranslate/langslist.py:21
 msgid "Welsh"
-msgstr ""
+msgstr "Gallese"
 
 #: addon/globalPlugins/instantTranslate/langslist.py:22
 msgid "Esperanto"
-msgstr ""
+msgstr "Esperanto"
 
 #: addon/globalPlugins/instantTranslate/langslist.py:23
 msgid "Gujarati"
-msgstr ""
+msgstr "Gujarati"
 
 #: addon/globalPlugins/instantTranslate/langslist.py:24
 msgid "Creole Haiti"
-msgstr ""
+msgstr "Creole Haiti"
 
 #: addon/globalPlugins/instantTranslate/langslist.py:25
 msgid "Armenian"
-msgstr ""
+msgstr "Armena"
 
 #: addon/globalPlugins/instantTranslate/langslist.py:26
 msgid "Latin"
-msgstr ""
+msgstr "Latina"
 
 #: addon/globalPlugins/instantTranslate/langslist.py:27
 msgid "Norwegian"
-msgstr ""
+msgstr "Norvegese"
 
 #: addon/globalPlugins/instantTranslate/langslist.py:28
 msgid "Serbian (Latin)"
-msgstr ""
+msgstr "Serba"
 
 #: addon/globalPlugins/instantTranslate/langslist.py:29
 msgid "Swahili"
-msgstr ""
+msgstr "Swahili"
 
 #: addon/globalPlugins/instantTranslate/langslist.py:30
 msgid "Tagalog"
-msgstr ""
+msgstr "Tagalog"
 
 #: addon/globalPlugins/instantTranslate/langslist.py:31
 msgid "Yiddish"
-msgstr ""
+msgstr "Yiddish"
 
 #: addon/globalPlugins/instantTranslate/langslist.py:32
 msgid "Chinese (Simplified)"
-msgstr ""
+msgstr "Cinese (semplificato)"
 
 #: addon/globalPlugins/instantTranslate/langslist.py:33
 msgid "Chinese (Traditional)"
-msgstr ""
+msgstr "Cinese (tradizionale)"
 
 #. Add-on description
 #. TRANSLATORS: Summary for this add-on to be shown on installation and add-on informaiton.
 #: buildVars.py:13
 msgid "Instant Translate - Translating selected text via Google Translator"
 msgstr ""
-"Instant Translate - переводчик выделенного текста с помощью сервиса Google "
-"Translator"
+"Instant Translate - Traduce il testo selezionato tramite Google Translator"
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on installation and add-on information
@@ -152,8 +158,8 @@ msgid ""
 "edit fields. This addon was been repacked and optimized for executing "
 "without standalone Python by Outsider <outsidepro@rambler.ru>."
 msgstr ""
-"Данное дополнение добавляет возможность переводить выделенный текст с "
-"помощью сервиса Google Translate. Выделите текст в полях редактирования и "
-"нажмите NVDA+Shift+T, чтобы услышать переведенный текст. Данное дополнение "
-"было пересобрано и оптимизировано для работы, не требуя отдельно "
-"установленного Python Outsider-ом <outsidepro@rambler.ru>."
+"Questo componente aggiuntivo traduce il testo selezionato tramite Google "
+"Translator e lo annuncia. Premere NVDA + Shift + T per eseguire l'operazione "
+"di traduzione sul testo selezionato in un campo editazione. Questo "
+"componente aggiuntivo è stato ottimizzato per l'esecuzione senza Python "
+"standalone da Outsider <outsidepro@rambler.ru>."

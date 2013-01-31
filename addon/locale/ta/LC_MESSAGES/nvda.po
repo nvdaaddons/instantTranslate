@@ -1,0 +1,302 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: 'Instant-Translate' '2.1'\n"
+"Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
+"POT-Creation-Date: 2013-01-26 11:32+0100\n"
+"PO-Revision-Date: 2013-01-27 21:39+0530\n"
+"Last-Translator: DINAKAR T.D. <td.dinkar@gmail.com>\n"
+"Language-Team: Tamil <td.dinkar@gmail.com>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Tamil\n"
+"X-Poedit-Country: India\n"
+
+#: addon/globalPlugins/instantTranslate/__init__.py:60
+msgid "Instant Translate Settings..."
+msgstr "உடனடி மொழிபெயர்ப்பு அமைப்புகள்..."
+
+#: addon/globalPlugins/instantTranslate/__init__.py:60
+msgid "Select Languages from which text will be translated from, and into."
+msgstr "மூல மொழியையும், எந்த மொழிக்கு மொழிபெயர்க்கப்பட வேண்டுமென்பதையும் தெரிவு செய்க"
+
+#: addon/globalPlugins/instantTranslate/__init__.py:76
+msgid "There is no text on the clipboard"
+msgstr "பிடிப்புப்பலகையில் எந்த உரையும் இல்லை"
+
+#: addon/globalPlugins/instantTranslate/__init__.py:84
+#, python-format
+msgid "The clipboard contains a large portion of text. It is %s characters long"
+msgstr "பிடிப்புப்பலகையில் பெருமளவு உரையுள்ளது. அது %s எழுத்துகள் நீளமுடையது"
+
+#: addon/globalPlugins/instantTranslate/__init__.py:85
+msgid "Translates clipboard text from one language to another using Google Translate."
+msgstr "பிடிப்புப்பலகையிலிருக்கும் உரையை, கூகுள் மொழிபெயர்ப்பு வசதியை பயன்படுத்தி, ஒரு மொழியிலிருந்து மற்றொரு மொழிக்கு மொழிபெயர்க்கும்;"
+
+#: addon/globalPlugins/instantTranslate/__init__.py:98
+msgid "no selection"
+msgstr "தெரிவு ஏதுமில்லை"
+
+#: addon/globalPlugins/instantTranslate/__init__.py:104
+msgid "Translates selected text from one language to another using Google Translate."
+msgstr "தெரிவாகியிருக்கும் உரையை, கூகுள் மொழிபெயர்ப்பு வசதியை பயன்படுத்தி, ஒரு மொழியிலிருந்து மற்றொரு மொழிக்கு மொழிபெயர்க்கும்"
+
+#: addon/globalPlugins/instantTranslate/__init__.py:111
+msgid "Error translating text. See log for details"
+msgstr "உரையை மொழிபெயர்ப்பதில் பிழை. தகவலை அறிய, செயற்குறிப்பேட்டைக் காணவும்."
+
+#: addon/globalPlugins/instantTranslate/interface.py:18
+msgid "Instant Translate Settings"
+msgstr "உடனடி மொழிபெயர்ப்பு அமைப்புகள்"
+
+#: addon/globalPlugins/instantTranslate/interface.py:24
+msgid "Select language from which you want to translate from and into and press ok."
+msgstr "மூல மொழியையும், எந்த மொழிக்கு மொழிபெயர்க்கப்பட வேண்டுமென்பதையும் தெரிவு செய்து , 'சரி' பொத்தானை அழுத்தவும்"
+
+#: addon/globalPlugins/instantTranslate/interface.py:28
+msgid "From Language:"
+msgstr "மூல மொழி:"
+
+#: addon/globalPlugins/instantTranslate/interface.py:33
+msgid "Into Language:"
+msgstr "இந்த மொழிக்கு மொழிபெயர்க்கவும்"
+
+#: addon/globalPlugins/instantTranslate/langslist.py:18
+msgid "Automatically detect language"
+msgstr "மொழியைத் தானாக கண்டறி"
+
+#: addon/globalPlugins/instantTranslate/langslist.py:19
+msgid "Arabic"
+msgstr "Arabic"
+
+#: addon/globalPlugins/instantTranslate/langslist.py:20
+msgid "Bangla"
+msgstr "Bangla"
+
+#: addon/globalPlugins/instantTranslate/langslist.py:21
+msgid "Welsh"
+msgstr "Welsh"
+
+#: addon/globalPlugins/instantTranslate/langslist.py:22
+msgid "Esperanto"
+msgstr "Esperanto"
+
+#: addon/globalPlugins/instantTranslate/langslist.py:23
+msgid "Gujarati"
+msgstr "Gujarati"
+
+#: addon/globalPlugins/instantTranslate/langslist.py:24
+msgid "Creole Haiti"
+msgstr "Creole Haiti"
+
+#: addon/globalPlugins/instantTranslate/langslist.py:25
+msgid "Armenian"
+msgstr "Armenian"
+
+#: addon/globalPlugins/instantTranslate/langslist.py:26
+msgid "Latin"
+msgstr "Latin"
+
+#: addon/globalPlugins/instantTranslate/langslist.py:27
+msgid "Norwegian"
+msgstr "Norwegian"
+
+#: addon/globalPlugins/instantTranslate/langslist.py:28
+msgid "Serbian (Latin)"
+msgstr "Serbian (Latin)"
+
+#: addon/globalPlugins/instantTranslate/langslist.py:29
+msgid "Swahili"
+msgstr "Swahili"
+
+#: addon/globalPlugins/instantTranslate/langslist.py:30
+msgid "Tagalog"
+msgstr "Tagalog"
+
+#: addon/globalPlugins/instantTranslate/langslist.py:31
+msgid "Yiddish"
+msgstr "Yiddish"
+
+#: addon/globalPlugins/instantTranslate/langslist.py:32
+msgid "Chinese (Simplified)"
+msgstr "Chinese (Simplified)"
+
+#: addon/globalPlugins/instantTranslate/langslist.py:33
+msgid "Chinese (Traditional)"
+msgstr "Chinese (Traditional)"
+
+#. Add-on description
+#. TRANSLATORS: Summary for this add-on to be shown on installation and add-on informaiton.
+#: buildVars.py:13
+msgid "Instant Translate - Translating selected text via Google Translator"
+msgstr "உடனடி மொழிபெயர்ப்பு - கூகுள் மொழிபெயர்ப்பு வசதியைக் கொண்டு, தெரிவு செய்யப்பட்டுள்ள உரையையும், பிடிப்புப்பலகையிலுள்ள  உரையையும் மொழிபெயர்க்கும்"
+
+#. Add-on description
+#. Translators: Long description to be shown for this add-on on installation and add-on information
+#: buildVars.py:16
+msgid "This addon translates selected text via Google Translator and says it. Press NVDA+Shift+T for execute translation operation on selected text in Reech edit fields. This addon was been repacked and optimized for executing without standalone Python by Outsider <outsidepro@rambler.ru>."
+msgstr "இந்தக் கூட்டுறுப்பு, கூகுள் மொழிபெயர்ப்பு வசதியைக் கொண்டு, தெரிவு செய்யப்பட்டுள்ள உரையையும், பிடிப்புப்பலகையிலுள்ள உரையையும்  மொழிபெயர்த்து அறிவிக்கும். தெரிவு செய்யப்பட்டுள்ள உரையை மொழிபெயர்க்க, என்விடிஏ+மாற்றழுத்தி+t விசையை அழுத்தவும். பிடிப்புப்பலகையிலுள்ள உரையை மொழிபெயர்க்க, என்விடிஏ+மாற்றழுத்தி+y விசையை அழுத்தவும்."
+
+#~ msgid "Select Languages from and into to translate selected text"
+#~ msgstr ""
+#~ "தெரிவு செய்யப்பட்ட உரையை மொழிபெயர்க்க, மூல மொழியையும், எந்த மொழிக்கு "
+#~ "மொழிபெயர்க்கப்பட வேண்டுமென்பதையும் தெரிவு செய்க;"
+
+#~ msgid "Afrikaans"
+#~ msgstr "Afrikaans"
+
+#~ msgid "Albanian"
+#~ msgstr "Albanian"
+
+#~ msgid "Azerbaijani"
+#~ msgstr "Azerbaijani"
+
+#~ msgid "Basque"
+#~ msgstr "Basque"
+
+#~ msgid "Belorussian"
+#~ msgstr "Belorussian"
+
+#~ msgid "Bengali"
+#~ msgstr "Bengali"
+
+#~ msgid "Bulgarian"
+#~ msgstr "Bulgarian"
+
+#~ msgid "Canada"
+#~ msgstr "Canada"
+
+#~ msgid "Catalan"
+#~ msgstr "Catalan"
+
+#~ msgid "Czech"
+#~ msgstr "Czech"
+
+#~ msgid "Croatian"
+#~ msgstr "Croatian"
+
+#~ msgid "Danish"
+#~ msgstr "Danish"
+
+#~ msgid "Dutch"
+#~ msgstr "Dutch"
+
+#~ msgid "English"
+#~ msgstr "English"
+
+#~ msgid "Estonian"
+#~ msgstr "Estonian"
+
+#~ msgid "Finnish"
+#~ msgstr "Finnish"
+
+#~ msgid "French"
+#~ msgstr "French"
+
+#~ msgid "Galician"
+#~ msgstr "Galician"
+
+#~ msgid "Georgian"
+#~ msgstr "Georgian"
+
+#~ msgid "German"
+#~ msgstr "German"
+
+#~ msgid "Greek"
+#~ msgstr "Greek"
+
+#~ msgid "Hebrew"
+#~ msgstr "Hebrew"
+
+#~ msgid "Hindi"
+#~ msgstr "Hindi"
+
+#~ msgid "Hungarian"
+#~ msgstr "Hungarian"
+
+#~ msgid "Indonesian"
+#~ msgstr "Indonesian"
+
+#~ msgid "Irish"
+#~ msgstr "Irish"
+
+#~ msgid "Icelandic"
+#~ msgstr "Icelandic"
+
+#~ msgid "Italian"
+#~ msgstr "Italian"
+
+#~ msgid "Japanese"
+#~ msgstr "Japanese"
+
+#~ msgid "Korean"
+#~ msgstr "Korean"
+
+#~ msgid "Latvian"
+#~ msgstr "Latvian"
+
+#~ msgid "Lithuanian"
+#~ msgstr "Lithuanian"
+
+#~ msgid "Macedonian"
+#~ msgstr "Macedonian"
+
+#~ msgid "Malay"
+#~ msgstr "Malay"
+
+#~ msgid "Maltese"
+#~ msgstr "Maltese"
+
+#~ msgid "Persian"
+#~ msgstr "Persian"
+
+#~ msgid "Polish"
+#~ msgstr "Polish"
+
+#~ msgid "Portuguese"
+#~ msgstr "Portuguese"
+
+#~ msgid "Romanian"
+#~ msgstr "Romanian"
+
+#~ msgid "Russian"
+#~ msgstr "Russian"
+
+#~ msgid "Slovak"
+#~ msgstr "Slovak"
+
+#~ msgid "Slovenian"
+#~ msgstr "Slovenian"
+
+#~ msgid "Spanish"
+#~ msgstr "Spanish"
+
+#~ msgid "Swedish"
+#~ msgstr "Swedish"
+
+#~ msgid "Tamil"
+#~ msgstr "Tamil"
+
+#~ msgid "Telugu"
+#~ msgstr "Telugu"
+
+#~ msgid "Thai"
+#~ msgstr "Thai"
+
+#~ msgid "Turkish"
+#~ msgstr "Turkish"
+
+#~ msgid "Ukrainian"
+#~ msgstr "Ukrainian"
+
+#~ msgid "Urdu"
+#~ msgstr "Urdu"
+
+#~ msgid "Vietnamese"
+#~ msgstr "Vietnamese"

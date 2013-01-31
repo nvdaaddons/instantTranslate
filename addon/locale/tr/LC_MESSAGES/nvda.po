@@ -5,143 +5,142 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: 'Instant-Translate' '1.0'\n"
+"Project-Id-Version: 'Instant-Translate' '2.1'\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2013-01-26 11:32+0100\n"
-"PO-Revision-Date: 2013-01-22 18:49+0400\n"
-"Last-Translator: nvda-russian-community <beqaprogger@gmail.com>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"PO-Revision-Date: 2013-01-26 13:02+0200\n"
+"Last-Translator: Çağrı Doğan <cagrid@hotmail.com>\n"
+"Language-Team: TR <cagrid@hotmail.com>\n"
+"Language: Turkish\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.5.4\n"
+"X-Poedit-SourceCharset: UTF-8\n"
 
 #: addon/globalPlugins/instantTranslate/__init__.py:60
 msgid "Instant Translate Settings..."
-msgstr ""
+msgstr "Anlık Çeviri Ayarları..."
 
 #: addon/globalPlugins/instantTranslate/__init__.py:60
 msgid "Select Languages from which text will be translated from, and into."
-msgstr ""
+msgstr "Kaynak ve hedef dili belirleyin."
 
 #: addon/globalPlugins/instantTranslate/__init__.py:76
 msgid "There is no text on the clipboard"
-msgstr ""
+msgstr "Panoda metin yok"
 
 #: addon/globalPlugins/instantTranslate/__init__.py:84
 #, python-format
 msgid ""
 "The clipboard contains a large portion of text. It is %s characters long"
-msgstr ""
+msgstr "Panoda çok uzun bir metin var. %s karakter uzunluğunda"
 
 #: addon/globalPlugins/instantTranslate/__init__.py:85
 msgid ""
 "Translates clipboard text from one language to another using Google "
 "Translate."
-msgstr ""
+msgstr "Panodaki metin Google Translate servisi ile tercüme edilir."
 
 #: addon/globalPlugins/instantTranslate/__init__.py:98
 msgid "no selection"
-msgstr "нет выделения"
+msgstr "seçim yok"
 
 #: addon/globalPlugins/instantTranslate/__init__.py:104
 msgid ""
 "Translates selected text from one language to another using Google Translate."
-msgstr ""
+msgstr "Seçili metin Google Translate servisi ile tercüme edilir"
 
 #: addon/globalPlugins/instantTranslate/__init__.py:111
 msgid "Error translating text. See log for details"
-msgstr "Ошибка при переводе текста. Подробности смотрите в журнале событий"
+msgstr "Çeviride hata. Detaylar için logu inceleyin"
 
 #: addon/globalPlugins/instantTranslate/interface.py:18
 msgid "Instant Translate Settings"
-msgstr ""
+msgstr "Anlık Çeviri Ayarları"
 
 #: addon/globalPlugins/instantTranslate/interface.py:24
 msgid ""
 "Select language from which you want to translate from and into and press ok."
-msgstr ""
+msgstr "Kaynak ve hedef dili belirleyip kaydetmek için tamam'a basın."
 
 #: addon/globalPlugins/instantTranslate/interface.py:28
 msgid "From Language:"
-msgstr ""
+msgstr "Kaynak Dil:"
 
 #: addon/globalPlugins/instantTranslate/interface.py:33
 msgid "Into Language:"
-msgstr ""
+msgstr "Hedef Dil:"
 
 #: addon/globalPlugins/instantTranslate/langslist.py:18
 msgid "Automatically detect language"
-msgstr ""
+msgstr "Dili otomatik olarak belirle"
 
 #: addon/globalPlugins/instantTranslate/langslist.py:19
 msgid "Arabic"
-msgstr ""
+msgstr "Arapça"
 
 #: addon/globalPlugins/instantTranslate/langslist.py:20
 msgid "Bangla"
-msgstr ""
+msgstr "Bangla"
 
 #: addon/globalPlugins/instantTranslate/langslist.py:21
 msgid "Welsh"
-msgstr ""
+msgstr "Welsh"
 
 #: addon/globalPlugins/instantTranslate/langslist.py:22
 msgid "Esperanto"
-msgstr ""
+msgstr "Esperanto"
 
 #: addon/globalPlugins/instantTranslate/langslist.py:23
 msgid "Gujarati"
-msgstr ""
+msgstr "Gujarati"
 
 #: addon/globalPlugins/instantTranslate/langslist.py:24
 msgid "Creole Haiti"
-msgstr ""
+msgstr "Creole Haiti"
 
 #: addon/globalPlugins/instantTranslate/langslist.py:25
 msgid "Armenian"
-msgstr ""
+msgstr "Ermenice"
 
 #: addon/globalPlugins/instantTranslate/langslist.py:26
 msgid "Latin"
-msgstr ""
+msgstr "Latin"
 
 #: addon/globalPlugins/instantTranslate/langslist.py:27
 msgid "Norwegian"
-msgstr ""
+msgstr "Norwegian"
 
 #: addon/globalPlugins/instantTranslate/langslist.py:28
 msgid "Serbian (Latin)"
-msgstr ""
+msgstr "Sırpça Latin"
 
 #: addon/globalPlugins/instantTranslate/langslist.py:29
 msgid "Swahili"
-msgstr ""
+msgstr "Swahili"
 
 #: addon/globalPlugins/instantTranslate/langslist.py:30
 msgid "Tagalog"
-msgstr ""
+msgstr "Tagalog"
 
 #: addon/globalPlugins/instantTranslate/langslist.py:31
 msgid "Yiddish"
-msgstr ""
+msgstr "Yiddish"
 
 #: addon/globalPlugins/instantTranslate/langslist.py:32
 msgid "Chinese (Simplified)"
-msgstr ""
+msgstr "Basitleştirilmiş Çince"
 
 #: addon/globalPlugins/instantTranslate/langslist.py:33
 msgid "Chinese (Traditional)"
-msgstr ""
+msgstr "Geleneksel Çince"
 
 #. Add-on description
 #. TRANSLATORS: Summary for this add-on to be shown on installation and add-on informaiton.
 #: buildVars.py:13
 msgid "Instant Translate - Translating selected text via Google Translator"
-msgstr ""
-"Instant Translate - переводчик выделенного текста с помощью сервиса Google "
-"Translator"
+msgstr "Anlık çeviri - Seçili metin Google Translator ile çevrilir"
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on installation and add-on information
@@ -152,8 +151,163 @@ msgid ""
 "edit fields. This addon was been repacked and optimized for executing "
 "without standalone Python by Outsider <outsidepro@rambler.ru>."
 msgstr ""
-"Данное дополнение добавляет возможность переводить выделенный текст с "
-"помощью сервиса Google Translate. Выделите текст в полях редактирования и "
-"нажмите NVDA+Shift+T, чтобы услышать переведенный текст. Данное дополнение "
-"было пересобрано и оптимизировано для работы, не требуя отдельно "
-"установленного Python Outsider-ом <outsidepro@rambler.ru>."
+"This addon translates selected text via Google Translator and says it. Press "
+"NVDA+Shift+T for execute translation operation on selected text in Reech "
+"edit fields. This addon was been repacked and optimized for executing "
+"without standalone Python by Outsider <outsidepro@rambler.ru>."
+
+#~ msgid "Select Languages from and into to translate selected text"
+#~ msgstr "Çeviri için kaynak ve hedef dilleri belirleyin"
+
+#~ msgid "Afrikaans"
+#~ msgstr "Afrikanca"
+
+#~ msgid "Albanian"
+#~ msgstr "Arnavutça"
+
+#~ msgid "Azerbaijani"
+#~ msgstr "Azerice"
+
+#~ msgid "Basque"
+#~ msgstr "Basque"
+
+#~ msgid "Belorussian"
+#~ msgstr "Belorusça"
+
+#~ msgid "Bengali"
+#~ msgstr "Bengalce"
+
+#~ msgid "Bulgarian"
+#~ msgstr "Bulgarca"
+
+#~ msgid "Canada"
+#~ msgstr "Canada"
+
+#~ msgid "Catalan"
+#~ msgstr "Catalan"
+
+#~ msgid "Czech"
+#~ msgstr "Çekçe"
+
+#~ msgid "Croatian"
+#~ msgstr "Hırvatça"
+
+#~ msgid "Danish"
+#~ msgstr "Danish"
+
+#~ msgid "Dutch"
+#~ msgstr "Dutch"
+
+#~ msgid "English"
+#~ msgstr "English"
+
+#~ msgid "Estonian"
+#~ msgstr "Estonian"
+
+#~ msgid "Finnish"
+#~ msgstr "Fince"
+
+#~ msgid "French"
+#~ msgstr "Fransızca"
+
+#~ msgid "Galician"
+#~ msgstr "Galician"
+
+#~ msgid "Georgian"
+#~ msgstr "Gürcüce"
+
+#~ msgid "German"
+#~ msgstr "Almanca"
+
+#~ msgid "Greek"
+#~ msgstr "Yunanca"
+
+#~ msgid "Hebrew"
+#~ msgstr "İbranice"
+
+#~ msgid "Hindi"
+#~ msgstr "Hindi"
+
+#~ msgid "Hungarian"
+#~ msgstr "Macarca"
+
+#~ msgid "Indonesian"
+#~ msgstr "Indonesian"
+
+#~ msgid "Irish"
+#~ msgstr "Irish"
+
+#~ msgid "Icelandic"
+#~ msgstr "Icelandic"
+
+#~ msgid "Italian"
+#~ msgstr "İtalyanca"
+
+#~ msgid "Japanese"
+#~ msgstr "Japonca"
+
+#~ msgid "Korean"
+#~ msgstr "Korece"
+
+#~ msgid "Latvian"
+#~ msgstr "Latvian"
+
+#~ msgid "Lithuanian"
+#~ msgstr "Lithuanian"
+
+#~ msgid "Macedonian"
+#~ msgstr "Makedonca"
+
+#~ msgid "Malay"
+#~ msgstr "Malay"
+
+#~ msgid "Maltese"
+#~ msgstr "Maltese"
+
+#~ msgid "Persian"
+#~ msgstr "Farsça"
+
+#~ msgid "Polish"
+#~ msgstr "Lehçe"
+
+#~ msgid "Portuguese"
+#~ msgstr "Portekizce"
+
+#~ msgid "Romanian"
+#~ msgstr "Rumence"
+
+#~ msgid "Russian"
+#~ msgstr "Rusça"
+
+#~ msgid "Slovak"
+#~ msgstr "Slovak"
+
+#~ msgid "Slovenian"
+#~ msgstr "Slovence"
+
+#~ msgid "Spanish"
+#~ msgstr "İspanyolca"
+
+#~ msgid "Swedish"
+#~ msgstr "Swedish"
+
+#~ msgid "Tamil"
+#~ msgstr "Tamil"
+
+#~ msgid "Telugu"
+#~ msgstr "Telugu"
+
+#~ msgid "Thai"
+#~ msgstr "Thai"
+
+#~ msgid "Turkish"
+#~ msgstr "Türkçe"
+
+#~ msgid "Ukrainian"
+#~ msgstr "Ukrainian"
+
+#~ msgid "Urdu"
+#~ msgstr "Urdu"
+
+#~ msgid "Vietnamese"
+#~ msgstr "Vietnamese"
