@@ -2,6 +2,7 @@
 # Copyright (C) 2012-2013 Aleksey Sadovoy AKA Lex <lex@progger.ru>,
 #ruslan <ru2020slan@yandex.ru>,
 #beqa <beqaprogger@gmail.com>
+#Joseph Lee <joseph.lee22590@gmail.com>
 #other nvda contributors
 #This file is covered by the GNU General Public License.
 #See the file COPYING for more details.
@@ -56,7 +57,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def createMenu(self):
 		self.prefsMenu = gui.mainFrame.sysTrayIcon.menu.GetMenuItems()[0].GetSubMenu()
-		self.instantTranslateSettingsItem = self.prefsMenu.Append(wx.ID_ANY, _("Instant Translate Settings..."), _("Select Languages from which text will be translated from, and into."))
+		self.instantTranslateSettingsItem = self.prefsMenu.Append(wx.ID_ANY, _("Instant Translate Settings..."), _("Select Languages from and into to translate selected text"))
 		gui.mainFrame.sysTrayIcon.Bind(wx.EVT_MENU , lambda e : gui.mainFrame._popupSettingsDialog(InstantTranslateSettingsDialog), self.instantTranslateSettingsItem)
 
 	def terminate(self):
@@ -96,10 +97,13 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		if not info or info.isCollapsed:
 			ui.message(_("no selection"))
 		else:
-			config = ConfigObj(config_file)
-			lang_from = config["translation"]["from"]
-			lang_to = config["translation"]["into"]
-			threading.Thread(target=self.translate, args=(info.text,)).run()
+			if len(info.text) < 351: 
+				config = ConfigObj(config_file)
+				lang_from = config["translation"]["from"]
+				lang_to = config["translation"]["into"]
+				threading.Thread(target=self.translate, args=(info.text,)).run()
+			else:
+				ui.message(_("The selected text is too large for translating. It hass %s characters long") % len(info.text))
 	script_translateSelection.__doc__=_("Translates selected text from one language to another using Google Translate.")
 
 	def translate(self, text):
@@ -109,7 +113,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			log.exception("Can not translate text")
 			queueHandler.queueFunction(queueHandler.eventQueue, ui.message, _('Error translating text. See log for details'))
 			return
-		translation = ";".join(t['trans'] for t in response['sentences'])
+		translation = "".join(t['trans'] for t in response['sentences'])
 		if 'dict' in response:
 			translation += " | " + " | ".join((", ".join(w for w in d['terms'])) for d in response['dict'])
 		queueHandler.queueFunction(queueHandler.eventQueue, ui.message, translation)
