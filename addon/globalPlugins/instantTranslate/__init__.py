@@ -2,7 +2,6 @@
 # Copyright (C) 2012-2013 Aleksey Sadovoy AKA Lex <lex@progger.ru>,
 #ruslan <ru2020slan@yandex.ru>,
 #beqa <beqaprogger@gmail.com>
-#Joseph Lee <joseph.lee22590@gmail.com>
 #other nvda contributors
 #This file is covered by the GNU General Public License.
 #See the file COPYING for more details.
@@ -57,7 +56,11 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def createMenu(self):
 		self.prefsMenu = gui.mainFrame.sysTrayIcon.menu.GetMenuItems()[0].GetSubMenu()
-		self.instantTranslateSettingsItem = self.prefsMenu.Append(wx.ID_ANY, _("Instant Translate Settings..."), _("Select Languages from and into to translate selected text"))
+		self.instantTranslateSettingsItem = self.prefsMenu.Append(wx.ID_ANY, 
+			# Translators: name of the option in the menu.
+			_("Instant Translate Settings..."),
+			# Translators: tooltip text for the menu item.
+			_("Select the languages to be used for translation."))
 		gui.mainFrame.sysTrayIcon.Bind(wx.EVT_MENU , lambda e : gui.mainFrame._popupSettingsDialog(InstantTranslateSettingsDialog), self.instantTranslateSettingsItem)
 
 	def terminate(self):
@@ -73,6 +76,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		except:
 			text = None
 		if not text or not isinstance(text,basestring) or text.isspace():
+			# Translators: message presented when user presses the shortcut key for translating clipboard text but the clipboard is empty.
 			ui.message(_("There is no text on the clipboard"))
 			return
 		if len(text) < 351: 
@@ -82,6 +86,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			threading.Thread(target=self.translate, args=(text,)).run()
 		else:
 			ui.message(_("The clipboard contains a large portion of text. It is %s characters long") % len(text))
+	# Translators: message presented in input help mode, when user presses the shortcut keys for this addon.
 	script_translateClipboardText.__doc__=_("Translates clipboard text from one language to another using Google Translate.")
 
 	def script_translateSelection(self, gesture):
@@ -103,7 +108,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				lang_to = config["translation"]["into"]
 				threading.Thread(target=self.translate, args=(info.text,)).run()
 			else:
-				ui.message(_("The selected text is too large for translating. It hass %s characters long") % len(info.text))
+				ui.message(_("The selected text is too large for translating. It has %s characters long") % len(info.text))
+	# Translators: message presented in input help mode, when user presses the shortcut keys for this addon.
 	script_translateSelection.__doc__=_("Translates selected text from one language to another using Google Translate.")
 
 	def translate(self, text):
