@@ -10,16 +10,16 @@ addon_info = {
 	"addon-name" : "instantTranslate",
 	# Add-on description
 	# TRANSLATORS: Summary for this add-on to be shown on installation and add-on informaiton.
-	"addon-summary" : _("Instant Translate - Translating selected text via Google Translator"),
+	"addon-summary" : _("Instant Translate - Translates given text using the Google Translate service."),
 	# Add-on description
 	# Translators: Long description to be shown for this add-on on installation and add-on information
-	"addon-description" : _("This addon translates selected text via Google Translator and says it. Press NVDA+Shift+T for execute translation operation on selected text in Reech edit fields. This addon was been repacked and optimized for executing without standalone Python by Outsider <outsidepro@rambler.ru>."),
+	"addon-description" : _("This addon translates selected or clipboard text using the Google Translate service and presents it. Press NVDA+Shift+T to translate selected text. Press NVDA+Shift+Y to translate clipboard text."),
 	# version
 	"addon-version" : "2.2beta1",
 	# Author(s)
 	"addon-author" : "Alexy Sadovoy aka Lex <lex@progger.su>, ruslan <ru2020slan@yandex.ru>, beqa <beqaprogger@gmail.com> and other nvda contributors",
-# URL for the add-on documentation support
-"addon-url" : None
+	# URL for the add-on documentation support
+	"addon-url" : None
 }
 
 import os.path

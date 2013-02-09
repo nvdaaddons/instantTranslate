@@ -16,22 +16,23 @@ from configobj import *
 config_file = os.path.join(os.path.abspath(os.path.dirname(__file__)), 'instantTranslate.ini')
 
 class InstantTranslateSettingsDialog(gui.SettingsDialog):
+	# Translators: name of the dialog.
 	title = _("Instant Translate Settings")
 
 	def __init__(self, parent):
 		super(InstantTranslateSettingsDialog, self).__init__(parent)
 
 	def makeSettings(self, sizer):
-		helpLabel = wx.StaticText(self, label=_("Select language from which you want to translate from and into and press ok."))
+		helpLabel = wx.StaticText(self, label=_("Select translation source and target language:"))
 		helpLabel.Wrap(self.GetSize()[0])
 		sizer.Add(helpLabel)
 		fromSizer = wx.BoxSizer(wx.HORIZONTAL)
-		fromLabel = wx.StaticText(self, label=_("From Language:"))
+		fromLabel = wx.StaticText(self, label=_("Source language:"))
 		fromSizer.Add(fromLabel)
 		self._fromChoice = wx.Choice(self, style=wx.CB_SORT, choices=langslist.keys())
 		fromSizer.Add(self._fromChoice)
 		intoSizer = wx.BoxSizer(wx.HORIZONTAL)
-		intoLabel = wx.StaticText(self, label=_("Into Language:"))
+		intoLabel = wx.StaticText(self, label=_("Target language:"))
 		intoSizer.Add(intoLabel)
 		self._intoChoice = wx.Choice(self, style=wx.CB_SORT, choices=langslist.keys())
 		intoSizer.Add(self._intoChoice)
