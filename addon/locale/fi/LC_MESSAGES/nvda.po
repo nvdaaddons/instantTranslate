@@ -7,34 +7,41 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 'Instant-Translate' '2.1'\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
-"POT-Creation-Date: 2013-01-26 11:32+0100\n"
-"PO-Revision-Date: 2013-01-26 21:36+0200\n"
+"POT-Creation-Date: 2013-02-09 18:30+0100\n"
+"PO-Revision-Date: 2013-02-11 09:08+0200\n"
 "Last-Translator: Jani Kinnunen\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.5.3\n"
+"X-Generator: Poedit 1.5.5\n"
 
-#: addon/globalPlugins/instantTranslate/__init__.py:60
+#. Translators: name of the option in the menu.
+#: addon/globalPlugins/instantTranslate/__init__.py:62
 msgid "Instant Translate Settings..."
 msgstr "Pikakääntäjä..."
 
-#: addon/globalPlugins/instantTranslate/__init__.py:60
-msgid "Select Languages from which text will be translated from, and into."
-msgstr "Valitse kieli, josta ja jolle käännetään."
+#. Translators: tooltip text for the menu item.
+#: addon/globalPlugins/instantTranslate/__init__.py:64
+msgid "Select languages to be used for translation."
+msgstr "Valitse käännöksessä käytettävät kielet."
 
-#: addon/globalPlugins/instantTranslate/__init__.py:76
+#. Translators: message presented when user presses the shortcut key for translating clipboard text but the clipboard is empty.
+#: addon/globalPlugins/instantTranslate/__init__.py:81
 msgid "There is no text on the clipboard"
 msgstr "Leikepöydällä ei ole tekstiä."
 
-#: addon/globalPlugins/instantTranslate/__init__.py:84
+#: addon/globalPlugins/instantTranslate/__init__.py:89
 #, python-format
 msgid ""
-"The clipboard contains a large portion of text. It is %s characters long"
-msgstr "Leikepöydällä on suuri määrä tekstiä. Sen pituus on %s merkkiä."
+"The clipboard contains a large portion of text. It is %s characters long. "
+"The limit is 350 characters."
+msgstr ""
+"Leikepöydällä on paljon tekstiä. Pituus %s merkkiä. Tekstissä saa olla "
+"enintään 350 merkkiä."
 
-#: addon/globalPlugins/instantTranslate/__init__.py:85
+#. Translators: message presented in input help mode, when user presses the shortcut keys for this addon.
+#: addon/globalPlugins/instantTranslate/__init__.py:91
 msgid ""
 "Translates clipboard text from one language to another using Google "
 "Translate."
@@ -42,119 +49,152 @@ msgstr ""
 "Kääntää leikepöydällä olevan tekstin kieleltä toiselle Google-kääntäjää "
 "käyttäen."
 
-#: addon/globalPlugins/instantTranslate/__init__.py:98
+#. Translators: user has pressed the shortcut key for translating selected text, but no text was actually selected.
+#: addon/globalPlugins/instantTranslate/__init__.py:105
 msgid "no selection"
 msgstr "Ei valintaa"
 
-#: addon/globalPlugins/instantTranslate/__init__.py:104
+#: addon/globalPlugins/instantTranslate/__init__.py:113
+#, python-format
+msgid ""
+"The selection contains a large portion of text. It is %s characters long. "
+"The limit is 350 characters."
+msgstr ""
+"Valittuna on paljon tekstiä. Pituus %s merkkiä. Tekstissä saa olla enintään "
+"350 merkkiä."
+
+#. Translators: message presented in input help mode, when user presses the shortcut keys for this addon.
+#: addon/globalPlugins/instantTranslate/__init__.py:115
 msgid ""
 "Translates selected text from one language to another using Google Translate."
 msgstr "Kääntää valitun tekstin kieleltä toiselle Google-kääntäjää käyttäen."
 
-#: addon/globalPlugins/instantTranslate/__init__.py:111
+#: addon/globalPlugins/instantTranslate/__init__.py:122
 msgid "Error translating text. See log for details"
 msgstr "Virhe käännettäessä tekstiä. Katso tiedot lokista."
 
-#: addon/globalPlugins/instantTranslate/interface.py:18
+#. Translators: name of the dialog.
+#: addon/globalPlugins/instantTranslate/interface.py:20
 msgid "Instant Translate Settings"
 msgstr "Pikakääntäjän asetukset"
 
-#: addon/globalPlugins/instantTranslate/interface.py:24
-msgid ""
-"Select language from which you want to translate from and into and press ok."
-msgstr "Valitse kieli, josta ja jolle käännetään ja paina OK."
+#: addon/globalPlugins/instantTranslate/interface.py:26
+msgid "Select translation source and target language:"
+msgstr "Valitse käännöksen lähde- ja kohdekieli:"
 
-#: addon/globalPlugins/instantTranslate/interface.py:28
-msgid "From Language:"
-msgstr "Kielestä:"
+#: addon/globalPlugins/instantTranslate/interface.py:30
+msgid "Source language:"
+msgstr "Lähdekieli:"
 
-#: addon/globalPlugins/instantTranslate/interface.py:33
-msgid "Into Language:"
-msgstr "Kielelle:"
+#: addon/globalPlugins/instantTranslate/interface.py:35
+msgid "Target language:"
+msgstr "Kohdekieli:"
 
-#: addon/globalPlugins/instantTranslate/langslist.py:18
+#: addon/globalPlugins/instantTranslate/langslist.py:19
 msgid "Automatically detect language"
 msgstr "Tunnista automaattisesti"
 
-#: addon/globalPlugins/instantTranslate/langslist.py:19
+#: addon/globalPlugins/instantTranslate/langslist.py:20
 msgid "Arabic"
 msgstr "arabia"
 
-#: addon/globalPlugins/instantTranslate/langslist.py:20
+#: addon/globalPlugins/instantTranslate/langslist.py:21
 msgid "Bangla"
 msgstr "bengali"
 
-#: addon/globalPlugins/instantTranslate/langslist.py:21
+#: addon/globalPlugins/instantTranslate/langslist.py:22
 msgid "Welsh"
 msgstr "wales"
 
-#: addon/globalPlugins/instantTranslate/langslist.py:22
+#: addon/globalPlugins/instantTranslate/langslist.py:23
 msgid "Esperanto"
 msgstr "esperanto"
 
-#: addon/globalPlugins/instantTranslate/langslist.py:23
+#: addon/globalPlugins/instantTranslate/langslist.py:24
 msgid "Gujarati"
 msgstr "gujarati"
 
-#: addon/globalPlugins/instantTranslate/langslist.py:24
-msgid "Creole Haiti"
-msgstr "kreoli"
-
 #: addon/globalPlugins/instantTranslate/langslist.py:25
+msgid "Creole Haiti"
+msgstr "haitinkreoli"
+
+#: addon/globalPlugins/instantTranslate/langslist.py:26
 msgid "Armenian"
 msgstr "armenia"
 
-#: addon/globalPlugins/instantTranslate/langslist.py:26
+#: addon/globalPlugins/instantTranslate/langslist.py:27
 msgid "Latin"
 msgstr "latina"
 
-#: addon/globalPlugins/instantTranslate/langslist.py:27
+#: addon/globalPlugins/instantTranslate/langslist.py:28
 msgid "Norwegian"
 msgstr "norja"
 
-#: addon/globalPlugins/instantTranslate/langslist.py:28
+#: addon/globalPlugins/instantTranslate/langslist.py:29
 msgid "Serbian (Latin)"
 msgstr "serbia (latinalainen)"
 
-#: addon/globalPlugins/instantTranslate/langslist.py:29
+#: addon/globalPlugins/instantTranslate/langslist.py:30
 msgid "Swahili"
 msgstr "swahili"
 
-#: addon/globalPlugins/instantTranslate/langslist.py:30
+#: addon/globalPlugins/instantTranslate/langslist.py:31
 msgid "Tagalog"
 msgstr "tagalog"
 
-#: addon/globalPlugins/instantTranslate/langslist.py:31
+#: addon/globalPlugins/instantTranslate/langslist.py:32
 msgid "Yiddish"
 msgstr "jiddish"
 
-#: addon/globalPlugins/instantTranslate/langslist.py:32
+#: addon/globalPlugins/instantTranslate/langslist.py:33
 msgid "Chinese (Simplified)"
 msgstr "kiina (yksinkertaistettu)"
 
-#: addon/globalPlugins/instantTranslate/langslist.py:33
+#: addon/globalPlugins/instantTranslate/langslist.py:34
 msgid "Chinese (Traditional)"
 msgstr "kiina (perinteinen)"
 
 #. Add-on description
 #. TRANSLATORS: Summary for this add-on to be shown on installation and add-on informaiton.
 #: buildVars.py:13
-msgid "Instant Translate - Translating selected text via Google Translator"
-msgstr "Pikakääntäjä - kääntää valitun tekstin Google-kääntäjän avulla"
+msgid ""
+"Instant Translate - Translates given text using the Google Translate service."
+msgstr "Pikakääntäjä - kääntää annetun tekstin Google-kääntäjä-palvelun avulla"
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on installation and add-on information
 #: buildVars.py:16
 msgid ""
-"This addon translates selected text via Google Translator and says it. Press "
-"NVDA+Shift+T for execute translation operation on selected text in Reech "
-"edit fields. This addon was been repacked and optimized for executing "
-"without standalone Python by Outsider <outsidepro@rambler.ru>."
+"This addon translates selected or clipboard text using the Google Translate "
+"service and presents it. Press NVDA+Shift+T to translate selected text. "
+"Press NVDA+Shift+Y to translate clipboard text."
 msgstr ""
-"Tämä lisäosa kääntää valitun tekstin Google-kääntäjän avulla ja lukee sen. "
-"Suorita käännös painamalla NVDA+Shift+T. Tämän lisäosan on pakannut "
-"uudelleen ja optimoinut toimimaan ilman itsenäistä Python-tulkkia Outsider "
-"<outsidepro@rambler.ru>."
+"Tämä lisäosa kääntää valitun tai leikepöydällä olevan tekstin Google-"
+"kääntäjä-palvelua käyttäen ja lukee käännöksen. Käännä valittu teksti "
+"painamalla NVDA+Shift+T ja leikepöydällä oleva teksti painamalla NVDA+Shift"
+"+Y."
+
+#~ msgid "Select Languages from which text will be translated from, and into."
+#~ msgstr "Valitse kieli, josta ja jolle käännetään."
+
+#~ msgid ""
+#~ "Select language from which you want to translate from and into and press "
+#~ "ok."
+#~ msgstr "Valitse kieli, josta ja jolle käännetään ja paina OK."
+
+#~ msgid "Into Language:"
+#~ msgstr "Kielelle:"
+
+#~ msgid ""
+#~ "This addon translates selected text via Google Translator and says it. "
+#~ "Press NVDA+Shift+T for execute translation operation on selected text in "
+#~ "Reech edit fields. This addon was been repacked and optimized for "
+#~ "executing without standalone Python by Outsider <outsidepro@rambler.ru>."
+#~ msgstr ""
+#~ "Tämä lisäosa kääntää valitun tekstin Google-kääntäjän avulla ja lukee "
+#~ "sen. Suorita käännös painamalla NVDA+Shift+T. Tämän lisäosan on pakannut "
+#~ "uudelleen ja optimoinut toimimaan ilman itsenäistä Python-tulkkia "
+#~ "Outsider <outsidepro@rambler.ru>."
 
 #~ msgid "Select Languages from and into to translate selected text"
 #~ msgstr "Valitse kieli, josta ja jolle valittu teksti käännetään."

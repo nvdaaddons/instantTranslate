@@ -1,0 +1,351 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: 'Instant-Translate' '2.1'\n"
+"Report-Msgid-Bugs-To: 'nvda-translations@freelists.org'\n"
+"POT-Creation-Date: 2013-01-22 18:48+0400\n"
+"PO-Revision-Date: 2013-02-04 10:48+0100\n"
+"Last-Translator: Jožef Gregorc <jozko.gregorc[@]guest.arnes.si\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+
+#: addon\globalPlugins\instantTranslate\__init__.py:58
+msgid "Instant Translate Settings..."
+msgstr "Nastavitve Hitro Prevedi"
+
+#: addon\globalPlugins\instantTranslate\__init__.py:58
+msgid "Select Languages from and into to translate selected text"
+msgstr ""
+"Izberite Jezike iz katerih in v katere želite prevesti izbrano besedilo"
+
+#: addon\globalPlugins\instantTranslate\__init__.py:74
+msgid "There is no text on the clipboard"
+msgstr "V odložišču ni besedila"
+
+#: addon\globalPlugins\instantTranslate\__init__.py:82
+#, python-format
+msgid ""
+"The clipboard contains a large portion of text. It is %s characters long"
+msgstr "V odložišču je večja količina besedila. Vsebuje %s znakov"
+
+#: addon\globalPlugins\instantTranslate\__init__.py:95
+msgid "no selection"
+msgstr "brez izbora"
+
+#: addon\globalPlugins\instantTranslate\__init__.py:107
+msgid "Error translating text. See log for details"
+msgstr "Napaka pri prevodu besedila. Glejte dnevnik za podrobnosti"
+
+#: addon\globalPlugins\instantTranslate\interface.py:18
+msgid "Instant Translate Settings"
+msgstr "Nastavitve Hitro Prevedi"
+
+#: addon\globalPlugins\instantTranslate\interface.py:24
+msgid ""
+"Select language from which you want to translate text and into and press ok "
+"to save."
+msgstr ""
+"Izberite jezik iz katerega želite prevajati inn jezik v katerega želite "
+"prevesti, nato pritisnite V redu, da shranite izbrano."
+
+#: addon\globalPlugins\instantTranslate\interface.py:28
+msgid "Language From:"
+msgstr "Iz Jezika:"
+
+#: addon\globalPlugins\instantTranslate\interface.py:33
+msgid "Language Into:"
+msgstr "V Jezik:"
+
+#: addon\globalPlugins\instantTranslate\langslist.py:9
+msgid "Automatically detect language"
+msgstr "Samodejno zaznaj jezik"
+
+#: addon\globalPlugins\instantTranslate\langslist.py:10
+msgid "Afrikaans"
+msgstr "Afrikanščina"
+
+#: addon\globalPlugins\instantTranslate\langslist.py:11
+msgid "Albanian"
+msgstr "Albanščina"
+
+#: addon\globalPlugins\instantTranslate\langslist.py:12
+msgid "Arabic"
+msgstr "Arabščina"
+
+#: addon\globalPlugins\instantTranslate\langslist.py:13
+msgid "Armenian"
+msgstr "Armenščina"
+
+#: addon\globalPlugins\instantTranslate\langslist.py:14
+msgid "Azerbaijani"
+msgstr "Azerbajanščina"
+
+#: addon\globalPlugins\instantTranslate\langslist.py:15
+msgid "Basque"
+msgstr "Baskovščina"
+
+#: addon\globalPlugins\instantTranslate\langslist.py:16
+msgid "Belorussian"
+msgstr "Beloruščina"
+
+#: addon\globalPlugins\instantTranslate\langslist.py:17
+msgid "Bengali"
+msgstr "Bengalščina"
+
+#: addon\globalPlugins\instantTranslate\langslist.py:18
+msgid "Bulgarian"
+msgstr "Bolgarščina"
+
+# iz priloženega ni možno določiti na katero jezikovno skupino (angleško, francosko ali drugo se nanaša
+#: addon\globalPlugins\instantTranslate\langslist.py:19
+msgid "Canada"
+msgstr "Kanada"
+
+#: addon\globalPlugins\instantTranslate\langslist.py:20
+msgid "Catalan"
+msgstr "Katalonščina"
+
+#: addon\globalPlugins\instantTranslate\langslist.py:21
+msgid "Czech"
+msgstr "Češčina"
+
+#: addon\globalPlugins\instantTranslate\langslist.py:22
+msgid "Chinese Simplified"
+msgstr "Kitajščina (Poenostavljena)"
+
+#: addon\globalPlugins\instantTranslate\langslist.py:23
+msgid "Chinese Traditional"
+msgstr "Kitajščina (Tradicijonalna)"
+
+#: addon\globalPlugins\instantTranslate\langslist.py:24
+msgid "Creole Haiti"
+msgstr "Kreolščina (Haiti)"
+
+#: addon\globalPlugins\instantTranslate\langslist.py:25
+msgid "Croatian"
+msgstr "Hrvaščina"
+
+#: addon\globalPlugins\instantTranslate\langslist.py:26
+msgid "Danish"
+msgstr "Danščina"
+
+#: addon\globalPlugins\instantTranslate\langslist.py:27
+msgid "Dutch"
+msgstr "Nizozemščina"
+
+#: addon\globalPlugins\instantTranslate\langslist.py:28
+msgid "English"
+msgstr "Angleščina"
+
+#: addon\globalPlugins\instantTranslate\langslist.py:29
+msgid "Estonian"
+msgstr "Estonščina"
+
+#: addon\globalPlugins\instantTranslate\langslist.py:30
+msgid "Finnish"
+msgstr "Finščina"
+
+#: addon\globalPlugins\instantTranslate\langslist.py:31
+msgid "French"
+msgstr "Francoščina"
+
+#: addon\globalPlugins\instantTranslate\langslist.py:32
+msgid "Galician"
+msgstr "Galicijščina (Španija)"
+
+#: addon\globalPlugins\instantTranslate\langslist.py:33
+msgid "Georgian"
+msgstr "Gruzijščina"
+
+#: addon\globalPlugins\instantTranslate\langslist.py:34
+msgid "German"
+msgstr "Nemščina"
+
+#: addon\globalPlugins\instantTranslate\langslist.py:35
+msgid "Greek"
+msgstr "Grščina"
+
+#: addon\globalPlugins\instantTranslate\langslist.py:36
+msgid "Gujarat"
+msgstr "Gujaratščina"
+
+#: addon\globalPlugins\instantTranslate\langslist.py:37
+msgid "Hebrew"
+msgstr "Hebrejščina"
+
+#: addon\globalPlugins\instantTranslate\langslist.py:38
+msgid "Hindi"
+msgstr "Hindujščina"
+
+#: addon\globalPlugins\instantTranslate\langslist.py:39
+msgid "Hungarian"
+msgstr "Madžarščina"
+
+#: addon\globalPlugins\instantTranslate\langslist.py:40
+msgid "Indonesian"
+msgstr "Indonezijščina"
+
+#: addon\globalPlugins\instantTranslate\langslist.py:41
+msgid "Irish"
+msgstr "Irščina"
+
+#: addon\globalPlugins\instantTranslate\langslist.py:42
+msgid "Icelandic"
+msgstr "Islandščina"
+
+#: addon\globalPlugins\instantTranslate\langslist.py:43
+msgid "Italian"
+msgstr "Italijanščina"
+
+#: addon\globalPlugins\instantTranslate\langslist.py:44
+msgid "Japanese"
+msgstr "Japonščina"
+
+#: addon\globalPlugins\instantTranslate\langslist.py:45
+msgid "Korean"
+msgstr "Korejščina"
+
+#: addon\globalPlugins\instantTranslate\langslist.py:46
+msgid "Latin"
+msgstr "Latinščina"
+
+#: addon\globalPlugins\instantTranslate\langslist.py:47
+msgid "Latvian"
+msgstr "Latvijščina"
+
+# lahko tudi letonščina - litovsko in latvijsko imata podobno, tu nekako ni enotnosti
+#: addon\globalPlugins\instantTranslate\langslist.py:48
+msgid "Lithuanian"
+msgstr "Litovščina"
+
+#: addon\globalPlugins\instantTranslate\langslist.py:49
+msgid "Macedonian"
+msgstr "Makedonščina"
+
+#: addon\globalPlugins\instantTranslate\langslist.py:50
+msgid "Malay"
+msgstr "Malajščina"
+
+#: addon\globalPlugins\instantTranslate\langslist.py:51
+msgid "Maltese"
+msgstr "Malteščina"
+
+#: addon\globalPlugins\instantTranslate\langslist.py:52
+msgid "Norwegian"
+msgstr "Norveščina"
+
+#: addon\globalPlugins\instantTranslate\langslist.py:53
+msgid "Persian"
+msgstr "Perziščina"
+
+#: addon\globalPlugins\instantTranslate\langslist.py:54
+msgid "Polish"
+msgstr "Poljščina"
+
+#: addon\globalPlugins\instantTranslate\langslist.py:55
+msgid "Portuguese"
+msgstr "Portugalščina"
+
+#: addon\globalPlugins\instantTranslate\langslist.py:56
+msgid "Romanian"
+msgstr "Romunščina"
+
+#: addon\globalPlugins\instantTranslate\langslist.py:57
+msgid "Russian"
+msgstr "Ruščina"
+
+#: addon\globalPlugins\instantTranslate\langslist.py:58
+msgid "Serbian"
+msgstr "Srbščina"
+
+#: addon\globalPlugins\instantTranslate\langslist.py:59
+msgid "Slovak"
+msgstr "Slovaščina"
+
+#: addon\globalPlugins\instantTranslate\langslist.py:60
+msgid "Slovenian"
+msgstr "Slovenščina"
+
+#: addon\globalPlugins\instantTranslate\langslist.py:61
+msgid "Spanish"
+msgstr "Španščina"
+
+#: addon\globalPlugins\instantTranslate\langslist.py:62
+msgid "Swahili"
+msgstr "Swahili"
+
+#: addon\globalPlugins\instantTranslate\langslist.py:63
+msgid "Swedish"
+msgstr "Švedščina"
+
+#: addon\globalPlugins\instantTranslate\langslist.py:64
+msgid "Tagalog"
+msgstr "Tagalogščina (Filipini)"
+
+#: addon\globalPlugins\instantTranslate\langslist.py:65
+msgid "Tamil"
+msgstr "Tamilščina"
+
+#: addon\globalPlugins\instantTranslate\langslist.py:66
+msgid "Telugu"
+msgstr "Telugu"
+
+#: addon\globalPlugins\instantTranslate\langslist.py:67
+msgid "Thai"
+msgstr "Tajščina"
+
+#: addon\globalPlugins\instantTranslate\langslist.py:68
+msgid "Turkish"
+msgstr "Turščina"
+
+#: addon\globalPlugins\instantTranslate\langslist.py:69
+msgid "Ukrainian"
+msgstr "Ukrajinščina"
+
+#: addon\globalPlugins\instantTranslate\langslist.py:70
+msgid "Urdu"
+msgstr "Urdujščina"
+
+#: addon\globalPlugins\instantTranslate\langslist.py:71
+msgid "Vietnamese"
+msgstr "Vijetnamščina"
+
+#: addon\globalPlugins\instantTranslate\langslist.py:72
+msgid "Welsh"
+msgstr "Valižanščina"
+
+#: addon\globalPlugins\instantTranslate\langslist.py:73
+msgid "Yiddish"
+msgstr "Jidiščina"
+
+#: addon\globalPlugins\instantTranslate\langslist.py:74
+msgid "Esperanto"
+msgstr "Esperanto"
+
+#. Add-on description
+#. TRANSLATORS: Summary for this add-on to be shown on installation and add-on informaiton.
+#: buildVars.py:13
+msgid "Instant Translate - Translating selected text via Google Translator"
+msgstr "Hitro Prevedi - prevajanje besedila s pomočjo Google Prevajalnika"
+
+# boljšega prevoda trenutno ni mogoče napisati. prosim za predloge izboljšav, če jih poznate.
+#. Add-on description
+#. Translators: Long description to be shown for this add-on on installation and add-on information
+#: buildVars.py:16
+msgid ""
+"This addon translates selected text via Google Translator and says it. Press "
+"NVDA+Shift+T for execute translation operation on selected text in Reech "
+"edit fields. This addon was been repacked and optimized for executing "
+"without standalone Python by Outsider <outsidepro@rambler.ru>."
+msgstr ""
+"Ta dodatek prevaja besedilo s pomočjo Google Prevajalnika in ga prebere. "
+"Pritisnite NVDA+Shift+T za izvedbo operacije prevajanja v poljih za "
+"Obogateno urejanje. Ta dodatek je optimiziran in načrtovan za uporabo brez "
+"Python namestitve. Avtor dodatka je Outsider <outsidepro@rambler.ru>."
