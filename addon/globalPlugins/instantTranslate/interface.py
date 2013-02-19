@@ -12,6 +12,8 @@ import gui
 from langslist import langslist
 import config
 from configobj import *
+import addonHandler
+addonHandler.initTranslation()
 
 config_file = os.path.join(os.path.abspath(os.path.dirname(__file__)), 'instantTranslate.ini')
 
