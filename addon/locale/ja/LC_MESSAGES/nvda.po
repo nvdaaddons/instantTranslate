@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: 'Instant-Translate' '2.1'\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2013-02-09 18:30+0100\n"
-"PO-Revision-Date: 2013-02-02 17:00-0500\n"
+"PO-Revision-Date: 2013-02-22 22:18+0900\n"
 "Last-Translator: Takuya Nishimoto <nishimotz@gmail.com>\n"
 "Language-Team: Japanese <nvdajp@nvda.jp>\n"
 "Language: ja\n"
@@ -24,7 +24,7 @@ msgstr "インスタント翻訳の設定..."
 #. Translators: tooltip text for the menu item.
 #: addon/globalPlugins/instantTranslate/__init__.py:64
 msgid "Select languages to be used for translation."
-msgstr ""
+msgstr "翻訳したい言語を選択してください"
 
 #. Translators: message presented when user presses the shortcut key for translating clipboard text but the clipboard is empty.
 #: addon/globalPlugins/instantTranslate/__init__.py:81
@@ -32,11 +32,11 @@ msgid "There is no text on the clipboard"
 msgstr "クリップボードにテキストがありません"
 
 #: addon/globalPlugins/instantTranslate/__init__.py:89
-#, fuzzy, python-format
+#, python-format
 msgid ""
 "The clipboard contains a large portion of text. It is %s characters long. "
 "The limit is 350 characters."
-msgstr "クリップボードのテキストが長すぎます。 %s文字あります"
+msgstr "クリップボードのテキストが長すぎます。 %s文字あります。最大は350文字です。"
 
 #. Translators: message presented in input help mode, when user presses the shortcut keys for this addon.
 #: addon/globalPlugins/instantTranslate/__init__.py:91
@@ -51,11 +51,11 @@ msgid "no selection"
 msgstr "選択なし"
 
 #: addon/globalPlugins/instantTranslate/__init__.py:113
-#, fuzzy, python-format
+#, python-format
 msgid ""
 "The selection contains a large portion of text. It is %s characters long. "
 "The limit is 350 characters."
-msgstr "クリップボードのテキストが長すぎます。 %s文字あります"
+msgstr "クリップボードのテキストが長すぎます。 %s文字あります。最大は350文字です。"
 
 #. Translators: message presented in input help mode, when user presses the shortcut keys for this addon.
 #: addon/globalPlugins/instantTranslate/__init__.py:115
@@ -74,15 +74,13 @@ msgstr "インスタント翻訳の設定"
 
 #: addon/globalPlugins/instantTranslate/interface.py:26
 msgid "Select translation source and target language:"
-msgstr ""
+msgstr "翻訳元と翻訳先の言語の選択:"
 
 #: addon/globalPlugins/instantTranslate/interface.py:30
-#, fuzzy
 msgid "Source language:"
 msgstr "翻訳元の言語:"
 
 #: addon/globalPlugins/instantTranslate/interface.py:35
-#, fuzzy
 msgid "Target language:"
 msgstr "翻訳元の言語:"
 
@@ -153,7 +151,6 @@ msgstr "中国語(繁体字)"
 #. Add-on description
 #. TRANSLATORS: Summary for this add-on to be shown on installation and add-on informaiton.
 #: buildVars.py:13
-#, fuzzy
 msgid ""
 "Instant Translate - Translates given text using the Google Translate service."
 msgstr "インスタント翻訳 - 選択されたテキストの翻訳をGoogle翻訳で実行します"
@@ -166,25 +163,6 @@ msgid ""
 "service and presents it. Press NVDA+Shift+T to translate selected text. "
 "Press NVDA+Shift+Y to translate clipboard text."
 msgstr ""
-
-#~ msgid ""
-#~ "Select language from which you want to translate from and into and press "
-#~ "ok."
-#~ msgstr "翻訳元の言語と翻訳先の言語を選んで、OKを押してください"
-
-#~ msgid "Into Language:"
-#~ msgstr "翻訳先の言語:"
-
-#~ msgid ""
-#~ "This addon translates selected text via Google Translator and says it. "
-#~ "Press NVDA+Shift+T for execute translation operation on selected text in "
-#~ "Reech edit fields. This addon was been repacked and optimized for "
-#~ "executing without standalone Python by Outsider <outsidepro@rambler.ru>."
-#~ msgstr ""
-#~ "このアドオンはGoogle翻訳を使って選択されたテキストを翻訳して読み上げま"
-#~ "す。\n"
-#~ "エディットボックスの中でテキストを選択して NVDA+Shift+T を押すと実行しま"
-#~ "す。\n"
-#~ "このアドオンは Outsider <outsidepro@rambler.ru> が既存のプラグインを改良し"
-#~ "た\n"
-#~ "もので、スタンドアロンの Python 処理系を必要としません。"
+"このアドオンは選択されたテキストやクリップボードのテキストをGoogle翻訳で翻訳します。\n"
+"NVDA+Shift+Tを押すと選択範囲を翻訳します。\n"
+"NVDA+Shift+Yを押すとクリップボードのテキストを翻訳します。"
