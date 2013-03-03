@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: 'Instant-Translate' '1.0'\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2013-02-09 18:30+0100\n"
-"PO-Revision-Date: 2013-02-17 08:26+0400\n"
+"PO-Revision-Date: 2013-02-24 11:58+0400\n"
 "Last-Translator: nvda-russian-community <beqaprogger@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -82,7 +82,7 @@ msgstr "Настройки Instant Translate"
 
 #: addon/globalPlugins/instantTranslate/interface.py:26
 msgid "Select translation source and target language:"
-msgstr ""
+msgstr "Выберите исходный и целевой язык перевода:"
 
 #: addon/globalPlugins/instantTranslate/interface.py:30
 msgid "Source language:"
