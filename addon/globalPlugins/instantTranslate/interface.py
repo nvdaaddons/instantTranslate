@@ -25,15 +25,18 @@ class InstantTranslateSettingsDialog(gui.SettingsDialog):
 		super(InstantTranslateSettingsDialog, self).__init__(parent)
 
 	def makeSettings(self, sizer):
+		# Translators: Help message for a dialog.
 		helpLabel = wx.StaticText(self, label=_("Select translation source and target language:"))
 		helpLabel.Wrap(self.GetSize()[0])
 		sizer.Add(helpLabel)
 		fromSizer = wx.BoxSizer(wx.HORIZONTAL)
+		# Translators: A setting in instant translate settings dialog.
 		fromLabel = wx.StaticText(self, label=_("Source language:"))
 		fromSizer.Add(fromLabel)
 		self._fromChoice = wx.Choice(self, style=wx.CB_SORT, choices=langslist.keys())
 		fromSizer.Add(self._fromChoice)
 		intoSizer = wx.BoxSizer(wx.HORIZONTAL)
+		# Translators: A setting in instant translate settings dialog.
 		intoLabel = wx.StaticText(self, label=_("Target language:"))
 		intoSizer.Add(intoLabel)
 		self._intoChoice = wx.Choice(self, style=wx.CB_SORT, choices=langslist.keys())

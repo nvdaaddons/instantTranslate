@@ -16,21 +16,37 @@ def g(code):
 	return code
 
 needed_codes = {
+	# Translators: An option to automatically detect source language for translation.
 	"auto":_("Automatically detect language"),
+	# Translators: The name of a language supported by this add-on.
 	"ar":_("Arabic"),
+	# Translators: The name of a language supported by this add-on.
 	"bn":_("Bangla"),
+	# Translators: The name of a language supported by this add-on.
 	"cy":_("Welsh"),
+	# Translators: The name of a language supported by this add-on.
 	"eo":_("Esperanto"),
+	# Translators: The name of a language supported by this add-on.
 	"gu":_("Gujarati"),
+	# Translators: The name of a language supported by this add-on.
 	"ht":_("Creole Haiti"),
+	# Translators: The name of a language supported by this add-on.
 	"hy":_("Armenian"),
+	# Translators: The name of a language supported by this add-on.
 	"la":_("Latin"),
+	# Translators: The name of a language supported by this add-on.
 	"no":_(u'Norwegian'),
+	# Translators: The name of a language supported by this add-on.
 	"sr":_("Serbian (Latin)"),
+	# Translators: The name of a language supported by this add-on.
 	"sw":_("Swahili"),
+	# Translators: The name of a language supported by this add-on.
 	"tl":_("Tagalog"),
+	# Translators: The name of a language supported by this add-on.
 	"yi":_("Yiddish"),
+	# Translators: The name of a language supported by this add-on.
 	'zh-CN':_('Chinese (Simplified)'),
+	# Translators: The name of a language supported by this add-on.
 	"zh-TW":_("Chinese (Traditional)"),
 }
 

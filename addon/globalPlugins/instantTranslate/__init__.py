@@ -86,6 +86,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			lang_to = config["translation"]["into"]
 			threading.Thread(target=self.translate, args=(text,)).run()
 		else:
+			# Translators: Message presented when clipboard text (to be translated) is too long (more than a set limit).
 			ui.message(_("The clipboard contains a large portion of text. It is %s characters long. The limit is 350 characters.") % len(text))
 	# Translators: message presented in input help mode, when user presses the shortcut keys for this addon.
 	script_translateClipboardText.__doc__=_("Translates clipboard text from one language to another using Google Translate.")
@@ -110,6 +111,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				lang_to = config["translation"]["into"]
 				threading.Thread(target=self.translate, args=(info.text,)).run()
 			else:
+				# Translators: Message presented when selected text (to be translated) is too long (more than a set limit).
 				ui.message(_("The selection contains a large portion of text. It is %s characters long. The limit is 350 characters.") % len(info.text))
 	# Translators: message presented in input help mode, when user presses the shortcut keys for this addon.
 	script_translateSelection.__doc__=_("Translates selected text from one language to another using Google Translate.")
@@ -119,6 +121,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			response = json.load(self.opener.open('http://translate.google.ru/translate_a/t?client=x&text={text}&sl={lang_from}&tl={lang_to}'.format(text=urllib2.quote(text.encode('utf-8')), lang_from=lang_from, lang_to=lang_to)))
 		except:
 			log.exception("Can not translate text")
+			# Translators: Message presented when the given text (from selected or clipboard) cannot be translated.
 			queueHandler.queueFunction(queueHandler.eventQueue, ui.message, _('Error translating text. See log for details'))
 			return
 		translation = "".join(t['trans'] for t in response['sentences'])
