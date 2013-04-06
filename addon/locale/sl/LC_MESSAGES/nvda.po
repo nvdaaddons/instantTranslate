@@ -11,7 +11,7 @@ msgstr ""
 "PO-Revision-Date: 2013-03-12 16:59+0100\n"
 "Last-Translator: Jožef Gregorc <jozko.gregorc[@]guest.arnes.si\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"Language: sl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -30,6 +30,7 @@ msgstr "Izbere jezike, ki jih želite uporabljati pri prevodu."
 msgid "There is no text on the clipboard"
 msgstr "V odložišču ni besedila"
 
+#. Translators: Message presented when clipboard text (to be translated) is too long (more than a set limit).
 #, python-format
 msgid ""
 "The clipboard contains a large portion of text. It is %s characters long. "
@@ -50,6 +51,7 @@ msgstr ""
 msgid "no selection"
 msgstr "brez izbora"
 
+#. Translators: Message presented when selected text (to be translated) is too long (more than a set limit).
 #, python-format
 msgid ""
 "The selection contains a large portion of text. It is %s characters long. "
@@ -65,6 +67,7 @@ msgstr ""
 "Prevede označeno besedilo iz enega jezika v drugega. Pri tem uporablja "
 "Google Prevajalnik."
 
+#. Translators: Message presented when the given text (from selected or clipboard) cannot be translated.
 msgid "Error translating text. See log for details"
 msgstr "Napaka pri prevodu besedila. Glejte dnevnik za podrobnosti"
 
@@ -72,60 +75,79 @@ msgstr "Napaka pri prevodu besedila. Glejte dnevnik za podrobnosti"
 msgid "Instant Translate Settings"
 msgstr "Nastavitve Hitro Prevedi"
 
+#. Translators: Help message for a dialog.
 msgid "Select translation source and target language:"
 msgstr "Izberi vir prevoda in ciljni jezik:"
 
+#. Translators: A setting in instant translate settings dialog.
 msgid "Source language:"
 msgstr "Jezik izvora:"
 
+#. Translators: A setting in instant translate settings dialog.
 msgid "Target language:"
 msgstr "Ciljni jezik:"
 
+#. Translators: An option to automatically detect source language for translation.
 msgid "Automatically detect language"
 msgstr "Samodejno zaznaj jezik"
 
+#. Translators: The name of a language supported by this add-on.
 msgid "Arabic"
 msgstr "Arabščina"
 
+#. Translators: The name of a language supported by this add-on.
 msgid "Bangla"
 msgstr "Bengalščina"
 
+#. Translators: The name of a language supported by this add-on.
 msgid "Welsh"
 msgstr "Valižanščina"
 
+#. Translators: The name of a language supported by this add-on.
 msgid "Esperanto"
 msgstr "Esperanto"
 
+#. Translators: The name of a language supported by this add-on.
 msgid "Gujarati"
 msgstr "Gujaratščina"
 
+#. Translators: The name of a language supported by this add-on.
 msgid "Creole Haiti"
 msgstr "Kreolščina (Haiti)"
 
+#. Translators: The name of a language supported by this add-on.
 msgid "Armenian"
 msgstr "Armenščina"
 
+#. Translators: The name of a language supported by this add-on.
 msgid "Latin"
 msgstr "Latinščina"
 
+#. Translators: The name of a language supported by this add-on.
 msgid "Norwegian"
 msgstr "Norveščina"
 
+#. Translators: The name of a language supported by this add-on.
 msgid "Serbian (Latin)"
 msgstr "Srbščina (Latinica)"
 
+#. Translators: The name of a language supported by this add-on.
 msgid "Swahili"
 msgstr "Swahili"
 
+#. Translators: The name of a language supported by this add-on.
 msgid "Tagalog"
 msgstr "Tagalogščina (Filipini)"
 
+#. Translators: The name of a language supported by this add-on.
 msgid "Yiddish"
 msgstr "Jidiščina"
 
+#. Translators: The name of a language supported by this add-on.
 msgid "Chinese (Simplified)"
 msgstr "Kitajščina (Poenostavljena)"
 
+#. Translators: The name of a language supported by this add-on.
 msgid "Chinese (Traditional)"
 msgstr "Kitajščina (Tradicionalna)"
 

@@ -20,6 +20,6 @@ There are two ways of using this add-on:
 2. Copy some text to clipboard. Then press Shift+NvDA+Y to translate the text in the clipboard to the target language.
 
 ## Changes for 2.2 ##
-* New languages: Finnish, French, Galician, German, Hungarian, Italian, Korean, Slovak, Spanish, Tamil, Turkish.
+* New languages: Aragonese, Arabic, Brazilian Portuguese, Croatian, Dutch, Finnish, French, Galician, German, Hungarian, Italian, Japanese, Korean, Nepali, Polish, Slovak, Slovenian, Spanish, Tamil, Turkish.
 
 [1]: http://addons.nvda-project.org/files/instantTranslate-2.2beta1.nvda-addon
