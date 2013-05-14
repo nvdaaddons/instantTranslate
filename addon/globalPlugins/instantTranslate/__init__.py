@@ -33,12 +33,12 @@ import addonHandler
 addonHandler.initTranslation()
 
 config_file = os.path.join(os.path.abspath(os.path.dirname(__file__)), 'instantTranslate.ini')
+charslimit=1500
 lo_lang = getdefaultlocale () # get a language of the OS localization.
 s = lo_lang[0] # get the first element of the tuplet.
 lo_lang = s[0:s.find("_")] # get the default language which is translated into.
 
 if not os.path.isfile(config_file):
-	
 	config = ConfigObj()
 	config.filename = config_file
 	config ["translation"] = {"from": "auto", "into": lo_lang}
@@ -80,14 +80,14 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			# Translators: message presented when user presses the shortcut key for translating clipboard text but the clipboard is empty.
 			ui.message(_("There is no text on the clipboard"))
 			return
-		if len(text) < 351: 
+		if len(text) < (charslimit): 
 			config = ConfigObj(config_file)
 			lang_from = config["translation"]["from"]
 			lang_to = config["translation"]["into"]
 			threading.Thread(target=self.translate, args=(text,)).run()
 		else:
 			# Translators: Message presented when clipboard text (to be translated) is too long (more than a set limit).
-			ui.message(_("The clipboard contains a large portion of text. It is %s characters long. The limit is 350 characters.") % len(text))
+			ui.message(_("The clipboard contains a large portion of text. It is %s characters long. The limit is 1500 characters.") % len(text))
 	# Translators: message presented in input help mode, when user presses the shortcut keys for this addon.
 	script_translateClipboardText.__doc__=_("Translates clipboard text from one language to another using Google Translate.")
 
@@ -105,14 +105,14 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			# Translators: user has pressed the shortcut key for translating selected text, but no text was actually selected.
 			ui.message(_("no selection"))
 		else:
-			if len(info.text) < 351: 
+			if len(info.text) < (charslimit): 
 				config = ConfigObj(config_file)
 				lang_from = config["translation"]["from"]
 				lang_to = config["translation"]["into"]
 				threading.Thread(target=self.translate, args=(info.text,)).run()
 			else:
 				# Translators: Message presented when selected text (to be translated) is too long (more than a set limit).
-				ui.message(_("The selection contains a large portion of text. It is %s characters long. The limit is 350 characters.") % len(info.text))
+				ui.message(_("The selection contains a large portion of text. It is %s characters long. The limit is 1500 characters.") % len(info.text))
 	# Translators: message presented in input help mode, when user presses the shortcut keys for this addon.
 	script_translateSelection.__doc__=_("Translates selected text from one language to another using Google Translate.")
 
