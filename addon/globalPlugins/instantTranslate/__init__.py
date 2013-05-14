@@ -39,9 +39,11 @@ s = lo_lang[0] # get the first element of the tuplet.
 lo_lang = s[0:s.find("_")] # get the default language which is translated into.
 
 if not os.path.isfile(config_file):
+	
 	config = ConfigObj()
 	config.filename = config_file
 	config ["translation"] = {"from": "auto", "into": lo_lang}
+	config ["settings"] = {"CopyTranslatedText": "true"}
 	config.write()
 
 
@@ -71,7 +73,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			pass
 
 	def script_translateClipboardText(self,gesture):
-		global lang_from, lang_to
+		global lang_from, lang_to, copyTranslation
 		try:
 			text = api.getClipData()
 		except:
@@ -84,6 +86,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			config = ConfigObj(config_file)
 			lang_from = config["translation"]["from"]
 			lang_to = config["translation"]["into"]
+			copyTranslation = config["settings"]["CopyTranslatedText"]
 			threading.Thread(target=self.translate, args=(text,)).run()
 		else:
 			# Translators: Message presented when clipboard text (to be translated) is too long (more than a set limit).
@@ -92,7 +95,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	script_translateClipboardText.__doc__=_("Translates clipboard text from one language to another using Google Translate.")
 
 	def script_translateSelection(self, gesture):
-		global lang_from, lang_to
+		global lang_from, lang_to, copyTranslation
 		obj=api.getFocusObject()
 		treeInterceptor=obj.treeInterceptor
 		if hasattr(treeInterceptor,'TextInfo') and not treeInterceptor.passThrough:
@@ -109,6 +112,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				config = ConfigObj(config_file)
 				lang_from = config["translation"]["from"]
 				lang_to = config["translation"]["into"]
+				copyTranslation = config["settings"]["CopyTranslatedText"]
 				threading.Thread(target=self.translate, args=(info.text,)).run()
 			else:
 				# Translators: Message presented when selected text (to be translated) is too long (more than a set limit).
@@ -128,7 +132,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		if 'dict' in response:
 			translation += " | " + " | ".join((", ".join(w for w in d['terms'])) for d in response['dict'])
 		queueHandler.queueFunction(queueHandler.eventQueue, ui.message, translation)
-		api.copyToClip(translation)
+		if copyTranslation == "true":
+			api.copyToClip(translation)
 
 	__gestures = {
 		"kb:NVDA+shift+t": "translateSelection",

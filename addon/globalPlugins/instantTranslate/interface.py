@@ -43,6 +43,15 @@ class InstantTranslateSettingsDialog(gui.SettingsDialog):
 		intoSizer.Add(self._intoChoice)
 		sizer.Add(fromSizer)
 		sizer.Add(intoSizer)
+		config = ConfigObj(config_file)
+		CopyStateValue = 0
+		if config["settings"]["CopyTranslatedText"] == "true":
+			CopyStateValue = 1
+		else:
+			CopyStateValue = 0
+		self.copyTranslationChk = wx.CheckBox(self, label=_("Copy translation result to clipboard"))
+		self.copyTranslationChk.SetValue(CopyStateValue)
+		sizer.Add(self.copyTranslationChk)
 
 	def postInit(self):
 		config = ConfigObj(config_file)
@@ -60,6 +69,10 @@ class InstantTranslateSettingsDialog(gui.SettingsDialog):
 		config = ConfigObj(config_file)
 		config["translation"]["from"] = langslist[self._fromChoice.GetStringSelection()]
 		config["translation"]["into"] = langslist[self._intoChoice.GetStringSelection()]
+		if self.copyTranslationChk.GetValue() == 1:
+			config["settings"]["CopyTranslatedText"] = "true"
+		else:
+			config["settings"]["CopyTranslatedText"] = "false"
 		config.write()
 
 	def getDictKey (self, currentValue):
