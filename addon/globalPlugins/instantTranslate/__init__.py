@@ -59,7 +59,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		self.prefsMenu = gui.mainFrame.sysTrayIcon.menu.GetMenuItems()[0].GetSubMenu()
 		self.instantTranslateSettingsItem = self.prefsMenu.Append(wx.ID_ANY, 
 			# Translators: name of the option in the menu.
-			_("Instant Translate Settings..."),
+			_("Instant &Translate Settings..."),
 			# Translators: tooltip text for the menu item.
 			_("Select languages to be used for translation."))
 		gui.mainFrame.sysTrayIcon.Bind(wx.EVT_MENU , lambda e : gui.mainFrame._popupSettingsDialog(InstantTranslateSettingsDialog), self.instantTranslateSettingsItem)
