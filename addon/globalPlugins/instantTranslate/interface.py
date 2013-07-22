@@ -10,12 +10,13 @@ import os.path
 import wx
 import gui
 from langslist import langslist
+import globalVars
 import config
 from configobj import *
 import addonHandler
 addonHandler.initTranslation()
 
-config_file = os.path.join(config.getUserDefaultConfigPath(),"instantTranslate.ini")
+config_file = os.path.join(globalVars.appArgs.configPath,"instantTranslate.ini")
 
 class InstantTranslateSettingsDialog(gui.SettingsDialog):
 	# Translators: name of the dialog.
