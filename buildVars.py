@@ -19,7 +19,7 @@ addon_info = {
 	# Author(s)
 	"addon-author" : "Alexy Sadovoy aka Lex <lex@progger.su>, ruslan <ru2020slan@yandex.ru>, beqa <beqaprogger@gmail.com> and other nvda contributors",
 	# URL for the add-on documentation support
-	"addon-url" : None
+	"addon-url" : "http://addons.nvda-project.org/"
 }
 
 import os.path
