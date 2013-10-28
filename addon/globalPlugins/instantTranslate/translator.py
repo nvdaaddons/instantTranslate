@@ -1,0 +1,75 @@
+# encoding: utf-8
+#
+# Copyright (C) 2013 Mesar Hameed <mhameed@src.gnome.org>
+# This file is covered by the GNU General Public License.
+# See the file COPYING for more details.
+
+import os
+import re
+import sys
+import threading
+from time import sleep
+from random import randint
+
+impPath = os.path.abspath(os.path.dirname(__file__))
+sys.path.append(impPath)
+import json
+import urllib2
+del sys.path[-1]
+
+# Each group has to be a class of possible breaking points for the writing script.
+# Usually this is the major syntax marks, such as:
+# full stop, comma, exclaim, question, etc.
+arabicBreaks = u'[،؛؟]'
+# Thanks to Talori in the NVDA irc room:
+# U+3000 to U+303F, U+FE10 to U+FE1F, U+FE30 to U+FE6F, U+FF01 to U+FF60
+chineseBreaks = u'[　-〿︐-︟︰-﹯！-｠]'
+latinBreaks = r'[.,!?;:]'
+splitReg = re.compile(u"{arabic}|{chinese}|{latin}".format(arabic=arabicBreaks, chinese=chineseBreaks, latin=latinBreaks))
+
+def splitChunks(text, chunksize):
+	pos = 0
+	potentialPos = 0
+	for splitMark in splitReg.finditer(text):
+		if (splitMark.start() - pos +1) < chunksize:
+			potentialPos = splitMark.start()
+			continue
+		else:
+			yield text[pos:potentialPos+1]
+			pos = potentialPos + 1
+			potentialPos = splitMark.start()
+	yield text[pos:]
+
+class Translator(threading.Thread):
+
+	def __init__(self, lang_from, lang_to, text, chunksize=1500, *args, **kwargs):
+		super(Translator, self).__init__(*args, **kwargs)
+		self._stop = threading.Event()
+		self.text = text
+		self.chunksize = chunksize
+		self.lang_to = lang_to
+		self.lang_from = lang_from
+		self.translation = ''
+		self.opener = urllib2.build_opener()
+		self.opener.addheaders = [('User-agent', 'Mozilla/5.0')]
+
+	def stop(self):
+		self._stop.set()
+
+	def run(self):
+		urlTemplate = 'http://translate.google.ru/translate_a/t?client=x&text={text}&sl={lang_from}&tl={lang_to}'
+		for chunk in splitChunks(self.text, self.chunksize):
+			# Make sure we don't send requests to google too often.
+			# Try to simulate a human.
+			sleep(randint(10, 40))
+			url = urlTemplate.format(text=urllib2.quote(chunk.encode('utf-8')), lang_from=self.lang_from, lang_to=self.lang_to)
+			try:
+				response = json.load(self.opener.open(url))
+			except Exception as e:
+				log.exception("Instant translate: Can not translate text '%s'" %chunk)
+				# We have probably been blocked, so stop trying to translate.
+				raise e
+			self.translation = "".join(t['trans'] for t in response['sentences'])
+			if 'dict' in response:
+				self.translation += " | " + " | ".join((", ".join(w for w in d['terms'])) for d in response['dict'])
+
