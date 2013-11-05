@@ -99,9 +99,14 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		copyTranslation = config["settings"]["CopyTranslatedText"]
 		myTranslator = Translator(lang_from, lang_to, text)
 		myTranslator.start()
+		i=0
 		while  myTranslator.isAlive():
-			sleep(0.5)
-			beep(500, 100)
+			sleep(0.1)
+			i+=1
+			if i == 10:
+				beep(500, 100)
+				i = 0
+            yield
 		myTranslator.join()
 		queueHandler.queueFunction(queueHandler.eventQueue, ui.message, myTranslator.translation)
 		if copyTranslation == "true":

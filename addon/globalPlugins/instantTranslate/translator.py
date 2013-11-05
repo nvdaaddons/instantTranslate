@@ -10,6 +10,7 @@ import sys
 import threading
 from time import sleep
 from random import randint
+from logHandler import log
 
 impPath = os.path.abspath(os.path.dirname(__file__))
 sys.path.append(impPath)
@@ -69,7 +70,7 @@ class Translator(threading.Thread):
 				log.exception("Instant translate: Can not translate text '%s'" %chunk)
 				# We have probably been blocked, so stop trying to translate.
 				raise e
-			self.translation = "".join(t['trans'] for t in response['sentences'])
+			self.translation += "".join(t['trans'] for t in response['sentences'])
 			if 'dict' in response:
 				self.translation += " | " + " | ".join((", ".join(w for w in d['terms'])) for d in response['dict'])
 
