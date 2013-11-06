@@ -134,8 +134,15 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		queueHandler.queueFunction(queueHandler.eventQueue, ui.message, translation)
 		if copyTranslation == "true":
 			api.copyToClip(translation)
-
+	def script_swapLanguages(script,gesture):
+		config = ConfigObj(config_file)
+		temp=config["translation"]["from"]
+		config["translation"]["from"]=config["translation"]["into"]
+		config["translation"]["into"]=temp
+		config.write()
+		ui.message(_("Languages swapped."))
 	__gestures = {
+"kb:NVDA+shift+r": "swapLanguages",
 		"kb:NVDA+shift+t": "translateSelection",
 "kb:NVDA+shift+y": "translateClipboardText",
 	}
