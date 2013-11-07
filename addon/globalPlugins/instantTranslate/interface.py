@@ -34,7 +34,8 @@ class InstantTranslateSettingsDialog(gui.SettingsDialog):
 		# Translators: A setting in instant translate settings dialog.
 		fromLabel = wx.StaticText(self, label=_("Source language:"))
 		fromSizer.Add(fromLabel)
-		self._fromChoice = wx.Choice(self, style=wx.CB_SORT, choices=langslist.keys())
+		temp=self.prepareChoices()
+		self._fromChoice = wx.Choice(self, choices=temp)
 		fromSizer.Add(self._fromChoice)
 		intoSizer = wx.BoxSizer(wx.HORIZONTAL)
 		# Translators: A setting in instant translate settings dialog.
@@ -58,11 +59,20 @@ class InstantTranslateSettingsDialog(gui.SettingsDialog):
 		config = ConfigObj(config_file)
 		iLang_from = self._fromChoice.FindString(self.getDictKey(config["translation"]["from"]))
 		iLang_to = self._intoChoice.FindString(self.getDictKey(config["translation"]["into"]))
-
 		self._fromChoice.Select(iLang_from)
 		self._intoChoice.Select(iLang_to)
 		self._fromChoice.SetFocus()
 
+	def prepareChoices(self):
+		import langslist as lngModule
+		keys=langslist.keys()
+		auto=lngModule.g(lngModule.langcodes[0])
+		keys.remove(auto)
+		keys.sort()
+		choices=[]
+		choices.append(auto)
+		choices.extend(keys)
+		return choices
 
 	def onOk(self, event):
 		super(InstantTranslateSettingsDialog, self).onOk(event)
