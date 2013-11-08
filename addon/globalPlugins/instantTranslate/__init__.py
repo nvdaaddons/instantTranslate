@@ -49,6 +49,8 @@ if not os.path.isfile(config_file):
 
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
+	scriptCategory = "InstantTranslate"
+
 	def __init__(self, *args, **kwargs):
 		super(GlobalPlugin, self).__init__(*args, **kwargs)
 		self.opener = urllib2.build_opener()
@@ -120,6 +122,15 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	# Translators: message presented in input help mode, when user presses the shortcut keys for this addon.
 	script_translateSelection.__doc__=_("Translates selected text from one language to another using Google Translate.")
 
+	def script_swapLanguages(script,gesture):
+		config = ConfigObj(config_file)
+		temp=config["translation"]["from"]
+		config["translation"]["from"]=config["translation"]["into"]
+		config["translation"]["into"]=temp
+		config.write()
+		ui.message(_("Languages swapped."))
+	script_swapLanguages.__doc__=_("Swaps the languages.")
+
 	def translate(self, text):
 		try:
 			response = json.load(self.opener.open('http://translate.google.ru/translate_a/t?client=x&text={text}&sl={lang_from}&tl={lang_to}'.format(text=urllib2.quote(text.encode('utf-8')), lang_from=lang_from, lang_to=lang_to)))
@@ -134,14 +145,9 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		queueHandler.queueFunction(queueHandler.eventQueue, ui.message, translation)
 		if copyTranslation == "true":
 			api.copyToClip(translation)
-	def script_swapLanguages(script,gesture):
-		config = ConfigObj(config_file)
-		temp=config["translation"]["from"]
-		config["translation"]["from"]=config["translation"]["into"]
-		config["translation"]["into"]=temp
-		config.write()
-		ui.message(_("Languages swapped."))
-	__gestures = {
+
+
+		__gestures = {
 "kb:NVDA+shift+r": "swapLanguages",
 		"kb:NVDA+shift+t": "translateSelection",
 "kb:NVDA+shift+y": "translateClipboardText",
