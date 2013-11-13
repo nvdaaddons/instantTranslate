@@ -2,6 +2,7 @@
 
 * authors: Alexy Sadovoy, ruslan, Beqa Gozalishvili and other nvda contributors.
 * download [version 2.2beta2][1]
+* download [version 2.3-dev][2]
 
 This add-on is used to translate selected and/or clipboard text from one language to another.
 This is done using the Google Translate service.
@@ -39,3 +40,4 @@ There are two ways of using this add-on:
 * Initial version.
 
 [1]: http://addons.nvda-project.org/files/get.php?file=it
+[2]: http://addons.nvda-project.org/files/get.php?file=it-dev
