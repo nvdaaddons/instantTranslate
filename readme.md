@@ -2,7 +2,7 @@
 
 * Authors: Alexy Sadovoy, Beqa Gozalishvili, Mesar Hameed, Alberto Buffolino and other nvda contributors.
 * Download [version 2.2beta2][1]
-* Download [version 2.3-dev][2]
+* Download [version 3.0-dev][2]
 
 This add-on is used to translate selected and/or clipboard text from one language to another.
 This is done using the Google Translate service.
@@ -24,11 +24,9 @@ There are two ways of using this add-on:
 ## Other useful commands ##
 * NVDA+shift+r: pressed once, announce current configuration; pressed twice, swap source and target languages.
 
-## Changes for 3.1 ##
-* Implemented all swapping functions.
-* Changed configuration format, for code style reasons.
-
 ## Changes for 3.0 ##
+* Implemented swapping languages.
+* Changed configuration format, for code style reasons.
 * Removed limit on amount of text that can be translated.
 * Added shortcut t to the Instant Translate Settings menu item
 * The auto option is now in first position in source combo, and absent in target combo.

@@ -43,6 +43,8 @@ if not os.path.isfile(config_file):
 
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
+	scriptCategory="InstantTranslate"
+
 	def __init__(self, *args, **kwargs):
 		super(GlobalPlugin, self).__init__(*args, **kwargs)
 		if globalVars.appArgs.secure:
