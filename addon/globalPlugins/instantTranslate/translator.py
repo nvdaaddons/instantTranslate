@@ -43,16 +43,18 @@ def splitChunks(text, chunksize):
 
 class Translator(threading.Thread):
 
-	def __init__(self, lang_from, lang_to, text, chunksize=1300, *args, **kwargs):
+	def __init__(self, lang_from, lang_to, text, lang_swap=None, chunksize=1300, *args, **kwargs):
 		super(Translator, self).__init__(*args, **kwargs)
 		self._stop = threading.Event()
 		self.text = text
 		self.chunksize = chunksize
 		self.lang_to = lang_to
 		self.lang_from = lang_from
+		self.lang_swap = lang_swap
 		self.translation = ''
 		self.opener = urllib2.build_opener()
 		self.opener.addheaders = [('User-agent', 'Mozilla/5.0')]
+		self.firstChunk = True
 
 	def stop(self):
 		self._stop.set()
@@ -66,6 +68,11 @@ class Translator(threading.Thread):
 			url = urlTemplate.format(text=urllib2.quote(chunk.encode('utf-8')), lang_from=self.lang_from, lang_to=self.lang_to)
 			try:
 				response = json.load(self.opener.open(url))
+				if self.firstChunk and self.lang_from == "auto" and response["src"] == self.lang_to and self.lang_swap is not None:
+					self.lang_to = self.lang_swap
+					self.firstChunk = False
+					self.run()
+					return
 			except Exception as e:
 				log.exception("Instant translate: Can not translate text '%s'" %chunk)
 				# We have probably been blocked, so stop trying to translate.
@@ -73,4 +80,3 @@ class Translator(threading.Thread):
 			self.translation += "".join(t['trans'] for t in response['sentences'])
 			if 'dict' in response:
 				self.translation += " | " + " | ".join((", ".join(w for w in d['terms'])) for d in response['dict'])
-

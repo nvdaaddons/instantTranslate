@@ -5,171 +5,186 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: 'Instant-Translate' '2.1'\n"
-"Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
-"POT-Creation-Date: 2013-02-09 18:30+0100\n"
-"PO-Revision-Date: 2013-03-05 12:11+0100\n"
-"Last-Translator: Simone Dal Maso <simone.dalmaso@juvox.it>\n"
-"Language-Team: Simone Dal Maso <simone.dalmaso@juvox.it>\n"
-"Language: it\n"
+"Project-Id-Version: 'Instant-Translate' '3.1'\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-11-17 17:00+0100\n"
+"PO-Revision-Date: 2013-11-17 17:03+0100\n"
+"Last-Translator: Alberto Buffolino <a.buffolino@gmail.com>\n"
+"Language-Team: Alberto Buffolino <a.buffolino@gmail.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: it\n"
 "X-Generator: Poedit 1.5.5\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-Language: Italian\n"
+"X-Poedit-Country: ITALY\n"
+"X-Poedit-SearchPath-0: ..\\..\\..\\globalPlugins\n"
+"X-Poedit-SearchPath-1: ..\\..\\..\\..\n"
 
-#. Translators: name of the option in the menu.
-msgid "Instant Translate Settings..."
-msgstr "Impostazioni di Instant Translate..."
-
-#. Translators: tooltip text for the menu item.
-msgid "Select languages to be used for translation."
-msgstr "Selezionare la lingua da utilizzare per la traduzione"
-
-#. Translators: message presented when user presses the shortcut key for translating clipboard text but the clipboard is empty.
-msgid "There is no text on the clipboard"
-msgstr "Non è presente testo negli appunti."
-
-#. Translators: Message presented when clipboard text (to be translated) is too long (more than a set limit).
-#, python-format
-msgid ""
-"The clipboard contains a large portion of text. It is %s characters long. "
-"The limit is 350 characters."
-msgstr ""
-"Gli appunti contengono una grande porzione di testo. Si tratta di %s "
-"caratteri. Il limite è di 350 caratteri."
-
-#. Translators: message presented in input help mode, when user presses the shortcut keys for this addon.
-msgid ""
-"Translates clipboard text from one language to another using Google "
-"Translate."
-msgstr ""
-"Traduce il testo presente negli appunti da una lingua ad un'altra tramite "
-"Google Translate"
-
-#. Translators: user has pressed the shortcut key for translating selected text, but no text was actually selected.
-msgid "no selection"
-msgstr "Nessuna selezione"
-
-#. Translators: Message presented when selected text (to be translated) is too long (more than a set limit).
-#, python-format
-msgid ""
-"The selection contains a large portion of text. It is %s characters long. "
-"The limit is 350 characters."
-msgstr ""
-"La selezione contiene una grande quantità di testo. Il totale ammonta a %s "
-"caratteri"
-
-#. Translators: message presented in input help mode, when user presses the shortcut keys for this addon.
-msgid ""
-"Translates selected text from one language to another using Google Translate."
-msgstr ""
-"Traduce il testo selezionato da una lingua ad un'altra tramite Google "
-"Translate"
-
-#. Translators: Message presented when the given text (from selected or clipboard) cannot be translated.
-msgid "Error translating text. See log for details"
-msgstr ""
-"Errore nella traduzione del testo. Vedere il log per ulteriori informazioni"
-
-#. Translators: name of the dialog.
+#: ..\..\..\globalPlugins/instantTranslate/interface.py:24
 msgid "Instant Translate Settings"
 msgstr "Impostazioni di Instant Translate"
 
-#. Translators: Help message for a dialog.
+#: ..\..\..\globalPlugins/instantTranslate/interface.py:31
 msgid "Select translation source and target language:"
-msgstr "Selezionare la sorgente di traduzione e la lingua di destinazione:"
+msgstr "Selezionare la lingua di origine e quella di destinazione per la traduzione:"
 
-#. Translators: A setting in instant translate settings dialog.
+#: ..\..\..\globalPlugins/instantTranslate/interface.py:36
 msgid "Source language:"
 msgstr "Lingua di origine:"
 
-#. Translators: A setting in instant translate settings dialog.
+#: ..\..\..\globalPlugins/instantTranslate/interface.py:44
 msgid "Target language:"
-msgstr "Lingua desiderata:"
+msgstr "Lingua di destinazione:"
 
-#. Translators: An option to automatically detect source language for translation.
+#: ..\..\..\globalPlugins/instantTranslate/interface.py:59
+msgid "Copy translation result to clipboard"
+msgstr "Copia il risultato della traduzione negli appunti"
+
+#: ..\..\..\globalPlugins/instantTranslate/interface.py:64
+msgid "Language for swapping:"
+msgstr "Lingua per lo scambio:"
+
+#: ..\..\..\globalPlugins/instantTranslate/interface.py:71
+msgid "Activate the auto-swap if recognized source is equal to the target (experimental)"
+msgstr "Attiva lo scambio automatico se la lingua d'origine rilevata è uguale a quella di destinazione (sperimentale)"
+
+#: ..\..\..\globalPlugins/instantTranslate/langslist.py:23
 msgid "Automatically detect language"
 msgstr "Rileva lingua automaticamente"
 
-#. Translators: The name of a language supported by this add-on.
+#: ..\..\..\globalPlugins/instantTranslate/langslist.py:25
 msgid "Arabic"
-msgstr "Araba"
+msgstr "Arabo"
 
-#. Translators: The name of a language supported by this add-on.
+#: ..\..\..\globalPlugins/instantTranslate/langslist.py:27
 msgid "Bangla"
 msgstr "Bangla"
 
-#. Translators: The name of a language supported by this add-on.
+#: ..\..\..\globalPlugins/instantTranslate/langslist.py:29
 msgid "Welsh"
 msgstr "Gallese"
 
-#. Translators: The name of a language supported by this add-on.
+#: ..\..\..\globalPlugins/instantTranslate/langslist.py:31
 msgid "Esperanto"
 msgstr "Esperanto"
 
-#. Translators: The name of a language supported by this add-on.
+#: ..\..\..\globalPlugins/instantTranslate/langslist.py:33
 msgid "Gujarati"
 msgstr "Gujarati"
 
-#. Translators: The name of a language supported by this add-on.
+#: ..\..\..\globalPlugins/instantTranslate/langslist.py:35
 msgid "Creole Haiti"
 msgstr "Creole Haiti"
 
-#. Translators: The name of a language supported by this add-on.
+#: ..\..\..\globalPlugins/instantTranslate/langslist.py:37
 msgid "Armenian"
-msgstr "Armena"
+msgstr "Armeno"
 
-#. Translators: The name of a language supported by this add-on.
+#: ..\..\..\globalPlugins/instantTranslate/langslist.py:39
 msgid "Latin"
-msgstr "Latina"
+msgstr "Latino"
 
-#. Translators: The name of a language supported by this add-on.
+#: ..\..\..\globalPlugins/instantTranslate/langslist.py:41
 msgid "Norwegian"
 msgstr "Norvegese"
 
-#. Translators: The name of a language supported by this add-on.
+#: ..\..\..\globalPlugins/instantTranslate/langslist.py:43
 msgid "Serbian (Latin)"
-msgstr "Serba"
+msgstr "Serbo"
 
-#. Translators: The name of a language supported by this add-on.
+#: ..\..\..\globalPlugins/instantTranslate/langslist.py:45
 msgid "Swahili"
 msgstr "Swahili"
 
-#. Translators: The name of a language supported by this add-on.
+#: ..\..\..\globalPlugins/instantTranslate/langslist.py:47
 msgid "Tagalog"
 msgstr "Tagalog"
 
-#. Translators: The name of a language supported by this add-on.
+#: ..\..\..\globalPlugins/instantTranslate/langslist.py:49
 msgid "Yiddish"
 msgstr "Yiddish"
 
-#. Translators: The name of a language supported by this add-on.
+#: ..\..\..\globalPlugins/instantTranslate/langslist.py:51
 msgid "Chinese (Simplified)"
 msgstr "Cinese (semplificato)"
 
-#. Translators: The name of a language supported by this add-on.
+#: ..\..\..\globalPlugins/instantTranslate/langslist.py:53
 msgid "Chinese (Traditional)"
 msgstr "Cinese (tradizionale)"
 
-#. Add-on description
-#. TRANSLATORS: Summary for this add-on to be shown on installation and add-on informaiton.
-msgid ""
-"Instant Translate - Translates given text using the Google Translate service."
-msgstr ""
-"Instant Translate - Traduce il testo selezionato tramite il servizio Google "
-"Translate."
+#: ..\..\..\globalPlugins/instantTranslate/__init__.py:77
+msgid "Instant &Translate Settings..."
+msgstr "Instant &Translate Impostazioni..."
 
-#. Add-on description
-#. Translators: Long description to be shown for this add-on on installation and add-on information
-msgid ""
-"This addon translates selected or clipboard text using the Google Translate "
-"service and presents it. Press NVDA+Shift+T to translate selected text. "
-"Press NVDA+Shift+Y to translate clipboard text."
-msgstr ""
-"Questo componente aggiuntivo traduce il testo selezionato o presente negli "
-"Appunti utilizzando il servizio Google Translate e lo annuncia. ;Premere "
-"NVDA + Shift + T per tradurre il testo selezionato. ;Premere NVDA + Shift + "
-"Y per tradurre il testo negli appunti."
+#: ..\..\..\globalPlugins/instantTranslate/__init__.py:79
+msgid "Select languages to be used for translation."
+msgstr "Selezionare le lingue da utilizzare per la traduzione"
+
+#: ..\..\..\globalPlugins/instantTranslate/__init__.py:95
+msgid "There is no text on the clipboard"
+msgstr "Non è presente testo negli appunti."
+
+#: ..\..\..\globalPlugins/instantTranslate/__init__.py:99
+msgid "Translates clipboard text from one language to another using Google Translate."
+msgstr "Traduce il testo presente negli appunti da una lingua ad un'altra tramite Google Translate"
+
+#: ..\..\..\globalPlugins/instantTranslate/__init__.py:112
+msgid "no selection"
+msgstr "Nessuna selezione"
+
+#: ..\..\..\globalPlugins/instantTranslate/__init__.py:116
+msgid "Translates selected text from one language to another using Google Translate."
+msgstr "Traduce il testo selezionato da una lingua ad un'altra tramite Google Translate"
+
+#: ..\..\..\globalPlugins/instantTranslate/__init__.py:125
+msgid "Translating..."
+msgstr "Traduzione in corso..."
+
+#: ..\..\..\globalPlugins/instantTranslate/__init__.py:162
+msgid "Languages swapped"
+msgstr "Lingue scambiate"
+
+#: ..\..\..\globalPlugins/instantTranslate/__init__.py:164
+msgid "Translate: from {lang1} to {lang2}"
+msgstr "Traduci: da {lang1} a {lang2}"
+
+#: ..\..\..\../buildVars.py:13
+msgid "Instant Translate - Translates given text using the Google Translate service."
+msgstr "Instant Translate - Traduce il testo selezionato tramite il servizio Google Translate."
+
+#: ..\..\..\../buildVars.py:16
+msgid "This addon translates selected or clipboard text using the Google Translate service and presents it. Press NVDA+Shift+T to translate selected text. Press NVDA+Shift+Y to translate clipboard text."
+msgstr "Questo componente aggiuntivo traduce il testo selezionato o presente negli Appunti utilizzando il servizio Google Translate e lo annuncia. ;Premere NVDA + Shift + T per tradurre il testo selezionato. ;Premere NVDA + Shift + Y per tradurre il testo negli appunti."
+
+#: ..\..\..\../addon/installTasks.py:25
+msgid "You have installed an old and incompatible version of this addon. Do you want to uninstall the old version?"
+msgstr "Hai installato una versione vecchia e incompatibile di questo componente aggiuntivo. Vuoi disinstallarla?"
+
+#: ..\..\..\../addon/installTasks.py:27
+msgid "Uninstall incompatible add-on"
+msgstr "Disinstalla componente aggiuntivo incompatibile"
+
+#~ msgid ""
+#~ "The clipboard contains a large portion of text. It is %s characters long. "
+#~ "The limit is 1500 characters."
+#~ msgstr ""
+#~ "Gli appunti contengono una grande porzione di testo. Si tratta di %s "
+#~ "caratteri. Il limite è di 1500 caratteri."
+
+#~ msgid ""
+#~ "The selection contains a large portion of text. It is %s characters long. "
+#~ "The limit is 1500 characters."
+#~ msgstr ""
+#~ "La selezione contiene una grande quantità di testo. Il totale ammonta a %"
+#~ "s caratteri. Il limite è di 1500 caratteri."
+
+#~ msgid "Error translating text. See log for details"
+#~ msgstr ""
+#~ "Errore nella traduzione del testo. Vedere il log per ulteriori "
+#~ "informazioni"
 
 #~ msgid "Select Languages from which text will be translated from, and into."
 #~ msgstr "Seleziona la lingua da e verso cui si desidera tradurre."

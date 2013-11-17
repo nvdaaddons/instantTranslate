@@ -15,9 +15,9 @@ addon_info = {
 	# Translators: Long description to be shown for this add-on on installation and add-on information
 	"addon-description" : _("This addon translates selected or clipboard text using the Google Translate service and presents it. Press NVDA+Shift+T to translate selected text. Press NVDA+Shift+Y to translate clipboard text."),
 	# version
-	"addon-version" : "3.0-dev",
+	"addon-version" : "3.1-dev",
 	# Author(s)
-	"addon-author" : "Alexy Sadovoy aka Lex <lex@progger.su>, ruslan <ru2020slan@yandex.ru>, beqa <beqaprogger@gmail.com>, Mesar Hameed <mhameed@src.gnome.org> and other nvda contributors",
+	"addon-author" : "Alexy Sadovoy aka Lex <lex@progger.su>, ruslan <ru2020slan@yandex.ru>, beqa <beqaprogger@gmail.com>, Mesar Hameed <mhameed@src.gnome.org>, Alberto Buffolino <a.buffolino@gmail.com>, and other nvda contributors",
 	# URL for the add-on documentation support
 	"addon-url" : "http://addons.nvda-project.org/"
 }

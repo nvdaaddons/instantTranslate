@@ -11,6 +11,7 @@ import gui
 import wx
 import api
 import textInfos
+import scriptHandler
 import globalPluginHandler
 from logHandler import log
 import queueHandler
@@ -35,20 +36,39 @@ lo_lang = s[0:s.find("_")] # get the default language which is translated into.
 if not os.path.isfile(config_file):
 	config = ConfigObj()
 	config.filename = config_file
-	config ["translation"] = {"from": "auto", "into": lo_lang}
-	config ["settings"] = {"CopyTranslatedText": "true"}
+	config ["translation"] = {"from": "auto", "into": lo_lang, "swap": "en"}
+	config ["settings"] = {"CopyTranslatedText": "True", "AutoSwap": "True"}
+	config ["temporary"] = {"isAutoSwapped": "False"}
 	config.write()
 
-
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
-
-	scriptCategory = "InstantTranslate"
 
 	def __init__(self, *args, **kwargs):
 		super(GlobalPlugin, self).__init__(*args, **kwargs)
 		if globalVars.appArgs.secure:
 			return
 		self.createMenu()
+		self.getUpdatedGlobalVars()
+
+	def getUpdatedGlobalVars(self):
+		global lang_from, lang_to, lang_swap, copyTranslation, autoSwap, isAutoSwapped
+		config = ConfigObj(config_file)
+		# source language
+		lang_from = config["translation"]["from"]
+		# target language
+		lang_to = config["translation"]["into"]
+		# language used to swap source and target when source is auto
+		lang_swap = config["translation"]["swap"]
+		copyTranslation = autoSwap = isAutoSwapped = False
+		# determine whether to copy translation on clipboard
+		if config["settings"]["CopyTranslatedText"] == "True":
+			copyTranslation = True
+		# determine whether to swap automatically lang_swap and target language, if source recognized equal to the target
+		if config["settings"]["AutoSwap"] == "True":
+			autoSwap = True
+		# keep track if there was a swapping from source=auto during previous NVDA session
+		if config["temporary"]["isAutoSwapped"] == "True":
+			isAutoSwapped = True
 
 	def createMenu(self):
 		self.prefsMenu = gui.mainFrame.sysTrayIcon.menu.GetMenuItems()[0].GetSubMenu()
@@ -95,21 +115,14 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	# Translators: message presented in input help mode, when user presses the shortcut keys for this addon.
 	script_translateSelection.__doc__=_("Translates selected text from one language to another using Google Translate.")
 
-	def script_swapLanguages(script,gesture):
-		config = ConfigObj(config_file)
-		temp=config["translation"]["from"]
-		config["translation"]["from"]=config["translation"]["into"]
-		config["translation"]["into"]=temp
-		config.write()
-		ui.message(_("Languages swapped."))
-	script_swapLanguages.__doc__=_("Swaps the languages.")
-
 	def translate(self, text):
-		config = ConfigObj(config_file)
-		lang_from = config["translation"]["from"]
-		lang_to = config["translation"]["into"]
-		copyTranslation = config["settings"]["CopyTranslatedText"]
-		myTranslator = Translator(lang_from, lang_to, text)
+		self.getUpdatedGlobalVars()
+		myTranslator = None
+		if not autoSwap:
+			myTranslator = Translator(lang_from, lang_to, text)
+		else:
+			myTranslator = Translator(lang_from, lang_to, text, lang_swap)
+		ui.message(_("Translating..."))
 		myTranslator.start()
 		i=0
 		while  myTranslator.isAlive():
@@ -120,12 +133,38 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				i = 0
 		myTranslator.join()
 		queueHandler.queueFunction(queueHandler.eventQueue, ui.message, myTranslator.translation)
-		if copyTranslation == "true":
+		if copyTranslation:
 			api.copyToClip(myTranslator.translation)
 
+	def swapLanguages(self, langFrom, langTo):
+		global lang_from, lang_to
+		lang_from=langTo
+		lang_to=langFrom
+
+	def script_announceOrSwapLanguages(self, gesture):
+		self.getUpdatedGlobalVars()
+		if scriptHandler.getLastScriptRepeatCount() != 0:
+			global isAutoSwapped
+			if lang_from == "auto":
+				self.swapLanguages(lang_swap, lang_to)
+				isAutoSwapped = True
+			elif isAutoSwapped and lang_to == lang_swap:
+				self.swapLanguages(lang_from, "auto")
+				isAutoSwapped = False
+			else:
+				self.swapLanguages(lang_from, lang_to)
+			config = ConfigObj(config_file)
+			config["translation"]["from"] = lang_from
+			config["translation"]["into"] = lang_to
+			config["temporary"]["isAutoSwapped"] = isAutoSwapped
+			config.write()
+			# Translators: message presented calling the script twice
+			ui.message(_("Languages swapped"))
+		# Translators: message presented calling the script once or twice
+		ui.message(_("Translate: from {lang1} to {lang2}").format(lang1=lang_from, lang2=lang_to))
 
 	__gestures = {
-"kb:NVDA+shift+r": "swapLanguages",
-"kb:NVDA+shift+t": "translateSelection",
-"kb:NVDA+shift+y": "translateClipboardText",
+		"kb:NVDA+shift+r": "announceOrSwapLanguages",
+		"kb:NVDA+shift+t": "translateSelection",
+		"kb:NVDA+shift+y": "translateClipboardText",
 	}
