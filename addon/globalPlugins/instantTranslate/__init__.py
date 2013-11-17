@@ -124,8 +124,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			api.copyToClip(myTranslator.translation)
 
 
-		__gestures = {
+	__gestures = {
 "kb:NVDA+shift+r": "swapLanguages",
-		"kb:NVDA+shift+t": "translateSelection",
+"kb:NVDA+shift+t": "translateSelection",
 "kb:NVDA+shift+y": "translateClipboardText",
 	}
