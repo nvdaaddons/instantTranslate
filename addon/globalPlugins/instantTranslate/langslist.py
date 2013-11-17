@@ -7,6 +7,9 @@
 #See the file COPYING for more details.
 
 from languageHandler import getLanguageDescription
+import addonHandler
+addonHandler.initTranslation()
+
 def g(code):
 	"""Return an NVDA language description for code, if one is available. Otherwise, return the one from needed_codes. If that fails, return the code."""
 	res = getLanguageDescription(code)
