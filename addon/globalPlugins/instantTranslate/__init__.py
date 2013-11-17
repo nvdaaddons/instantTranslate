@@ -23,6 +23,7 @@ from interface import *
 from translator import Translator
 from tones import beep
 from time import sleep
+import threading
 import addonHandler
 addonHandler.initTranslation()
 
@@ -73,7 +74,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			# Translators: message presented when user presses the shortcut key for translating clipboard text but the clipboard is empty.
 			ui.message(_("There is no text on the clipboard"))
 		else:
-			self.translate(text)
+			threading.Thread(target=self.translate, args=(info.text,)).start()
 	# Translators: message presented in input help mode, when user presses the shortcut keys for this addon.
 	script_translateClipboardText.__doc__=_("Translates clipboard text from one language to another using Google Translate.")
 
@@ -90,7 +91,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			# Translators: user has pressed the shortcut key for translating selected text, but no text was actually selected.
 			ui.message(_("no selection"))
 		else:
-			self.translate(info.text)
+			threading.Thread(target=self.translate, args=(info.text,)).start()
 	# Translators: message presented in input help mode, when user presses the shortcut keys for this addon.
 	script_translateSelection.__doc__=_("Translates selected text from one language to another using Google Translate.")
 
@@ -117,7 +118,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			if i == 10:
 				beep(500, 100)
 				i = 0
-            yield
 		myTranslator.join()
 		queueHandler.queueFunction(queueHandler.eventQueue, ui.message, myTranslator.translation)
 		if copyTranslation == "true":
