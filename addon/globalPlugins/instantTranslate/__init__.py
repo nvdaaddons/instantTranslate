@@ -42,8 +42,7 @@ if not os.path.isfile(config_file):
 	config.write()
 
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
-
-	scriptCategory="InstantTranslate"
+	scriptCategory = unicode(_addonSummary)
 
 	def __init__(self, *args, **kwargs):
 		super(GlobalPlugin, self).__init__(*args, **kwargs)
@@ -160,10 +159,12 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			config["translation"]["into"] = lang_to
 			config["temporary"]["isAutoSwapped"] = isAutoSwapped
 			config.write()
-			# Translators: message presented calling the script twice
+			# Translators: message presented to announce that the source and target languages have been swapped.
 			ui.message(_("Languages swapped"))
-		# Translators: message presented calling the script once or twice
+		# Translators: message presented to announce the current source and target languages.
 		ui.message(_("Translate: from {lang1} to {lang2}").format(lang1=lang_from, lang2=lang_to))
+	# Translators: Presented in input help mode.
+	script_announceOrSwapLanguages.__doc__ = _("When pressed once, announces the current source and target languages. Pressed twice will swap source and target.")
 
 	__gestures = {
 		"kb:NVDA+shift+r": "announceOrSwapLanguages",
