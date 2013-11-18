@@ -64,7 +64,8 @@ class Translator(threading.Thread):
 		for chunk in splitChunks(self.text, self.chunksize):
 			# Make sure we don't send requests to google too often.
 			# Try to simulate a human.
-			sleep(randint(1, 10))
+			if not self.firstChunk:
+				sleep(randint(1, 10))
 			url = urlTemplate.format(text=urllib2.quote(chunk.encode('utf-8')), lang_from=self.lang_from, lang_to=self.lang_to)
 			try:
 				response = json.load(self.opener.open(url))
