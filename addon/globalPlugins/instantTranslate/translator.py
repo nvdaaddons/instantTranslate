@@ -72,8 +72,8 @@ class Translator(threading.Thread):
 				if self.firstChunk and self.lang_from == "auto" and response["src"] == self.lang_to and self.lang_swap is not None:
 					self.lang_to = self.lang_swap
 					self.firstChunk = False
-					self.run()
-					return
+					url = urlTemplate.format(text=urllib2.quote(chunk.encode('utf-8')), lang_from=self.lang_from, lang_to=self.lang_to)
+					response = json.load(self.opener.open(url))
 			except Exception as e:
 				log.exception("Instant translate: Can not translate text '%s'" %chunk)
 				# We have probably been blocked, so stop trying to translate.
