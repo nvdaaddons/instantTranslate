@@ -13,7 +13,7 @@ def onInstall():
 		if addon.manifest['name'] == "Instant-Translate":
 			askToRemove(addon)
 			break
-		elif addon.manifest['name'] == "instantTranslate" and addon.manifest['version'] < "3.1":
+		elif addon.manifest['name'] == "instantTranslate" and addon.manifest['version'] < "3.0-dev":
 			if os.path.isfile(os.path.join(globalVars.appArgs.configPath, "instantTranslate.ini")):
 				os.remove(os.path.join(globalVars.appArgs.configPath, "instantTranslate.ini"))
 			askToRemove(addon)
