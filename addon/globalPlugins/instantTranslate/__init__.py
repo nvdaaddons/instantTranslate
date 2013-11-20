@@ -26,6 +26,9 @@ from tones import beep
 from time import sleep
 import threading
 import addonHandler
+_addonDir = os.path.join(os.path.dirname(__file__), "..", "..").decode("mbcs")
+_curAddon = addonHandler.Addon(_addonDir)
+_addonSummary = _curAddon.manifest['summary']
 addonHandler.initTranslation()
 
 config_file = os.path.join(globalVars.appArgs.configPath,"instantTranslate.ini")
