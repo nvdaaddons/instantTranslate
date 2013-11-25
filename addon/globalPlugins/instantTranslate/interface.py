@@ -15,9 +15,9 @@ import globalVars
 import config
 import _config
 import addonHandler
+
 _config.load()
 addonHandler.initTranslation()
-
 
 class InstantTranslateSettingsDialog(gui.SettingsDialog):
 	# Translators: name of the dialog.

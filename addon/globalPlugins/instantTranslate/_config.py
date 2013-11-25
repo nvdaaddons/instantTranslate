@@ -6,8 +6,8 @@ import globalVars
 from logHandler import log
 from locale import getdefaultlocale
 
-INSTANTTRANSLATE_CONFIG_FILENAME = "instanttranslate.ini"
-lo_lang = getdefaultlocale () # get a language of the OS localization.
+INSTANTTRANSLATE_CONFIG_FILENAME = "instantTranslate.ini"
+lo_lang = getdefaultlocale() # get a language of the OS localization.
 s = lo_lang[0] # get the first element of the tuplet.
 lo_lang = s[0:s.find("_")] # get the default language which is translated into.
 
@@ -16,22 +16,20 @@ instanttranslateConfig = None
 _configSpec = """
 [translation]
 from = string(default=auto)
-into = string(default=lo_lang)
+into = string(default={lo_lang})
 swap = string(default=en)
-
 [settings]
 copytranslatedtext = boolean(default=true)
 autoswap = boolean(default=true)
-
 [temporary]
 isautoswapped = boolean(default=false)
 """
 
 def load():
 	global instanttranslateConfig
-	if not instanttranslateConfig:
+	if instanttranslateConfig is None:
 		path = os.path.join(globalVars.appArgs.configPath, INSTANTTRANSLATE_CONFIG_FILENAME)
-		instanttranslateConfig = configobj.ConfigObj(path, configspec=StringIO(_configSpec), encoding="utf-8")
+		instanttranslateConfig = configobj.ConfigObj(path, configspec=StringIO(_configSpec.format(lo_lang=lo_lang)), encoding="utf-8")
 		instanttranslateConfig.newlines = "\r\n"
 		instanttranslateConfig.stringify = True
 		val = Validator()
@@ -41,7 +39,7 @@ def load():
 
 def save():
 	global instanttranslateConfig
-	if not instanttranslateConfig:
+	if instanttranslateConfig is None:
 		raise RuntimeError("Instant Translate config is not loaded.")
 	val = Validator()
 	instanttranslateConfig.validate(val, copy=True)
