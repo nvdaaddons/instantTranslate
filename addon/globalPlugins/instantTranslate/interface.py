@@ -13,11 +13,11 @@ from langslist import langslist
 import langslist as lngModule
 import globalVars
 import config
-from configobj import *
+import _config
 import addonHandler
+_config.load()
 addonHandler.initTranslation()
 
-config_file = os.path.join(globalVars.appArgs.configPath,"instantTranslate.ini")
 
 class InstantTranslateSettingsDialog(gui.SettingsDialog):
 	# Translators: name of the dialog.
@@ -49,15 +49,9 @@ class InstantTranslateSettingsDialog(gui.SettingsDialog):
 		intoSizer.Add(self._intoChoice)
 		sizer.Add(fromSizer)
 		sizer.Add(intoSizer)
-		config = ConfigObj(config_file)
-		CopyStateValue=AutoSwapStateValue=0
-		if config["settings"]["CopyTranslatedText"] == "True":
-			CopyStateValue = 1
-		if config["settings"]["AutoSwap"] == "True":
-			AutoSwapStateValue = 1
 		# Translators: A setting in addon settings dialog.
 		self.copyTranslationChk = wx.CheckBox(self, label=_("Copy translation result to clipboard"))
-		self.copyTranslationChk.SetValue(CopyStateValue)
+		self.copyTranslationChk.SetValue(_config.instanttranslateConfig['settings']['copytranslatedtext'])
 		sizer.Add(self.copyTranslationChk)
 		self.swapSizer = wx.BoxSizer(wx.HORIZONTAL)
 		# Translators: A setting in addon settings dialog, shown if source language is on auto.
@@ -69,11 +63,11 @@ class InstantTranslateSettingsDialog(gui.SettingsDialog):
 		sizer.Add(self.swapSizer)
 		# Translators: A setting in addon settings dialog, shown if source language is on auto.
 		self.autoSwapChk = wx.CheckBox(self, label=_("Activate the auto-swap if recognized source is equal to the target (experimental)"))
-		self.autoSwapChk.SetValue(AutoSwapStateValue)
+		self.autoSwapChk.SetValue(_config.instanttranslateConfig['settings']['autoswap'])
 		sizer.Add(self.autoSwapChk)
-		iLang_from = self._fromChoice.FindString(self.getDictKey(config["translation"]["from"]))
-		iLang_to = self._intoChoice.FindString(self.getDictKey(config["translation"]["into"]))
-		iLang_swap = self._swapChoice.FindString(self.getDictKey(config["translation"]["swap"]))
+		iLang_from = self._fromChoice.FindString(self.getDictKey(_config.instanttranslateConfig['translation']['from']))
+		iLang_to = self._intoChoice.FindString(self.getDictKey(_config.instanttranslateConfig['translation']['into']))
+		iLang_swap = self._swapChoice.FindString(self.getDictKey(_config.instanttranslateConfig['translation']['swap']))
 		self._fromChoice.Select(iLang_from)
 		self._intoChoice.Select(iLang_to)
 		self._swapChoice.Select(iLang_swap)
@@ -105,19 +99,12 @@ class InstantTranslateSettingsDialog(gui.SettingsDialog):
 	def onOk(self, event):
 		super(InstantTranslateSettingsDialog, self).onOk(event)
 		# Update Configuration
-		config = ConfigObj(config_file)
-		config["translation"]["from"] = langslist[self._fromChoice.GetStringSelection()]
-		config["translation"]["into"] = langslist[self._intoChoice.GetStringSelection()]
-		config["translation"]["swap"] = langslist[self._swapChoice.GetStringSelection()]
-		if self.copyTranslationChk.GetValue() == 1:
-			config["settings"]["CopyTranslatedText"] = "True"
-		else:
-			config["settings"]["CopyTranslatedText"] = "False"
-		if self.autoSwapChk.GetValue() == 1:
-			config["settings"]["AutoSwap"] = "True"
-		else:
-			config["settings"]["AutoSwap"] = "False"
-		config.write()
+		_config.instanttranslateConfig['translation']['from'] = langslist[self._fromChoice.GetStringSelection()]
+		_config.instanttranslateConfig['translation']['into'] = langslist[self._intoChoice.GetStringSelection()]
+		_config.instanttranslateConfig['translation']['swap'] = langslist[self._swapChoice.GetStringSelection()]
+		_config.instanttranslateConfig['settings']['copytranslatedtext'] = self.copyTranslationChk.GetValue()
+		_config.instanttranslateConfig['settings']['autoswap'] = self.autoSwapChk.GetValue()
+		_config.save()
 
 	def getDictKey (self, currentValue):
 		for key, value in langslist.iteritems():
