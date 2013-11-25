@@ -26,6 +26,7 @@ from time import sleep
 import threading
 import _config
 import addonHandler
+
 _config.load()
 _addonDir = os.path.join(os.path.dirname(__file__), "..", "..").decode("mbcs")
 _curAddon = addonHandler.Addon(_addonDir)
@@ -56,13 +57,13 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		lang_swap = _config.instanttranslateConfig['translation']['swap']
 		copyTranslation = autoSwap = isAutoSwapped = False
 		# determine whether to copy translation on clipboard
-		if _config.instanttranslateConfig['settings']['copytranslatedtext'] == 'true':
+		if _config.instanttranslateConfig['settings']['copytranslatedtext'] == 'True':
 			copyTranslation = True
 		# determine whether to swap automatically lang_swap and target language, if source recognized equal to the target
-		if _config.instanttranslateConfig['settings']['autoswap'] == 'true':
+		if _config.instanttranslateConfig['settings']['autoswap'] == 'True':
 			autoSwap = True
 		# keep track if there was a swapping from source=auto during previous NVDA session
-		if _config.instanttranslateConfig['temporary']['isautoswapped'] == 'true':
+		if _config.instanttranslateConfig['temporary']['isautoswapped'] == 'True':
 			isAutoSwapped = True
 
 	def createMenu(self):
