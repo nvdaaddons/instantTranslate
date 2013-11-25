@@ -56,7 +56,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		lang_swap = _config.instanttranslateConfig['translation']['swap']
 		copyTranslation = autoSwap = isAutoSwapped = False
 		# determine whether to copy translation on clipboard
-		if _config.instanttranslateConfig['settings']['copytranslatedtext'] == 'true"':
+		if _config.instanttranslateConfig['settings']['copytranslatedtext'] == 'true':
 			copyTranslation = True
 		# determine whether to swap automatically lang_swap and target language, if source recognized equal to the target
 		if _config.instanttranslateConfig['settings']['autoswap'] == 'true':
