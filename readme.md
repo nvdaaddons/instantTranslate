@@ -26,7 +26,7 @@ There are two ways of using this add-on:
 
 ## Changes for 3.0 ##
 * Implemented swapping languages.
-* Changed configuration format, for code style reasons.
+* Changed configuration format, now we can change instant translate settings if we are in readonly pane, but remember that this will work before first restart of nvda.
 * Removed limit on amount of text that can be translated.
 * Added shortcut t to the Instant Translate Settings menu item
 * The auto option is now in first position in source combo, and absent in target combo.
