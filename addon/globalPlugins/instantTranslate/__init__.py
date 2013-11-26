@@ -33,10 +33,6 @@ _curAddon = addonHandler.Addon(_addonDir)
 _addonSummary = _curAddon.manifest['summary']
 addonHandler.initTranslation()
 
-#lo_lang = getdefaultlocale () # get a language of the OS localization.
-#s = lo_lang[0] # get the first element of the tuplet.
-#lo_lang = s[0:s.find("_")] # get the default language which is translated into.
-
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	scriptCategory = unicode(_addonSummary)
 
