@@ -55,16 +55,12 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		lang_to = _config.instanttranslateConfig['translation']['into']
 		# language used to swap source and target when source is auto
 		lang_swap = _config.instanttranslateConfig['translation']['swap']
-		copyTranslation = autoSwap = isAutoSwapped = False
 		# determine whether to copy translation on clipboard
-		if _config.instanttranslateConfig['settings']['copytranslatedtext'] == True:
-			copyTranslation = True
+		copyTranslation = _config.instanttranslateConfig['settings']['copytranslatedtext']
 		# determine whether to swap automatically lang_swap and target language, if source recognized equal to the target
-		if _config.instanttranslateConfig['settings']['autoswap'] == True:
-			autoSwap = True
+		autoSwap = _config.instanttranslateConfig['settings']['autoswap']
 		# keep track if there was a swapping from source=auto during previous NVDA session
-		if _config.instanttranslateConfig['temporary']['isautoswapped'] == True:
-			isAutoSwapped = True
+		isAutoSwapped = _config.instanttranslateConfig['temporary']['isautoswapped']
 
 	def createMenu(self):
 		self.prefsMenu = gui.mainFrame.sysTrayIcon.menu.GetMenuItems()[0].GetSubMenu()
