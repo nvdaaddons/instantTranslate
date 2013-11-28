@@ -1,33 +1,54 @@
 # instantTranslate #
 [[!meta title="instantTranslate"]]
 
-* مطورو الإضافة: Alexy Sadovoy, ruslan, Beqa Gozalishvili وآخرون.
-* تحميل [version 2.2beta2][1]
+* Authors: Alexy Sadovoy, Beqa Gozalishvili, Mesar Hameed, Alberto Buffolino
+  and other nvda contributors.
+* Download [version 3.0-dev][1]
 
 تقوم هذه الإضافة بترجمة النص المظلل أو الموجود بحافظة الويندوز من لغة إلى
 أخرى مستخدمة في ذلك خدمة الترجمة من قوقل.
 
 ## إعداد اللغات ##
+To configure source, target and in case swap language, from NVDA menu, go to
+Preferences, then go to Instant Translate Settings.  There are three combo
+boxes labeled "translate from", "translate into" and "Language for swapping"
+(if you selected auto option from source languages).
 
-لإعداد لغة المصدر ولغة الهدف, من قائمة NVDA الرئيسية, اذهب إلى القائمة
-الفرعية تفضيلات, ومنها إلى إعدادات InstantTranslate. ستجد اثنين من صناديق
-الخيارات أحدهما باسم "ترجم من" والآخر تحت مسمى "ترجم إلى". قم بضبط لغة
-المصدر ولغة الهدف ثم اضغط مفتاح الإدخال على زر موافق.
+If you selected the auto option from source languages, there is also a
+checkbox about the auto-swap: if you activate it, then the addon tries to
+commute automatically from your source and target configuration to a
+configuration where target becomes the source language, and language
+selected in "Language for swapping" combo is the new target language;
+extremely useful if the source language of the text you want translate is
+the target language.
+
+However, this is a temporary configuration, if this option has no effect
+(it's experimental), try to commute manually to a stable configuration,
+using the gesture for swapping described below.
 
 ## كيفية استخدام الإضافة ##
-
 توجد طريقتان لاستخدام هذه الإضافة:
 
-1. قم بتحديد جزء من النص باستخدام أي من طرق التحديد المعروفة (كاستخدام مفتاح
-   shift مع الأسهم, على سبيل المثال). ثم قم بالضغط على Shift+NVDA+T لترجمة
-   النص المحدد. سيقوم NVDA بقراءة ترجمة النص عن طريق آلة النطق التي تدعم لغة
-   الهدف.
-2. قم بنسخ جزء من النص إلى الحافظة. ثم قم بالضغط على Shift+NVDA+Y لترجمة
-   النص المخزن بالحافظة إلى لغة الهدف.
+1. Select some text using selection commands (shift with arrow keys, for
+   example). Then press Shift+NVDA+T to translate the selected text. Then
+   the translated string will be read, providing that the synthesizer you
+   are using supports the target language.
+2. Copy some text to clipboard. Then press Shift+NVDA+Y to translate the
+   text in the clipboard to the target language.
 
-## مستجدات الإصدار 2.2 ##
-* زيادة أحرف النص المسموح بترجمته إلى 1500 حرف.
+## Other useful commands ##
+* NVDA+shift+r: pressed once, announce current configuration; pressed twice,
+  swap source and target languages.
+
+## Changes for 3.0 ##
+* Implemented swapping languages.
+* Changed configuration format, now we can change instant translate settings
+  if we are in readonly pane, but remember that this will work before first
+  restart of nvda.
+* Removed limit on amount of text that can be translated.
 * إضافة حرف الوصول السريع T إلى قائمة إعدادات instant translate
+* The auto option is now in first position in source combo, and absent in
+  target combo.
 * إضافة مربع تحديد لإعداد نسخ نتائج الترجمة.
 * تخزين ملف الإعدادات داخل مجلد الإعدادات.
 * ترجمة الإضافة إلى: الأرجانيزية, والعربية, والبرازيلية البرتغالية,
@@ -49,4 +70,4 @@
 
 [[!tag dev]]
 
-[1]: http://addons.nvda-project.org/files/get.php?file=it
+[1]: http://addons.nvda-project.org/files/get.php?file=it-dev

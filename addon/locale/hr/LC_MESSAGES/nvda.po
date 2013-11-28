@@ -18,7 +18,8 @@ msgstr ""
 "X-Generator: Poedit 1.5.5\n"
 
 #. Translators: name of the option in the menu.
-msgid "Instant Translate Settings..."
+#, fuzzy
+msgid "Instant &Translate Settings..."
 msgstr "Postavke trenutnog prevoditelja..."
 
 #. Translators: tooltip text for the menu item.
@@ -30,10 +31,10 @@ msgid "There is no text on the clipboard"
 msgstr "Nema teksta u međuspremniku"
 
 #. Translators: Message presented when clipboard text (to be translated) is too long (more than a set limit).
-#, python-format
+#, fuzzy, python-format
 msgid ""
 "The clipboard contains a large portion of text. It is %s characters long. "
-"The limit is 350 characters."
+"The limit is 1500 characters."
 msgstr ""
 "Međuspremnik sadrži veliku količinu teksta, dužine od %s znakova. Granica je "
 "350 znakova."
@@ -51,10 +52,10 @@ msgid "no selection"
 msgstr "nema odabira"
 
 #. Translators: Message presented when selected text (to be translated) is too long (more than a set limit).
-#, python-format
+#, fuzzy, python-format
 msgid ""
 "The selection contains a large portion of text. It is %s characters long. "
-"The limit is 350 characters."
+"The limit is 1500 characters."
 msgstr ""
 "Odabir sadrži veliku količinu teksta, dužine od %s znakova. Granica je 350 "
 "znakova."
@@ -86,6 +87,9 @@ msgstr "Izvorni jezik:"
 #. Translators: A setting in instant translate settings dialog.
 msgid "Target language:"
 msgstr "Ciljni jezik:"
+
+msgid "Copy translation result to clipboard"
+msgstr ""
 
 #. Translators: An option to automatically detect source language for translation.
 msgid "Automatically detect language"

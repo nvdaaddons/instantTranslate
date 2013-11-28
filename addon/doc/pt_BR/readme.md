@@ -1,35 +1,55 @@
 # instantTranslate #
 
-* autores: Alexy Sadovoy, ruslan, Beqa Gozalishvili e outros colaboradores
-  do NVDA.
-* baixe a [versão 2.2beta2][1]
+* Authors: Alexy Sadovoy, Beqa Gozalishvili, Mesar Hameed, Alberto Buffolino
+  and other nvda contributors.
+* Download [version 3.0-dev][1]
 
 Este complemento serve para traduzir um texto selecionado e/ou da área de
 transferência dum idioma para outro.  Isso é feito por meio do serviço
 Google Translate.
 
 ## Configurando idiomas ##
+To configure source, target and in case swap language, from NVDA menu, go to
+Preferences, then go to Instant Translate Settings.  There are three combo
+boxes labeled "translate from", "translate into" and "Language for swapping"
+(if you selected auto option from source languages).
 
-Para configurar os idiomas de origem e destino, a partir do menu do NVDA vá
-para Preferências, daí para Opções do Tradutor Instantâneo.  Existem duas
-caixas de combinação denominadas "traduzir de" e "traduzir para".  Selecione
-os idiomas e pressione ENTER no botão OK.
+If you selected the auto option from source languages, there is also a
+checkbox about the auto-swap: if you activate it, then the addon tries to
+commute automatically from your source and target configuration to a
+configuration where target becomes the source language, and language
+selected in "Language for swapping" combo is the new target language;
+extremely useful if the source language of the text you want translate is
+the target language.
+
+However, this is a temporary configuration, if this option has no effect
+(it's experimental), try to commute manually to a stable configuration,
+using the gesture for swapping described below.
 
 ## Como usar este complemento ##
-
 Há duas formas de usar o complemento:
 
-1. Selecione um texto usando comandos de seleção (shift com setas, por
-   exemplo). Aí pressione Shift+NVDA+T para traduzir o texto
-   selecionado. Será então lido o texto traduzido, contanto que o
-   sintetizador em uso suporte o idioma de destino.
-2. Copie um texto para a área de transferência, aí pressione Shift+NVDA+Y
-   para traduzi-lo ao idioma destino.
+1. Select some text using selection commands (shift with arrow keys, for
+   example). Then press Shift+NVDA+T to translate the selected text. Then
+   the translated string will be read, providing that the synthesizer you
+   are using supports the target language.
+2. Copy some text to clipboard. Then press Shift+NVDA+Y to translate the
+   text in the clipboard to the target language.
 
-## Mudanças na 2.2 ##
-* Aumentado o número de caracteres para 1500.
+## Other useful commands ##
+* NVDA+shift+r: pressed once, announce current configuration; pressed twice,
+  swap source and target languages.
+
+## Changes for 3.0 ##
+* Implemented swapping languages.
+* Changed configuration format, now we can change instant translate settings
+  if we are in readonly pane, but remember that this will work before first
+  restart of nvda.
+* Removed limit on amount of text that can be translated.
 * Adicionada a tecla de atalho t para o item de menu Opções do Tradutor
   Instantâneo
+* The auto option is now in first position in source combo, and absent in
+  target combo.
 * Adicionada uma caixa de seleção para configurar a cópia de resultados de
   traduções.
 * Armazena arquivo de configuração na raiz da pasta de opções.
@@ -54,4 +74,4 @@ Há duas formas de usar o complemento:
 
 [[!tag dev]]
 
-[1]: http://addons.nvda-project.org/files/get.php?file=it
+[1]: http://addons.nvda-project.org/files/get.php?file=it-dev

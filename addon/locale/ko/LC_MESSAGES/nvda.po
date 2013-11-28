@@ -18,7 +18,8 @@ msgstr ""
 "X-Generator: Poedit 1.5.5\n"
 
 #. Translators: name of the option in the menu.
-msgid "Instant Translate Settings..."
+#, fuzzy
+msgid "Instant &Translate Settings..."
 msgstr "인스턴트 번역기 설정..."
 
 #. Translators: tooltip text for the menu item.
@@ -30,10 +31,10 @@ msgid "There is no text on the clipboard"
 msgstr "클립보드에 텍스트 없음"
 
 #. Translators: Message presented when clipboard text (to be translated) is too long (more than a set limit).
-#, python-format
+#, fuzzy, python-format
 msgid ""
 "The clipboard contains a large portion of text. It is %s characters long. "
-"The limit is 350 characters."
+"The limit is 1500 characters."
 msgstr "클립보드에 대용량 텍스트가 있습니다. 글자수: %s, 최대 글자수: 350자"
 
 #. Translators: message presented in input help mode, when user presses the shortcut keys for this addon.
@@ -48,10 +49,10 @@ msgid "no selection"
 msgstr "선택한 텍스트 없음"
 
 #. Translators: Message presented when selected text (to be translated) is too long (more than a set limit).
-#, python-format
+#, fuzzy, python-format
 msgid ""
 "The selection contains a large portion of text. It is %s characters long. "
-"The limit is 350 characters."
+"The limit is 1500 characters."
 msgstr "클립보드에 대용량 텍스트가 있습니다. 글자수: %s, 최대 글자수: 350자"
 
 #. Translators: message presented in input help mode, when user presses the shortcut keys for this addon.
@@ -78,6 +79,9 @@ msgstr "원본 언어"
 #. Translators: A setting in instant translate settings dialog.
 msgid "Target language:"
 msgstr "번역 언어"
+
+msgid "Copy translation result to clipboard"
+msgstr ""
 
 #. Translators: An option to automatically detect source language for translation.
 msgid "Automatically detect language"

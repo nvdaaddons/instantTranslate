@@ -1,31 +1,53 @@
 # Błyskawiczny tłumacz tekstu / instantTranslate #
 
-* Autorzy: Alexy Sadovoy, ruslan, Beqa Gozalishvili i inni.
-* Pobierz [wersja 2.2beta2][1]
+* Authors: Alexy Sadovoy, Beqa Gozalishvili, Mesar Hameed, Alberto Buffolino
+  and other nvda contributors.
+* Download [version 3.0-dev][1]
 
 Ta wtyczka tłumaczy tekst ze schowka lub zaznaczenia z jednego języka na
 drugi. W tym celu używany jest tłumacz google.
 
 ## konfigurowanie języków ##
+To configure source, target and in case swap language, from NVDA menu, go to
+Preferences, then go to Instant Translate Settings.  There are three combo
+boxes labeled "translate from", "translate into" and "Language for swapping"
+(if you selected auto option from source languages).
 
-Aby ustawić źródłowy i docelowy język, z menu ustawień NVDA wybierz pozycję
-instant translate. W oknie są listy z wyborem języka źródłowego i
-docelowego. Ustaw się kursorem na językach które wybierasz i wciśnij ok.
+If you selected the auto option from source languages, there is also a
+checkbox about the auto-swap: if you activate it, then the addon tries to
+commute automatically from your source and target configuration to a
+configuration where target becomes the source language, and language
+selected in "Language for swapping" combo is the new target language;
+extremely useful if the source language of the text you want translate is
+the target language.
+
+However, this is a temporary configuration, if this option has no effect
+(it's experimental), try to commute manually to a stable configuration,
+using the gesture for swapping described below.
 
 ## jak użyć tego dodatku? ##
-
 Są na to dwa sposoby
 
-1. Zaznacz jakiś tekst używając poleceń zaznaczania (np. shift z klawiszami
-   strzałek). Następnie naciśnij Shift+NvDA+T aby przetłumaczyć zaznaczony
-   tekst. Przetłumaczony tekst zostanie odczytany, pod warunkiem, że
-   syntezator, którego używasz, obsługuje docelowy język.
-2. skopiuj tekst źródłowy do schowka i naciśnij nvda+shift+y aby go
-   przetłumaczyć na docelowy język.
+1. Select some text using selection commands (shift with arrow keys, for
+   example). Then press Shift+NVDA+T to translate the selected text. Then
+   the translated string will be read, providing that the synthesizer you
+   are using supports the target language.
+2. Copy some text to clipboard. Then press Shift+NVDA+Y to translate the
+   text in the clipboard to the target language.
 
-## zmiany dla wersji 2.2 ##
-* liczba znaków w tekście zwiększona do 1500.
+## Other useful commands ##
+* NVDA+shift+r: pressed once, announce current configuration; pressed twice,
+  swap source and target languages.
+
+## Changes for 3.0 ##
+* Implemented swapping languages.
+* Changed configuration format, now we can change instant translate settings
+  if we are in readonly pane, but remember that this will work before first
+  restart of nvda.
+* Removed limit on amount of text that can be translated.
 * skrut i pozwala szybko dostać się do ustawień wtyczki z menu nvda.
+* The auto option is now in first position in source combo, and absent in
+  target combo.
 * Dodane pole wyboru ustawiające kopiowanie do schowka wyniku tłumaczenia.
 * plik konfiguracyjny trzymany jest teraz w głównym katalogu ustawień nvda.
 * Nowe języki: aragoński, arabski, brazylijski portugalski, chorwacki,
@@ -47,4 +69,4 @@ Są na to dwa sposoby
 
 [[!tag dev]]
 
-[1]: http://addons.nvda-project.org/files/get.php?file=it
+[1]: http://addons.nvda-project.org/files/get.php?file=it-dev

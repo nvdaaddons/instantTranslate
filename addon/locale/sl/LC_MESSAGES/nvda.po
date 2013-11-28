@@ -8,23 +8,23 @@ msgstr ""
 "Project-Id-Version: 'Instant-Translate' '2.1'\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2013-02-20 22:56+0100\n"
-"PO-Revision-Date: 2013-03-12 16:59+0100\n"
+"PO-Revision-Date: 2013-10-30 07:57+0100\n"
 "Last-Translator: Jožef Gregorc <jozko.gregorc[@]guest.arnes.si\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: sl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.5.5\n"
+"X-Generator: Poedit 1.5.7\n"
 
 #. Translators: name of the option in the menu.
-msgid "Instant Translate Settings..."
-msgstr "Nastavitve Hitro Prevedi..."
+msgid "Instant &Translate Settings..."
+msgstr "Nastavitve &Hitro Prevedi..."
 
 # več po testu
 #. Translators: tooltip text for the menu item.
 msgid "Select languages to be used for translation."
-msgstr "Izbere jezike, ki jih želite uporabljati pri prevodu."
+msgstr "Izberite jezike, ki jih želite uporabljati pri prevodu."
 
 #. Translators: message presented when user presses the shortcut key for translating clipboard text but the clipboard is empty.
 msgid "There is no text on the clipboard"
@@ -34,10 +34,10 @@ msgstr "V odložišču ni besedila"
 #, python-format
 msgid ""
 "The clipboard contains a large portion of text. It is %s characters long. "
-"The limit is 350 characters."
+"The limit is 1500 characters."
 msgstr ""
 "V odložišču je večja količina besedila. Vsebuje %s znakov. Omejitev je pri "
-"350 znakih."
+"1500 znakih."
 
 #. Translators: message presented in input help mode, when user presses the shortcut keys for this addon.
 msgid ""
@@ -55,9 +55,9 @@ msgstr "brez izbora"
 #, python-format
 msgid ""
 "The selection contains a large portion of text. It is %s characters long. "
-"The limit is 350 characters."
+"The limit is 1500 characters."
 msgstr ""
-"Izbrana je večja količina besedila. Vsebuje %s znakov. Omejitev je pri 350 "
+"Izbrana je večja količina besedila. Vsebuje %s znakov. Omejitev je pri 1500 "
 "znakih."
 
 #. Translators: message presented in input help mode, when user presses the shortcut keys for this addon.
@@ -87,6 +87,9 @@ msgstr "Jezik izvora:"
 msgid "Target language:"
 msgstr "Ciljni jezik:"
 
+msgid "Copy translation result to clipboard"
+msgstr "Preslikaj izid prevoda v odložišče"
+
 #. Translators: An option to automatically detect source language for translation.
 msgid "Automatically detect language"
 msgstr "Samodejno zaznaj jezik"
@@ -109,7 +112,7 @@ msgstr "Esperanto"
 
 #. Translators: The name of a language supported by this add-on.
 msgid "Gujarati"
-msgstr "Gujaratščina"
+msgstr "Gujarati"
 
 #. Translators: The name of a language supported by this add-on.
 msgid "Creole Haiti"

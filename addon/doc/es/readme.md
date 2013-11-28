@@ -1,35 +1,55 @@
 # instantTranslate #
 
-* autores: Alexy Sadovoy, ruslan, Beqa Gozalishvili y otros colaboradores de
-  nvda.
-* Descargar: [versión 2.2beta2][1]
+* Authors: Alexy Sadovoy, Beqa Gozalishvili, Mesar Hameed, Alberto Buffolino
+  and other nvda contributors.
+* Download [version 3.0-dev][1]
 
 Este complemento se utiliza para traducir texto seleccionado y/o del
 portapapeles de un idioma a otro.  Esto se hace utilizando el servicio
 Google Translate.
 
 ## Configurando idiomas ##
+To configure source, target and in case swap language, from NVDA menu, go to
+Preferences, then go to Instant Translate Settings.  There are three combo
+boxes labeled "translate from", "translate into" and "Language for swapping"
+(if you selected auto option from source languages).
 
-Para configurar el idioma fuente y el de destino, desde el menú NVDA, ve a
-Preferencias, luego ve a Opciones de Instant Translate.  Hay dos cuadros
-combinados etiquetados como "Idioma original" e "Idioma de la traducción".
-Haz tu selección de idioma y pulsa INTRO sobre el botón Aceptar.
+If you selected the auto option from source languages, there is also a
+checkbox about the auto-swap: if you activate it, then the addon tries to
+commute automatically from your source and target configuration to a
+configuration where target becomes the source language, and language
+selected in "Language for swapping" combo is the new target language;
+extremely useful if the source language of the text you want translate is
+the target language.
+
+However, this is a temporary configuration, if this option has no effect
+(it's experimental), try to commute manually to a stable configuration,
+using the gesture for swapping described below.
 
 ## Cómo utilizar este complemento ##
-
 Hay dos modos de utilizar este complemento:
 
-1. Selecciona algún texto utilizando las órdenes de selección (shift con
-   teclas de cursor, por ejemplo). luego pulsa Shift+NVDA+T para traducir el
-   texto seleccionado. Entonces la cadena traducida se leerá, siempre que el
-   sintetizador utilizado soporte el idioma de destino.
-2. Copia algún texto al portapapeles. entonces pulsa Shift+NVDA+Y para
-   traducir el texto del portapapeles al idioma de destino.
+1. Select some text using selection commands (shift with arrow keys, for
+   example). Then press Shift+NVDA+T to translate the selected text. Then
+   the translated string will be read, providing that the synthesizer you
+   are using supports the target language.
+2. Copy some text to clipboard. Then press Shift+NVDA+Y to translate the
+   text in the clipboard to the target language.
 
-## Cambios para  2.2 ##
-* Aumentado el número de caracteres a 1500.
+## Other useful commands ##
+* NVDA+shift+r: pressed once, announce current configuration; pressed twice,
+  swap source and target languages.
+
+## Changes for 3.0 ##
+* Implemented swapping languages.
+* Changed configuration format, now we can change instant translate settings
+  if we are in readonly pane, but remember that this will work before first
+  restart of nvda.
+* Removed limit on amount of text that can be translated.
 * Añadido un atajo de teclado al elemento de menú Opciones de Instant
   Translate
+* The auto option is now in first position in source combo, and absent in
+  target combo.
 * Añadida una casilla de verificación para configurar el copiado de los
   resultados de la traducción.
 * Almacenar el fichero config en la raíz de la carpeta de configuraciones.
@@ -54,4 +74,4 @@ Hay dos modos de utilizar este complemento:
 
 [[!tag dev]]
 
-[1]: http://addons.nvda-project.org/files/get.php?file=it
+[1]: http://addons.nvda-project.org/files/get.php?file=it-dev

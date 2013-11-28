@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: 'Instant-Translate' '2.1'\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2013-02-09 18:30+0100\n"
-"PO-Revision-Date: 2013-02-19 07:05+0545\n"
-"Last-Translator: \n"
+"PO-Revision-Date: 2013-07-10 13:25+0545\n"
+"Last-Translator: Him Prasad Gautam <drishtibachak@gmail.com>\n"
 "Language-Team: Nepali <drishtibachak@gmail.com>\n"
 "Language: ne\n"
 "MIME-Version: 1.0\n"
@@ -18,8 +18,8 @@ msgstr ""
 "X-Generator: Poedit 1.5.5\n"
 
 #. Translators: name of the option in the menu.
-msgid "Instant Translate Settings..."
-msgstr "तुरुन्तै अनुवाद अनुकूलता"
+msgid "Instant &Translate Settings..."
+msgstr "&तुरुन्तै अनुवाद अनुकूलता"
 
 #. Translators: tooltip text for the menu item.
 msgid "Select languages to be used for translation."
@@ -33,9 +33,9 @@ msgstr "क्लिपपाठिमा पाठहरू छैनन् ।
 #, python-format
 msgid ""
 "The clipboard contains a large portion of text. It is %s characters long. "
-"The limit is 350 characters."
+"The limit is 1500 characters."
 msgstr ""
-"क्लिपपाठीमा अति धेरै पाठहरू पाइयो ।यसमा %s वर्णहरु रहेछन् । अधिकतम सीमा ३५० वर्णहरू "
+"क्लिपपाटीमा अति धेरै पाठहरू पाइयो ।यसमा %s वर्णहरु रहेछन् । अधिकतम सीमा १५०० वर्णहरू "
 "कायम गरिएको छ ।"
 
 #. Translators: message presented in input help mode, when user presses the shortcut keys for this addon.
@@ -54,16 +54,16 @@ msgstr "कुनै चयन छैन"
 #, python-format
 msgid ""
 "The selection contains a large portion of text. It is %s characters long. "
-"The limit is 350 characters."
+"The limit is 1500 characters."
 msgstr ""
-"तपाइले धेरै पाठहरू चयन गर्नु भयो । यसमा %s वर्णहरु रहेछन् । अधिकतम सीमा ३५० वर्णहरू कायम "
+"तपाइले धेरै पाठहरू चयन गर्नु भयो । यसमा %s वर्णहरु छन् । अधिकतम सीमा १५०० वर्णहरू कायम "
 "गरिएको छ ।"
 
 #. Translators: message presented in input help mode, when user presses the shortcut keys for this addon.
 msgid ""
 "Translates selected text from one language to another using Google Translate."
 msgstr ""
-"गुगल अनुवादको पर्योग गरी चयनीत पाठहरूलाई  एक भाषाबाट अर्को भाषामा अनुवाद गर्ने छ ।"
+"गुगल अनुवादको पर्योग गरेर चयनीत पाठहरूलाई  एक भाषाबाट अर्को भाषामा अनुवाद गर्ने छ ।"
 
 #. Translators: Message presented when the given text (from selected or clipboard) cannot be translated.
 msgid "Error translating text. See log for details"
@@ -84,6 +84,9 @@ msgstr "श्रोत भाषा"
 #. Translators: A setting in instant translate settings dialog.
 msgid "Target language:"
 msgstr "लक्षित भाषा"
+
+msgid "Copy translation result to clipboard"
+msgstr "अनुवाद नतिजालाइ क्लीपपाटीमा उतार ।"
 
 #. Translators: An option to automatically detect source language for translation.
 msgid "Automatically detect language"
