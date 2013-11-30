@@ -11,9 +11,11 @@ import gui
 import wx
 import api
 import textInfos
+import tones
 import scriptHandler
 import globalPluginHandler
 from logHandler import log
+from functools import wraps
 import queueHandler
 import ui
 import config
@@ -33,6 +35,18 @@ _curAddon = addonHandler.Addon(_addonDir)
 _addonSummary = _curAddon.manifest['summary']
 addonHandler.initTranslation()
 
+def finally_(func, final):
+	"""Calls final after func, even if it fails."""
+	def wrap(f):
+		@wraps(f)
+		def new(*args, **kwargs):
+			try:
+				func(*args, **kwargs)
+			finally:
+				final()
+		return new
+	return wrap(final)
+
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	scriptCategory = unicode(_addonSummary)
 
@@ -42,6 +56,10 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			return
 		self.createMenu()
 		self.getUpdatedGlobalVars()
+		self.toggling = False
+		self.__toggle_gestures = {}
+		for c in "tcs":
+			self.__toggle_gestures["KB:%s" % c] = "toggleX"
 
 	def getUpdatedGlobalVars(self):
 		global lang_from, lang_to, lang_swap, copyTranslation, autoSwap, isAutoSwapped
@@ -58,6 +76,45 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# keep track if there was a swapping from source=auto during previous NVDA session
 		isAutoSwapped = _config.instanttranslateConfig['temporary']['isautoswapped']
 
+	def getScript(self, gesture):
+		if not self.toggling:
+			return globalPluginHandler.GlobalPlugin.getScript(self, gesture)
+		script = globalPluginHandler.GlobalPlugin.getScript(self, gesture)
+		if not script:
+			script = finally_(self.script_error, self.finish)
+		return finally_(script, self.finish)
+
+	def finish(self):
+		self.toggling = False
+		self.clearGestureBindings()
+		self.bindGestures(self.__gestures)
+
+	def script_error(self, gesture):
+		tones.beep(120, 100)
+
+	def script_toggleX(self, gesture):
+		char = gesture.identifiers[-1][-1]
+		if char == 't':
+			self.translateSelection()
+		elif char == 'c':
+			self.translateClipboardText()
+		elif char == 's':
+			self.announceOrSwapLanguages()
+
+	def script_toggle(self, gesture):
+		#If already toggling, send it on and clean up
+		if self.toggling:
+			gesture.send()
+			return
+		#alert the user of a gesture map error, rather than making the machine unusable
+		try:
+			self.bindGestures(self.__toggle_gestures)
+		except:
+			ui.message("Error binding toggle gestures")
+			raise
+		self.toggling = True
+		tones.beep(100, 10)
+
 	def createMenu(self):
 		self.prefsMenu = gui.mainFrame.sysTrayIcon.menu.GetMenuItems()[0].GetSubMenu()
 		self.instantTranslateSettingsItem = self.prefsMenu.Append(wx.ID_ANY,
@@ -73,7 +130,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		except wx.PyDeadObjectError:
 			pass
 
-	def script_translateClipboardText(self,gesture):
+	def translateClipboardText(self):
 		try:
 			text = api.getClipData()
 		except:
@@ -84,9 +141,9 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		else:
 			threading.Thread(target=self.translate, args=(text,)).start()
 	# Translators: message presented in input help mode, when user presses the shortcut keys for this addon.
-	script_translateClipboardText.__doc__=_("Translates clipboard text from one language to another using Google Translate.")
+	translateClipboardText.__doc__=_("Translates clipboard text from one language to another using Google Translate.")
 
-	def script_translateSelection(self, gesture):
+	def translateSelection(self):
 		obj=api.getFocusObject()
 		treeInterceptor=obj.treeInterceptor
 		if hasattr(treeInterceptor,'TextInfo') and not treeInterceptor.passThrough:
@@ -101,7 +158,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		else:
 			threading.Thread(target=self.translate, args=(info.text,)).start()
 	# Translators: message presented in input help mode, when user presses the shortcut keys for this addon.
-	script_translateSelection.__doc__=_("Translates selected text from one language to another using Google Translate.")
+	translateSelection.__doc__=_("Translates selected text from one language to another using Google Translate.")
 
 	def translate(self, text):
 		self.getUpdatedGlobalVars()
@@ -129,7 +186,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		lang_from=langTo
 		lang_to=langFrom
 
-	def script_announceOrSwapLanguages(self, gesture):
+	def announceOrSwapLanguages(self):
 		self.getUpdatedGlobalVars()
 		if scriptHandler.getLastScriptRepeatCount() != 0:
 			global isAutoSwapped
@@ -150,10 +207,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# Translators: message presented to announce the current source and target languages.
 		ui.message(_("Translate: from {lang1} to {lang2}").format(lang1=lang_from, lang2=lang_to))
 	# Translators: Presented in input help mode.
-	script_announceOrSwapLanguages.__doc__ = _("When pressed once, announces the current source and target languages. Pressed twice will swap source and target.")
+	announceOrSwapLanguages.__doc__ = _("When pressed once, announces the current source and target languages. Pressed twice will swap source and target.")
 
 	__gestures = {
-		"kb:NVDA+shift+r": "announceOrSwapLanguages",
-		"kb:NVDA+shift+t": "translateSelection",
-		"kb:NVDA+shift+y": "translateClipboardText",
+		"kb:NVDA+shift+t": "toggle",
 	}
