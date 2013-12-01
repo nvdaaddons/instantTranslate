@@ -35,6 +35,8 @@ _curAddon = addonHandler.Addon(_addonDir)
 _addonSummary = _curAddon.manifest['summary']
 addonHandler.initTranslation()
 
+# Below toggle code came from Tyler Spivey's code, with enhancements by Joseph Lee.
+
 def finally_(func, final):
 	"""Calls final after func, even if it fails."""
 	def wrap(f):
@@ -57,9 +59,9 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		self.createMenu()
 		self.getUpdatedGlobalVars()
 		self.toggling = False
-		self.__toggle_gestures = {}
+		self.__ITgestures = {}
 		for c in "tcs":
-			self.__toggle_gestures["KB:%s" % c] = "toggleX"
+			self.__ITgestures["KB:%s" % c] = "ITLayerCommands"
 
 	def getUpdatedGlobalVars(self):
 		global lang_from, lang_to, lang_swap, copyTranslation, autoSwap, isAutoSwapped
@@ -92,7 +94,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	def script_error(self, gesture):
 		tones.beep(120, 100)
 
-	def script_toggleX(self, gesture):
+	def script_ITLayerCommands(self, gesture):
 		char = gesture.identifiers[-1][-1]
 		if char == 't':
 			self.translateSelection()
@@ -101,19 +103,16 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		elif char == 's':
 			self.announceOrSwapLanguages()
 
-	def script_toggle(self, gesture):
-		#If already toggling, send it on and clean up
+	def script_ITLayer(self, gesture):
+		# A run-time binding will occur from which we can perform various layered translation commands.
+		# First, check if a second press of the script was done.
 		if self.toggling:
-			gesture.send()
+			self.script_error(gesture)
 			return
-		#alert the user of a gesture map error, rather than making the machine unusable
-		try:
-			self.bindGestures(self.__toggle_gestures)
-		except:
-			ui.message("Error binding toggle gestures")
-			raise
+		self.bindGestures(self.__ITgestures)
 		self.toggling = True
 		tones.beep(100, 10)
+	script_ITLayer.__doc__=_("Instant Translate layer commands. Press C to translate clipboard text, t to translate selction or s to swap languages.")
 
 	def createMenu(self):
 		self.prefsMenu = gui.mainFrame.sysTrayIcon.menu.GetMenuItems()[0].GetSubMenu()
@@ -210,5 +209,5 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	announceOrSwapLanguages.__doc__ = _("When pressed once, announces the current source and target languages. Pressed twice will swap source and target.")
 
 	__gestures = {
-		"kb:NVDA+shift+t": "toggle",
+		"kb:NVDA+shift+t": "ITLayer",
 	}
