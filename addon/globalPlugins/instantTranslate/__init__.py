@@ -59,9 +59,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		self.createMenu()
 		self.getUpdatedGlobalVars()
 		self.toggling = False
-		self.__ITgestures = {}
-		for c in "tcs":
-			self.__ITgestures["KB:%s" % c] = "ITLayerCommands"
 
 	def getUpdatedGlobalVars(self):
 		global lang_from, lang_to, lang_swap, copyTranslation, autoSwap, isAutoSwapped
@@ -94,22 +91,13 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	def script_error(self, gesture):
 		tones.beep(120, 100)
 
-	def script_ITLayerCommands(self, gesture):
-		char = gesture.identifiers[-1][-1]
-		if char == 't':
-			self.translateSelection()
-		elif char == 'c':
-			self.translateClipboardText()
-		elif char == 's':
-			self.announceOrSwapLanguages()
-
 	def script_ITLayer(self, gesture):
 		# A run-time binding will occur from which we can perform various layered translation commands.
 		# First, check if a second press of the script was done.
 		if self.toggling:
 			self.script_error(gesture)
 			return
-		self.bindGestures(self.__ITgestures)
+		self.bindGestures(self.__ITGestures)
 		self.toggling = True
 		tones.beep(100, 10)
 	script_ITLayer.__doc__=_("Instant Translate layer commands. Press C to translate clipboard text, t to translate selction or s to swap languages.")
@@ -129,7 +117,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		except wx.PyDeadObjectError:
 			pass
 
-	def translateClipboardText(self):
+	def script_translateClipboardText(self, gesture):
 		try:
 			text = api.getClipData()
 		except:
@@ -140,9 +128,9 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		else:
 			threading.Thread(target=self.translate, args=(text,)).start()
 	# Translators: message presented in input help mode, when user presses the shortcut keys for this addon.
-	translateClipboardText.__doc__=_("Translates clipboard text from one language to another using Google Translate.")
+	script_translateClipboardText.__doc__=_("Translates clipboard text from one language to another using Google Translate.")
 
-	def translateSelection(self):
+	def script_translateSelection(self, gesture):
 		obj=api.getFocusObject()
 		treeInterceptor=obj.treeInterceptor
 		if hasattr(treeInterceptor,'TextInfo') and not treeInterceptor.passThrough:
@@ -157,7 +145,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		else:
 			threading.Thread(target=self.translate, args=(info.text,)).start()
 	# Translators: message presented in input help mode, when user presses the shortcut keys for this addon.
-	translateSelection.__doc__=_("Translates selected text from one language to another using Google Translate.")
+	script_translateSelection.__doc__=_("Translates selected text from one language to another using Google Translate.")
 
 	def translate(self, text):
 		self.getUpdatedGlobalVars()
@@ -185,7 +173,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		lang_from=langTo
 		lang_to=langFrom
 
-	def announceOrSwapLanguages(self):
+	def script_announceOrSwapLanguages(self,gesture):
 		self.getUpdatedGlobalVars()
 		if scriptHandler.getLastScriptRepeatCount() != 0:
 			global isAutoSwapped
@@ -206,7 +194,13 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# Translators: message presented to announce the current source and target languages.
 		ui.message(_("Translate: from {lang1} to {lang2}").format(lang1=lang_from, lang2=lang_to))
 	# Translators: Presented in input help mode.
-	announceOrSwapLanguages.__doc__ = _("When pressed once, announces the current source and target languages. Pressed twice will swap source and target.")
+	script_announceOrSwapLanguages.__doc__ = _("When pressed once, announces the current source and target languages. Pressed twice will swap source and target.")
+
+	__ITGestures={
+		"kb:t":"translateSelection",
+		"kb:shift+t":"translateClipboardText",
+		"kb:s":"announceOrSwapLanguages"
+		}
 
 	__gestures = {
 		"kb:NVDA+shift+t": "ITLayer",
