@@ -98,6 +98,7 @@ langcodes = [
 	"mk",
 	"ms",
 	"mt",
+	"ne",
 	"no",
 	"nl",
 	"pl",
