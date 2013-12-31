@@ -59,6 +59,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		self.createMenu()
 		self.getUpdatedGlobalVars()
 		self.toggling = False
+		self.maxCachedResults = 5
+		self.cachedResults = []
 
 	def getUpdatedGlobalVars(self):
 		global lang_from, lang_to, lang_swap, copyTranslation, autoSwap, isAutoSwapped
@@ -149,24 +151,42 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def translate(self, text):
 		self.getUpdatedGlobalVars()
-		myTranslator = None
-		if not autoSwap:
-			myTranslator = Translator(lang_from, lang_to, text)
+		translation = None
+		if (text, lang_to) in [(x[0],x[1]) for x in self.cachedResults]:
+			translation = filter(lambda f: f[0] == text and f[1] == lang_to, self.cachedResults)[0][2]
+			ui.message(_("Translating..."))
 		else:
-			myTranslator = Translator(lang_from, lang_to, text, lang_swap)
-		ui.message(_("Translating..."))
-		myTranslator.start()
-		i=0
-		while  myTranslator.isAlive():
-			sleep(0.1)
-			i+=1
-			if i == 10:
-				beep(500, 100)
-				i = 0
-		myTranslator.join()
-		queueHandler.queueFunction(queueHandler.eventQueue, ui.message, myTranslator.translation)
-		if copyTranslation:
-			api.copyToClip(myTranslator.translation)
+			myTranslator = None
+			if not autoSwap:
+				myTranslator = Translator(lang_from, lang_to, text)
+			else:
+				myTranslator = Translator(lang_from, lang_to, text, lang_swap)
+			ui.message(_("Translating..."))
+			myTranslator.start()
+			i=0
+			while  myTranslator.isAlive():
+				sleep(0.1)
+				i+=1
+				if i == 10:
+					beep(500, 100)
+					i = 0
+			myTranslator.join()
+			translation = myTranslator.translation
+			if translation != '':
+				self.addResultToCache(text, translation)
+		queueHandler.queueFunction(queueHandler.eventQueue, ui.message, translation)
+		self.copyResult(translation)
+
+	def addResultToCache(self, text, translation):
+		if len(self.cachedResults) == self.maxCachedResults:
+			self.cachedResults.__delitem__(0)
+		self.cachedResults.append((text, lang_to, translation))
+
+	def copyResult(self, translation, ignoreSetting=False):
+		if ignoreSetting:
+			api.copyToClip(translation)
+		elif copyTranslation:
+			api.copyToClip(translation)
 
 	def swapLanguages(self, langFrom, langTo):
 		global lang_from, lang_to
@@ -202,11 +222,25 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	# Translators: Presented in input help mode.
 	script_announceLanguages.__doc__ = _("It announces the current source and target languages.")
 
+	def script_copyLastResult(self, gesture):
+		self.getUpdatedGlobalVars()
+		if len(self.cachedResults) > 0:
+			text = self.cachedResults[len(self.cachedResults)-1][2]
+			self.copyResult(text, ignoreSetting=True)
+			# Translators: message presented to announce a successful copy
+			ui.message(_("Last translation copied in clipboard"))
+		else:
+			# Translators: message presented to announce no previous translation disponibility
+			ui.message(_("No stored translation"))
+	# Translators: Presented in input help mode.
+	script_copyLastResult.__doc__ = _("It copies the last translation to clipboard")
+
 	__ITGestures={
 		"kb:t":"translateSelection",
 		"kb:shift+t":"translateClipboardText",
 		"kb:s":"swapLanguages",
-		"kb:a":"announceLanguages"
+		"kb:a":"announceLanguages",
+		"kb:c":"copyLastResult"
 	}
 
 	__gestures = {
