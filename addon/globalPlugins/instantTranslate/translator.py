@@ -25,7 +25,7 @@ arabicBreaks = u'[،؛؟]'
 # Thanks to Talori in the NVDA irc room:
 # U+3000 to U+303F, U+FE10 to U+FE1F, U+FE30 to U+FE6F, U+FF01 to U+FF60
 chineseBreaks = u'[　-〿︐-︟︰-﹯！-｠]'
-latinBreaks = r'[.,!?;:]'
+latinBreaks = r'[.,!?;:\n]'
 splitReg = re.compile(u"{arabic}|{chinese}|{latin}".format(arabic=arabicBreaks, chinese=chineseBreaks, latin=latinBreaks))
 
 def splitChunks(text, chunksize):
@@ -43,7 +43,7 @@ def splitChunks(text, chunksize):
 
 class Translator(threading.Thread):
 
-	def __init__(self, lang_from, lang_to, text, lang_swap=None, chunksize=1300, *args, **kwargs):
+	def __init__(self, lang_from, lang_to, text, lang_swap=None, chunksize=350, *args, **kwargs):
 		super(Translator, self).__init__(*args, **kwargs)
 		self._stop = threading.Event()
 		self.text = text
