@@ -154,14 +154,16 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		translation = None
 		if (text, lang_to) in [(x[0],x[1]) for x in self.cachedResults]:
 			translation = filter(lambda f: f[0] == text and f[1] == lang_to, self.cachedResults)[0][2]
-			ui.message(_("Translating..."))
+#			ui.message(_("Translating..."))
+			index = self.cachedResults.index((text, lang_to, translation))
+			self.addResultToCache(text, translation, removeIndex=index)
 		else:
 			myTranslator = None
 			if not autoSwap:
 				myTranslator = Translator(lang_from, lang_to, text)
 			else:
 				myTranslator = Translator(lang_from, lang_to, text, lang_swap)
-			ui.message(_("Translating..."))
+#			ui.message(_("Translating..."))
 			myTranslator.start()
 			i=0
 			while  myTranslator.isAlive():
@@ -177,8 +179,10 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		queueHandler.queueFunction(queueHandler.eventQueue, ui.message, translation)
 		self.copyResult(translation)
 
-	def addResultToCache(self, text, translation):
-		if len(self.cachedResults) == self.maxCachedResults:
+	def addResultToCache(self, text, translation, removeIndex=0):
+		if removeIndex:
+			self.cachedResults.__delitem__(removeIndex)
+		elif len(self.cachedResults) == self.maxCachedResults:
 			self.cachedResults.__delitem__(0)
 		self.cachedResults.append((text, lang_to, translation))
 
