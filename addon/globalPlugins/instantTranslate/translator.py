@@ -52,6 +52,7 @@ class Translator(threading.Thread):
 		self.lang_from = lang_from
 		self.lang_swap = lang_swap
 		self.translation = ''
+		self.lang_translated = ''
 		self.opener = urllib2.build_opener()
 		self.opener.addheaders = [('User-agent', 'Mozilla/5.0')]
 		self.firstChunk = True
@@ -69,7 +70,7 @@ class Translator(threading.Thread):
 			url = urlTemplate.format(text=urllib2.quote(chunk.encode('utf-8')), lang_from=self.lang_from, lang_to=self.lang_to)
 			try:
 				response = json.load(self.opener.open(url))
-				if self.firstChunk and self.lang_from == "auto" and response["src"] == self.lang_to and self.lang_swap is not None:
+				if self.firstChunk and self.lang_from == "auto" and response['src'] == self.lang_to and self.lang_swap is not None:
 					self.lang_to = self.lang_swap
 					self.firstChunk = False
 					url = urlTemplate.format(text=urllib2.quote(chunk.encode('utf-8')), lang_from=self.lang_from, lang_to=self.lang_to)
@@ -81,3 +82,4 @@ class Translator(threading.Thread):
 			self.translation += "".join(t['trans'] for t in response['sentences'])
 			if 'dict' in response:
 				self.translation += " | " + " | ".join((", ".join(w for w in d['terms'])) for d in response['dict'])
+			self.lang_translated = response['src']

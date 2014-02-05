@@ -38,6 +38,7 @@ All following commands are valid after pressing NVDA+Shift+T:
 * S: swap source and target languages.
 * A: announce current configuration.
 * C: copy last result to clipboard.
+* I: identify the language of selected text.
 
 ## Changes for 3.0 ##
 * Implemented swapping languages.

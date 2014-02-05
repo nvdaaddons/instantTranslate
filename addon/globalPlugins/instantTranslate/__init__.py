@@ -28,6 +28,7 @@ from time import sleep
 import threading
 import _config
 import addonHandler
+from langslist import g
 
 _config.load()
 _addonDir = os.path.join(os.path.dirname(__file__), "..", "..").decode("mbcs")
@@ -239,12 +240,43 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	# Translators: Presented in input help mode.
 	script_copyLastResult.__doc__ = _("It copies the last translation to clipboard")
 
+	def script_identifyLanguage(self, gesture):
+		obj=api.getFocusObject()
+		treeInterceptor=obj.treeInterceptor
+		if hasattr(treeInterceptor,'TextInfo') and not treeInterceptor.passThrough:
+			obj=treeInterceptor
+		try:
+			info=obj.makeTextInfo(textInfos.POSITION_SELECTION)
+		except (RuntimeError, NotImplementedError):
+			info=None
+		if not info or info.isCollapsed:
+			# Translators: user has pressed the shortcut key for identifying the language of selected text, but no text was actually selected.
+			ui.message(_("no selection"))
+		else:
+			self.getUpdatedGlobalVars()
+			myTranslator = Translator("auto", lang_to, info.text)
+			ui.message(_("Language is..."))
+			myTranslator.start()
+			i=0
+			while  myTranslator.isAlive():
+				sleep(0.1)
+				i+=1
+				if i == 10:
+					beep(500, 100)
+					i = 0
+			myTranslator.join()
+			language = myTranslator.lang_translated
+			queueHandler.queueFunction(queueHandler.eventQueue, ui.message, g(language))
+	# Translators: Presented in input help mode.
+	script_identifyLanguage.__doc__ = _("It identifies the language of selected text")
+
 	__ITGestures={
 		"kb:t":"translateSelection",
 		"kb:shift+t":"translateClipboardText",
 		"kb:s":"swapLanguages",
 		"kb:a":"announceLanguages",
-		"kb:c":"copyLastResult"
+		"kb:c":"copyLastResult",
+		"kb:i":"identifyLanguage"
 	}
 
 	__gestures = {
