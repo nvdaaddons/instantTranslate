@@ -8,9 +8,9 @@ This add-on is used to translate selected and/or clipboard text from one languag
 This is done using the Google Translate service.
 
 ## Configuring languages ##
-To configure source, target and in case swap language, from NVDA menu, go to Preferences, then go to Instant Translate Settings.
+To configure source, target and in case swap language, go to: NVDA Menu >> Preferences >> Instant Translate Settings.
 
-There are two comboboxes labeled "Source language" and "Target language", and a checkbox to decide if it copies the translation to clipboard.
+There are two comboboxes labeled "Source language" and "Target language", and a checkbox to decide if it must copy the translation to clipboard.
 
 In addition, if you selected auto option (the first choice) from "Source language" combobox, there are also a combobox labeled "Language for swapping" and a checkbox about the auto-swap.
 
@@ -26,21 +26,25 @@ A simple example: take again in mind the situation  imagined previously; if you 
 
 Anyway, this is a temporary configuration; if this option has no effect (it's experimental), try to commute manually to a stable configuration, using the gesture for swapping described below. It's experimental because in some situations (with short texts, tipically), Google does not recognize the real source language correctly, and you have to swap languages manually via script, so to force the source language to be the previous target language (English in our example).
 
-## How to use this add-on ##
-There are two ways of using this add-on:
+## Using ##
+You can use this add-on in two ways:
 
-1. Select some text using selection commands (shift with arrow keys, for example). Press NVDA+Shift+T, then T to translate the selected text. The translated string will be read, providing that the synthesizer you are using supports the target language.
-2. Copy some text to clipboard. Press NVDA+Shift+T, then Shift+T to translate the text in the clipboard to the target language.
+1. Select some text using selection commands (shift with arrow keys, for example) and press associated key to translate. translation result willbe read with synthesizer which you are using.
+2. You can also translate text from the Clipboard.
 
-## Other useful commands ##
-All following commands are valid after pressing NVDA+Shift+T:
+## Shortcuts ##
+All following commands must be pressed after modifier key "NVDA+Shift+t":
 
-* S: swap source and target languages.
-* A: announce current configuration.
-* C: copy last result to clipboard.
-* I: identify the language of selected text.
+* t: Translate selected text,
+* Shift+t: translate text from the Clipboard,
+* S: swap source and target languages,
+* A: announce current configuration,
+* C: copy last result to clipboard,
+* I: identify the language of selected text,
+* h: announces all available commands to user.
 
 ## Changes for 3.0 ##
+* Change way how Shortcuts are used, now you can press instantTranslate modifier key "NVDA+Shift+t", and then single letter key to perform some action {see all Commands in the "Shortcuts" section}.
 * Implemented swapping languages.
 * Changed configuration format, now we can change instant translate settings if we are in readonly pane, but remember that this will work before first restart of nvda.
 * Removed limit on amount of text that can be translated.

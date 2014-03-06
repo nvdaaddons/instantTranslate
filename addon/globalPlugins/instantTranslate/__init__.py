@@ -1,5 +1,5 @@
 #__init__.py
-# Copyright (C) 2012-2013 Aleksey Sadovoy AKA Lex <lex@progger.ru>,
+# Copyright (C) 2012-2014 Aleksey Sadovoy AKA Lex <lex@progger.ru>,
 #ruslan <ru2020slan@yandex.ru>,
 #beqa <beqaprogger@gmail.com>
 #This addon was been repacked and optimized for executing without standalone Python by Outsider <outsidepro@rambler.ru>.
@@ -103,7 +103,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		self.bindGestures(self.__ITGestures)
 		self.toggling = True
 		tones.beep(100, 10)
-	script_ITLayer.__doc__=_("Instant Translate layer commands. Press C to translate clipboard text, t to translate selction or s to swap languages.")
+	script_ITLayer.__doc__=_("Instant Translate layer commands. t translates selected text, shift+t translates clipboard text, a announces current swap configuration, s swaps source and target languages, c copies last result to clipboard, i identify the language of selected text.")
 
 	def createMenu(self):
 		self.prefsMenu = gui.mainFrame.sysTrayIcon.menu.GetMenuItems()[0].GetSubMenu()
@@ -270,14 +270,17 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	# Translators: Presented in input help mode.
 	script_identifyLanguage.__doc__ = _("It identifies the language of selected text")
 
+	def script_displayHelp(self, gesture):
+		ui.message(_("t translates selected text, shift+t translates clipboard text, a announces current swap configuration, s swaps source and target languages, c copies last result to clipboard, i identify the language of selected text, h displays this message."))
 	__ITGestures={
 		"kb:t":"translateSelection",
 		"kb:shift+t":"translateClipboardText",
 		"kb:s":"swapLanguages",
 		"kb:a":"announceLanguages",
 		"kb:c":"copyLastResult",
-		"kb:i":"identifyLanguage"
-	}
+		"kb:i":"identifyLanguage",
+		"kb:h":"displayHelp"
+		}
 
 	__gestures = {
 		"kb:NVDA+shift+t": "ITLayer",

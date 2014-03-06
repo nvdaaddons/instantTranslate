@@ -13,7 +13,7 @@ addon_info = {
 	"addon-summary" : _("Instant Translate - Translates given text using the Google Translate service."),
 	# Add-on description
 	# Translators: Long description to be shown for this add-on on installation and add-on information
-	"addon-description" : _("This addon translates selected or clipboard text using the Google Translate service and presents it. Press NVDA+Shift+T to translate selected text. Press NVDA+Shift+Y to translate clipboard text."),
+	"addon-description" : _("This addon translates selected or clipboard text using the Google Translate service and presents it."),
 	# version
 	"addon-version" : "3.0-dev",
 	# Author(s)
