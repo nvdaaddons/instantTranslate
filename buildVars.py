@@ -1,25 +1,31 @@
+# -*- coding: UTF-8 -*-
+
 # Build customizations
-# Change this file instead of sconstruct, whenever possible.
+# Change this file instead of sconstruct or manifest files, whenever possible.
 
 # Full getext (please don't change)
 _ = lambda x : x
 
 # Add-on information variables
 addon_info = {
-# add-on Name
-	"addon-name" : "instantTranslate",
+	# for previously unpublished addons, please follow the community guidelines at:
+	# https://bitbucket.org/nvdaaddonteam/todo/raw/master/guideLines.txt
+	# add-on Name, internal for nvda
+	"addon_name" : "instantTranslate",
+	# Add-on summary, usually the user visible name of the addon.
+	# Translators: Summary for this add-on to be shown on installation and add-on information.
+	"addon_summary" : _("Instant Translate - Translates given text using the Google Translate service."),
 	# Add-on description
-	# TRANSLATORS: Summary for this add-on to be shown on installation and add-on informaiton.
-	"addon-summary" : _("Instant Translate - Translates given text using the Google Translate service."),
-	# Add-on description
-	# Translators: Long description to be shown for this add-on on installation and add-on information
-	"addon-description" : _("This addon translates selected or clipboard text using the Google Translate service and presents it."),
+	# Translators: Long description to be shown for this add-on on add-on information from add-ons manager
+	"addon_description" : _("This addon translates selected or clipboard text using the Google Translate service and presents it."),
 	# version
-	"addon-version" : "3.0-dev",
+	"addon_version" : "3.0-dev",
 	# Author(s)
-	"addon-author" : "Alexy Sadovoy aka Lex <lex@progger.su>, ruslan <ru2020slan@yandex.ru>, beqa <beqaprogger@gmail.com>, Mesar Hameed <mhameed@src.gnome.org>, Alberto Buffolino <a.buffolino@gmail.com>, and other nvda contributors",
+	"addon_author" : "Alexy Sadovoy aka Lex <lex@progger.su>, ruslan <ru2020slan@yandex.ru>, beqa <beqaprogger@gmail.com>, Mesar Hameed <mhameed@src.gnome.org>, Alberto Buffolino <a.buffolino@gmail.com>, and other nvda contributors",
 	# URL for the add-on documentation support
-	"addon-url" : "http://addons.nvda-project.org/"
+	"addon_url" : "http://addons.nvda-project.org/",
+	# Documentation file name
+	"addon_docFileName" : "readme.html"
 }
 
 import os.path
