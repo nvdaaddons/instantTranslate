@@ -14,7 +14,6 @@ from logHandler import log
 
 impPath = os.path.abspath(os.path.dirname(__file__))
 sys.path.append(impPath)
-import json
 import urllib2
 del sys.path[-1]
 
@@ -82,10 +81,6 @@ class Translator(threading.Thread):
 		# some adjustment, better to do on full text
 		self.translation = self.translation.replace('\r\n ', '\r\n').replace('  ', ' ')[1:]
 		self.lang_translated = lang_translated
-# old code, for future re-implementation
-#			self.translation += "".join(t['trans'] for t in response['sentences'])
-#			if 'dict' in response:
-#				self.translation += " | " + " | ".join((", ".join(w for w in d['terms'])) for d in response['dict'])
 
 	def buildRequest(self, text, lang_from, lang_to):
 		"""Build POST request which will be sent to Google."""
@@ -100,19 +95,27 @@ class Translator(threading.Thread):
 		"""Parse unstructured response."""
 		data = response.readlines()[0]
 		# get segments with couples ["translation","original text"]
-		translation = data.split(']],,', 1)[0][3:]
-		# get a list with each couple as item
-		sentences = translation.split('],[')
-		temp = ''
-		# get translation, removing first char (quote symbol)
-		for item in sentences:
-			item = item.split('\",\"', 1)[0][1:]
-			# join all translations
-			temp = ' '.join([temp, item])
+		l1, l2 = data.split(']],', 1)
+		translation = l1[3:]
+		if l2.startswith('[[\"'):
+			# get list of synonyms
+			syn = l2[l2.find(',[')+1:l2.find(']')].split(',')
+			temp = ', '.join([x.replace('\"', '') for x in syn])
+		else:
+			# get a list with each couple as item
+			sentences = translation.split('],[')
+			temp = ''
+			# get translation, removing first char (quote symbol)
+			for item in sentences:
+				item = item.split('\",\"', 1)[0][1:]
+				# join all translations
+				temp = ' '.join([temp, item])
 		translation = temp.decode('string-escape').decode('utf-8')
 		translation = self.fixPunctuation(translation)
 		# get the language of original text
 		lang = data.partition(']],,\"')[2][:2]
+		if lang == '':
+			lang = _("unavailable")
 		return translation, lang
 
 	def fixPunctuation(self, translation):
