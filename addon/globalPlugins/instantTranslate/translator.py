@@ -53,33 +53,81 @@ class Translator(threading.Thread):
 		self.lang_swap = lang_swap
 		self.translation = ''
 		self.lang_translated = ''
-		self.opener = urllib2.build_opener()
-		self.opener.addheaders = [('User-agent', 'Mozilla/5.0')]
 		self.firstChunk = True
 
 	def stop(self):
 		self._stop.set()
 
 	def run(self):
-		urlTemplate = 'http://translate.google.ru/translate_a/t?client=x&text={text}&sl={lang_from}&tl={lang_to}'
 		for chunk in splitChunks(self.text, self.chunksize):
 			# Make sure we don't send requests to google too often.
 			# Try to simulate a human.
 			if not self.firstChunk:
 				sleep(randint(1, 10))
-			url = urlTemplate.format(text=urllib2.quote(chunk.encode('utf-8')), lang_from=self.lang_from, lang_to=self.lang_to)
+			req = self.buildRequest(chunk.encode('utf-8'), self.lang_from, self.lang_to)
 			try:
-				response = json.load(self.opener.open(url))
-				if self.firstChunk and self.lang_from == "auto" and response['src'] == self.lang_to and self.lang_swap is not None:
+				response = urllib2.urlopen(req)
+				translation, lang_translated = self.parseData(response)
+				if self.firstChunk and self.lang_from == "auto" and  lang_translated == self.lang_to and self.lang_swap is not None:
 					self.lang_to = self.lang_swap
 					self.firstChunk = False
-					url = urlTemplate.format(text=urllib2.quote(chunk.encode('utf-8')), lang_from=self.lang_from, lang_to=self.lang_to)
-					response = json.load(self.opener.open(url))
+					req = self.buildRequest(chunk.encode('utf-8'), self.lang_from, self.lang_to)
+					response = urllib2.urlopen(req)
+					translation, lang_translated = self.parseData(response)
 			except Exception as e:
 				log.exception("Instant translate: Can not translate text '%s'" %chunk)
 				# We have probably been blocked, so stop trying to translate.
 				raise e
-			self.translation += "".join(t['trans'] for t in response['sentences'])
-			if 'dict' in response:
-				self.translation += " | " + " | ".join((", ".join(w for w in d['terms'])) for d in response['dict'])
-			self.lang_translated = response['src']
+			self.translation += translation
+		# some adjustment, better to do on full text
+		self.translation = self.translation.replace('\r\n ', '\r\n').replace('  ', ' ')[1:]
+		self.lang_translated = lang_translated
+# old code, for future re-implementation
+#			self.translation += "".join(t['trans'] for t in response['sentences'])
+#			if 'dict' in response:
+#				self.translation += " | " + " | ".join((", ".join(w for w in d['terms'])) for d in response['dict'])
+
+	def buildRequest(self, text, lang_from, lang_to):
+		"""Build POST request which will be sent to Google."""
+		urlTemplate = 'http://www.google.com/translate_a/t?client=t&sl={lang_from}&tl={lang_to}&ie=utf-8&oe=utf-8'
+		url = urlTemplate.format(lang_from=lang_from, lang_to=lang_to)
+		header = {'User-agent': 'Mozilla/5.0', 'Content-Type': 'application/x-www-form-urlencoded'}
+		data = 'text=%s' %urllib2.quote(text)
+		req = urllib2.Request(url, data, header)
+		return req
+
+	def parseData(self, response):
+		"""Parse unstructured response."""
+		data = response.readlines()[0]
+		# get segments with couples ["translation","original text"]
+		translation = data.split(']],,', 1)[0][3:]
+		# get a list with each couple as item
+		sentences = translation.split('],[')
+		temp = ''
+		# get translation, removing first char (quote symbol)
+		for item in sentences:
+			item = item.split('\",\"', 1)[0][1:]
+			# join all translations
+			temp = ' '.join([temp, item])
+		translation = temp.decode('string-escape').decode('utf-8')
+		translation = self.fixPunctuation(translation)
+		# get the language of original text
+		lang = data.partition(']],,\"')[2][:2]
+		return translation, lang
+
+	def fixPunctuation(self, translation):
+		"""Clean text from space before punctuation symbol."""
+		# list of potentially positions of spaces to remove
+		spacePos = []
+		for puncMark in splitReg.finditer(translation):
+			spacePos.append(puncMark.start()-1)
+		if len(spacePos) == 0:
+			return translation
+		fixedTranslation = ''
+		for n in xrange(0,len(translation)):
+			temp = translation[n]
+			if n in spacePos and temp == ' ':
+				continue
+			else:
+				fixedTranslation += temp
+		return fixedTranslation
