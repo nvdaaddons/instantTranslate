@@ -79,7 +79,7 @@ class Translator(threading.Thread):
 				raise e
 			self.translation += translation
 		# some adjustment, better to do on full text
-		self.translation = self.translation.replace('\r\n ', '\r\n').replace('  ', ' ')[1:]
+		self.translation = self.translation.replace('\r\n ', '\n').replace('\n ', '\r\n').replace('  ', ' ')[1:]
 		self.lang_translated = lang_translated
 
 	def buildRequest(self, text, lang_from, lang_to):
