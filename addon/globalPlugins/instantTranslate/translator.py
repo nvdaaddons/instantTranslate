@@ -79,7 +79,7 @@ class Translator(threading.Thread):
 				raise e
 			self.translation += translation
 		# some adjustment, better to do on full text
-		self.translation = self.translation.replace('\r\n ', '\n').replace('\n ', '\r\n').replace('  ', ' ')[1:]
+		self.translation = self.fixNewlines(self.translation)
 		self.lang_translated = lang_translated
 
 	def buildRequest(self, text, lang_from, lang_to):
@@ -134,3 +134,11 @@ class Translator(threading.Thread):
 			else:
 				fixedTranslation += temp
 		return fixedTranslation
+
+	def fixNewlines(self, translation):
+		"""Adjust newlines and (subsequent or double) spaces."""
+		fixes = [('\r\n ', '\r\n'), ('\n ', '\r\n'), ('  ', ' ')]
+		for fix in fixes:
+			translation = translation.replace(fix[0], fix[1])
+		# first char is a space, so...
+		return translation[1:]

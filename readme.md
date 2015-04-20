@@ -1,6 +1,6 @@
 # Instant Translate #
 
-* Authors: Alexy Sadovoy, Beqa Gozalishvili, Mesar Hameed, Alberto Buffolino and other nvda contributors.
+* Authors: Alexy Sadovoy, Beqa Gozalishvili, Mesar Hameed, Alberto Buffolino and other NVDA contributors.
 * Download [version 2.2beta2][1]
 * Download [version 3.0-dev][2]
 
@@ -35,24 +35,23 @@ You can use this add-on in two ways:
 ## Shortcuts ##
 All following commands must be pressed after modifier key "NVDA+Shift+t":
 
-* t: Translate selected text,
+* T: Translate selected text,
 * Shift+t: translate text from the Clipboard,
 * S: swap source and target languages,
 * A: announce current configuration,
 * C: copy last result to clipboard,
 * I: identify the language of selected text,
-* h: announces all available commands to user.
+* H: announces all available commands to user.
 
 ## Changes for 3.0 ##
 * Change way how Shortcuts are used, now you can press instantTranslate modifier key "NVDA+Shift+t", and then single letter key to perform some action {see all Commands in the "Shortcuts" section}.
 * Implemented swapping languages.
-* Changed configuration format, now we can change instant translate settings if we are in readonly pane, but remember that this will work before first restart of nvda.
+* Changed configuration format, now we can change instant translate settings if we are in readonly pane, but remember that this will work before first restart of NVDA.
 * Removed limit on amount of text that can be translated.
 * Added shortcut t to the Instant Translate Settings menu item
 * The auto option is now in first position in source combo, and absent in target combo.
 * Added a checkbox for configuring copying translation results.
 * Store config file in the root of settings folder.
-* New languages: Aragonese, Arabic, Brazilian Portuguese, Croatian, Dutch, Finnish, French, Galician, German, Hungarian, Italian, Japanese, Korean, Nepali, Polish, Slovak, Slovenian, Italian, Tamil, Turkish.
 
 ## Changes for 2.1 ##
 * Now addon can translate text from clipboard when pressing nvda+shift+y. 
