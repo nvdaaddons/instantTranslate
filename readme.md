@@ -52,6 +52,8 @@ All following commands must be pressed after modifier key "NVDA+Shift+t":
 * The auto option is now in first position in source combo, and absent in target combo.
 * Added a checkbox for configuring copying translation results.
 * Store config file in the root of settings folder.
+* Source and target languages syncronized with what Google Translate currently exposes (22 Apr 2015).
+
 
 ## Changes for 2.1 ##
 * Now addon can translate text from clipboard when pressing nvda+shift+y. 

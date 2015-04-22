@@ -113,7 +113,8 @@ class Translator(threading.Thread):
 		translation = temp.decode('string-escape').decode('utf-8')
 		translation = self.fixPunctuation(translation)
 		# get the language of original text
-		lang = data.partition(']],,\"')[2][:2]
+		tempLang = data.partition(']],,\"')[2]
+		lang = tempLang[:tempLang.find('\"')]
 		if lang == '':
 			lang = _("unavailable")
 		return translation, lang
