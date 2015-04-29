@@ -1,8 +1,8 @@
 # Instant Translate #
 
 * Authors: Alexy Sadovoy, Beqa Gozalishvili, Mesar Hameed, Alberto Buffolino and other NVDA contributors.
-* Download [version 2.2beta2][1]
-* Download [version 3.0-dev][2]
+* Download [stable version][1]
+* Download [development version][2]
 
 This add-on is used to translate selected and/or clipboard text from one language to another.
 This is done using the Google Translate service.
