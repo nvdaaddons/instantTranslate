@@ -44,7 +44,7 @@ All following commands must be pressed after modifier key "NVDA+Shift+t":
 * H: announces all available commands to user.
 
 ## Changes for 3.0 ##
-* Change way how Shortcuts are used, now you can press instantTranslate modifier key "NVDA+Shift+t", and then single letter key to perform some action {see all Commands in the "Shortcuts" section}.
+* Change way how Shortcuts are used, now you can press instantTranslate modifier key "NVDA+Shift+t", and then single letter key to perform some action (see all Commands in the "Shortcuts" section).
 * Implemented swapping languages.
 * Changed configuration format, now we can change instant translate settings if we are in readonly pane, but remember that this will work before first restart of NVDA.
 * Removed limit on amount of text that can be translated.
