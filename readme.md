@@ -68,4 +68,5 @@ All following commands must be pressed after modifier key "NVDA+Shift+t":
 * Initial version.
 
 [1]: http://addons.nvda-project.org/files/get.php?file=it
+
 [2]: http://addons.nvda-project.org/files/get.php?file=it-dev
