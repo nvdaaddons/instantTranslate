@@ -153,18 +153,17 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	def translate(self, text):
 		self.getUpdatedGlobalVars()
 		translation = None
-		if (text, lang_to) in [(x[0],x[1]) for x in self.cachedResults]:
-			translation = filter(lambda f: f[0] == text and f[1] == lang_to, self.cachedResults)[0][2]
-#			ui.message(_("Translating..."))
-			index = self.cachedResults.index((text, lang_to, translation))
+		if (text, lang_to, lang_from) in [(x[0],x[1],x[2]) for x in self.cachedResults]:
+			translation = filter(lambda f: f[0] == text and f[1] == lang_to and f[2] == lang_from, self.cachedResults)[0][3]
+			index = self.cachedResults.index((text, lang_to, lang_from, translation))
 			self.addResultToCache(text, translation, removeIndex=index)
+			translation = "cached: "+translation
 		else:
 			myTranslator = None
 			if not autoSwap:
 				myTranslator = Translator(lang_from, lang_to, text)
 			else:
 				myTranslator = Translator(lang_from, lang_to, text, lang_swap)
-#			ui.message(_("Translating..."))
 			myTranslator.start()
 			i=0
 			while  myTranslator.isAlive():
@@ -182,10 +181,10 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def addResultToCache(self, text, translation, removeIndex=0):
 		if removeIndex:
-			self.cachedResults.__delitem__(removeIndex)
+			del self.cachedResults[removeIndex]
 		elif len(self.cachedResults) == self.maxCachedResults:
-			self.cachedResults.__delitem__(0)
-		self.cachedResults.append((text, lang_to, translation))
+			del self.cachedResults[0]
+		self.cachedResults.append((text, lang_to, lang_from, translation))
 
 	def copyResult(self, translation, ignoreSetting=False):
 		if ignoreSetting:
