@@ -157,7 +157,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			translation = filter(lambda f: f[0] == text and f[1] == lang_to and f[2] == lang_from, self.cachedResults)[0][3]
 			index = self.cachedResults.index((text, lang_to, lang_from, translation))
 			self.addResultToCache(text, translation, removeIndex=index)
-			translation = "cached: "+translation
 		else:
 			myTranslator = None
 			if not autoSwap:
@@ -216,6 +215,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		ui.message(_("Languages swapped"))
 		# Translators: message presented to announce the current source and target languages.
 		ui.message(_("Translate: from {lang1} to {lang2}").format(lang1=lang_from, lang2=lang_to))
+		self.script_translateSelection(gesture)
 	# Translators: Presented in input help mode.
 	script_swapLanguages.__doc__ = _("It swaps source and target languages.")
 

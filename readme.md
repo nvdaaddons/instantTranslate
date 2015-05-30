@@ -1,8 +1,8 @@
 # Instant Translate #
 
 * Authors: Alexy Sadovoy, Beqa Gozalishvili, Mesar Hameed, Alberto Buffolino and other NVDA contributors.
-* Download [version 2.2beta2][1]
-* Download [version 3.0-dev][2]
+* Download [stable version][1]
+* Download [development version][2]
 
 This add-on is used to translate selected and/or clipboard text from one language to another.
 This is done using the Google Translate service.
@@ -43,8 +43,12 @@ All following commands must be pressed after modifier key "NVDA+Shift+t":
 * I: identify the language of selected text,
 * H: announces all available commands to user.
 
+## Changes for 4.0 ##
+* Translation is automatically performed after swapping.
+* Cache bug fixed.
+
 ## Changes for 3.0 ##
-* Change way how Shortcuts are used, now you can press instantTranslate modifier key "NVDA+Shift+t", and then single letter key to perform some action {see all Commands in the "Shortcuts" section}.
+* Change way how Shortcuts are used, now you can press instantTranslate modifier key "NVDA+Shift+t", and then single letter key to perform some action (see all Commands in the "Shortcuts" section).
 * Implemented swapping languages.
 * Changed configuration format, now we can change instant translate settings if we are in readonly pane, but remember that this will work before first restart of NVDA.
 * Removed limit on amount of text that can be translated.
@@ -53,7 +57,6 @@ All following commands must be pressed after modifier key "NVDA+Shift+t":
 * Added a checkbox for configuring copying translation results.
 * Store config file in the root of settings folder.
 * Source and target languages syncronized with what Google Translate currently exposes (22 Apr 2015).
-
 
 ## Changes for 2.1 ##
 * Now addon can translate text from clipboard when pressing nvda+shift+y. 
@@ -68,4 +71,5 @@ All following commands must be pressed after modifier key "NVDA+Shift+t":
 * Initial version.
 
 [1]: http://addons.nvda-project.org/files/get.php?file=it
+
 [2]: http://addons.nvda-project.org/files/get.php?file=it-dev
