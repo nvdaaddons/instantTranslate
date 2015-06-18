@@ -1,59 +1,104 @@
 # Błyskawiczny tłumacz tekstu / instantTranslate #
 
-* Authors: Alexy Sadovoy, Beqa Gozalishvili, Mesar Hameed, Alberto Buffolino
-  and other nvda contributors.
-* Download [version 3.0-dev][1]
+* Autorzy: Alexy Sadovoy, Beqa Gozalishvili, Mesar Hameed, Alberto Buffolino
+  i inni.
+* Pobierz [wersja stabilna][1]
+* Pobierz [wersja rozwojowa][2]
 
 Ta wtyczka tłumaczy tekst ze schowka lub zaznaczenia z jednego języka na
 drugi. W tym celu używany jest tłumacz google.
 
 ## konfigurowanie języków ##
-To configure source, target and in case swap language, from NVDA menu, go to
-Preferences, then go to Instant Translate Settings.  There are three combo
-boxes labeled "translate from", "translate into" and "Language for swapping"
-(if you selected auto option from source languages).
+Aby skonfigurować język źródłowy, docelowy, oraz ewentualnie język zamiany, idź do: menu NVDA >> Ustawienia >> Ustawienia Instant Translate.
 
-If you selected the auto option from source languages, there is also a
-checkbox about the auto-swap: if you activate it, then the addon tries to
-commute automatically from your source and target configuration to a
-configuration where target becomes the source language, and language
-selected in "Language for swapping" combo is the new target language;
-extremely useful if the source language of the text you want translate is
-the target language.
+Znajdują się tam dwie listy rozwijane, nazwane "Język źródłowy" and "Język
+docelowy", oraz pole wyboru określające czy tłumaczenie ma być kopiowane do
+schowka.
 
-However, this is a temporary configuration, if this option has no effect
-(it's experimental), try to commute manually to a stable configuration,
-using the gesture for swapping described below.
+Ponadto, jeśli wybrano opcję auto na liście "Język źródłowy",  będzie tam
+również lista "Język zamiany" oraz pole wyboru określające automatyczną
+zamianę.
 
-## jak użyć tego dodatku? ##
-Są na to dwa sposoby
+Znaczenie pierwszych list rozwijanych i pola wyboru kopiowania jest
+oczywiste, ale kilka słów  o pozostałych elementach jest
+konieczne. Pamiętaj, że poniższe wyjaśnienia zakładają, że język źródłowy
+jest ustawiony na auto.
 
-1. Select some text using selection commands (shift with arrow keys, for
-   example). Then press Shift+NVDA+T to translate the selected text. Then
-   the translated string will be read, providing that the synthesizer you
-   are using supports the target language.
-2. Copy some text to clipboard. Then press Shift+NVDA+Y to translate the
-   text in the clipboard to the target language.
+Lista "Język zamiany"  jest użyteczna, gdy zamieniasz za pomocą skryptu
+(więcej poniżej) język źródłowy i docelowy; język docelowy ustawiony na auto
+nie ma sensu, więc dodatek ustawia go na wartość powyższej listy.
 
-## Other useful commands ##
-* NVDA+shift+r: pressed once, announce current configuration; pressed twice,
-  swap source and target languages.
+A zatem wyobraźmy sobie taką sytuację: zwykle tłumaczysz na angielski (twój
+podstawowy język), ale czasem (np. podczas tworzenia dokumentu) musisz
+przetłumaczyć coś na włoski (przypuśćmy, że jest to drugi język, którym się
+posługujesz); możesz ustawić "język zamiany" na Włoski, aby móc tłumaczyć z
+angielskiego na włoski bez zmiany ustawień dodatku. Ta funkcja ma różną
+użyteczność, zależnie od twoich potrzeb.
 
-## Changes for 3.0 ##
-* Implemented swapping languages.
-* Changed configuration format, now we can change instant translate settings
-  if we are in readonly pane, but remember that this will work before first
-  restart of nvda.
-* Removed limit on amount of text that can be translated.
+Obecnie pole wyboru automatycznej zamiany pojawia się wtedy i tylko wtedy,
+gdy "język źródłowy"  jest ustawiony na auto, jest także bezpośrednio
+związane z listą "język zamiany". Jeśli aktywowane, dodatek próbuje
+automatycznie przełączać z ustawienia języka źródłowego i docelowego, na
+konfigurację w której język docelowy staje się źródłowy, a język wybrany na
+liście "język zamiany" staje się nowym językiem docelowym; szczególnie
+przydatne, gdy język źródłowy tekstu, który chcesz tłumaczyć jest językiem
+docelowym.
+
+Prosty przykład: rozważmy sytuację omawianą poprzednio; jeśli tłumaczysz
+tekst w języku innym niż angielski, nie stanowi to problemu, otrzymujesz
+prawidłowe tłumaczenie po angielsku. Jeśli jednak chcesz przetłumaczyć tekst
+z angielskiego, zwykle otrzymasz tłumaczenie angielskie identyczne z
+oryginałem, co jest bezużyteczne. Dzięki funkcji automatycznej zamiany,
+zakładając, że chcesz wiedzieć jak twój tekst będzie brzmieć po Włosku,
+dodatek automatycznie ustawia język docelowy na Włoski i zwraca prawidłowe
+tłumaczenie.
+
+Jest to tymczasowe ustawienie; jeśli ta opcja nie przyniesie rezultatu (jest
+eksperymentalna), try przełącz się ręcznie na stabilną konfigurację,
+używając zdarzenia wejścia zamiany, opisanego poniżej. Ta funkcja jest
+eksperymentalna, ponieważ w niektórych sytuacjach (np. krótkich tekstów),
+Google nie rozpozna prawidłowo rzeczywistego języka źródłowego i musisz
+ręcznie zamienić języki aby przestawić język źródłowy na poprzedni język
+docelowy (angielski w naszym przykładzie).
+
+## Użycie ##
+Można użyć tego dodatku na dwa sposoby:
+
+1. Zaznacz jakiś tekst używając poleceń zaznaczania (np. shift z klawiszami
+   strzałek). Następnie naciśnij kombinację klawiszy tłumaczenia, aby
+   przetłumaczyć zaznaczony tekst. Przetłumaczony tekst zostanie odczytany
+   przy pomocy używanego syntezatora.
+2. Możesz również przetłumaczyć tekst ze schowka.
+
+## Skróty ##
+Wszystkie poniższe polecenia muszą być wywołane po klawiszu modyfikatora
+"NVDA+Shift+t":
+
+* T: tłumaczy zaznaczony tekst, 
+* Shift+t: tłumaczy tekst w schowku, 
+* S: zamienia język źródłowy i docelowy, 
+* A: oznajmia aktualną konfigurację, 
+* C: kopiuje ostatni wynik do schowka, 
+* I: identyfikuje język zaznaczonego tekstu,
+* H: przedstawia użytkownikowi wszystkie dostępne polecenia.
+
+## zmiany dla wersji 3.0 ##
+* Change way how Shortcuts are used, now you can press instantTranslate
+  modifier key "NVDA+Shift+t", and then single letter key to perform some
+  action (see all Commands in the "Shortcuts" section).
+* Zaimplementowana zamiana języków.
+* Zmieniony format konfiguracji, teraz możemy zmieniać ustawienia dodatku w
+  panelu tylko do odczytu, ale proszę pamiętać, że będzie to działać przed
+  pierwszym restartem nvda.
+* Usunięty limit ilości tekstu, która może zostać przetłumaczona.
 * skrut i pozwala szybko dostać się do ustawień wtyczki z menu nvda.
-* The auto option is now in first position in source combo, and absent in
-  target combo.
+* Opcja Auto jest na pierwszej pozycji listy języka źródłowego, a nie ma jej
+  na liście języka docelowego.
 * Dodane pole wyboru ustawiające kopiowanie do schowka wyniku tłumaczenia.
 * plik konfiguracyjny trzymany jest teraz w głównym katalogu ustawień nvda.
-* Nowe języki: aragoński, arabski, brazylijski portugalski, chorwacki,
-  holenderski, fiński, francuski, galicyjski, niemiecki, węgierski, włoski,
-  japoński, koreański, nepalski, polski, słowacki, słoweński, hiszpański,
-  tamilski, turecki.
+* Języki źródłowe i docelowe zsynchronizowane z listą obsługiwanych przez
+  Google Translate (22 Kwi 2015).
+
 
 ## Zmiany dla wersji 2.1 ##
 * Skrót klawiszowy NVDA+shift+y tłumaczy tekst w schowku.
@@ -67,6 +112,12 @@ Są na to dwa sposoby
 ## zmiany dla wersji 1.0 ##
 * Wstępne wydanie.
 
-[[!tag dev]]
+[1]: http://addons.nvda-project.org/files/get.php?file=it [2]:
+http://addons.nvda-project.org/files/get.php?file=it-dev
 
-[1]: http://addons.nvda-project.org/files/get.php?file=it-dev
+
+[[!tag dev stable]]
+
+[1]: http://addons.nvda-project.org/files/get.php?file=it
+
+[2]: http://addons.nvda-project.org/files/get.php?file=it-dev

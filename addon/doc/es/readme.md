@@ -1,69 +1,122 @@
 # instantTranslate #
 
-* Authors: Alexy Sadovoy, Beqa Gozalishvili, Mesar Hameed, Alberto Buffolino
-  and other nvda contributors.
-* Download [version 3.0-dev][1]
+* Autores: Alexy Sadovoy, Beqa Gozalishvili, Mesar Hameed, Alberto Buffolino
+  y otros colaboradores de NVDA.
+* Descargar [Versión estable][1]
+* Descargar [versión de desarrollo][2]
 
 Este complemento se utiliza para traducir texto seleccionado y/o del
 portapapeles de un idioma a otro.  Esto se hace utilizando el servicio
 Google Translate.
 
 ## Configurando idiomas ##
-To configure source, target and in case swap language, from NVDA menu, go to
-Preferences, then go to Instant Translate Settings.  There are three combo
-boxes labeled "translate from", "translate into" and "Language for swapping"
-(if you selected auto option from source languages).
+Para configurar el idioma origen, el destino y, en su caso, el intercambio, ve a: NVDA Menú >> Preferenciass >> Opciones de Instant Translate.
 
-If you selected the auto option from source languages, there is also a
-checkbox about the auto-swap: if you activate it, then the addon tries to
-commute automatically from your source and target configuration to a
-configuration where target becomes the source language, and language
-selected in "Language for swapping" combo is the new target language;
-extremely useful if the source language of the text you want translate is
-the target language.
+Hay dos cuadros combinados etiquetados "idioma de origen" y "idioma
+destino", y una casilla de verificación para decidir si debe copiar la
+traducción al portapapeles.
 
-However, this is a temporary configuration, if this option has no effect
-(it's experimental), try to commute manually to a stable configuration,
-using the gesture for swapping described below.
+Además, si seleccionaste la opción auto (la primera elección) desde el
+cuadro combinado "Idioma Origen", también hay un cuadro combinado etiquetado
+"Idioma para intercambiar" y una casilla de verificación acerca del auto
+intercambiado.
 
-## Cómo utilizar este complemento ##
-Hay dos modos de utilizar este complemento:
+El significado de los dos primeros cuadros combinados y de la casilla de
+verificación para copiar es claro, pero son necesarias algunas palabras
+acerca del resto. Recuerda siempre que las explicaciones de más abajo asumen
+el idioma origen ajustado a la opción auto.
 
-1. Select some text using selection commands (shift with arrow keys, for
-   example). Then press Shift+NVDA+T to translate the selected text. Then
-   the translated string will be read, providing that the synthesizer you
-   are using supports the target language.
-2. Copy some text to clipboard. Then press Shift+NVDA+Y to translate the
-   text in the clipboard to the target language.
+El cuadro combinado "Idioma para Intercambiar" es útil cuando intercambias a
+través de un script (Mira más abajo) el idioma origen y el destino; de
+hecho, un idioma destino ajustado a la opción auto no tiene sentido, así el
+complemento lo ajusta al valor del cuadro combinado anterior.
 
-## Other useful commands ##
-* NVDA+shift+r: pressed once, announce current configuration; pressed twice,
-  swap source and target languages.
+Así, imagina esta situación: normalmente traduces al inglés (tu idioma
+principal), pero a veces(por ejemplo, cuando escribes un documento)
+necesitas traducir al italiano (tu segundo idioma, suponiendo tal); puedes
+ajustar el cuadro combinado "Idioma para intercambiar" a Italiano, así
+traducirás desde el inglés al Italiano sin acceder directamente a las
+opciones del complemento. Obviamente esta función tiene una mayor o menor
+utilidad dependiendo de tus necesidades más frecuentes.
 
-## Changes for 3.0 ##
-* Implemented swapping languages.
-* Changed configuration format, now we can change instant translate settings
-  if we are in readonly pane, but remember that this will work before first
-  restart of nvda.
-* Removed limit on amount of text that can be translated.
+Ahora, la casilla de verificación auto intercambiar: aparece si, y sólo si
+ajustas la opción auto en el cuadro combinado "Idioma de origen", y está
+conectada directamente con el cuadro combinado "Idioma para
+intercambiar". Si la activas, entonces el complemento intenta conmutar
+automáticamente desde tu configuración origen y destino a una configuración
+donde el destino viene a ser el idioma origen , y el idioma seleccionado en
+el cuadro combinado "Idioma para Intercambiar" es el nuevo idioma destino;
+extremadamente útil si el idioma origen del texto que quieres traducir es el
+idioma destino.
+
+Un ejemplo simple: ten nuevamente en cuenta la situación imaginada
+previamente; si traduces un texto en un idioma diferente del inglés, no hay
+problemas, obtienes la traducción correcta en inglés. Pero si necesitas
+traducir un texto del inglés, normalmente obtienes una traducción al inglés
+idéntica al texto original, y esto es un poco inútil. Gracias a la función
+de auto-intercambiar, sin embargo, asumiendo que quieres saber cómo suena tu
+texto en Italiano, el complemento conmuta automáticamente el idioma destino
+a Italiano, tal que devuelve una traducción válida.
+
+De todos modos, esto es una configuración temporal; si esta opción no tiene
+efecto (es experimental), intenta conmutar manualmente a una configuración
+estable, utilizando el gesto para intercambio descrita más abajo. Es
+experimental porque en algunas situaciones (con textos cortos, típicamente),
+Google no reconoze el idioma origen real correctamente, y tienes que
+intercambiar idiomas manualmente a través de script, así fuerzas al idioma
+origen a ser el  idioma destino anterior (inglés en nuestro ejemplo).
+
+## Utilizando ##
+Puedes utilizar este complemento de dos maneras:
+
+1. Selecciona texto usando las órdenes de selección(shift con teclas de
+   flecha, por ejemplo) y pulsa la tecla asociada para traducir. A
+   continuación, la traducción de la cadena será leída, siempre que el
+   sintetizador que se esté utilizando sea compatible con el idioma de
+   destino.
+2. También puedes traducir texto desde el portapapeles.
+
+## Atajos de teclado ##
+Todas las órdenes que siguen deben pulsarse después de la tecla modificadora
+"NVDA+Shift+t":
+
+* T: Traduce el texto seleccionado,
+* Shift+t: traduce el texto desde el portapapeles,
+* S: intercambia idiomas origen y destino,
+* A: anuncia la configuración actual,
+* C: copia el último resultado al portapapeles,
+* I: identifica el idioma del texto seleccionado,
+* H: anuncia todas las órdenes disponibles al usuario.
+
+## Cambios para 3.0 ##
+* Cambia la forma de cómo se utilizan los atajos de teclado, ahora puedes
+  pulsar la tecla modificadora de instantTranslate "NVDA+Shift+t", y luego
+  letras solas para llevar a cabo alguna acción (Mira todas las órdenes en
+  la sección "Atajos de teclado").
+* Implementado el intercambio de idiomas.
+* Formato de configuración cambiado, ahora podemos cambiar las opciones de
+  instant translate si estamos en un panel de sólo lectura, pero recuerda
+  que esto funcionará antes del primer reinicio de NVDA.
+* Eliminado el límite de cantidad de texto que puede ser traducido.
 * Añadido un atajo de teclado al elemento de menú Opciones de Instant
   Translate
-* The auto option is now in first position in source combo, and absent in
-  target combo.
+* La opción auto se encuentra ahora en la primera posición en el cuadro
+  combinado de origen, y ausente en el cuadro combinado de destino.
 * Añadida una casilla de verificación para configurar el copiado de los
   resultados de la traducción.
 * Almacenar el fichero config en la raíz de la carpeta de configuraciones.
-* Nuevos idiomas: Alemán, Coreano, Eslovaco, Español, Francés, Finlandés,
-  Gallego, Húngaro, Italiano, Tamil, Turco.
+* Los idiomas fuente y destino se sincronizaron con lo que actualmente
+  expone Google Translate (22 Apr 2015).
+
 
 ## Cambios para 2.1 ##
 * Ahora el complemento puede traducir texto desde el portapapeles cuando se
   presione NVDA+shift+y.
 
 ## Cambios para 2.0 ##
-* Añadida una GUI para el configurador donde  puedes elegir los idiomas
-  fuente y destino.
-* Añadido un elemento de menú al complemento que se encuentra bajo el menú
+* Añadida una Interface Gráfica de Usuario para el configurador donde
+  puedes elegir los idiomas de origen y de destino.
+* Añadido un elemento de menú al complemento que se encuentra en el menú
   preferencias.
 * Las configuraciones ahora se escriben en un fichero config separado.
 * Los resultados de la traducción se copian ahora automáticamente en el
@@ -72,6 +125,12 @@ Hay dos modos de utilizar este complemento:
 ## Cambios para 1.0 ##
 * Versión Inicial.
 
-[[!tag dev]]
+[1]: http://addons.nvda-project.org/files/get.php?file=it [2]:
+http://addons.nvda-project.org/files/get.php?file=it-dev
 
-[1]: http://addons.nvda-project.org/files/get.php?file=it-dev
+
+[[!tag dev stable]]
+
+[1]: http://addons.nvda-project.org/files/get.php?file=it
+
+[2]: http://addons.nvda-project.org/files/get.php?file=it-dev

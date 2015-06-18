@@ -1,59 +1,101 @@
 # instantTranslate #
 [[!meta title="instantTranslate"]]
 
-* Authors: Alexy Sadovoy, Beqa Gozalishvili, Mesar Hameed, Alberto Buffolino
-  and other nvda contributors.
-* Download [version 3.0-dev][1]
+* مطورو الإضافة: Alexy Sadovoy, Beqa Gozalishvili, Mesar Hameed, Alberto
+  Buffolino وآخرون.
+* تحميل [الإصدار النهائي][1]
+* تحميل [الإصدار التجريبي][2]
 
 تقوم هذه الإضافة بترجمة النص المظلل أو الموجود بحافظة الويندوز من لغة إلى
 أخرى مستخدمة في ذلك خدمة الترجمة من قوقل.
 
 ## إعداد اللغات ##
-To configure source, target and in case swap language, from NVDA menu, go to
-Preferences, then go to Instant Translate Settings.  There are three combo
-boxes labeled "translate from", "translate into" and "Language for swapping"
-(if you selected auto option from source languages).
+لإعداد لغة المصدر, ولغة الهدف, أو في حالة التبديل بين لغة المصدر ولغة الهدف, اذهب إلى: قائمة NVDA الرئيسية>> التفضيلات>> إعدادات instant translate.
 
-If you selected the auto option from source languages, there is also a
-checkbox about the auto-swap: if you activate it, then the addon tries to
-commute automatically from your source and target configuration to a
-configuration where target becomes the source language, and language
-selected in "Language for swapping" combo is the new target language;
-extremely useful if the source language of the text you want translate is
-the target language.
+يوجد بالإضافة اثنان من صناديق الخيارات الأول يسمى "لغة المصدر" والثاني يسمى
+"لغة الهدف", ومربع تحديد لتقرير ما إذا كان يجب على الإضافة نسخ الترجمة
+للحافظة.
 
-However, this is a temporary configuration, if this option has no effect
-(it's experimental), try to commute manually to a stable configuration,
-using the gesture for swapping described below.
+فضلا عن ذلك, إذا قمت باختيار الخيار التلقائي (أول اختيار) من صندوق الخيارات
+الأول المسمى ب"لغة المصدر", فإنه يوجد أيضا صندوق خيارات آخر يسمى "لغة
+التبديل" ومربع تحديد عن التبديل التلقائي بين اللغات.
 
-## كيفية استخدام الإضافة ##
-توجد طريقتان لاستخدام هذه الإضافة:
+إن معنى كل من صندوق الخيارات الأول والثاني ومربع التحديد الخاص بنسخ الترجمة
+للحافظة واضح, لكن من الضروري شرح باقي صناديق الخيارات ومربعات التحديد
+الأخرى. تذكر دائما أن الشرح المكتوب أدناه يعتبر بأن لغة المصدر قد تم ضبطها
+لتكون هي الخيار التلقائي.
 
-1. Select some text using selection commands (shift with arrow keys, for
-   example). Then press Shift+NVDA+T to translate the selected text. Then
-   the translated string will be read, providing that the synthesizer you
-   are using supports the target language.
-2. Copy some text to clipboard. Then press Shift+NVDA+Y to translate the
-   text in the clipboard to the target language.
+يعتبر صندوق الخيارات "لغة التبديل" مفيد عندما تبدل بين لغتي المصدر والهدف
+عبر مفتاح اختصار (انظر أدناه)، في الحقيقة, إن ضبط لغة الهدف لتكون الخيار
+التلقائي ليس له معنى, لذا فإن الإضافة تقوم بضبط قيمتها لتكون نفس قيمة اللغة
+الموجودة بصندوق الخيارات الأول وهو لغة المصدر.
 
-## Other useful commands ##
-* NVDA+shift+r: pressed once, announce current configuration; pressed twice,
-  swap source and target languages.
+هب أنك تترجم عادة إلى اللغة الإنجليزية (لغتك الرئيسية),لكنك في بعض الأحيان
+(على سبيل المثال, عند كتابة مستند) تحتاج للترجمة إلى الإيطالية (لغتك
+الثانية), فرضا)، فإنه يمكنك ضبط صندوق الخيارات "لغة التبديل" للإيطالية, لذا
+فإنك ستترجم من الإنجليزية للإيطالية دون الحاجة إلى الذهاب لإعدادات
+الإضافة. من الواضح إن هذه الخاصية "لغة التبديل" تقل أهميتها أو تعظم وفقا
+لحاجاتك الدائمة.
 
-## Changes for 3.0 ##
-* Implemented swapping languages.
-* Changed configuration format, now we can change instant translate settings
-  if we are in readonly pane, but remember that this will work before first
-  restart of nvda.
-* Removed limit on amount of text that can be translated.
+الآن, أصبح مربع تحديد لغة التبديل يظهر إذا وفقط إذا قمت باختيار الخيار
+التلقائي من صندوق الخيارات "لغة المصدر", وأصبح يتصل مباشرة بصندوق الخيارات
+"لغة التبديل". إذا قمت بتحديد المربع, فستقوم الإضافة تلقائيا بالتبديل من
+إعدادات لغة المصدر ولغة الهدف لإعداد آخر تكون فيه لغة الهدف هي لغة المصدر
+واللغة المختارة في صندوق خيارات "لغة التبديل" هي لغة الهدف الجديدة، يفيد جدا
+عندما تكون لغة المصدر للنص الذي تريد ترجمته هي لغة الهدف.
+
+مثال بسيط: بالنظر للمثال المشروحسابقا, إذا كنت تترجم نص بلغة أخرى غير
+الإنجليزية, فليست هناك مشكلة, حيث ستحصل على الترجمة الصحيحة بالإنجليزية. لكن
+إذا أردت ترجمة نص من اللغة الإنجليزية, فإنه من الطبيعي أن تحصل على ترجمة
+للإنجليزية مطابقة للنص الأصلي, وهذا ليس له جدوى. فشكرا لوظيفة لغة التبديل,
+ومع ذلك, هب أنك تريد أن تعرف كيف كيف يبدو النص بالإيطالية, ففي هذه الحالة
+ستقوم الإضافة آليا بتبديل لغة الهدف للإيطالية, لذا فستحصل على ترجمة صحيحة
+ذات معنى.
+
+على أية حال, فإن هذا الإعداد مؤقت, إذا كان هذا الخيار ليس له تأثير (هذا خيار
+تجريبي), حاول أن تبدل بين لغتي المصدر والهدف يدويا لضمان عدم التغيير بين
+اللغتين, باستخدام الاختصار المنوط بذلك والموصوف أدناه. يعتبر هذا الخيار
+تجريبي لأنه في بعض المواقف (مع النصوص القصيرة), لا يتعرف قوقل على لغة المصدر
+الحقيقية بشكل صحيح, ويجب عليك التبديل بين اللغات يدوياعبر الاختصار لإجبار
+لغة المصدر أن تكون لغة الهدف السابقة (الإنجليزية في المثال الذي معنا).
+
+## الاستخدام ##
+يمكنك استخدام الإضافة بطريقتين:
+
+1. قم بتحديد جزء من النص باستخدام أي من طرق التحديد المعروفة (كاستخدام مفتاح
+   shift مع الأسهم, على سبيل المثال). ثم قم بالضغط على الاختصار لترجمة النص
+   المحدد. سيقوم NVDA بقراءة ترجمة النص عن طريق آلة النطق التي تدعم لغة
+   الهدف.
+2. كما يمكنك ترجمة النص المخزن بالحافظة.
+
+## مفاتيح الاختصار ##
+يجب ضغط كافة الاختصارات التالية بعد ضغط مفتاح الإضافة "NVDA+Shift+t":
+
+* T: ترجمة النص المظلل,
+* Shift+t: ترجمة النص من الحافظة,
+* S: تبديل بين لغتي المصدر والهدف,
+* a: الإعلان عن الإعداد الحالي,
+* S: نسخ آخر نتيجة للحافظة,
+* I: التعرف على لغة النص المظلل,
+* H: الإعلان عن كافة أوامر الإضافة للمستخدم.
+
+## مستجدات الإصدار 3.0 ##
+* تغيير كيفية استخدام مفاتيح الاختصار, الآن يمكنك ضغط مفتاح الإضافة
+  "NVDA+Shift+t", ثم الضغط على الأحرف المنفردها لأداء المهام المطلوبة (انظر
+  إلى كافة أوامر الإضافة بقسم "مفاتيح الاختصار").
+* تنفيذ التبديل بين اللغات
+* تغيير تنسيق الإعدادات, الآن يمكننا تغيير إعدادات Instante translate إذا
+  كنا في بيئة أو حقل للقراءة فقط ولكن عليك أن تتذكر أن تقوم بغلق وإعادة
+  تشغيل NVDA أولا. 
+* إزالة التقييد على حجم النص المراد ترجمته
 * إضافة حرف الوصول السريع T إلى قائمة إعدادات instant translate
-* The auto option is now in first position in source combo, and absent in
-  target combo.
+* الاختيار التلقائي أصبح موجودا الآن في الموضع الأول في صندوق خيار لغات
+  المصدر ولم يعد موجودا في صندوق خيار لغات الهدف.
 * إضافة مربع تحديد لإعداد نسخ نتائج الترجمة.
 * تخزين ملف الإعدادات داخل مجلد الإعدادات.
-* ترجمة الإضافة إلى: الأرجانيزية, والعربية, والبرازيلية البرتغالية,
-  والهولندية,  والكرواتية, والفنلندية, الفرنسية, الغالية, الألمانية,
-  المجرية, الإيطالية, الكورية, السلوفاكية, الإسبانية, ولغة تاميل, والتوركية.
+* تتزامن لغات المصدر والهدف مع ما تعرضه خدمة الترجمة من قوقل حاليا (22 إبريل
+  2015).
+
 
 ## مستجدات الإصدار 2.1 ##
 * من الآن يمكن للإضافة ترجمة النص المخزن بحافظة الويندوز عن طريق الضغط على
@@ -68,6 +110,12 @@ using the gesture for swapping described below.
 ## مستجدات الإصدار 2.0 ##
 * إصدار أولي
 
-[[!tag dev]]
+[1]: http://addons.nvda-project.org/files/get.php?file=it [2]:
+http://addons.nvda-project.org/files/get.php?file=it-dev
 
-[1]: http://addons.nvda-project.org/files/get.php?file=it-dev
+
+[[!tag dev stable]]
+
+[1]: http://addons.nvda-project.org/files/get.php?file=it
+
+[2]: http://addons.nvda-project.org/files/get.php?file=it-dev

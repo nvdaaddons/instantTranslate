@@ -8,14 +8,25 @@ msgstr ""
 "Project-Id-Version: 'Instant-Translate' '2.1'\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2013-02-09 18:30+0100\n"
-"PO-Revision-Date: 2013-07-12 17:25+0100\n"
-"Last-Translator: Bue Vester-Andersen\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2015-05-14 11:39+0100\n"
+"Last-Translator: Bue Vester-Andersen <bue@vester-andersen.dk>\n"
+"Language-Team: Bue Vester-Andersen <bue@vester-andersen.dk>\n"
 "Language: da\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.5.7\n"
+"X-Generator: Poedit 1.6.10\n"
+
+msgid ""
+"Instant Translate layer commands. t translates selected text, shift+t "
+"translates clipboard text, a announces current swap configuration, s swaps "
+"source and target languages, c copies last result to clipboard, i identify "
+"the language of selected text."
+msgstr ""
+"Stablede kommandoer til Ekspres-oversættelse. t oversætter den valgte tekst, "
+"Shift+t oversætter tekst i udklipsholderen, a annoncerer indstilling for "
+"ombytning af sprog, s byter om på kilde- og målsprog, c kopierer sidste "
+"resultat til udklipsholderen, i identificerer sproget i den valgte tekst."
 
 #. Translators: name of the option in the menu.
 msgid "Instant &Translate Settings..."
@@ -29,14 +40,6 @@ msgstr "Vælg de sprog, der skal bruges i oversættelsen"
 msgid "There is no text on the clipboard"
 msgstr "Der er ingen tekst i udklipsholderen"
 
-#. Translators: Message presented when clipboard text (to be translated) is too long (more than a set limit).
-#, python-format
-msgid ""
-"The clipboard contains a large portion of text. It is %s characters long. "
-"The limit is 1500 characters."
-msgstr ""
-"Der er for meget tekst i udklipsholderen (%s tegn). Maksimum er 1500 tegn."
-
 #. Translators: message presented in input help mode, when user presses the shortcut keys for this addon.
 msgid ""
 "Translates clipboard text from one language to another using Google "
@@ -46,15 +49,9 @@ msgstr ""
 "Translate."
 
 #. Translators: user has pressed the shortcut key for translating selected text, but no text was actually selected.
+#. Translators: user has pressed the shortcut key for identifying the language of selected text, but no text was actually selected.
 msgid "no selection"
 msgstr "Intet valgt"
-
-#. Translators: Message presented when selected text (to be translated) is too long (more than a set limit).
-#, python-format
-msgid ""
-"The selection contains a large portion of text. It is %s characters long. "
-"The limit is 1500 characters."
-msgstr "Du har valgt for meget tekst (%s tegn). Maksimum er 1500 tegn."
 
 #. Translators: message presented in input help mode, when user presses the shortcut keys for this addon.
 msgid ""
@@ -62,9 +59,52 @@ msgid ""
 msgstr ""
 "Oversætter den valgte tekst fra et sprog til et andet med Google Translate."
 
-#. Translators: Message presented when the given text (from selected or clipboard) cannot be translated.
-msgid "Error translating text. See log for details"
-msgstr "Fejl under oversættelsen. se log for detaljer."
+#. Translators: message presented to announce that the source and target languages have been swapped.
+msgid "Languages swapped"
+msgstr "Sprog ombyttet"
+
+#. Translators: message presented to announce the current source and target languages.
+#, python-brace-format
+msgid "Translate: from {lang1} to {lang2}"
+msgstr "Oversæt: fra {lang1} til {lang2}"
+
+#. Translators: Presented in input help mode.
+msgid "It swaps source and target languages."
+msgstr "Bytter om på kilde- og målsprog"
+
+#. Translators: Presented in input help mode.
+msgid "It announces the current source and target languages."
+msgstr "Annoncerer aktuelle kilde- og målsprog"
+
+#. Translators: message presented to announce a successful copy
+msgid "Last translation copied in clipboard"
+msgstr "Sidste oversættelse kopieret til udklipsholder"
+
+#. Translators: message presented to announce no previous translation disponibility
+msgid "No stored translation"
+msgstr "Ingen gemt oversættelse"
+
+#. Translators: Presented in input help mode.
+msgid "It copies the last translation to clipboard"
+msgstr "Kopier den sidste oversættelse til udklipsholder"
+
+msgid "Language is..."
+msgstr "Sprog er..."
+
+#. Translators: Presented in input help mode.
+msgid "It identifies the language of selected text"
+msgstr "Identificerer sproget i den valgte tekst"
+
+msgid ""
+"t translates selected text, shift+t translates clipboard text, a announces "
+"current swap configuration, s swaps source and target languages, c copies "
+"last result to clipboard, i identify the language of selected text, h "
+"displays this message."
+msgstr ""
+"t oversætter den valgte tekst, Shift+t oversætter tekst i udklipsholderen, a "
+"annoncerer indstilling for ombytning af sprog, s byter om på kilde- og "
+"målsprog, c kopierer sidste resultat til udklipsholderen, i identificerer "
+"sproget i den valgte tekst, h viser denne meddelelse."
 
 #. Translators: name of the dialog.
 msgid "Instant Translate Settings"
@@ -74,64 +114,81 @@ msgstr "Indstillinger for Ekspres-oversættelse"
 msgid "Select translation source and target language:"
 msgstr "Vælg kilde- og målsprog for oversættelse:"
 
-#. Translators: A setting in instant translate settings dialog.
+#. Translators: A setting in addon settings dialog.
 msgid "Source language:"
 msgstr "Kildesprog:"
 
-#. Translators: A setting in instant translate settings dialog.
+#. Translators: A setting in addon settings dialog.
 msgid "Target language:"
 msgstr "Målsprog:"
 
+#. Translators: A setting in addon settings dialog.
 msgid "Copy translation result to clipboard"
 msgstr "Kopier resultatet af oversættelsen til udklipsholder"
+
+#. Translators: A setting in addon settings dialog, shown if source language is on auto.
+msgid "Language for swapping:"
+msgstr "Sprog til ombytning:"
+
+#. Translators: A setting in addon settings dialog, shown if source language is on auto.
+msgid ""
+"Activate the auto-swap if recognized source is equal to the target "
+"(experimental)"
+msgstr ""
+"Aktiver automatisk ombytning, hvis kilden ser ud til at være det samme som "
+"oversættelsen (eksperimentelt)."
 
 #. Translators: An option to automatically detect source language for translation.
 msgid "Automatically detect language"
 msgstr "Detekter sprog automatisk"
 
 #. Translators: The name of a language supported by this add-on.
-msgid "Arabic"
-msgstr "Arabisk"
-
-#. Translators: The name of a language supported by this add-on.
-msgid "Bangla"
-msgstr "Bangla"
-
-#. Translators: The name of a language supported by this add-on.
-msgid "Welsh"
-msgstr "Walisisk"
+msgid "Cebuano"
+msgstr "Cebuano"
 
 #. Translators: The name of a language supported by this add-on.
 msgid "Esperanto"
 msgstr "Esperanto"
 
 #. Translators: The name of a language supported by this add-on.
-msgid "Gujarati"
-msgstr "Gujarati"
+msgid "Hmong"
+msgstr "Hmong"
 
 #. Translators: The name of a language supported by this add-on.
 msgid "Creole Haiti"
 msgstr "Creole Haiti"
 
 #. Translators: The name of a language supported by this add-on.
-msgid "Armenian"
-msgstr "Armennsk"
+msgid "Javanese"
+msgstr "Javanesisk"
 
 #. Translators: The name of a language supported by this add-on.
 msgid "Latin"
 msgstr "Latin"
 
 #. Translators: The name of a language supported by this add-on.
-msgid "Norwegian"
-msgstr "Norsk"
+msgid "Malagasy"
+msgstr "Malagasy"
 
 #. Translators: The name of a language supported by this add-on.
-msgid "Serbian (Latin)"
-msgstr "Serbisk (latinsk)"
+msgid "Myanmar (Burmese)"
+msgstr "Myanmar (Burmesisk)"
 
 #. Translators: The name of a language supported by this add-on.
-msgid "Swahili"
-msgstr "Swahili"
+msgid "Chichewa"
+msgstr "Chichewa"
+
+#. Translators: The name of a language supported by this add-on.
+msgid "Somali"
+msgstr "Somali"
+
+#. Translators: The name of a language supported by this add-on.
+msgid "Sesotho"
+msgstr "Sesotho"
+
+#. Translators: The name of a language supported by this add-on.
+msgid "Sundanese"
+msgstr "Sundanesisk"
 
 #. Translators: The name of a language supported by this add-on.
 msgid "Tagalog"
@@ -141,28 +198,92 @@ msgstr "Tagalog"
 msgid "Yiddish"
 msgstr "Yiddish"
 
-#. Translators: The name of a language supported by this add-on.
-msgid "Chinese (Simplified)"
-msgstr "Kinesisk (simplificeret)"
+msgid "unavailable"
+msgstr "Ikke tilgængelig"
 
-#. Translators: The name of a language supported by this add-on.
-msgid "Chinese (Traditional)"
-msgstr "Kinesisk (traditionel)"
-
-#. Add-on description
-#. TRANSLATORS: Summary for this add-on to be shown on installation and add-on informaiton.
+#. Translators: the label of a message box dialog.
 msgid ""
-"Instant Translate - Translates given text using the Google Translate service."
-msgstr "Ekspres-oversættelse - Oversætter tekst med Google Translate service"
+"You have installed an old and incompatible version of this addon. Do you "
+"want to uninstall the old version?"
+msgstr ""
+"Du har installeret en gammel og inkompatibel version af dette "
+"tilføjelsesprogram. Vil du afinstallere den gamle version?"
+
+#. Translators: the title of a message box dialog.
+msgid "Uninstall incompatible add-on"
+msgstr "Afinstallerer inkompatibelt tilføjelsesprogram"
+
+#. Add-on summary, usually the user visible name of the addon.
+#. Translators: Summary for this add-on to be shown on installation and add-on information.
+msgid "Instant Translate"
+msgstr "Ekspres-oversættelse"
 
 #. Add-on description
-#. Translators: Long description to be shown for this add-on on installation and add-on information
+#. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid ""
 "This addon translates selected or clipboard text using the Google Translate "
-"service and presents it. Press NVDA+Shift+T to translate selected text. "
-"Press NVDA+Shift+Y to translate clipboard text."
+"service and presents it."
 msgstr ""
-"Dette add-on oversætter markeret tekst og tekst i udklipsholderen ved hjælp "
-"af Google Translate service og viser oversættelsen. Tryk NVDA+Skift+T for at "
-"oversætte markeret tekst og NVDA+Skift+Y for at oversætte tekst fra "
-"udklipsholderen."
+"Dette tilføjelsesprogram oversætter markeret tekst og tekst i "
+"udklipsholderen ved hjælp af Google Translate service og viser "
+"oversættelsen. "
+
+#~ msgid "Translating..."
+#~ msgstr "Oversætter..."
+
+#~ msgid ""
+#~ "When pressed once, announces the current source and target languages. "
+#~ "Pressed twice will swap source and target."
+#~ msgstr ""
+#~ "Tryk en gang for at høre kilde- og målsprog. Tryk to gange for at bytte "
+#~ "om på sprog."
+
+#~ msgid "Arabic"
+#~ msgstr "Arabisk"
+
+#~ msgid "Bangla"
+#~ msgstr "Bangla"
+
+#~ msgid "Welsh"
+#~ msgstr "Walisisk"
+
+#~ msgid "Gujarati"
+#~ msgstr "Gujarati"
+
+#~ msgid "Armenian"
+#~ msgstr "Armennsk"
+
+#~ msgid "Norwegian"
+#~ msgstr "Norsk"
+
+#~ msgid "Serbian (Latin)"
+#~ msgstr "Serbisk (latinsk)"
+
+#~ msgid "Swahili"
+#~ msgstr "Swahili"
+
+#~ msgid "Chinese (Simplified)"
+#~ msgstr "Kinesisk (simplificeret)"
+
+#~ msgid "Chinese (Traditional)"
+#~ msgstr "Kinesisk (traditionel)"
+
+#~ msgid ""
+#~ "Instant Translate - Translates given text using the Google Translate "
+#~ "service."
+#~ msgstr ""
+#~ "Ekspres-oversættelse - Oversætter tekst med Google Translate service"
+
+#~ msgid ""
+#~ "The clipboard contains a large portion of text. It is %s characters long. "
+#~ "The limit is 1500 characters."
+#~ msgstr ""
+#~ "Der er for meget tekst i udklipsholderen (%s tegn). Maksimum er 1500 tegn."
+
+#~ msgid ""
+#~ "The selection contains a large portion of text. It is %s characters long. "
+#~ "The limit is 1500 characters."
+#~ msgstr "Du har valgt for meget tekst (%s tegn). Maksimum er 1500 tegn."
+
+#~ msgid "Error translating text. See log for details"
+#~ msgstr "Fejl under oversættelsen. se log for detaljer."
