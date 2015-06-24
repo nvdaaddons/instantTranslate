@@ -15,6 +15,8 @@ import globalVars
 import config
 import _config
 import addonHandler
+from copy import deepcopy
+from logHandler import log
 
 _config.load()
 addonHandler.initTranslation()
@@ -36,8 +38,11 @@ class InstantTranslateSettingsDialog(gui.SettingsDialog):
 		fromLabel = wx.StaticText(self, label=_("Source language:"))
 		fromSizer.Add(fromLabel)
 		# list of choices, in alphabetical order but with auto in first position
-		temp=self.prepareChoices()
-		self._fromChoice = wx.Choice(self, choices=temp)
+		temp = self.prepareChoices()
+		# zh-TW is not present in sources, on site
+		temp1 = deepcopy(temp)
+		temp1.remove(lngModule.g("zh-TW"))
+		self._fromChoice = wx.Choice(self, choices=temp1)
 		fromSizer.Add(self._fromChoice)
 		intoSizer = wx.BoxSizer(wx.HORIZONTAL)
 		# Translators: A setting in addon settings dialog.
@@ -66,7 +71,11 @@ class InstantTranslateSettingsDialog(gui.SettingsDialog):
 		self.autoSwapChk.SetValue(_config.instanttranslateConfig['settings']['autoswap'])
 		sizer.Add(self.autoSwapChk)
 		iLang_from = self._fromChoice.FindString(self.getDictKey(_config.instanttranslateConfig['translation']['from']))
-		iLang_to = self._intoChoice.FindString(self.getDictKey(_config.instanttranslateConfig['translation']['into']))
+		val = _config.instanttranslateConfig['translation']['into']
+		log.info("Configuration value is %s"%val)
+		keyval = self.getDictKey(val)
+		log.info("Returned key is %s"%keyval)
+		iLang_to = self._intoChoice.FindString(keyval)
 		iLang_swap = self._swapChoice.FindString(self.getDictKey(_config.instanttranslateConfig['translation']['swap']))
 		self._fromChoice.Select(iLang_from)
 		self._intoChoice.Select(iLang_to)
@@ -107,6 +116,8 @@ class InstantTranslateSettingsDialog(gui.SettingsDialog):
 		_config.save()
 
 	def getDictKey (self, currentValue):
+		log.info("Current langslist is: %s"%langslist)
+		log.info("Passed value is %s"%currentValue)
 		for key, value in langslist.iteritems():
 			if value == currentValue:
 				return key

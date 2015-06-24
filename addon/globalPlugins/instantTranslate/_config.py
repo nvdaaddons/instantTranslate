@@ -7,9 +7,17 @@ from logHandler import log
 from locale import getdefaultlocale
 
 INSTANTTRANSLATE_CONFIG_FILENAME = "instantTranslate.ini"
-lo_lang = getdefaultlocale() # get a language of the OS localization.
-s = lo_lang[0] # get the first element of the tuplet.
-lo_lang = s[0:s.find("_")] # get the default language which is translated into.
+# get a language of the OS localization.
+lo_lang = getdefaultlocale()
+# get the first element of the tuplet.
+s = lo_lang[0]
+# get the default language which is translated into.
+if s == "zh_HK":
+	lo_lang = "zh-TW"
+elif s.startswith("zh"):
+	lo_lang = s.replace('_', '-')
+else:
+	lo_lang = s[0:s.find("_")]
 
 instanttranslateConfig = None
 
