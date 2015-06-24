@@ -8,14 +8,25 @@ msgstr ""
 "Project-Id-Version: 'Instant-Translate' '2.1'\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2013-02-09 18:30+0100\n"
-"PO-Revision-Date: 2013-06-26 16:45+0100\n"
+"PO-Revision-Date: 2015-05-07 16:45+0100\n"
 "Last-Translator: Juan C. Buño <quetzatl@eresmas.net>\n"
-"Language-Team: Juan C. Buño <quetzatl@eresmas.net>\n"
+"Language-Team: Add-ons translation team <oprisniki@gmail.com>\n"
 "Language: gl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.5.5\n"
+"X-Generator: Poedit 1.6.11\n"
+
+msgid ""
+"Instant Translate layer commands. t translates selected text, shift+t "
+"translates clipboard text, a announces current swap configuration, s swaps "
+"source and target languages, c copies last result to clipboard, i identify "
+"the language of selected text."
+msgstr ""
+"Capa de ordes do Instant Translate. t traduce o texto seleccionado, shift+t "
+"traduce o texto do portapapeis, a anuncia a configuración de intercambio "
+"actual, s intercambia as linguas orixe e de destiño, c copia o derradeiro "
+"resultado ó portapapeis, i identifica a lingua do texto seleccionado."
 
 #. Translators: name of the option in the menu.
 msgid "Instant &Translate Settings..."
@@ -29,15 +40,6 @@ msgstr "Selecciona as linguas a utilizar para a traducción."
 msgid "There is no text on the clipboard"
 msgstr "Non hai texto no portapapeis"
 
-#. Translators: Message presented when clipboard text (to be translated) is too long (more than a set limit).
-#, python-format
-msgid ""
-"The clipboard contains a large portion of text. It is %s characters long. "
-"The limit is 1500 characters."
-msgstr ""
-"O portapapeis contén un gran anaco de texto. ten %s caracteres de longo. O "
-"límite é de 1500 caracteres."
-
 #. Translators: message presented in input help mode, when user presses the shortcut keys for this addon.
 msgid ""
 "Translates clipboard text from one language to another using Google "
@@ -47,17 +49,9 @@ msgstr ""
 "Translate."
 
 #. Translators: user has pressed the shortcut key for translating selected text, but no text was actually selected.
+#. Translators: user has pressed the shortcut key for identifying the language of selected text, but no text was actually selected.
 msgid "no selection"
 msgstr "non hai selección"
-
-#. Translators: Message presented when selected text (to be translated) is too long (more than a set limit).
-#, python-format
-msgid ""
-"The selection contains a large portion of text. It is %s characters long. "
-"The limit is 1500 characters."
-msgstr ""
-"A selección contén un gran anaco de texto. ten %s caracteres de longo. O "
-"límite é de 1500 caracteres."
 
 #. Translators: message presented in input help mode, when user presses the shortcut keys for this addon.
 msgid ""
@@ -66,9 +60,52 @@ msgstr ""
 "Traduce o texto seleccionado dunha lingua a outra utilizando o Google "
 "Translate."
 
-#. Translators: Message presented when the given text (from selected or clipboard) cannot be translated.
-msgid "Error translating text. See log for details"
-msgstr "Erro ó traducir o texto. Mira o log para detalles"
+#. Translators: message presented to announce that the source and target languages have been swapped.
+msgid "Languages swapped"
+msgstr "Linguas intercambiadas"
+
+#. Translators: message presented to announce the current source and target languages.
+#, python-brace-format
+msgid "Translate: from {lang1} to {lang2}"
+msgstr "Traducir: de {lang1} a {lang2}"
+
+#. Translators: Presented in input help mode.
+msgid "It swaps source and target languages."
+msgstr "Intercambia as linguas orixe e destiño."
+
+#. Translators: Presented in input help mode.
+msgid "It announces the current source and target languages."
+msgstr "Anuncia as linguas orixe e destiño actuais."
+
+#. Translators: message presented to announce a successful copy
+msgid "Last translation copied in clipboard"
+msgstr "Derradeira traducción copiada no portapapeis"
+
+#. Translators: message presented to announce no previous translation disponibility
+msgid "No stored translation"
+msgstr "Ningunha traducción gardada"
+
+#. Translators: Presented in input help mode.
+msgid "It copies the last translation to clipboard"
+msgstr "Copia a derradeira traducción no portapapeis"
+
+msgid "Language is..."
+msgstr "A lingua é..."
+
+#. Translators: Presented in input help mode.
+msgid "It identifies the language of selected text"
+msgstr "Identifica a lingua do texto seleccionado"
+
+msgid ""
+"t translates selected text, shift+t translates clipboard text, a announces "
+"current swap configuration, s swaps source and target languages, c copies "
+"last result to clipboard, i identify the language of selected text, h "
+"displays this message."
+msgstr ""
+"t traduce o texto seleccionado, shift+t traduce o texto do portapapeis, a "
+"anuncia a configuración de intercambio actual, s intercambia as linguas "
+"orixe e destiño, c copia o derradeiro resultado ó portapapeis, i identifica "
+"a lingua do texto seleccionado, h amosa esta mensaxe."
 
 #. Translators: name of the dialog.
 msgid "Instant Translate Settings"
@@ -78,64 +115,81 @@ msgstr "Opcións do Instant Translate"
 msgid "Select translation source and target language:"
 msgstr "Selecciona a lingua orixinal e a da traducción:"
 
-#. Translators: A setting in instant translate settings dialog.
+#. Translators: A setting in addon settings dialog.
 msgid "Source language:"
 msgstr "Lingua orixinal:"
 
-#. Translators: A setting in instant translate settings dialog.
+#. Translators: A setting in addon settings dialog.
 msgid "Target language:"
 msgstr "Lingua da traducción:"
 
+#. Translators: A setting in addon settings dialog.
 msgid "Copy translation result to clipboard"
 msgstr "Copiar o resultado da traducción ó portapapeis"
+
+#. Translators: A setting in addon settings dialog, shown if source language is on auto.
+msgid "Language for swapping:"
+msgstr "Intercambiar lingua:"
+
+#. Translators: A setting in addon settings dialog, shown if source language is on auto.
+msgid ""
+"Activate the auto-swap if recognized source is equal to the target "
+"(experimental)"
+msgstr ""
+"Activar o auto intercambiado se a orixe recoñecida é igual que a destino "
+"(experimental)"
 
 #. Translators: An option to automatically detect source language for translation.
 msgid "Automatically detect language"
 msgstr "Detectar lingua automáticamente"
 
 #. Translators: The name of a language supported by this add-on.
-msgid "Arabic"
-msgstr "Árabe"
-
-#. Translators: The name of a language supported by this add-on.
-msgid "Bangla"
-msgstr "Bengalés"
-
-#. Translators: The name of a language supported by this add-on.
-msgid "Welsh"
-msgstr "Galés"
+msgid "Cebuano"
+msgstr "Cebuano"
 
 #. Translators: The name of a language supported by this add-on.
 msgid "Esperanto"
 msgstr "Esperanto"
 
 #. Translators: The name of a language supported by this add-on.
-msgid "Gujarati"
-msgstr "Gujarati"
+msgid "Hmong"
+msgstr "Hmong"
 
 #. Translators: The name of a language supported by this add-on.
 msgid "Creole Haiti"
 msgstr "Creole Haití"
 
 #. Translators: The name of a language supported by this add-on.
-msgid "Armenian"
-msgstr "Armenio"
+msgid "Javanese"
+msgstr "Javanés"
 
 #. Translators: The name of a language supported by this add-on.
 msgid "Latin"
 msgstr "Latín"
 
 #. Translators: The name of a language supported by this add-on.
-msgid "Norwegian"
-msgstr "Noruego"
+msgid "Malagasy"
+msgstr "Malagasy"
 
 #. Translators: The name of a language supported by this add-on.
-msgid "Serbian (Latin)"
-msgstr "Serbio (Latino)"
+msgid "Myanmar (Burmese)"
+msgstr "Myanmar (Burmese)"
 
 #. Translators: The name of a language supported by this add-on.
-msgid "Swahili"
-msgstr "Swahili"
+msgid "Chichewa"
+msgstr "Chichewa"
+
+#. Translators: The name of a language supported by this add-on.
+msgid "Somali"
+msgstr "Somalí"
+
+#. Translators: The name of a language supported by this add-on.
+msgid "Sesotho"
+msgstr "Sesotho"
+
+#. Translators: The name of a language supported by this add-on.
+msgid "Sundanese"
+msgstr "Sudanés"
 
 #. Translators: The name of a language supported by this add-on.
 msgid "Tagalog"
@@ -145,32 +199,98 @@ msgstr "Tagalo"
 msgid "Yiddish"
 msgstr "Yiddish"
 
-#. Translators: The name of a language supported by this add-on.
-msgid "Chinese (Simplified)"
-msgstr "Chinese Simplificado"
+msgid "unavailable"
+msgstr "Non dispoñible"
 
-#. Translators: The name of a language supported by this add-on.
-msgid "Chinese (Traditional)"
-msgstr "Chinese Tradicional"
-
-#. Add-on description
-#. TRANSLATORS: Summary for this add-on to be shown on installation and add-on informaiton.
+#. Translators: the label of a message box dialog.
 msgid ""
-"Instant Translate - Translates given text using the Google Translate service."
+"You have installed an old and incompatible version of this addon. Do you "
+"want to uninstall the old version?"
 msgstr ""
-"Instant Translate - Traduce un texto dado utilizando o servizo Google "
-"Translate."
+"Instalaches unha versión antiga e incompatible deste complemento. ¿Queres "
+"desinstalar a versión anterior?"
+
+#. Translators: the title of a message box dialog.
+msgid "Uninstall incompatible add-on"
+msgstr "Desinstalar complemento incompatible"
+
+#. Add-on summary, usually the user visible name of the addon.
+#. Translators: Summary for this add-on to be shown on installation and add-on information.
+msgid "Instant Translate"
+msgstr "Instant Translate"
 
 #. Add-on description
-#. Translators: Long description to be shown for this add-on on installation and add-on information
+#. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid ""
 "This addon translates selected or clipboard text using the Google Translate "
-"service and presents it. Press NVDA+Shift+T to translate selected text. "
-"Press NVDA+Shift+Y to translate clipboard text."
+"service and presents it."
 msgstr ""
 "Este complemento traduce o texto seleccionado ou o do portapapeis utilizando "
-"o servizo Google Translate e preséntao. Preme NVDA+Shift+T para traducir o "
-"texto seleccionado. Preme NVDA+Shift+Y para traducir o texto do portapapeis."
+"o servizo Google Translate e preséntao."
+
+#~ msgid "Translating..."
+#~ msgstr "Traducindo..."
+
+#~ msgid ""
+#~ "When pressed once, announces the current source and target languages. "
+#~ "Pressed twice will swap source and target."
+#~ msgstr ""
+#~ "Cando se preme unha vez, anuncia as linguas orixinal e de destino "
+#~ "actuais. Cando se preme dúas vecess intercámbiase a orixe pola destino."
+
+#~ msgid "Arabic"
+#~ msgstr "Árabe"
+
+#~ msgid "Bangla"
+#~ msgstr "Bengalés"
+
+#~ msgid "Welsh"
+#~ msgstr "Galés"
+
+#~ msgid "Gujarati"
+#~ msgstr "Gujarati"
+
+#~ msgid "Armenian"
+#~ msgstr "Armenio"
+
+#~ msgid "Norwegian"
+#~ msgstr "Noruego"
+
+#~ msgid "Serbian (Latin)"
+#~ msgstr "Serbio (Latino)"
+
+#~ msgid "Swahili"
+#~ msgstr "Swahili"
+
+#~ msgid "Chinese (Simplified)"
+#~ msgstr "Chinese Simplificado"
+
+#~ msgid "Chinese (Traditional)"
+#~ msgstr "Chinese Tradicional"
+
+#~ msgid ""
+#~ "Instant Translate - Translates given text using the Google Translate "
+#~ "service."
+#~ msgstr ""
+#~ "Instant Translate - Traduce un texto dado utilizando o servizo Google "
+#~ "Translate."
+
+#~ msgid ""
+#~ "The clipboard contains a large portion of text. It is %s characters long. "
+#~ "The limit is 1500 characters."
+#~ msgstr ""
+#~ "O portapapeis contén un gran anaco de texto. ten %s caracteres de longo. "
+#~ "O límite é de 1500 caracteres."
+
+#~ msgid ""
+#~ "The selection contains a large portion of text. It is %s characters long. "
+#~ "The limit is 1500 characters."
+#~ msgstr ""
+#~ "A selección contén un gran anaco de texto. ten %s caracteres de longo. O "
+#~ "límite é de 1500 caracteres."
+
+#~ msgid "Error translating text. See log for details"
+#~ msgstr "Erro ó traducir o texto. Mira o log para detalles"
 
 #~ msgid "Select Languages from which text will be translated from, and into."
 #~ msgstr ""
@@ -287,9 +407,6 @@ msgstr ""
 #~ msgid "Italian"
 #~ msgstr "Italiano"
 
-#~ msgid "Japanese"
-#~ msgstr "Xaponés"
-
 #~ msgid "Korean"
 #~ msgstr "Coreano"
 
@@ -301,9 +418,6 @@ msgstr ""
 
 #~ msgid "Macedonian"
 #~ msgstr "Macedonio"
-
-#~ msgid "Malay"
-#~ msgstr "Malaio"
 
 #~ msgid "Maltese"
 #~ msgstr "Maltés"

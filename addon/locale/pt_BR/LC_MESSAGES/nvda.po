@@ -8,16 +8,28 @@ msgstr ""
 "Project-Id-Version: instantTranslate 2.2beta1\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2013-02-09 18:30+0100\n"
-"PO-Revision-Date: 2013-06-26 09:33-0300\n"
-"Last-Translator: Cleverson Casarin Uliana <clever92000@yahoo.com.br>\n"
-"Language-Team: Equipe de tradução do NVDA para Português do Brasil <clever92000@yahoo.com.br>\n"
+"PO-Revision-Date: 2015-05-08 21:58-0300\n"
+"Last-Translator: Cleverson Casarin Uliana <clcaul@live.com>\n"
+"Language-Team: Equipe de tradução do NVDA para Português do Brasil "
+"<clcaul@live.com>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Poedit-Language: Portuguese\n"
-"X-Poedit-Country: BRAZIL\n"
-"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Generator: Poedit 1.6.10\n"
+
+msgid ""
+"Instant Translate layer commands. t translates selected text, shift+t "
+"translates clipboard text, a announces current swap configuration, s swaps "
+"source and target languages, c copies last result to clipboard, i identify "
+"the language of selected text."
+msgstr ""
+"Comandos de camada do Tradutor instantâneo: t traduz o texto selecionado, "
+"shift+t traduz o texto da área de transferência, a anuncia a atual "
+"configuração de alternância, s alterna os idiomas de origem e destino, c "
+"copia o último resultado para a área de transferência, i identifica o idioma "
+"do texto selecionado."
 
 #. Translators: name of the option in the menu.
 msgid "Instant &Translate Settings..."
@@ -31,31 +43,72 @@ msgstr "Selecionar idiomas a usar na tradução."
 msgid "There is no text on the clipboard"
 msgstr "Não há texto na área de transferência"
 
-#. Translators: Message presented when clipboard text (to be translated) is too long (more than a set limit).
-#, python-format
-msgid "The clipboard contains a large portion of text. It is %s characters long. The limit is 1500 characters."
-msgstr "A área de transferência contém um texto muito grande. O mesmo possui %s caracteres. O limite é de 1500 caracteres."
-
 #. Translators: message presented in input help mode, when user presses the shortcut keys for this addon.
-msgid "Translates clipboard text from one language to another using Google Translate."
-msgstr "Traduz o texto da área de transferência de um idioma para outro usando o Google Translate."
+msgid ""
+"Translates clipboard text from one language to another using Google "
+"Translate."
+msgstr ""
+"Traduz o texto da área de transferência de um idioma para outro usando o "
+"Google Translate."
 
 #. Translators: user has pressed the shortcut key for translating selected text, but no text was actually selected.
+#. Translators: user has pressed the shortcut key for identifying the language of selected text, but no text was actually selected.
 msgid "no selection"
 msgstr "sem seleção"
 
-#. Translators: Message presented when selected text (to be translated) is too long (more than a set limit).
-#, python-format
-msgid "The selection contains a large portion of text. It is %s characters long. The limit is 1500 characters."
-msgstr "A seleção contém um texto muito grande. O mesmo possui %s caracteres. O limite é de 1500 caracteres."
-
 #. Translators: message presented in input help mode, when user presses the shortcut keys for this addon.
-msgid "Translates selected text from one language to another using Google Translate."
-msgstr "Traduz o texto selecionado de um idioma para outro usando o Google Translate."
+msgid ""
+"Translates selected text from one language to another using Google Translate."
+msgstr ""
+"Traduz o texto selecionado de um idioma para outro usando o Google Translate."
 
-#. Translators: Message presented when the given text (from selected or clipboard) cannot be translated.
-msgid "Error translating text. See log for details"
-msgstr "Erro a traduzir o texto. Por favor veja o log para detalhes"
+#. Translators: message presented to announce that the source and target languages have been swapped.
+msgid "Languages swapped"
+msgstr "Idiomas trocados"
+
+#. Translators: message presented to announce the current source and target languages.
+#, python-brace-format
+msgid "Translate: from {lang1} to {lang2}"
+msgstr "Traduzir: de {lang1} para {lang2}"
+
+#. Translators: Presented in input help mode.
+msgid "It swaps source and target languages."
+msgstr "Alterna os idiomas de origem e de destino."
+
+#. Translators: Presented in input help mode.
+msgid "It announces the current source and target languages."
+msgstr "Anuncia os atuais idiomas de origem e destino."
+
+#. Translators: message presented to announce a successful copy
+msgid "Last translation copied in clipboard"
+msgstr "Última tradução Copiada para a área de transferência"
+
+#. Translators: message presented to announce no previous translation disponibility
+msgid "No stored translation"
+msgstr "Nenhuma tradução armazenada"
+
+#. Translators: Presented in input help mode.
+msgid "It copies the last translation to clipboard"
+msgstr "Copia a última tradução para a área de transferência"
+
+msgid "Language is..."
+msgstr "Idioma é..."
+
+#. Translators: Presented in input help mode.
+msgid "It identifies the language of selected text"
+msgstr "Identifica o idioma do texto selecionado"
+
+msgid ""
+"t translates selected text, shift+t translates clipboard text, a announces "
+"current swap configuration, s swaps source and target languages, c copies "
+"last result to clipboard, i identify the language of selected text, h "
+"displays this message."
+msgstr ""
+"t traduz o texto selecionado, shift+t traduz o texto da área de "
+"transferência, a anuncia a atual configuração de alternância, s alterna os "
+"idiomas de origem e destino, c copia o último resultado para a área de "
+"transferência, i identifica o idioma do texto selecionado, h mostra esta "
+"mensagem."
 
 #. Translators: name of the dialog.
 msgid "Instant Translate Settings"
@@ -65,64 +118,81 @@ msgstr "Opções do tradutor instantâneo"
 msgid "Select translation source and target language:"
 msgstr "Selecione os idiomas de origem e de destino para tradução:"
 
-#. Translators: A setting in instant translate settings dialog.
+#. Translators: A setting in addon settings dialog.
 msgid "Source language:"
 msgstr "Idioma de origem:"
 
-#. Translators: A setting in instant translate settings dialog.
+#. Translators: A setting in addon settings dialog.
 msgid "Target language:"
 msgstr "Idioma destino:"
 
+#. Translators: A setting in addon settings dialog.
 msgid "Copy translation result to clipboard"
 msgstr "Copiar resultado da tradução para a área de transferência"
+
+#. Translators: A setting in addon settings dialog, shown if source language is on auto.
+msgid "Language for swapping:"
+msgstr "Idioma de permuta:"
+
+#. Translators: A setting in addon settings dialog, shown if source language is on auto.
+msgid ""
+"Activate the auto-swap if recognized source is equal to the target "
+"(experimental)"
+msgstr ""
+"Ativar a permuta automática se a origem reconhecida for igual ao destino "
+"(experimental)"
 
 #. Translators: An option to automatically detect source language for translation.
 msgid "Automatically detect language"
 msgstr "Detectar idioma automaticamente"
 
 #. Translators: The name of a language supported by this add-on.
-msgid "Arabic"
-msgstr "Árabe"
-
-#. Translators: The name of a language supported by this add-on.
-msgid "Bangla"
-msgstr "Bangla"
-
-#. Translators: The name of a language supported by this add-on.
-msgid "Welsh"
-msgstr "Galês"
+msgid "Cebuano"
+msgstr "Cebuano"
 
 #. Translators: The name of a language supported by this add-on.
 msgid "Esperanto"
 msgstr "Esperanto"
 
 #. Translators: The name of a language supported by this add-on.
-msgid "Gujarati"
-msgstr "Gujarati"
+msgid "Hmong"
+msgstr "Mongo"
 
 #. Translators: The name of a language supported by this add-on.
 msgid "Creole Haiti"
 msgstr "Haitiano Crioulo"
 
 #. Translators: The name of a language supported by this add-on.
-msgid "Armenian"
-msgstr "Armênio"
+msgid "Javanese"
+msgstr "Japonês"
 
 #. Translators: The name of a language supported by this add-on.
 msgid "Latin"
 msgstr "Latim"
 
 #. Translators: The name of a language supported by this add-on.
-msgid "Norwegian"
-msgstr "Norueguês"
+msgid "Malagasy"
+msgstr "Malagásio"
 
 #. Translators: The name of a language supported by this add-on.
-msgid "Serbian (Latin)"
-msgstr "Latim Vulgar"
+msgid "Myanmar (Burmese)"
+msgstr "Mianmar (Burmês)"
 
 #. Translators: The name of a language supported by this add-on.
-msgid "Swahili"
-msgstr "Swahili"
+msgid "Chichewa"
+msgstr "Chicheua"
+
+#. Translators: The name of a language supported by this add-on.
+msgid "Somali"
+msgstr "Somálio"
+
+#. Translators: The name of a language supported by this add-on.
+msgid "Sesotho"
+msgstr "Sesoto"
+
+#. Translators: The name of a language supported by this add-on.
+msgid "Sundanese"
+msgstr "Sudanês"
 
 #. Translators: The name of a language supported by this add-on.
 msgid "Tagalog"
@@ -132,21 +202,95 @@ msgstr "Tagalog"
 msgid "Yiddish"
 msgstr "Ídixe"
 
-#. Translators: The name of a language supported by this add-on.
-msgid "Chinese (Simplified)"
-msgstr "Chinês Simplificado"
+msgid "unavailable"
+msgstr "indisponível"
 
-#. Translators: The name of a language supported by this add-on.
-msgid "Chinese (Traditional)"
-msgstr "Chinês tradicional"
+#. Translators: the label of a message box dialog.
+msgid ""
+"You have installed an old and incompatible version of this addon. Do you "
+"want to uninstall the old version?"
+msgstr ""
+"Você tem instalada uma versão antiga e incompatível deste complemento. Quer "
+"desinstalar a versão antiga?"
+
+#. Translators: the title of a message box dialog.
+msgid "Uninstall incompatible add-on"
+msgstr "Desinstalar complemento incompatível"
+
+#. Add-on summary, usually the user visible name of the addon.
+#. Translators: Summary for this add-on to be shown on installation and add-on information.
+msgid "Instant Translate"
+msgstr "Tradutor instantâneo"
 
 #. Add-on description
-#. TRANSLATORS: Summary for this add-on to be shown on installation and add-on informaiton.
-msgid "Instant Translate - Translates given text using the Google Translate service."
-msgstr "Tradutor Instantâneo - traduz um dado texto usando o serviço Google Translate."
+#. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
+msgid ""
+"This addon translates selected or clipboard text using the Google Translate "
+"service and presents it."
+msgstr ""
+"Este complemento traduz um texto selecionado ou da área de transferência e "
+"exibe o mesmo."
 
-#. Add-on description
-#. Translators: Long description to be shown for this add-on on installation and add-on information
-msgid "This addon translates selected or clipboard text using the Google Translate service and presents it. Press NVDA+Shift+T to translate selected text. Press NVDA+Shift+Y to translate clipboard text."
-msgstr "Este complemento traduz um texto selecionado ou da área de transferência por meio do serviço Google Translate e exibe o mesmo. Pressione NVDA+Shift+T para traduzir um texto selecionado. Pressione NVDA+Shift+Y para traduzir um texto da área de transferência."
+#~ msgid "Translating..."
+#~ msgstr "Traduzindo..."
 
+#~ msgid ""
+#~ "When pressed once, announces the current source and target languages. "
+#~ "Pressed twice will swap source and target."
+#~ msgstr ""
+#~ "Pressionado uma vez, anuncia os idiomas de origem e destino atuais. "
+#~ "Pressionado duas vezes troca origem e destino."
+
+#~ msgid "Arabic"
+#~ msgstr "Árabe"
+
+#~ msgid "Bangla"
+#~ msgstr "Bangla"
+
+#~ msgid "Welsh"
+#~ msgstr "Galês"
+
+#~ msgid "Gujarati"
+#~ msgstr "Gujarati"
+
+#~ msgid "Armenian"
+#~ msgstr "Armênio"
+
+#~ msgid "Norwegian"
+#~ msgstr "Norueguês"
+
+#~ msgid "Serbian (Latin)"
+#~ msgstr "Latim Vulgar"
+
+#~ msgid "Swahili"
+#~ msgstr "Swahili"
+
+#~ msgid "Chinese (Simplified)"
+#~ msgstr "Chinês Simplificado"
+
+#~ msgid "Chinese (Traditional)"
+#~ msgstr "Chinês tradicional"
+
+#~ msgid ""
+#~ "Instant Translate - Translates given text using the Google Translate "
+#~ "service."
+#~ msgstr ""
+#~ "Tradutor Instantâneo - traduz um dado texto usando o serviço Google "
+#~ "Translate."
+
+#~ msgid ""
+#~ "The clipboard contains a large portion of text. It is %s characters long. "
+#~ "The limit is 1500 characters."
+#~ msgstr ""
+#~ "A área de transferência contém um texto muito grande. O mesmo possui %s "
+#~ "caracteres. O limite é de 1500 caracteres."
+
+#~ msgid ""
+#~ "The selection contains a large portion of text. It is %s characters long. "
+#~ "The limit is 1500 characters."
+#~ msgstr ""
+#~ "A seleção contém um texto muito grande. O mesmo possui %s caracteres. O "
+#~ "limite é de 1500 caracteres."
+
+#~ msgid "Error translating text. See log for details"
+#~ msgstr "Erro a traduzir o texto. Por favor veja o log para detalhes"

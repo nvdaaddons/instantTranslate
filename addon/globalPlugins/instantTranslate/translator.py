@@ -115,6 +115,7 @@ class Translator(threading.Thread):
 		# get the language of original text
 		tempLang = data.partition(']],,\"')[2]
 		lang = tempLang[:tempLang.find('\"')]
+		log.info("Detected language is %s"%lang)
 		if lang == '':
 			lang = _("unavailable")
 		return translation, lang

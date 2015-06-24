@@ -1,60 +1,112 @@
 # Pikakääntäjä #
 
-* Authors: Alexy Sadovoy, Beqa Gozalishvili, Mesar Hameed, Alberto Buffolino
-  and other nvda contributors.
-* Download [version 3.0-dev][1]
+* Tekijät: Alexy Sadovoy, Beqa Gozalishvili, Mesar Hameed, Alberto Buffolino
+  sekä muut NVDA-yhteisön jäsenet.
+* Lataa [vakaa versio][1]
+* Lataa [kehitysversio][2]
 
 Tätä lisäosaa käytetään valitun ja/tai leikepöydällä olevan tekstin
 kääntämiseen kielestä toiselle.  Käännös suoritetaan
 Google-kääntäjä-palvelulla.
 
 ## Kielten määrittäminen ##
-To configure source, target and in case swap language, from NVDA menu, go to
-Preferences, then go to Instant Translate Settings.  There are three combo
-boxes labeled "translate from", "translate into" and "Language for swapping"
-(if you selected auto option from source languages).
+Määritä lähde-, kohde- ja vaihdettava kieli valitsemalla "Pikakääntäjä..."-vaihtoehto kohdasta NVDA-valikko -> Asetukset.
 
-If you selected the auto option from source languages, there is also a
-checkbox about the auto-swap: if you activate it, then the addon tries to
-commute automatically from your source and target configuration to a
-configuration where target becomes the source language, and language
-selected in "Language for swapping" combo is the new target language;
-extremely useful if the source language of the text you want translate is
-the target language.
+Valintaikkunassa on kaksi yhdistelmäruutua, jotka ovat "Lähdekieli" ja
+"Kohdekieli", sekä valintaruutu, jolla voit valita, kopioidaanko käännös
+leikepöydälle.
 
-However, this is a temporary configuration, if this option has no effect
-(it's experimental), try to commute manually to a stable configuration,
-using the gesture for swapping described below.
+Lisäksi, jos valitsit "Lähdekieli"-yhdistelmäruudusta ensimmäisenä olevan
+Tunnista automaattisesti -vaihtoehdon, käytössä on myös "Vaihdettava
+kieli"-yhdistelmäruutu sekä valintaruutu, jolla automaattinen kielen
+vaihtaminen voidaan ottaa käyttöön.
 
-## Miten tätä lisäosaa käytetään ##
-Käyttötapoja on kaksi:
+Kahden ensimmäisen yhdistelmäruudun ja kopiointivalintaruudun tarkoitus on
+selvä, mutta muiden käytöstä on tarpeen kertoa jotain. Alla olevissa
+selityksissä oletetaan, että Lähdekieli-yhdistelmäruudussa on valittuna
+automaattinen tunnistus.
 
-1. Select some text using selection commands (shift with arrow keys, for
-   example). Then press Shift+NVDA+T to translate the selected text. Then
-   the translated string will be read, providing that the synthesizer you
-   are using supports the target language.
-2. Copy some text to clipboard. Then press Shift+NVDA+Y to translate the
-   text in the clipboard to the target language.
+"Vaihdettava kieli" -yhdistelmäruudusta on hyötyä vaihtaessasi lähde- ja
+kohdekieltä näppäinkomentoa avulla (katso alta). Kohdekielen määrittämisestä
+automaattiseksi ei ole järkeä, joten lisäosa asettaa sen arvoksi saman kuin
+yllä olevassa yhdistelmäruudussa.
 
-## Other useful commands ##
-* NVDA+shift+r: pressed once, announce current configuration; pressed twice,
-  swap source and target languages.
+Kuvittele seuraavanlainen tilanne: käännät tekstiä tavallisesti englanniksi,
+joka on pääasiallinen kielesi, mutta toisinaan (esim. asiakirjaa
+kirjoittaessasi) sinun täytyy kääntää italiaksi, joka on toinen
+kielesi. Valitse "Vaihdettava kieli" -yhdistelmäruudusta italia, jotta voit
+kääntää englannista italiaksi menemättä lisäosan asetuksiin. On selvää, että
+tämän toiminnon hyödyllisyys riippuu siitä, miten usein sinulla on sille
+käyttöä.
 
-## Changes for 3.0 ##
-* Implemented swapping languages.
-* Changed configuration format, now we can change instant translate settings
-  if we are in readonly pane, but remember that this will work before first
-  restart of nvda.
-* Removed limit on amount of text that can be translated.
+Nyt on vuorossa automaattisen kielen vaihtamisen valintaruutu: Se on
+näkyvissä jos ja vain jos olet valinnut "Lähdekieli"-yhdistelmäruudusta
+automaattisen tunnistuksen, ja se on suoraan yhteydessä "Vaihdettava kieli"
+-yhdistelmäruutuun. Mikäli olet valinnut tämän valintaruudun, lisäosa
+yrittää muuttaa lähde- ja kohdekielten asetukset sellaisiksi, joissa
+kohdekielestä tulee lähdekieli ja "Vaihdettava kieli"-yhdistelmäruudussa
+valitusta kielestä uusi kohdekieli. Tämä on äärimmäisen hyödyllistä, mikäli
+kääntämäsi tekstin kieli on "Kohdekieli"-yhdistelmäruudussa määritettyä
+kieltä.
+
+Yksinkertainen esimerkki: Palauta mieleesi aiemmin kuviteltu tilanne. Jos
+kääntämäsi tekstin kieli on jokin muu kuin englanti, ongelmia ei ole - saat
+asianmukaisen englanninkielisen käännöksen. Mutta jos sinun täytyy kääntää
+englanninkielistä tekstiä, saat normaalisti käännöksen englanniksi, joka on
+täsmälleen sama kuin alkuperäinen teksti, mistä ei tietenkään ole mitään
+hyötyä. Kiitos automaattisen kielenvaihtamistoiminnon, olettaen, että haluat
+tietää, miltä tekstisi italiankielinen käännös kuulostaa, lisäosa voi
+kuitenkin vaihtaa kohdekielen automaattisesti italiaksi, jolloin saat
+asianmukaisen käännöksen.
+
+Tämä asetus on oikeastaan tarkoitettu vain tilapäiseen käyttöön. Mikäli
+tällä kokeellisella toiminnolla ei ole vaikutusta, kokeile vaihtaa
+manuaalisesti vakaisiin asetuksiin alla kuvailtua kielenvaihtamiselettä
+käyttäen. Toiminto on kokeellinen, koska Google ei tunnista todellista
+lähdekieltä oikein joissakin tilanteissa (tyypillisesti lyhyiden tekstien
+kanssa), ja sinun täytyy vaihtaa kieliä manuaalisesti näppäinkomentoa
+käyttäen pakottaaksesi lähdekieleksi aiemman kohdekielen (meidän
+tapauksessamme englanti).
+
+## Käyttö ##
+Voit käyttää tätä lisäosaa kahdella tavalla:
+
+1. Valitse tekstiä valitsemiskomennoilla
+   (esim. Shift+nuolinäppäimet). Käännä sitten valittu teksti painamalla
+   määritettyä näppäinkomentoa. Tämän jälkeen käännös luetaan käyttämälläsi
+   puhesyntetisaattorilla.
+2. Voit kääntää myös leikepöydällä olevaa tekstiä.
+
+## Pikanäppäimet ##
+Seuraavia komentoja  on painettava toimintonäppäimen NVDA+Shift+T jälkeen:
+
+* T: Käännä valittu teksti.
+* Shift+T: Käännä leikepöydällä oleva teksti.
+* S: Vaihda lähde- ja kohdekieliä.
+* A: Ilmoita nykyiset asetukset.
+* C: Kopioi viimeisin käännös leikepöydälle.
+* I: Tunnista valitun tekstin kieli.
+* H: Kertoo kaikki käytettävissä olevat komennot.
+
+## Muutokset versiossa 3.0 ##
+* Pikanäppäinten käyttötapaa on muutettu. Paina ensin Pikakääntäjän
+  toimintonäppäintä (NVDA+Shift+T) ja sitten haluamaasi toimintoa vastaavaa
+  kirjainta (katso kaikki komennot Pikanäppäimet-kappaleesta).
+* Kielten vaihtaminen toteutettu.
+* Asetusten muotoa on muutettu. Pikakääntäjän asetusten muuttaminen on nyt
+  mahdollista vain luku -tiedostojärjestelmissä, mutta tehdyt muutokset ovat
+  voimassa vain NVDA:n seuraavaan uudelleenkäynnistykseen asti.
+* Poistettu käännettävän tekstimäärän rajoitus.
 * Lisätty t-pikanäppäin englanninkieliseen Pikakäännöksen asetukset
   -valikkokohteeseen
-* The auto option is now in first position in source combo, and absent in
-  target combo.
+* Automaattinen tunnistus on nyt ensimmäisenä vaihtoehtona
+  Lähdekieli-yhdistelmäruudussa, ja poistettu kokonaan
+  Kohdekieli-yhdistelmäruudusta.
 * Lisätty valintaruutu käännöstuloksen kopioinnin määrittämiseksi.
 * Asetustiedosto tallennetaan asetuskansion juureen.
-* Uusia kieliä: arabia, aragonia, brasilianportugali, espanja, galego,
-  hollanti, italia, japani, korea, kroatia, nepali, puola, ranska, saksa,
-  slovakki, sloveeni, suomi, tamili, tshekki, turkki, unkari.
+* Lähde- ja kohdekielet synkronoitu Google-kääntäjän tällä hetkellä
+  käyttämien kielten kanssa (22. huhtikuuta 2015).
+
 
 ## Muutokset versiossa 2.1 ##
 * Lisäosa voi kääntää leikepöydällä olevan tekstin painettaessa
@@ -71,6 +123,12 @@ Käyttötapoja on kaksi:
 ## Muutokset versiossa 1.0 ##
 * Ensimmäinen versio.
 
-[[!tag dev]]
+[1]: http://addons.nvda-project.org/files/get.php?file=it [2]:
+http://addons.nvda-project.org/files/get.php?file=it-dev
 
-[1]: http://addons.nvda-project.org/files/get.php?file=it-dev
+
+[[!tag dev stable]]
+
+[1]: http://addons.nvda-project.org/files/get.php?file=it
+
+[2]: http://addons.nvda-project.org/files/get.php?file=it-dev

@@ -1,57 +1,99 @@
 # Gyorsfordító #
 
-* Authors: Alexy Sadovoy, Beqa Gozalishvili, Mesar Hameed, Alberto Buffolino
-  and other nvda contributors.
-* Download [version 3.0-dev][1]
+* Készítők: Alexy Sadovoy, Beqa Gozalishvili, Mesar Hameed, Alberto
+  Buffolino, és további NVDA közreműködők.
+* Letöltés [Stabil verzió][1]
+* Letöltés [Fejlesztői verzió][2]
 
-A kiegészítő segítségével egy kijelölt/vágólapra másolt szöveget fordíthat
-le egyik nyelvről a másikra, a Google fordító segítségével.
+A kiegészítő használatával egy kijelölt és/vagy vágólapra másolt szöveget
+fordíthat le egyik nyelvről a másikra, a Google fordító segítségével.
 
 ## Nyelvek beállítása ##
-To configure source, target and in case swap language, from NVDA menu, go to
-Preferences, then go to Instant Translate Settings.  There are three combo
-boxes labeled "translate from", "translate into" and "Language for swapping"
-(if you selected auto option from source languages).
+A forrás, célnyelv, és nyelvek felcserélésére szolgáló lehetőségeket az NVDA menü->beállítások->Gyorsfordító beállításai menüpontban érheti el.
 
-If you selected the auto option from source languages, there is also a
-checkbox about the auto-swap: if you activate it, then the addon tries to
-commute automatically from your source and target configuration to a
-configuration where target becomes the source language, and language
-selected in "Language for swapping" combo is the new target language;
-extremely useful if the source language of the text you want translate is
-the target language.
+A megnyíló ablakban két kombinált listamező található a forrásnyelv és
+célnyelv beállítására, ill. egy jelölőnégyzet, mellyel a fordítás vágólapra
+másolását lehet szabályozni.
 
-However, this is a temporary configuration, if this option has no effect
-(it's experimental), try to commute manually to a stable configuration,
-using the gesture for swapping described below.
+Amennyiben a forrásnyelvnél az automatikus nyelvfelismerését választotta ki
+(a listában az első elem), megjelenik egy "Felcserélés nyelve" megnevezésű
+lista amellyel a nyelv felcserélését lehet konfigurálni, és egy az
+automatikus felcserélés beállítására való jelölőnégyzet is.
 
-## Hogyan használható ez a kiegészítő? ##
-Kétféle módon használhatja ezt a bővítményt:
+Az első két kombinált listamező és a másolást szabályzó jelölőnégyzet
+működése egyértelmű, viszont a többi beállítás bővebb magyarázatra
+szorul. Fontos, hogy az alábbiak csak akkor érvényesek, ha a forrás nyelve
+automatikusra van állítva.
 
-1. Select some text using selection commands (shift with arrow keys, for
-   example). Then press Shift+NVDA+T to translate the selected text. Then
-   the translated string will be read, providing that the synthesizer you
-   are using supports the target language.
-2. Copy some text to clipboard. Then press Shift+NVDA+Y to translate the
-   text in the clipboard to the target language.
+A "Felcserélés nyelve" funkció abban az esetben hasznos, ha a forrás és cél
+nyelv váltását automatikusan szeretné megoldani. Mivel az automatikus
+felismerésnek a cél nyelv esetén nincs értelme, így ez ebben a listában nem
+jelenik meg.
 
-## Other useful commands ##
-* NVDA+shift+r: pressed once, announce current configuration; pressed twice,
-  swap source and target languages.
+Képzelje el a következő szituációt: Minden szöveget magyar nyelvre szeretne
+lefordítani, de olykor a magyarul begépelt szövegnek szeretné megnézni az
+angol fordítását is. Amennyiben a felcserélés nyelvét angolra állítja, úgy a
+két nyelv közötti fordítás automatikusan megtörténik, anélkül hogy megnyitná
+a kiegészítő párbeszédablakát.
 
-## Changes for 3.0 ##
-* Implemented swapping languages.
-* Changed configuration format, now we can change instant translate settings
-  if we are in readonly pane, but remember that this will work before first
-  restart of nvda.
-* Removed limit on amount of text that can be translated.
+Ha a forrás nyelvnél az automatikus felismerés van kiválasztva, megjelenik
+egy jelölőnégyzet az automatikus forrás és célnyelv felcseréléséről. Ha
+aktiválja ezt, a kiegészítő megpróbálja automatikusan váltogatni a forrás és
+a célnyelvet. Ekkor a forrás nyelv lesz a célnyelv, és a "Felcserélés
+nyelve" az új forrás nyelv. Ez a lehetőség akkor nagyon hasznos, hogyha a
+beállított célnyelvről szeretnénk egy szöveget lefordíttatni.
+
+A fenti példából  kiindulva, ha bármilyen szöveget lefordít magyarra, az
+eredmény magyar nyelvű lesz. A felcserélés nyelve funkció használata nélkül
+ha egy magyar szöveget ad meg a programnak, ugyanazt a szöveget kapja
+vissza, aminek nincs túl sok értelme. Az automatikus felcserélésnek
+köszönhetően a kiegészítő felismeri, hogy az éppen kijelölt szöveget milyen
+nyelvre kell lefordítania, ha a szöveg nyelve nem egyezik meg a
+célnyelvével, akkor automatikusan a célnyelven adja vissza.
+
+Ez egy kísérleti funkció, így főképp rövid szövegeknél a Google nem ismeri
+fel a megadott forrás nyelvét, ekkor a fentebb taglalt funkció nem működik
+megfelelően.
+
+## Használat ##
+Kétféle módon is használható ez a kiegészítő:
+
+1. Jelölje ki a lefordítandó szöveget a kijelölési parancsokkal
+   (pl. Shift+nyilak), majd nyomja meg a fordításhoz szükséges
+   billentyűparancsot. A lefordított szöveg egy kis idő elteltével elhangzik
+   a cél nyelven (feltéve ha a használatban lévő beszédszintetizátor
+   támogatja azt).
+2. A kiegészítő képes a vágólapon lévő szöveg lefordítására is.
+
+## Billentyűparancsok ##
+Az alábbi parancsok az "NVDA+Shift+t" módosító billentyűparancs lenyomása
+után használhatók:
+
+* T: Lefordítja a kijelölt szöveget,
+* Shift+t: Lefordítja a vágólapon található szöveget,
+* S: Felcseréli a forrás- és a célnyelvet.
+* A: Bemondja az aktuális beállításokat,
+* C: Az utolsó fordítás eredményét a vágólapra másolja,
+* I: Felismeri a kijelölt szöveg nyelvét,
+* H: Bemondja az összes rendelkezésre álló felhasználói parancsot.
+
+## A 3.0 verzió változásai ##
+* Change way how Shortcuts are used, now you can press instantTranslate
+  modifier key "NVDA+Shift+t", and then single letter key to perform some
+  action (see all Commands in the "Shortcuts" section).
+* Beépítették a nyelvek felcserélése funkciót.
+* A beállítás módjának megváltoztatása, így módosíthatóak a Gyorsfordító
+  beállításai egy csak olvasható eszközön is, de ezek csak az NVDA
+  újraindításáig maradnak életben.
+* A lefordítható szöveg mennyisége korlátozásának megszüntetése.
 * Gyorsbillentyű hozzáadása a Gyorsfordító menüjének eléréséhez.
-* The auto option is now in first position in source combo, and absent in
-  target combo.
+* Az automatikus felismerés a legelső a forrásnyelv listában, a célnyelvéből
+  pedig hiányzik.
 * Egy jelölőnégyzet hozzáadása a fordítás eredményének konfigurálásához.
-* A konfig fájl a beállítások főmappájában található.
-* Új nyelvek: Finn, Német, Francia, Galíciai, Kóreai, Magyar, Német, Olasz,
-  Spanyoll, Szlovák, Tamil, Török.
+* A konfigurációs fájl a beállítások főmappájában található.
+* A forrás és célnyelv már a Google-nek megfelelő formátumban kerül
+  elküldésre (2015 április22)
+
 
 ## A 2.1 verzió változásai ##
 * Mostantól a kiegészítő képes a vágólapon lévő szöveg lefordítására is az
@@ -60,13 +102,19 @@ Kétféle módon használhatja ezt a bővítményt:
 ## A 2.0 verzió változásai ##
 * Grafikus ablak hozzáadása, ahol kiválasztható a forrás és a célnyelv.
 * A kiegészítő menüjének hozzáadása a beállítások menühöz.
-* A beállítások mostantól egy elkülönített konfig fájlba írodnak.
+* A beállítások mostantól egy elkülönített konfigurációs fájlba íródnak.
 * A fordítás eredménye automatikusan a vágólapra kerül, így később ez
   könnyen használható.
 
 ## Az 1.0 verzió változásai ##
 * Első változat
 
-[[!tag dev]]
+[1]: http://addons.nvda-project.org/files/get.php?file=it [2]:
+http://addons.nvda-project.org/files/get.php?file=it-dev
 
-[1]: http://addons.nvda-project.org/files/get.php?file=it-dev
+
+[[!tag dev stable]]
+
+[1]: http://addons.nvda-project.org/files/get.php?file=it
+
+[2]: http://addons.nvda-project.org/files/get.php?file=it-dev

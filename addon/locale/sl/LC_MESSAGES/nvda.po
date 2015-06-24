@@ -8,14 +8,25 @@ msgstr ""
 "Project-Id-Version: 'Instant-Translate' '2.1'\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2013-02-20 22:56+0100\n"
-"PO-Revision-Date: 2013-10-30 07:57+0100\n"
-"Last-Translator: Jožef Gregorc <jozko.gregorc[@]guest.arnes.si\n"
+"PO-Revision-Date: 2015-05-05 13:45+0100\n"
+"Last-Translator: jožef gregorc <jozko.gregorc@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: sl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.5.7\n"
+
+msgid ""
+"Instant Translate layer commands. t translates selected text, shift+t "
+"translates clipboard text, a announces current swap configuration, s swaps "
+"source and target languages, c copies last result to clipboard, i identify "
+"the language of selected text."
+msgstr ""
+"Ukazi za hitri prevod so v plasti. t prevede označeno besedilo, shift t "
+"prevede besedilo v odložišču, a naznani trenutne nastavitve menjave jezikov, "
+"s  zamenja jezik vira in ciljni jezik, c preslika zadnji rezultat v "
+"odložišče, i identificira jezik označenega besedila."
 
 #. Translators: name of the option in the menu.
 msgid "Instant &Translate Settings..."
@@ -30,35 +41,18 @@ msgstr "Izberite jezike, ki jih želite uporabljati pri prevodu."
 msgid "There is no text on the clipboard"
 msgstr "V odložišču ni besedila"
 
-#. Translators: Message presented when clipboard text (to be translated) is too long (more than a set limit).
-#, python-format
-msgid ""
-"The clipboard contains a large portion of text. It is %s characters long. "
-"The limit is 1500 characters."
-msgstr ""
-"V odložišču je večja količina besedila. Vsebuje %s znakov. Omejitev je pri "
-"1500 znakih."
-
 #. Translators: message presented in input help mode, when user presses the shortcut keys for this addon.
 msgid ""
 "Translates clipboard text from one language to another using Google "
 "Translate."
 msgstr ""
-"Prevede besedilo iz odložišča iz enega jezika v drugega. Pri tem uporablja "
+"Prevede besedilo v odložišču iz enega jezika v drugega. Pri tem uporablja "
 "Google Prevajalnik."
 
 #. Translators: user has pressed the shortcut key for translating selected text, but no text was actually selected.
+#. Translators: user has pressed the shortcut key for identifying the language of selected text, but no text was actually selected.
 msgid "no selection"
 msgstr "brez izbora"
-
-#. Translators: Message presented when selected text (to be translated) is too long (more than a set limit).
-#, python-format
-msgid ""
-"The selection contains a large portion of text. It is %s characters long. "
-"The limit is 1500 characters."
-msgstr ""
-"Izbrana je večja količina besedila. Vsebuje %s znakov. Omejitev je pri 1500 "
-"znakih."
 
 #. Translators: message presented in input help mode, when user presses the shortcut keys for this addon.
 msgid ""
@@ -67,9 +61,52 @@ msgstr ""
 "Prevede označeno besedilo iz enega jezika v drugega. Pri tem uporablja "
 "Google Prevajalnik."
 
-#. Translators: Message presented when the given text (from selected or clipboard) cannot be translated.
-msgid "Error translating text. See log for details"
-msgstr "Napaka pri prevodu besedila. Glejte dnevnik za podrobnosti"
+#. Translators: message presented to announce that the source and target languages have been swapped.
+msgid "Languages swapped"
+msgstr "Menjava jezikov uspela."
+
+#. Translators: message presented to announce the current source and target languages.
+msgid "Translate: from {lang1} to {lang2}"
+msgstr "Prevedi: iz {lang1} v {lang2}"
+
+#. Translators: Presented in input help mode.
+msgid "It swaps source and target languages."
+msgstr "To zamenja vir in ciljne jezike."
+
+#. Translators: Presented in input help mode.
+msgid "It announces the current source and target languages."
+msgstr "To naznani trenutni vir in ciljne jezike."
+
+#. Translators: message presented to announce a successful copy
+msgid "Last translation copied in clipboard"
+msgstr "Zadnji prevod je preslikan v doložišče"
+
+#. Translators: message presented to announce no previous translation disponibility
+msgid "No stored translation"
+msgstr "ni ohranjenega prevoda"
+
+#. Translators: Presented in input help mode.
+msgid "It copies the last translation to clipboard"
+msgstr ""
+"To preslika zadnji prevod v odložišče.Preslikaj izid prevoda v odložišče"
+
+msgid "Language is..."
+msgstr "Jezik je..."
+
+#. Translators: Presented in input help mode.
+msgid "It identifies the language of selected text"
+msgstr "To identificira jezik označenega besedila"
+
+msgid ""
+"t translates selected text, shift+t translates clipboard text, a announces "
+"current swap configuration, s swaps source and target languages, c copies "
+"last result to clipboard, i identify the language of selected text, h "
+"displays this message."
+msgstr ""
+"t prevede označeno besedilo, shift+t prevede besedilo v odložišču, a naznani "
+"trenutno konfiguracijo zamenjave jezikov, s menja jezike vira in cilja, c "
+"preslika zadnji rezultat v odložišče, i identificira jezik označenega "
+"besedila, h prikaže to sporočilo."
 
 #. Translators: name of the dialog.
 msgid "Instant Translate Settings"
@@ -79,64 +116,81 @@ msgstr "Nastavitve Hitro Prevedi"
 msgid "Select translation source and target language:"
 msgstr "Izberi vir prevoda in ciljni jezik:"
 
-#. Translators: A setting in instant translate settings dialog.
+#. Translators: A setting in addon settings dialog.
 msgid "Source language:"
 msgstr "Jezik izvora:"
 
-#. Translators: A setting in instant translate settings dialog.
+#. Translators: A setting in addon settings dialog.
 msgid "Target language:"
 msgstr "Ciljni jezik:"
 
+#. Translators: A setting in addon settings dialog.
 msgid "Copy translation result to clipboard"
 msgstr "Preslikaj izid prevoda v odložišče"
+
+#. Translators: A setting in addon settings dialog, shown if source language is on auto.
+msgid "Language for swapping:"
+msgstr "Jezik menjave"
+
+#. Translators: A setting in addon settings dialog, shown if source language is on auto.
+msgid ""
+"Activate the auto-swap if recognized source is equal to the target "
+"(experimental)"
+msgstr ""
+"Sproži samodejno obračanje, če se zazna, da je vir enak kot ciljni jezik "
+"(poskusno)."
 
 #. Translators: An option to automatically detect source language for translation.
 msgid "Automatically detect language"
 msgstr "Samodejno zaznaj jezik"
 
 #. Translators: The name of a language supported by this add-on.
-msgid "Arabic"
-msgstr "Arabščina"
-
-#. Translators: The name of a language supported by this add-on.
-msgid "Bangla"
-msgstr "Bengalščina"
-
-#. Translators: The name of a language supported by this add-on.
-msgid "Welsh"
-msgstr "Valižanščina"
+msgid "Cebuano"
+msgstr "Cebuano"
 
 #. Translators: The name of a language supported by this add-on.
 msgid "Esperanto"
 msgstr "Esperanto"
 
 #. Translators: The name of a language supported by this add-on.
-msgid "Gujarati"
-msgstr "Gujarati"
+msgid "Hmong"
+msgstr "Hmong"
 
 #. Translators: The name of a language supported by this add-on.
 msgid "Creole Haiti"
 msgstr "Kreolščina (Haiti)"
 
 #. Translators: The name of a language supported by this add-on.
-msgid "Armenian"
-msgstr "Armenščina"
+msgid "Javanese"
+msgstr "Javanski"
 
 #. Translators: The name of a language supported by this add-on.
 msgid "Latin"
 msgstr "Latinščina"
 
 #. Translators: The name of a language supported by this add-on.
-msgid "Norwegian"
-msgstr "Norveščina"
+msgid "Malagasy"
+msgstr "Malagasy"
 
 #. Translators: The name of a language supported by this add-on.
-msgid "Serbian (Latin)"
-msgstr "Srbščina (Latinica)"
+msgid "Myanmar (Burmese)"
+msgstr "Myanmar (Burma)"
 
 #. Translators: The name of a language supported by this add-on.
-msgid "Swahili"
-msgstr "Swahili"
+msgid "Chichewa"
+msgstr "Chichewa"
+
+#. Translators: The name of a language supported by this add-on.
+msgid "Somali"
+msgstr "Somalijski"
+
+#. Translators: The name of a language supported by this add-on.
+msgid "Sesotho"
+msgstr "Sesotho"
+
+#. Translators: The name of a language supported by this add-on.
+msgid "Sundanese"
+msgstr "Sundaneški"
 
 #. Translators: The name of a language supported by this add-on.
 msgid "Tagalog"
@@ -146,30 +200,96 @@ msgstr "Tagalogščina (Filipini)"
 msgid "Yiddish"
 msgstr "Jidiščina"
 
-#. Translators: The name of a language supported by this add-on.
-msgid "Chinese (Simplified)"
-msgstr "Kitajščina (Poenostavljena)"
+msgid "unavailable"
+msgstr "ni na voljo"
 
-#. Translators: The name of a language supported by this add-on.
-msgid "Chinese (Traditional)"
-msgstr "Kitajščina (Tradicionalna)"
-
-#. Add-on description
-#. TRANSLATORS: Summary for this add-on to be shown on installation and add-on informaiton.
+#. Translators: the label of a message box dialog.
 msgid ""
-"Instant Translate - Translates given text using the Google Translate service."
-msgstr "Hitro Prevedi - prevajanje besedila s pomočjo Google Prevajalnika"
+"You have installed an old and incompatible version of this addon. Do you "
+"want to uninstall the old version?"
+msgstr ""
+"Nameščeno imate staro in nezdružljivo različico tega dodatka. Jo želite "
+"odstraniti?"
+
+#. Translators: the title of a message box dialog.
+msgid "Uninstall incompatible add-on"
+msgstr "Odstrani nezdružljiv dodatek"
+
+#. Add-on summary, usually the user visible name of the addon.
+#. Translators: Summary for this add-on to be shown on installation and add-on information.
+msgid "Instant Translate"
+msgstr "Hitro Prevedi"
 
 #. Add-on description
-#. Translators: Long description to be shown for this add-on on installation and add-on information
+#. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid ""
 "This addon translates selected or clipboard text using the Google Translate "
-"service and presents it. Press NVDA+Shift+T to translate selected text. "
-"Press NVDA+Shift+Y to translate clipboard text."
+"service and presents it."
 msgstr ""
 "Ta dodatek prevede označeno besedilo ali besedilo v odložišču s pomočjo "
-"storitve Google Prevajalnik in ga prikaže. Pritisnite NVDA+Shift+T za prevod "
-"označenega besedila. Pritisnite NVDA+Shift+Y za prevod besedila v odložišču."
+"storitve Google Prevajalnika in ga prikaže."
+
+#~ msgid "Translating..."
+#~ msgstr "Prevajanje..."
+
+#~ msgid ""
+#~ "When pressed once, announces the current source and target languages. "
+#~ "Pressed twice will swap source and target."
+#~ msgstr ""
+#~ "Ko pritisnete enkrat, se naznani jezik izvora in ciljni jezik, dvojni "
+#~ "pritisk obrne jezik izvora in ciljni jezik."
+
+#~ msgid "Arabic"
+#~ msgstr "Arabščina"
+
+#~ msgid "Bangla"
+#~ msgstr "Bengalščina"
+
+#~ msgid "Welsh"
+#~ msgstr "Valižanščina"
+
+#~ msgid "Gujarati"
+#~ msgstr "Gujarati"
+
+#~ msgid "Armenian"
+#~ msgstr "Armenščina"
+
+#~ msgid "Norwegian"
+#~ msgstr "Norveščina"
+
+#~ msgid "Serbian (Latin)"
+#~ msgstr "Srbščina (Latinica)"
+
+#~ msgid "Swahili"
+#~ msgstr "Swahili"
+
+#~ msgid "Chinese (Simplified)"
+#~ msgstr "Kitajščina (Poenostavljena)"
+
+#~ msgid "Chinese (Traditional)"
+#~ msgstr "Kitajščina (Tradicionalna)"
+
+#~ msgid ""
+#~ "Instant Translate - Translates given text using the Google Translate "
+#~ "service."
+#~ msgstr "Hitro Prevedi - prevajanje besedila s pomočjo Google Prevajalnika"
+
+#~ msgid ""
+#~ "The clipboard contains a large portion of text. It is %s characters long. "
+#~ "The limit is 1500 characters."
+#~ msgstr ""
+#~ "V odložišču je večja količina besedila. Vsebuje %s znakov. Omejitev je "
+#~ "pri 1500 znakih."
+
+#~ msgid ""
+#~ "The selection contains a large portion of text. It is %s characters long. "
+#~ "The limit is 1500 characters."
+#~ msgstr ""
+#~ "Izbrana je večja količina besedila. Vsebuje %s znakov. Omejitev je pri "
+#~ "1500 znakih."
+
+#~ msgid "Error translating text. See log for details"
+#~ msgstr "Napaka pri prevodu besedila. Glejte dnevnik za podrobnosti"
 
 #~ msgid "Select Languages from and into to translate selected text"
 #~ msgstr ""
@@ -181,9 +301,6 @@ msgstr ""
 #~ msgstr ""
 #~ "Izberite jezik iz katerega želite prevajati inn jezik v katerega želite "
 #~ "prevesti, nato pritisnite V redu, da shranite izbrano."
-
-#~ msgid "Language From:"
-#~ msgstr "Iz Jezika:"
 
 #~ msgid "Language Into:"
 #~ msgstr "V Jezik:"
