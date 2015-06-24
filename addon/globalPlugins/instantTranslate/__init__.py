@@ -14,7 +14,6 @@ import textInfos
 import tones
 import scriptHandler
 import globalPluginHandler
-from logHandler import log
 from functools import wraps
 import queueHandler
 import ui

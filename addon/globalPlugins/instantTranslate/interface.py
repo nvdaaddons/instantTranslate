@@ -16,7 +16,6 @@ import config
 import _config
 import addonHandler
 from copy import deepcopy
-from logHandler import log
 
 _config.load()
 addonHandler.initTranslation()
@@ -71,11 +70,7 @@ class InstantTranslateSettingsDialog(gui.SettingsDialog):
 		self.autoSwapChk.SetValue(_config.instanttranslateConfig['settings']['autoswap'])
 		sizer.Add(self.autoSwapChk)
 		iLang_from = self._fromChoice.FindString(self.getDictKey(_config.instanttranslateConfig['translation']['from']))
-		val = _config.instanttranslateConfig['translation']['into']
-		log.info("Configuration value is %s"%val)
-		keyval = self.getDictKey(val)
-		log.info("Returned key is %s"%keyval)
-		iLang_to = self._intoChoice.FindString(keyval)
+		iLang_to = self._intoChoice.FindString(self.getDictKey(_config.instanttranslateConfig['translation']['into']))
 		iLang_swap = self._swapChoice.FindString(self.getDictKey(_config.instanttranslateConfig['translation']['swap']))
 		self._fromChoice.Select(iLang_from)
 		self._intoChoice.Select(iLang_to)
@@ -115,9 +110,9 @@ class InstantTranslateSettingsDialog(gui.SettingsDialog):
 		_config.instanttranslateConfig['settings']['autoswap'] = self.autoSwapChk.GetValue()
 		_config.save()
 
-	def getDictKey (self, currentValue):
-		log.info("Current langslist is: %s"%langslist)
-		log.info("Passed value is %s"%currentValue)
+	def getDictKey(self, currentValue):
 		for key, value in langslist.iteritems():
 			if value == currentValue:
 				return key
+		# set English if search fails
+		return lngModule.g("en")
