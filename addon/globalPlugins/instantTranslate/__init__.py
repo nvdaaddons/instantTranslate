@@ -228,8 +228,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	def script_copyLastResult(self, gesture):
 		self.getUpdatedGlobalVars()
 		if len(self.cachedResults) > 0:
-			text = self.cachedResults[len(self.cachedResults)-1][2]
-			self.copyResult(text, ignoreSetting=True)
+			translation = self.cachedResults[len(self.cachedResults)-1][3]
+			self.copyResult(translation, ignoreSetting=True)
 			# Translators: message presented to announce a successful copy
 			ui.message(_("Last translation copied in clipboard"))
 		else:
