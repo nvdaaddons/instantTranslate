@@ -128,9 +128,6 @@ modificatrice "NVDA+Maj+t":
 ## Changements pour la version 1.0 ##
 * Version initiale.
 
-[1]: http://addons.nvda-project.org/files/get.php?file=it [2]:
-http://addons.nvda-project.org/files/get.php?file=it-dev
-
 
 [[!tag dev stable]]
 

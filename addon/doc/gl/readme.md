@@ -123,9 +123,6 @@ Todas as ordes que siguen deben premerse despois da tecla modificadora
 ## Cambios para 1.0 ##
 * Versión Inicial.
 
-[1]: http://addons.nvda-project.org/files/get.php?file=it [2]:
-http://addons.nvda-project.org/files/get.php?file=it-dev
-
 
 [[!tag dev stable]]
 

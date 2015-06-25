@@ -110,9 +110,6 @@
 ## مستجدات الإصدار 2.0 ##
 * إصدار أولي
 
-[1]: http://addons.nvda-project.org/files/get.php?file=it [2]:
-http://addons.nvda-project.org/files/get.php?file=it-dev
-
 
 [[!tag dev stable]]
 

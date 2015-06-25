@@ -109,9 +109,6 @@ után használhatók:
 ## Az 1.0 verzió változásai ##
 * Első változat
 
-[1]: http://addons.nvda-project.org/files/get.php?file=it [2]:
-http://addons.nvda-project.org/files/get.php?file=it-dev
-
 
 [[!tag dev stable]]
 

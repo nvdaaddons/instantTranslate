@@ -123,9 +123,6 @@ Seuraavia komentoja  on painettava toimintonäppäimen NVDA+Shift+T jälkeen:
 ## Muutokset versiossa 1.0 ##
 * Ensimmäinen versio.
 
-[1]: http://addons.nvda-project.org/files/get.php?file=it [2]:
-http://addons.nvda-project.org/files/get.php?file=it-dev
-
 
 [[!tag dev stable]]
 

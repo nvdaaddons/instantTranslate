@@ -5,9 +5,9 @@
 * Download [versione stabile][1]
 * Download [versione in sviluppo][2]
 
-Questo componente aggiuntivo viene utilizzato per tradurre del testo
-selezionato oppure presente negli appunti da una lingua ad un'altra. il
-servizio è reso possibile utilizzando la piattaforma di  Google Translate.
+Questo add-on viene utilizzato per tradurre del testo selezionato oppure
+presente negli appunti da una lingua ad un'altra. Il tutto viene realizzato
+grazie all'utilizzo del servizio di  Google Translate.
 
 ## Configurazione delle lingue ##
 Per configurare la lingua di origine, di destinazione e, nel caso, di scambio, andare in: menu di NVDA >> Preferenze >> Instant Translate - Impostazioni.
@@ -16,62 +16,65 @@ Ci sono due caselle combinate chiamate "Lingua di origine" e "Lingua di
 destinazione", e una casella di controllo per decidere se copiare la
 traduzione negli appunti.
 
-Inoltre, se si è selezionata l'opzione automatica (la prima scelta) dalla
-casella combinata "Lingua di origine", ci sono anche una casella di
+Inoltre, se avete selezionato l'opzione automatica (la prima scelta) dalla
+casella combinata "Lingua di origine", ci saranno anche una casella di
 controllo chiamata "Lingua di scambio" e un'altra sullo scambio automatico.
 
 Il significato delle prime due caselle combinate e di quella di controllo
-per la copia è chiaro, ma qualche parola sul resto è necessaria. Ricordarsi
-sempre che le spiegazioni seguenti assumono la lingua di origine impostata
+per la copia è chiaro, ma qualche parola sul resto è necessaria. Ricordatevi
+sempre che le seguenti spiegazioni assumono la lingua di origine impostata
 su automatica.
 
 La casella combinata "Lingua di scambio" è utile quando si scambiano la
 lingua di origine e di destinazione via script (vedere sotto); infatti, una
 lingua di destinazione impostata sull'opzione automatica non ha senso,
-perciò l'addon la imposta col valore della casella combinata suddetta.
+perciò l'add-on la imposta col valore della casella combinata suddetta.
 
-Si immagini questa situazione: you usually translate into English (your main
-language), but sometimes (for example, when you write a document) you need
-to translate into Italian (your second language, suppose); you can set
-"Language for swapping" combobox to Italian, so you will translate from
-English to Italian without accessing directly to the addon
-settings. Obviously this function has a major or minor utility according to
-your more frequent needs.
+Immaginate questa situazione: siete soliti tradurre in italiano (la vostra
+lingua principale), ma a volte (scrivendo un documento, ad esempio) avete
+bisogno di tradurre in inglese (la vostra seconda lingua, supponiamo);
+potete impostare la "Lingua di scambio" su inglese, così tradurrete da
+italiano a inglese senza accedere direttamente alle impostazioni
+dell'add-on. Ovviamente questa funzionalità ha una maggiore o minore utilità
+a seconda delle vostre necessità più frequenti.
 
-Now, the auto-swap checkbox: it appears if and only if you set the auto
-option in "Source language" combobox, and is directly connected with
-"Language for swapping" combobox. If you activate it, then the addon tries
-to commute automatically from your source and target configuration to a
-configuration where target becomes the source language, and language
-selected in "Language for swapping" combobox is the new target language;
-extremely useful if the source language of the text you want translate is
-the target language.
+Ora, la casella di controllo per l'auto-scambio: questa appare se e solo se
+si è impostata l'opzione automatica nella casella combinata "Lingua di
+origine", ed è direttamente collegata alla casella combinata "Lingua di
+scambio". Se si attiva, allora l'add-on prova a commutare automaticamente
+dalla configurazione d'origine e destinazione a una configurazione dove la
+lingua di destinazione diventa quella d'origine, e la lingua selezionata in
+"Lingua di scambio" è la nuova lingua di destinazione; estremamente utile se
+la lingua d'origine del testo che si vuole tradurre è la lingua di
+destinazione.
 
-A simple example: take again in mind the situation imagined previously; if
-you translate a text in a language different from English, there is no
-problem, you get the correct translation in English. But if you need to
-translate a text from English, normally you get a translation into English
-identical to original text, and this is a bit useless. Thanks to auto-swap
-function, however, assuming that you want to know how your text sounds into
-Italian, the addon commutes automatically the target language to Italian, so
-it returns a valid translation.
+Un semplice esempio: tenete di nuovo a mente la situazione immaginata in
+precedenza; se traducete un testo in una lingua diversa dall'italiano, non
+ci sono problemi, ottenete la corretta traduzione in italiano. Ma se avete
+bisogno di tradurre un testo dall'italiano, normalmente otterrete una
+traduzione in italiano identica al testo originale, il che è abbastanza
+inutile. Grazie alla funzione di auto-scambio, invece, assumendo vogliate
+sapere come suona un testo in inglese, il componente aggiuntivo commuta
+automaticamente la lingua di destinazione a inglese, così da restituire una
+traduzione valida.
 
-Anyway, this is a temporary configuration; if this option has no effect
-(it's experimental), try to commute manually to a stable configuration,
-using the gesture for swapping described below. It's experimental because in
-some situations (with short texts, tipically), Google does not recognize the
-real source language correctly, and you have to swap languages manually via
-script, so to force the source language to be the previous target language
-(English in our example).
+Comunque, questa è una configurazione temporanea; se quest'opzione non ha
+effetto (è sperimentale), provate a commutare manualmente a una
+configurazione stabile, usando la combinazione di tasti per lo scambio
+descritta in seguito. E' sperimentale perché in alcune situazioni (con testi
+brevi, tipicamente), Google non riconosce correttamente la reale lingua di
+origine, e bisogna scambiare manualmente le lingue via script, così da
+forzare la lingua di origine a essere la precedente lingua di destinazione
+(italiano, nel nostro esempio).
 
 ## Utilizzo ##
-Questo componente aggiuntivo può essere usato in due modi:
+Potete usare questo add-on in due modi:
 
-1. Selezionare una parte di testo utilizzando i comandi di selezione (ad
-   esempio Tasto Shift con i tasti freccia) e premere il relativo tasto per
+1. Selezionate una parte di testo utilizzando i comandi di selezione (ad
+   esempio Tasto Shift con i tasti freccia) e premete il relativo tasto per
    tradurre. Il risultato della traduzione verrà letto con il sintetizzatore
-   che si sta utilizzando.
-2. Si può anche tradurre testo dagli appunti.
+   che state utilizzando.
+2. Potete anche tradurre testo dagli appunti.
 
 ## Combinazioni di tasti ##
 Tutti i comandi seguenti devono essere premuti dopo il tasto modificatore
@@ -102,27 +105,24 @@ Tutti i comandi seguenti devono essere premuti dopo il tasto modificatore
   di traduzione.
 * Salvataggio del file di configurazione nella cartella radice delle
   impostazioni.
-* Source and target languages syncronized with what Google Translate
-  currently exposes (22 Apr 2015).
+* Lingue di origine e destinazione sincronizzate con quelle messe a
+  disposizione attualmente da Google Translate (22 Apr 2015).
 
 
 ## Modifiche nella versione 2.1 ##
-* Ora il componente aggiuntivo può tradurre il testo dagli appunti mediante
-  la pressione della combinazione NVDA+shift+y.
+* Ora l'add-on può tradurre il testo dagli appunti mediante la pressione
+  della combinazione NVDA+shift+y.
 
 ## Modifiche nella versione 2.0 ##
 * Aggiunta un'interfaccia grafica di configurazione da dove poter
   selezionare la lingua di origine e la lingua di destinazione.
-* Aggiunto il menu del componente aggiuntivo sotto al menu preferenze.
+* Aggiunto il menu dell'add-on sotto al menu preferenze.
 * Le impostazioni ora vengono salvate in un file separato di configurazione.
 * I risultati di traduzione ora vengono copiati automaticamente negli
   appunti per manipolazioni future.
 
 ## Modifiche nella versione 1.0 ##
 * Versione Iniziale.
-
-[1]: http://addons.nvda-project.org/files/get.php?file=it [2]:
-http://addons.nvda-project.org/files/get.php?file=it-dev
 
 
 [[!tag dev stable]]

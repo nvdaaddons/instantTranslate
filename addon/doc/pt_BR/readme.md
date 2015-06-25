@@ -122,9 +122,6 @@ Todos os seguintes comandos devem ser pressionados após a tecla modificadora
 ## Mudanças na 1.0 ##
 * Versão inicial.
 
-[1]: http://addons.nvda-project.org/files/get.php?file=it [2]:
-http://addons.nvda-project.org/files/get.php?file=it-dev
-
 
 [[!tag dev stable]]
 

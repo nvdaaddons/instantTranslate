@@ -112,9 +112,6 @@ Wszystkie poniższe polecenia muszą być wywołane po klawiszu modyfikatora
 ## zmiany dla wersji 1.0 ##
 * Wstępne wydanie.
 
-[1]: http://addons.nvda-project.org/files/get.php?file=it [2]:
-http://addons.nvda-project.org/files/get.php?file=it-dev
-
 
 [[!tag dev stable]]
 

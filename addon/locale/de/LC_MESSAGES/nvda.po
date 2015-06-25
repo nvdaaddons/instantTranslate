@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: 'Instant-Translate' '2.1'\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2013-02-09 18:30+0100\n"
-"PO-Revision-Date: 2015-05-17 22:44+0100\n"
+"PO-Revision-Date: 2015-06-20 00:27+0100\n"
 "Last-Translator: Bernd Dorer <bdorer@mailbox.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8beta3\n"
+"X-Generator: Poedit 1.8.1\n"
 "Language-Team: \n"
 
 msgid ""
@@ -162,7 +162,6 @@ msgid "Creole Haiti"
 msgstr ""
 
 #. Translators: The name of a language supported by this add-on.
-#, fuzzy
 msgid "Javanese"
 msgstr "japanisch"
 
@@ -171,13 +170,12 @@ msgid "Latin"
 msgstr "Latein"
 
 #. Translators: The name of a language supported by this add-on.
-#, fuzzy
 msgid "Malagasy"
-msgstr "malaysisch"
+msgstr ""
 
 #. Translators: The name of a language supported by this add-on.
 msgid "Myanmar (Burmese)"
-msgstr ""
+msgstr "Burmesisch )Myanmar)"
 
 #. Translators: The name of a language supported by this add-on.
 msgid "Chichewa"
