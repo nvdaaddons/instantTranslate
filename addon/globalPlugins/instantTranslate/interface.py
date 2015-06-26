@@ -16,7 +16,6 @@ import config
 import _config
 import addonHandler
 from copy import deepcopy
-from logHandler import log
 
 _config.load()
 addonHandler.initTranslation()
@@ -115,7 +114,5 @@ class InstantTranslateSettingsDialog(gui.SettingsDialog):
 		for key, value in langslist.iteritems():
 			if value == currentValue:
 				return key
-		# why search fails?
-		log.info("current value is %s"%currentValue)
 		# set English if search fails
 		return lngModule.g("en")

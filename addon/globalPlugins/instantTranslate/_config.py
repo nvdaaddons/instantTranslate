@@ -18,7 +18,6 @@ elif s.startswith("zh"):
 	lo_lang = s.replace('_', '-')
 else:
 	lo_lang = s[0:s.find("_")]
-log.info("lo_lang is %s"%lo_lang)
 
 instanttranslateConfig = None
 
