@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: 'Instant-Translate' '3.0'\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2013-02-09 18:30+0100\n"
-"PO-Revision-Date: 2015-07-14 14:56+0100\n"
-"Last-Translator: Rémy Ruiz <remyruiz@gmail.com>\n"
+"PO-Revision-Date: 2015-08-11 09:56+0100\n"
+"Last-Translator: Bachir BENANOU <ben_bach@yahoo.fr>\n"
 "Language-Team: \n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.7.1\n"
+"X-Generator: Poedit 1.6.6\n"
 
 msgid ""
 "Instant Translate layer commands. t translates selected text, shift+t "
@@ -94,7 +94,7 @@ msgstr "La langue est..."
 
 #. Translators: Presented in input help mode.
 msgid "It identifies the language of selected text"
-msgstr "Il identifie la langue du texte sélectionné"
+msgstr "Ceci identifie la langue du texte sélectionné"
 
 msgid ""
 "t translates selected text, shift+t translates clipboard text, a announces "
@@ -169,11 +169,11 @@ msgstr "Latin"
 
 #. Translators: The name of a language supported by this add-on.
 msgid "Malagasy"
-msgstr "Malay "
+msgstr "Malgache"
 
 #. Translators: The name of a language supported by this add-on.
 msgid "Myanmar (Burmese)"
-msgstr "Myanmar (Burmese)"
+msgstr "Myanmar (Birman)"
 
 #. Translators: The name of a language supported by this add-on.
 msgid "Chichewa"
@@ -181,7 +181,7 @@ msgstr "Chichewa"
 
 #. Translators: The name of a language supported by this add-on.
 msgid "Somali"
-msgstr "Somali"
+msgstr "Somalien"
 
 #. Translators: The name of a language supported by this add-on.
 msgid "Sesotho"
