@@ -2,21 +2,34 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# Zahari Yurukov <zahari.yurukov@gmail.com>, 2013.
+#
+# Zahari Yurukov <zahari.yurukov@gmail.com>, 2013., 2013.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: instantTranslate 2.2beta1\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2013-04-11 05:45+0100\n"
-"PO-Revision-Date: 2013-11-16 18:06+0200\n"
+"PO-Revision-Date: 2015-08-16 03:20+0200\n"
 "Last-Translator: Zahari Yurukov <zahari.yurukov@gmail.com>\n"
 "Language-Team: Български <>\n"
-"Language:bg\n"
+"Language: bg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
+"X-Generator: Poedit 1.5.4\n"
+
+msgid ""
+"Instant Translate layer commands. t translates selected text, shift+t "
+"translates clipboard text, a announces current swap configuration, s swaps "
+"source and target languages, c copies last result to clipboard, i identify "
+"the language of selected text."
+msgstr ""
+"Команди за слоя на Незабавен превод. t превежда маркирания текст, shift+t "
+"превежда текста от клипборда, a докладва текущата конфигурация за размяна, s "
+"разменя текущия и желания език, c копира последният превод в клипборда, i "
+"разпознава езика на маркирания текст."
 
 #. Translators: name of the option in the menu.
 msgid "Instant &Translate Settings..."
@@ -30,35 +43,18 @@ msgstr "Изберете езиците, които да бъдат използ
 msgid "There is no text on the clipboard"
 msgstr "Няма текст в клипборда"
 
-#. Translators: Message presented when clipboard text (to be translated) is too long (more than a set limit).
-#, python-format
-msgid ""
-"The clipboard contains a large portion of text. It is %s characters long. "
-"The limit is 1500 characters."
-msgstr ""
-"Клипборда съдържа голямо количество текст. Дължината му е %s символа. "
-"Ограничението е 1500 символа."
-
 #. Translators: message presented in input help mode, when user presses the shortcut keys for this addon.
 msgid ""
 "Translates clipboard text from one language to another using Google "
 "Translate."
 msgstr ""
-"Превежда текста намиращ се в клипборда от един език на друг, като използва "
+"Превежда текста, намиращ се в клипборда, от един език на друг, като използва "
 "Google Translate."
 
 #. Translators: user has pressed the shortcut key for translating selected text, but no text was actually selected.
+#. Translators: user has pressed the shortcut key for identifying the language of selected text, but no text was actually selected.
 msgid "no selection"
 msgstr "няма нищо маркирано"
-
-#. Translators: Message presented when selected text (to be translated) is too long (more than a set limit).
-#, python-format
-msgid ""
-"The selection contains a large portion of text. It is %s characters long. "
-"The limit is 1500 characters."
-msgstr ""
-"Маркирали сте  голямо количество текст. Дължината му е %s символа. "
-"Ограничението е 1500 символа."
 
 #. Translators: message presented in input help mode, when user presses the shortcut keys for this addon.
 msgid ""
@@ -67,9 +63,52 @@ msgstr ""
 "Превежда маркирания текст от един език на друг, като използва Google "
 "Translate."
 
-#. Translators: Message presented when the given text (from selected or clipboard) cannot be translated.
-msgid "Error translating text. See log for details"
-msgstr "Грешка при превода на текста. За повече информация вижте протокола"
+#. Translators: message presented to announce that the source and target languages have been swapped.
+msgid "Languages swapped"
+msgstr "Езиците са разменени"
+
+#. Translators: message presented to announce the current source and target languages.
+#, python-brace-format
+msgid "Translate: from {lang1} to {lang2}"
+msgstr "Превод: от {lang1} на {lang2}"
+
+#. Translators: Presented in input help mode.
+msgid "It swaps source and target languages."
+msgstr "Разменя текущия и желания език."
+
+#. Translators: Presented in input help mode.
+msgid "It announces the current source and target languages."
+msgstr "Докладва текущите текущ и желан език."
+
+#. Translators: message presented to announce a successful copy
+msgid "Last translation copied in clipboard"
+msgstr "Последният превод е копиран в клипборда"
+
+#. Translators: message presented to announce no previous translation disponibility
+msgid "No stored translation"
+msgstr "Няма съхранен превод"
+
+#. Translators: Presented in input help mode.
+msgid "It copies the last translation to clipboard"
+msgstr "Копира последният превод в клипборда"
+
+msgid "Language is..."
+msgstr "Езикът е..."
+
+#. Translators: Presented in input help mode.
+msgid "It identifies the language of selected text"
+msgstr "Разпознава езика на текущо маркирания текст"
+
+msgid ""
+"t translates selected text, shift+t translates clipboard text, a announces "
+"current swap configuration, s swaps source and target languages, c copies "
+"last result to clipboard, i identify the language of selected text, h "
+"displays this message."
+msgstr ""
+"t превежда маркирания текст, shift+t превежда текста от клипборда, a "
+"докладва текущата конфигурация за размяна, s разменя текущия и желания език, "
+"c копира последният превод в клипборда, i разпознава езика на маркирания "
+"текст, h извежда това съобщение."
 
 #. Translators: name of the dialog.
 msgid "Instant Translate Settings"
@@ -79,64 +118,81 @@ msgstr "Незабавен превод"
 msgid "Select translation source and target language:"
 msgstr "Избор на текущ и желан език:"
 
-#. Translators: A setting in instant translate settings dialog.
+#. Translators: A setting in addon settings dialog.
 msgid "Source language:"
 msgstr "Език на текста:"
 
-#. Translators: A setting in instant translate settings dialog.
+#. Translators: A setting in addon settings dialog.
 msgid "Target language:"
 msgstr "Желан език:"
 
+#. Translators: A setting in addon settings dialog.
 msgid "Copy translation result to clipboard"
 msgstr "Копиране на резултата от превода в клипборда"
+
+#. Translators: A setting in addon settings dialog, shown if source language is on auto.
+msgid "Language for swapping:"
+msgstr "Език за размяна:"
+
+#. Translators: A setting in addon settings dialog, shown if source language is on auto.
+msgid ""
+"Activate the auto-swap if recognized source is equal to the target "
+"(experimental)"
+msgstr ""
+"Активиране на автоматичната размяна на езици, ако разпознатият език за "
+"текущия текст съвпада с желания език (експериментално)"
 
 #. Translators: An option to automatically detect source language for translation.
 msgid "Automatically detect language"
 msgstr "Автоматично откриване на езика"
 
 #. Translators: The name of a language supported by this add-on.
-msgid "Arabic"
-msgstr "арабски"
-
-#. Translators: The name of a language supported by this add-on.
-msgid "Bangla"
-msgstr "бангла"
-
-#. Translators: The name of a language supported by this add-on.
-msgid "Welsh"
-msgstr "уелски"
+msgid "Cebuano"
+msgstr "Себуано"
 
 #. Translators: The name of a language supported by this add-on.
 msgid "Esperanto"
 msgstr "есперанто"
 
 #. Translators: The name of a language supported by this add-on.
-msgid "Gujarati"
-msgstr "гуджарати"
+msgid "Hmong"
+msgstr "Хмонг"
 
 #. Translators: The name of a language supported by this add-on.
 msgid "Creole Haiti"
 msgstr "креолски Хаити"
 
 #. Translators: The name of a language supported by this add-on.
-msgid "Armenian"
-msgstr "арменски"
+msgid "Javanese"
+msgstr "Явански"
 
 #. Translators: The name of a language supported by this add-on.
 msgid "Latin"
 msgstr "латински"
 
 #. Translators: The name of a language supported by this add-on.
-msgid "Norwegian"
-msgstr "норвежки"
+msgid "Malagasy"
+msgstr "Мадагаскарски"
 
 #. Translators: The name of a language supported by this add-on.
-msgid "Serbian (Latin)"
-msgstr "Сръбски (латиница)"
+msgid "Myanmar (Burmese)"
+msgstr "Мианмар (Бирма)"
 
 #. Translators: The name of a language supported by this add-on.
-msgid "Swahili"
-msgstr "суахили"
+msgid "Chichewa"
+msgstr "Чичуа"
+
+#. Translators: The name of a language supported by this add-on.
+msgid "Somali"
+msgstr "сомалийски"
+
+#. Translators: The name of a language supported by this add-on.
+msgid "Sesotho"
+msgstr "Сесото"
+
+#. Translators: The name of a language supported by this add-on.
+msgid "Sundanese"
+msgstr "Сундански"
 
 #. Translators: The name of a language supported by this add-on.
 msgid "Tagalog"
@@ -146,30 +202,95 @@ msgstr "тагалог"
 msgid "Yiddish"
 msgstr "идиш"
 
-#. Translators: The name of a language supported by this add-on.
-msgid "Chinese (Simplified)"
-msgstr "Китайски (опростен)"
+msgid "unavailable"
+msgstr "недостъпен"
 
-#. Translators: The name of a language supported by this add-on.
-msgid "Chinese (Traditional)"
-msgstr "Китайски (традиционен)"
-
-#. Add-on description
-#. TRANSLATORS: Summary for this add-on to be shown on installation and add-on informaiton.
+#. Translators: the label of a message box dialog.
 msgid ""
-"Instant Translate - Translates given text using the Google Translate service."
+"You have installed an old and incompatible version of this addon. Do you "
+"want to uninstall the old version?"
 msgstr ""
-"Незабавен превод - Превежда даден текст използвайки услугата Google "
-"Translate."
+"Имате инсталирана най-вероятно стара и несъвместима версия на тази добавка. "
+"Желаете ли да деинсталирате старата версия?"
+
+#. Translators: the title of a message box dialog.
+msgid "Uninstall incompatible add-on"
+msgstr "Деинсталиране на несъвместима добавка"
+
+#. Add-on summary, usually the user visible name of the addon.
+#. Translators: Summary for this add-on to be shown on installation and add-on information.
+msgid "Instant Translate"
+msgstr "Незабавен превод"
 
 #. Add-on description
-#. Translators: Long description to be shown for this add-on on installation and add-on information
+#. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid ""
 "This addon translates selected or clipboard text using the Google Translate "
-"service and presents it. Press NVDA+Shift+T to translate selected text. "
-"Press NVDA+Shift+Y to translate clipboard text."
+"service and presents it."
 msgstr ""
-"Тази добавка превежда маркиран или намиращ се в клипборда текст, като "
-"използва услугата Google Translate и ви го предоставя. Натиснете NVDA+Shift"
-"+T за да преведете предварително маркиран текст. Натиснете NVDA+Shift+Y за "
-"да преведете текст, намиращ се в клипборда."
+"Тази добавка превежда маркиран или намиращ се в клипборда текст чрез "
+"услугата Google Translate и ви го предоставя."
+
+#~ msgid "Translating..."
+#~ msgstr "В процес на превод..."
+
+#~ msgid ""
+#~ "When pressed once, announces the current source and target languages. "
+#~ "Pressed twice will swap source and target."
+#~ msgstr ""
+#~ "При еднократно натискане съобщава текущо зададените езици за превод. "
+#~ "Двукратното натискане разменя местата им."
+
+#~ msgid "Arabic"
+#~ msgstr "арабски"
+
+#~ msgid "Bangla"
+#~ msgstr "бангла"
+
+#~ msgid "Welsh"
+#~ msgstr "уелски"
+
+#~ msgid "Gujarati"
+#~ msgstr "гуджарати"
+
+#~ msgid "Armenian"
+#~ msgstr "арменски"
+
+#~ msgid "Norwegian"
+#~ msgstr "норвежки"
+
+#~ msgid "Serbian (Latin)"
+#~ msgstr "Сръбски (латиница)"
+
+#~ msgid "Swahili"
+#~ msgstr "суахили"
+
+#~ msgid "Chinese (Simplified)"
+#~ msgstr "китайски (опростен)"
+
+#~ msgid "Chinese (Traditional)"
+#~ msgstr "китайски (традиционен)"
+
+#~ msgid ""
+#~ "Instant Translate - Translates given text using the Google Translate "
+#~ "service."
+#~ msgstr ""
+#~ "Незабавен превод - Превежда даден текст, използвайки услугата Google "
+#~ "Translate."
+
+#~ msgid ""
+#~ "The clipboard contains a large portion of text. It is %s characters long. "
+#~ "The limit is 1500 characters."
+#~ msgstr ""
+#~ "Клипбордът съдържа голямо количество текст. Дължината му е %s символа. "
+#~ "Ограничението е 1500 символа."
+
+#~ msgid ""
+#~ "The selection contains a large portion of text. It is %s characters long. "
+#~ "The limit is 1500 characters."
+#~ msgstr ""
+#~ "Маркирали сте голямо количество текст. Дължината му е %s символа. "
+#~ "Ограничението е 1500 символа."
+
+#~ msgid "Error translating text. See log for details"
+#~ msgstr "Грешка при превода на текста. За повече информация вижте протокола"
