@@ -6,8 +6,8 @@
 * تحميل [الإصدار النهائي][1]
 * تحميل [الإصدار التجريبي][2]
 
-This add-on is used to translate selected and/or clipboard text from one
-language to another.  This is done using an external service.
+تقوم هذه الإضافة بترجمة النص المظلل أو الموجود بحافظة الويندوز من لغة إلى
+أخرى باستخدام خدمة من مصدر خارجي.
 
 ## إعداد اللغات ##
 لإعداد لغة المصدر, ولغة الهدف, أو في حالة التبديل بين لغة المصدر ولغة الهدف, اذهب إلى: قائمة NVDA الرئيسية>> التفضيلات>> إعدادات instant translate.
