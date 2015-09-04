@@ -5,8 +5,9 @@
 * Lataa [vakaa versio][1]
 * Lataa [kehitysversio][2]
 
-This add-on is used to translate selected and/or clipboard text from one
-language to another.  This is done using an external service.
+Tätä lisäosaa käytetään valitun ja/tai leikepöydällä olevan tekstin
+kääntämiseen kielestä toiselle.  Käännös suoritetaan
+Google-kääntäjä-palvelua käyttäen.
 
 ## Kielten määrittäminen ##
 Määritä lähde-, kohde- ja vaihdettava kieli valitsemalla "Pikakääntäjä..."-vaihtoehto kohdasta NVDA-valikko -> Asetukset.
