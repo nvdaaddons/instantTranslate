@@ -8,14 +8,25 @@ msgstr ""
 "Project-Id-Version: 'Instant-Translate' '2.1'\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2013-02-09 18:30+0100\n"
-"PO-Revision-Date: 2013-10-11 18:05+0900\n"
+"PO-Revision-Date: 2015-09-27 08:34+0900\n"
 "Last-Translator: Takuya Nishimoto <nishimotz@gmail.com>\n"
 "Language-Team: Japanese <nvdajp@nvda.jp>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.5.7\n"
+"X-Generator: Poedit 1.7.5\n"
+
+msgid ""
+"Instant Translate layer commands. t translates selected text, shift+t "
+"translates clipboard text, a announces current swap configuration, s swaps "
+"source and target languages, c copies last result to clipboard, i identify "
+"the language of selected text."
+msgstr ""
+"インスタント翻訳レイヤーコマンド。tは選択したテキストを翻訳、Shift+tはクリッ"
+"プボードのテキストを翻訳、aは現在の交換設定を通知、sは翻訳元の言語と翻訳先の"
+"言語の入れ替え、cは最後の結果をクリップボードにコピー、iは選択されたテキスト"
+"の言語を識別。"
 
 #. Translators: name of the option in the menu.
 msgid "Instant &Translate Settings..."
@@ -29,14 +40,6 @@ msgstr "翻訳したい言語を選択してください"
 msgid "There is no text on the clipboard"
 msgstr "クリップボードにテキストがありません"
 
-#. Translators: Message presented when clipboard text (to be translated) is too long (more than a set limit).
-#, python-format
-msgid ""
-"The clipboard contains a large portion of text. It is %s characters long. "
-"The limit is 1500 characters."
-msgstr ""
-"クリップボードのテキストが長すぎます。 %s文字あります。最大は1500文字です。"
-
 #. Translators: message presented in input help mode, when user presses the shortcut keys for this addon.
 msgid ""
 "Translates clipboard text from one language to another using Google "
@@ -44,25 +47,61 @@ msgid ""
 msgstr "クリップボードのテキストの翻訳をGoogle翻訳で行います"
 
 #. Translators: user has pressed the shortcut key for translating selected text, but no text was actually selected.
+#. Translators: user has pressed the shortcut key for identifying the language of selected text, but no text was actually selected.
 msgid "no selection"
 msgstr "選択なし"
-
-#. Translators: Message presented when selected text (to be translated) is too long (more than a set limit).
-#, python-format
-msgid ""
-"The selection contains a large portion of text. It is %s characters long. "
-"The limit is 1500 characters."
-msgstr ""
-"クリップボードのテキストが長すぎます。 %s文字あります。最大は1500文字です。"
 
 #. Translators: message presented in input help mode, when user presses the shortcut keys for this addon.
 msgid ""
 "Translates selected text from one language to another using Google Translate."
 msgstr "クリップボードのテキストの翻訳をGoogle翻訳で行います"
 
-#. Translators: Message presented when the given text (from selected or clipboard) cannot be translated.
-msgid "Error translating text. See log for details"
-msgstr "翻訳のエラーです。詳細はログを確認してください。"
+#. Translators: message presented to announce that the source and target languages have been swapped.
+msgid "Languages swapped"
+msgstr "言語を入れ替えました"
+
+#. Translators: message presented to announce the current source and target languages.
+#, python-brace-format
+msgid "Translate: from {lang1} to {lang2}"
+msgstr "翻訳元 {lang1} 翻訳先 {lang2}"
+
+#. Translators: Presented in input help mode.
+msgid "It swaps source and target languages."
+msgstr "翻訳元の言語と翻訳先の言語の入れ替え"
+
+#. Translators: Presented in input help mode.
+msgid "It announces the current source and target languages."
+msgstr "現在の翻訳元の言語と翻訳先の言語を通知"
+
+#. Translators: message presented to announce a successful copy
+msgid "Last translation copied in clipboard"
+msgstr "クリップボードにコピーされた最後の翻訳"
+
+#. Translators: message presented to announce no previous translation disponibility
+msgid "No stored translation"
+msgstr "翻訳がありません"
+
+#. Translators: Presented in input help mode.
+msgid "It copies the last translation to clipboard"
+msgstr "最後の翻訳をクリップボードにコピー"
+
+msgid "Language is..."
+msgstr "言語は..."
+
+#. Translators: Presented in input help mode.
+msgid "It identifies the language of selected text"
+msgstr "選択されたテキストの言語を識別します"
+
+msgid ""
+"t translates selected text, shift+t translates clipboard text, a announces "
+"current swap configuration, s swaps source and target languages, c copies "
+"last result to clipboard, i identify the language of selected text, h "
+"displays this message."
+msgstr ""
+"tは選択したテキストを翻訳、Shift+tはクリップボードのテキストを翻訳、aは現在の"
+"交換設定を通知、sは翻訳元の言語と翻訳先の言語の入れ替え、cは最後の結果をク"
+"リップボードにコピー、iは選択されたテキストの言語を識別、hはこのメッセージを"
+"表示。"
 
 #. Translators: name of the dialog.
 msgid "Instant Translate Settings"
@@ -72,64 +111,79 @@ msgstr "インスタント翻訳の設定"
 msgid "Select translation source and target language:"
 msgstr "翻訳元と翻訳先の言語の選択:"
 
-#. Translators: A setting in instant translate settings dialog.
+#. Translators: A setting in addon settings dialog.
 msgid "Source language:"
 msgstr "翻訳元の言語:"
 
-#. Translators: A setting in instant translate settings dialog.
+#. Translators: A setting in addon settings dialog.
 msgid "Target language:"
 msgstr "翻訳先の言語:"
 
+#. Translators: A setting in addon settings dialog.
 msgid "Copy translation result to clipboard"
 msgstr "翻訳結果をクリップボードにコピー"
+
+#. Translators: A setting in addon settings dialog, shown if source language is on auto.
+msgid "Language for swapping:"
+msgstr "入れ替え言語:"
+
+#. Translators: A setting in addon settings dialog, shown if source language is on auto.
+msgid ""
+"Activate the auto-swap if recognized source is equal to the target "
+"(experimental)"
+msgstr "言語の入れ替えを翻訳元と翻訳先が同じでも実行する（実験的機能）"
 
 #. Translators: An option to automatically detect source language for translation.
 msgid "Automatically detect language"
 msgstr "言語の自動検出"
 
 #. Translators: The name of a language supported by this add-on.
-msgid "Arabic"
-msgstr "アラビア語"
-
-#. Translators: The name of a language supported by this add-on.
-msgid "Bangla"
-msgstr "バングラ語"
-
-#. Translators: The name of a language supported by this add-on.
-msgid "Welsh"
-msgstr "ウェルシュ語"
+msgid "Cebuano"
+msgstr ""
 
 #. Translators: The name of a language supported by this add-on.
 msgid "Esperanto"
 msgstr "エスペラント語"
 
 #. Translators: The name of a language supported by this add-on.
-msgid "Gujarati"
-msgstr "グジャラート語"
+msgid "Hmong"
+msgstr ""
 
 #. Translators: The name of a language supported by this add-on.
 msgid "Creole Haiti"
 msgstr "ハイチ・クレオール語"
 
 #. Translators: The name of a language supported by this add-on.
-msgid "Armenian"
-msgstr "アルメニア語"
+msgid "Javanese"
+msgstr ""
 
 #. Translators: The name of a language supported by this add-on.
 msgid "Latin"
 msgstr "ラテン語"
 
 #. Translators: The name of a language supported by this add-on.
-msgid "Norwegian"
-msgstr "ノルウェー語"
+msgid "Malagasy"
+msgstr ""
 
 #. Translators: The name of a language supported by this add-on.
-msgid "Serbian (Latin)"
-msgstr "セルビア語(ラテン文字)"
+msgid "Myanmar (Burmese)"
+msgstr ""
 
 #. Translators: The name of a language supported by this add-on.
-msgid "Swahili"
-msgstr "スワヒリ語"
+msgid "Chichewa"
+msgstr ""
+
+#. Translators: The name of a language supported by this add-on.
+msgid "Somali"
+msgstr ""
+
+#. Translators: The name of a language supported by this add-on.
+msgid "Sesotho"
+msgstr ""
+
+#. Translators: The name of a language supported by this add-on.
+msgid "Sundanese"
+msgstr ""
 
 #. Translators: The name of a language supported by this add-on.
 msgid "Tagalog"
@@ -139,28 +193,77 @@ msgstr "タガログ語"
 msgid "Yiddish"
 msgstr "イディッシュ語"
 
-#. Translators: The name of a language supported by this add-on.
-msgid "Chinese (Simplified)"
-msgstr "中国語(簡体字)"
+msgid "unavailable"
+msgstr "利用出来ません"
 
-#. Translators: The name of a language supported by this add-on.
-msgid "Chinese (Traditional)"
-msgstr "中国語(繁体字)"
-
-#. Add-on description
-#. TRANSLATORS: Summary for this add-on to be shown on installation and add-on informaiton.
+#. Translators: the label of a message box dialog.
 msgid ""
-"Instant Translate - Translates given text using the Google Translate service."
-msgstr "Instant Translate - 選択されたテキストをGoogleのサービスで翻訳します"
+"You have installed an old and incompatible version of this addon. Do you "
+"want to uninstall the old version?"
+msgstr ""
+"このアドオンの非互換の古いバージョンがインストールされています。古いバージョ"
+"ンをアンインストールしますか？"
+
+#. Translators: the title of a message box dialog.
+msgid "Uninstall incompatible add-on"
+msgstr "非互換アドオンのアンインストール"
+
+#. Add-on summary, usually the user visible name of the addon.
+#. Translators: Summary for this add-on to be shown on installation and add-on information.
+msgid "Instant Translate"
+msgstr "インスタント翻訳"
 
 #. Add-on description
-#. Translators: Long description to be shown for this add-on on installation and add-on information
+#. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid ""
 "This addon translates selected or clipboard text using the Google Translate "
-"service and presents it. Press NVDA+Shift+T to translate selected text. "
-"Press NVDA+Shift+Y to translate clipboard text."
+"service and presents it."
 msgstr ""
 "このアドオンは選択されたテキストやクリップボードのテキストをGoogle翻訳で翻訳"
-"します。\n"
-"NVDA+Shift+Tを押すと選択範囲を翻訳します。\n"
-"NVDA+Shift+Yを押すとクリップボードのテキストを翻訳します。"
+"します。"
+
+#~ msgid "Translating..."
+#~ msgstr "翻訳中"
+
+#~ msgid ""
+#~ "When pressed once, announces the current source and target languages. "
+#~ "Pressed twice will swap source and target."
+#~ msgstr ""
+#~ "1回押すと現在の翻訳元と翻訳先の言語を通知。2回押すと翻訳元と翻訳先の言語の"
+#~ "入れ替え。"
+
+#~ msgid "Arabic"
+#~ msgstr "アラビア語"
+
+#~ msgid "Bangla"
+#~ msgstr "バングラ語"
+
+#~ msgid "Welsh"
+#~ msgstr "ウェルシュ語"
+
+#~ msgid "Gujarati"
+#~ msgstr "グジャラート語"
+
+#~ msgid "Armenian"
+#~ msgstr "アルメニア語"
+
+#~ msgid "Norwegian"
+#~ msgstr "ノルウェー語"
+
+#~ msgid "Serbian (Latin)"
+#~ msgstr "セルビア語(ラテン文字)"
+
+#~ msgid "Swahili"
+#~ msgstr "スワヒリ語"
+
+#~ msgid "Chinese (Simplified)"
+#~ msgstr "中国語(簡体字)"
+
+#~ msgid "Chinese (Traditional)"
+#~ msgstr "中国語(繁体字)"
+
+#~ msgid ""
+#~ "Instant Translate - Translates given text using the Google Translate "
+#~ "service."
+#~ msgstr ""
+#~ "Instant Translate - 選択されたテキストをGoogleのサービスで翻訳します"
