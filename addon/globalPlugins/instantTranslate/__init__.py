@@ -270,6 +270,17 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def script_displayHelp(self, gesture):
 		ui.message(_("t translates selected text, shift+t translates clipboard text, a announces current swap configuration, s swaps source and target languages, c copies last result to clipboard, i identify the language of selected text, h displays this message."))
+
+	def script_showSettings(self, gesture):
+		# code from RapidSettings
+		def run():
+			gui.mainFrame.prePopup()
+			d = InstantTranslateSettingsDialog(None)
+			if d is not None:
+				d.Show()
+			gui.mainFrame.postPopup()
+		wx.CallAfter(run)
+
 	__ITGestures={
 		"kb:t":"translateSelection",
 		"kb:shift+t":"translateClipboardText",
@@ -277,8 +288,9 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		"kb:a":"announceLanguages",
 		"kb:c":"copyLastResult",
 		"kb:i":"identifyLanguage",
-		"kb:h":"displayHelp"
-		}
+		"kb:o":"showSettings",
+		"kb:h":"displayHelp",
+	}
 
 	__gestures = {
 		"kb:NVDA+shift+t": "ITLayer",
