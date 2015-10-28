@@ -84,7 +84,7 @@ class Translator(threading.Thread):
 
 	def buildRequest(self, text, lang_from, lang_to):
 		"""Build POST request which will be sent to Google."""
-		urlTemplate = 'http://translate.google.com/translate_a/single?client=t&sl={lang_from}&tl={lang_to}&ie=utf-8&oe=utf-8&dt=t&dt=bd'
+		urlTemplate = 'http://translate.google.com/translate_a/single?client=t&sl={lang_from}&tl={lang_to}&ie=utf-8&oe=utf-8&dt=t&dt=bd&tk='
 		url = urlTemplate.format(lang_from=lang_from, lang_to=lang_to)
 		header = {'User-agent': 'Mozilla/5.0', 'Content-Type': 'application/x-www-form-urlencoded'}
 		data = 'text=%s' %urllib2.quote(text)
