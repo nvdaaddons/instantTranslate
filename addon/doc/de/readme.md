@@ -114,7 +114,7 @@ All following commands must be pressed after modifier key "NVDA+Shift+t":
 * Erstveröffentlichung
 
 
-[[!tag dev stable]]
+[[!tag dev]]
 
 [1]: http://addons.nvda-project.org/files/get.php?file=it
 

@@ -5,8 +5,9 @@
 * Загрузить [стабильную версию][1]
 * Загрузить [разрабатываемую версию][2]
 
-This add-on is used to translate selected and/or clipboard text from one
-language to another.  This is done using an external service.
+Это дополнение используется для перевода выбранного текста и текста из
+буфера обмена с одного языка на другой. Это делается с помощью внешней
+службы.
 
 ## Настройка языков ##
 Чтобы настроить исходный, целевой и иногда  язык для перемены местами, перейдите: NVDA Меню >> Параметры >> Настройки Instant Translate.
@@ -116,7 +117,7 @@ script, so to force the source language to be the previous target language
 * Начальная версия.
 
 
-[[!tag dev stable]]
+[[!tag dev]]
 
 [1]: http://addons.nvda-project.org/files/get.php?file=it
 

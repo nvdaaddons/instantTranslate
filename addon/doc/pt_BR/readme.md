@@ -123,7 +123,7 @@ Todos os seguintes comandos devem ser pressionados após a tecla modificadora
 * Versão inicial.
 
 
-[[!tag dev stable]]
+[[!tag dev]]
 
 [1]: http://addons.nvda-project.org/files/get.php?file=it
 

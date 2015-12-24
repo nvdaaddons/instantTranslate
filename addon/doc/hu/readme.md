@@ -111,8 +111,7 @@ után használhatók:
 * Első változat
 
 
-[[!tag dev stable]]
-[[!tag dev stable]]
+[[!tag dev]]
 
 [1]: http://addons.nvda-project.org/files/get.php?file=it
 
