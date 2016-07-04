@@ -62,7 +62,7 @@ class Translator(threading.Thread):
 		self._stop.set()
 
 	def run(self):
-		urlTemplate = 'https://translate.yandex.net/api/v1.5/tr.json/translate?key=trnsl.1.1.20160704T120239Z.5bbe772fede33a6e.f8155753e939ab51790587718370993c40f29897&text={text}&lang={lang_from}-{lang_to}'
+		urlTemplate = 'https://translate.yandex.net/api/v1.5/tr.json/translate?key=trnsl.1.1.20150410T053856Z.1c57628dc3007498.d36b0117d8315e9cab26f8e0302f6055af8132d7&text={text}&lang={lang_from}-{lang_to}'
 		for chunk in splitChunks(self.text, self.chunksize):
 			# Make sure we don't send requests to yandex too often.
 			# Try to simulate a human.
