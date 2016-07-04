@@ -43,6 +43,9 @@ All following commands must be pressed after modifier key "NVDA+Shift+t":
 * I: identify the language of selected text,
 * H: announces all available commands to user.
 
+## Changes for 4.1 ##
+* InstantTranslate is working again, now with Yandex translator service instead of Google.
+
 ## Changes for 4.0 ##
 * Translation is automatically performed after swapping.
 * Cache bug fixed.

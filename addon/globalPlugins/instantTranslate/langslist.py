@@ -1,5 +1,5 @@
 #langslist.py
-# Copyright (C) 2012-2013 Aleksey Sadovoy AKA Lex <lex@progger.ru>,
+# Copyright (C) 2012-2016 Aleksey Sadovoy AKA Lex <lex@progger.ru>,
 #ruslan <ru2020slan@yandex.ru>,
 #beqa <beqaprogger@gmail.com>
 #other nvda contributors

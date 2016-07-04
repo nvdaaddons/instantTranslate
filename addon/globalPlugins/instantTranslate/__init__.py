@@ -1,5 +1,5 @@
 #__init__.py
-# Copyright (C) 2012-2014 Aleksey Sadovoy AKA Lex <lex@progger.ru>,
+# Copyright (C) 2012-2016 Aleksey Sadovoy AKA Lex <lex@progger.ru>,
 #ruslan <ru2020slan@yandex.ru>,
 #beqa <beqaprogger@gmail.com>
 #This addon was been repacked and optimized for executing without standalone Python by Outsider <outsidepro@rambler.ru>.
