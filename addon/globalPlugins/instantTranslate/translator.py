@@ -8,7 +8,8 @@ import os
 import re
 import sys
 import threading
-from time import sleep
+import ctypes
+from time import sleep, time
 from random import randint
 from logHandler import log
 
@@ -82,10 +83,28 @@ class Translator(threading.Thread):
 		self.translation = self.fixNewlines(self.translation)
 		self.lang_translated = lang_translated
 
+	def calc_lr(self, a, b):
+		for c in xrange(0, len(b)-2, 3):
+			d = b[c+2]
+			d = ord(d) - 87 if d >= 'a' else int(d)
+			xa = ctypes.c_uint32(a).value
+			d = xa >> d if b[c+1] == '+' else xa << d
+			a = a + d & 4294967295 if b[c] == '+' else a ^ d
+		return ctypes.c_int32(a).value
+
 	def buildRequest(self, text, lang_from, lang_to):
 		"""Build POST request which will be sent to Google."""
-		urlTemplate = 'http://translate.google.com/translate_a/single?client=x&sl={lang_from}&tl={lang_to}&ie=utf-8&oe=utf-8&dt=t&dt=bd&tk='
-		url = urlTemplate.format(lang_from=lang_from, lang_to=lang_to)
+		ans = unixhour = int(time() / 3600)
+		for char in text:
+			ans = self.calc_lr(ans + ord(char), '+-a^+6')
+		ans = self.calc_lr(ans, '+-3^+b+-f')
+		if ans < 0:
+			ans &= 2147483647
+			ans += 2147483648
+		ans %= 1000000
+		tk = '%d.%d' % (ans, ans ^ unixhour)
+		urlTemplate = 'http://translate.google.com/translate_a/single?client=t&sl={lang_from}&tl={lang_to}&ie=utf-8&oe=utf-8&dt=t&dt=bd&tk={tk}'
+		url = urlTemplate.format(lang_from=lang_from, lang_to=lang_to, tk=tk)
 		header = {'User-agent': 'Mozilla/5.0', 'Content-Type': 'application/x-www-form-urlencoded'}
 		data = 'text=%s' %urllib2.quote(text)
 		req = urllib2.Request(url, data, header)
