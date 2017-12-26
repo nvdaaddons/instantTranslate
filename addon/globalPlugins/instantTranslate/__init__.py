@@ -25,15 +25,32 @@ from translator import Translator
 from tones import beep
 from time import sleep
 import threading
-import _config
 import addonHandler
 from langslist import g
 
-_config.load()
 _addonDir = os.path.join(os.path.dirname(__file__), "..", "..").decode("mbcs")
 _curAddon = addonHandler.Addon(_addonDir)
 _addonSummary = _curAddon.manifest['summary']
 addonHandler.initTranslation()
+
+lo_lang = getdefaultlocale()
+s = lo_lang[0]
+if s == "zh_HK":
+	lo_lang = "zh-TW"
+elif s.startswith("zh"):
+	lo_lang = s.replace('_', '-')
+else:
+	lo_lang = s[0:s.find("_")]
+
+confspec = {
+"from": "string(default=auto)",
+"into": "string(default={lo_lang})",
+"swap": "string(default=en)",
+"copytranslatedtext": "boolean(default=true)",
+"autoswap": "boolean(default=true)",
+"isautoswapped": "boolean(default=false)",
+}
+config.conf.spec["instanttranslate"] = confspec
 
 # Below toggle code came from Tyler Spivey's code, with enhancements by Joseph Lee.
 
@@ -65,17 +82,17 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	def getUpdatedGlobalVars(self):
 		global lang_from, lang_to, lang_swap, copyTranslation, autoSwap, isAutoSwapped
 		# source language
-		lang_from = _config.instanttranslateConfig['translation']['from']
+		lang_from = config.conf['instanttranslate']['from']
 		# target language
-		lang_to = _config.instanttranslateConfig['translation']['into']
+		lang_to = config.conf['instanttranslate']['into']
 		# language used to swap source and target when source is auto
-		lang_swap = _config.instanttranslateConfig['translation']['swap']
+		lang_swap = config.conf['instanttranslate']['swap']
 		# determine whether to copy translation on clipboard
-		copyTranslation = _config.instanttranslateConfig['settings']['copytranslatedtext']
+		copyTranslation = config.conf['instanttranslate']['copytranslatedtext']
 		# determine whether to swap automatically lang_swap and target language, if source recognized equal to the target
-		autoSwap = _config.instanttranslateConfig['settings']['autoswap']
+		autoSwap = config.conf['instanttranslate']['autoswap']
 		# keep track if there was a swapping from source=auto during previous NVDA session
-		isAutoSwapped = _config.instanttranslateConfig['temporary']['isautoswapped']
+		isAutoSwapped = config.conf['instanttranslate']['isautoswapped']
 
 	def getScript(self, gesture):
 		if not self.toggling:
@@ -206,10 +223,9 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			isAutoSwapped = False
 		else:
 			self.swapLanguages(lang_from, lang_to)
-		_config.instanttranslateConfig['translation']['from'] = lang_from
-		_config.instanttranslateConfig['translation']['into'] = lang_to
-		_config.instanttranslateConfig['temporary']['isautoswapped'] = isAutoSwapped
-		_config.save()
+		config.conf['instanttranslate']['from'] = lang_from
+		config.conf['instanttranslate']['into'] = lang_to
+		config.conf['instanttranslate']['isautoswapped'] = isAutoSwapped
 		# Translators: message presented to announce that the source and target languages have been swapped.
 		ui.message(_("Languages swapped"))
 		# Translators: message presented to announce the current source and target languages.
