@@ -18,12 +18,12 @@ from copy import deepcopy
 
 addonHandler.initTranslation()
 
-class InstantTranslateSettingsDialog(gui.SettingsDialog):
+class InstantTranslateSettingsPanel(gui.SettingsPanel):
 	# Translators: name of the dialog.
-	title = _("Instant Translate Settings")
+	title = _("Instant Translate")
 
 	def __init__(self, parent):
-		super(InstantTranslateSettingsDialog, self).__init__(parent)
+		super(InstantTranslateSettingsPanel, self).__init__(parent)
 
 	def makeSettings(self, sizer):
 		# Translators: Help message for a dialog.
@@ -98,8 +98,7 @@ class InstantTranslateSettingsDialog(gui.SettingsDialog):
 			sizer.Hide(self.swapSizer)
 			sizer.Hide(self.autoSwapChk)
 
-	def onOk(self, event):
-		super(InstantTranslateSettingsDialog, self).onOk(event)
+	def onSave(self):
 		# Update Configuration
 		config.conf['instanttranslate']['from'] = langslist[self._fromChoice.GetStringSelection()]
 		config.conf['instanttranslate']['into'] = langslist[self._intoChoice.GetStringSelection()]

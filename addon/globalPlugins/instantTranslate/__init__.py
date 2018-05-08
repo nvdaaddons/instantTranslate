@@ -8,6 +8,7 @@
 #See the file COPYING for more details.
 
 import gui
+from gui import NVDASettingsDialog
 import wx
 import api
 import textInfos
@@ -73,7 +74,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		super(GlobalPlugin, self).__init__(*args, **kwargs)
 		if globalVars.appArgs.secure:
 			return
-		self.createMenu()
+		NVDASettingsDialog.categoryClasses.append(InstantTranslateSettingsPanel)
 		self.getUpdatedGlobalVars()
 		self.toggling = False
 		self.maxCachedResults = 5
@@ -121,20 +122,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		tones.beep(100, 10)
 	script_ITLayer.__doc__=_("Instant Translate layer commands. t translates selected text, shift+t translates clipboard text, a announces current swap configuration, s swaps source and target languages, c copies last result to clipboard, i identify the language of selected text.")
 
-	def createMenu(self):
-		self.prefsMenu = gui.mainFrame.sysTrayIcon.menu.GetMenuItems()[0].GetSubMenu()
-		self.instantTranslateSettingsItem = self.prefsMenu.Append(wx.ID_ANY,
-			# Translators: name of the option in the menu.
-			_("Instant &Translate Settings..."),
-			# Translators: tooltip text for the menu item.
-			_("Select languages to be used for translation."))
-		gui.mainFrame.sysTrayIcon.Bind(wx.EVT_MENU , lambda e : gui.mainFrame._popupSettingsDialog(InstantTranslateSettingsDialog), self.instantTranslateSettingsItem)
-
 	def terminate(self):
-		try:
-			self.prefsMenu.RemoveItem(self.instantTranslateSettingsItem)
-		except wx.PyDeadObjectError:
-			pass
+		NVDASettingsDialog.categoryClasses.remove(InstantTranslateSettingsPanel)
 
 	def script_translateClipboardText(self, gesture):
 		try:
