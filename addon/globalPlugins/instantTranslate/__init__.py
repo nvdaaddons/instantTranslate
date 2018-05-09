@@ -7,6 +7,8 @@
 #This file is covered by the GNU General Public License.
 #See the file COPYING for more details.
 
+import urllib
+import json
 import gui
 from gui import NVDASettingsDialog
 import wx
@@ -66,6 +68,11 @@ def finally_(func, final):
 				final()
 		return new
 	return wrap(final)
+
+def detect_language(text):
+	response=urllib.urlopen("https://translate.yandex.net/api/v1.5/tr.json/detect?key=trnsl.1.1.20150410T053856Z.1c57628dc3007498.d36b0117d8315e9cab26f8e0302f6055af8132d7&"+urllib.urlencode({"text":text})).read()
+	response=json.loads(response)
+	return response['lang']
 
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	scriptCategory = unicode(_addonSummary)
@@ -157,6 +164,9 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def translate(self, text):
 		self.getUpdatedGlobalVars()
+		global lang_from
+		if lang_from == "auto":
+			lang_from = detect_language(text)
 		translation = None
 		if (text, lang_to, lang_from) in [(x[0],x[1],x[2]) for x in self.cachedResults]:
 			translation = filter(lambda f: f[0] == text and f[1] == lang_to and f[2] == lang_from, self.cachedResults)[0][3]
