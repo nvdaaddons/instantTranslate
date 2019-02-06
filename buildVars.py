@@ -2,10 +2,10 @@
 
 # Build customizations
 # Change this file instead of sconstruct or manifest files, whenever possible.
-
+from datetime import datetime
 # Full getext (please don't change)
 _ = lambda x : x
-
+now = datetime.now()
 # Add-on information variables
 addon_info = {
 	# for previously unpublished addons, please follow the community guidelines at:
@@ -19,13 +19,17 @@ addon_info = {
 	# Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 	"addon_description" : _("This addon translates selected or clipboard text using the Yandex Translate service and presents it."),
 	# version
-	"addon_version" : "4.2-dev",
+	"addon_version" : "4.3-dev",
 	# Author(s)
 	"addon_author" : "Alexy Sadovoy aka Lex <lex@progger.su>, ruslan <ru2020slan@yandex.ru>, beqa <beqaprogger@gmail.com>, Mesar Hameed <mhameed@src.gnome.org>, Alberto Buffolino <a.buffolino@gmail.com>, and other NVDA contributors",
 	# URL for the add-on documentation support
 	"addon_url" : "http://addons.nvda-project.org/",
 	# Documentation file name
-	"addon_docFileName" : "readme.html"
+	"addon_docFileName" : "readme.html",
+	# Minimum NVDA version supported
+	"addon_minimumNVDAVersion" : "2018.2.0",
+	# Last NVDA version supported/tested
+	"addon_lastTestedNVDAVersion" : "{major}.{minor}.0".format(major=now.year, minor=(now.month-1)//3+1)
 }
 
 import os.path
