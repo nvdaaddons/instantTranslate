@@ -80,4 +80,4 @@ class Translator(threading.Thread):
 				log.exception("Instant translate: Can not translate text '%s'" %chunk)
 				# We have probably been blocked, so stop trying to translate.
 				raise e
-			self.translation += "".join(response[0][0][0])
+			self.translation += "".join(r[0] for r in response[0])
