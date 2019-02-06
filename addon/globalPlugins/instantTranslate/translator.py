@@ -62,22 +62,22 @@ class Translator(threading.Thread):
 		self._stop.set()
 
 	def run(self):
-		urlTemplate = 'https://translate.yandex.net/api/v1.5/tr.json/translate?key=trnsl.1.1.20150410T053856Z.1c57628dc3007498.d36b0117d8315e9cab26f8e0302f6055af8132d7&text={text}&lang={lang_from}-{lang_to}'
+		urlTemplate = 'https://translate.googleapis.com/translate_a/single?client=gtx&sl={lang_from}&tl={lang_to}&dt=t&q={text}'
 		for chunk in splitChunks(self.text, self.chunksize):
-			# Make sure we don't send requests to yandex too often.
+			# Make sure we don't send requests to google too often.
 			# Try to simulate a human.
 			if not self.firstChunk:
 				sleep(randint(1, 10))
-			url = urlTemplate.format(text=urllib2.quote(chunk.encode('utf-8')), lang_from=self.lang_from, lang_to=self.lang_to)
+			url = urlTemplate.format(lang_from=self.lang_from, lang_to=self.lang_to, text=urllib2.quote(chunk.encode('utf-8')))
 			try:
 				response = json.load(self.opener.open(url))
 				if self.firstChunk and self.lang_from == "auto" and response["src"] == self.lang_to and self.lang_swap is not None:
 					self.lang_to = self.lang_swap
 					self.firstChunk = False
-					url = urlTemplate.format(text=urllib2.quote(chunk.encode('utf-8')), lang_from=self.lang_from, lang_to=self.lang_to)
+					url = urlTemplate.format(lang_from=self.lang_from, lang_to=self.lang_to, text=urllib2.quote(chunk.encode('utf-8')))
 					response = json.load(self.opener.open(url))
 			except Exception as e:
 				log.exception("Instant translate: Can not translate text '%s'" %chunk)
 				# We have probably been blocked, so stop trying to translate.
 				raise e
-			self.translation += "".join(response['text'])
+			self.translation += "".join(response[0][0][0])
