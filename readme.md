@@ -43,6 +43,10 @@ All following commands must be pressed after modifier key "NVDA+Shift+t":
 * I: identify the language of selected text,
 * H: announces all available commands to user.
 
+## Changes for 4.3 ##
+* nvda compatibility fix Now instant translate will be compatible with latest nvda builds.
+* found a way to use google as a translation service again.
+
 ## Changes for 4.2 ##
 * Restored working state with newer versions of nvda.
 * Restored automatic language detection.
