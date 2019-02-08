@@ -12,6 +12,8 @@ import threading
 from time import sleep
 from random import randint
 from logHandler import log
+import ui
+import queueHandler
 
 impPath = os.path.abspath(os.path.dirname(__file__))
 sys.path.append(impPath)
@@ -54,6 +56,7 @@ class Translator(threading.Thread):
 		self.lang_from = lang_from
 		self.lang_swap = lang_swap
 		self.translation = ''
+		self.lang_detected = ''
 		self.opener = urllib2.build_opener()
 		self.opener.addheaders = [('User-agent', 'Mozilla/5.0')]
 		self.firstChunk = True
@@ -71,13 +74,20 @@ class Translator(threading.Thread):
 			url = urlTemplate.format(lang_from=self.lang_from, lang_to=self.lang_to, text=urllib2.quote(chunk.encode('utf-8')))
 			try:
 				response = json.load(self.opener.open(url))
-				if self.firstChunk and self.lang_from == "auto" and response["src"] == self.lang_to and self.lang_swap is not None:
+				temp = response[-1][-1][-1]
+				self.lang_detected = temp if isinstance(temp,unicode) else unicode()
+				if not self.lang_detected:
+					self.lang_detected = _("unavailable")
+#				log.info("firstChunk=%s, lang_from=%s, lang_detected=%s, lang_to=%s, lang_swap=%s"%(self.firstChunk, self.lang_from, self.lang_detected, self.lang_to, self.lang_swap))
+				if self.firstChunk and self.lang_from == "auto" and self.lang_detected == self.lang_to and self.lang_swap is not None:
 					self.lang_to = self.lang_swap
 					self.firstChunk = False
 					url = urlTemplate.format(lang_from=self.lang_from, lang_to=self.lang_to, text=urllib2.quote(chunk.encode('utf-8')))
 					response = json.load(self.opener.open(url))
 			except Exception as e:
-				log.exception("Instant translate: Can not translate text '%s'" %chunk)
 				# We have probably been blocked, so stop trying to translate.
-				raise e
+#				log.exception("Instant translate: Can not translate text '%s'" %chunk)
+#				raise e
+				queueHandler.queueFunction(queueHandler.eventQueue, ui.message, _("Translation failed"))
+				return
 			self.translation += "".join(r[0] for r in response[0])

@@ -7,29 +7,29 @@
 #This file is covered by the GNU General Public License.
 #See the file COPYING for more details.
 
-import urllib
-import json
-import gui
-from gui import NVDASettingsDialog
-import wx
-import api
-import textInfos
-import tones
-import scriptHandler
-import globalPluginHandler
 from functools import wraps
-import queueHandler
-import ui
-import config
-from locale import getdefaultlocale
-import globalVars
-from interface import *
-from translator import Translator
-from tones import beep
-from time import sleep
-import threading
-import addonHandler
+from interface import InstantTranslateSettingsPanel
 from langslist import g
+from locale import getdefaultlocale
+from time import sleep
+from tones import beep
+from translator import Translator
+import addonHandler
+import api
+import config
+import globalPluginHandler
+import globalVars
+import gui
+import json
+import os
+import queueHandler
+import scriptHandler
+import textInfos
+import threading
+import tones
+import ui
+import urllib
+import wx
 
 _addonDir = os.path.join(os.path.dirname(__file__), "..", "..").decode("mbcs")
 _curAddon = addonHandler.Addon(_addonDir)
@@ -69,10 +69,10 @@ def finally_(func, final):
 		return new
 	return wrap(final)
 
-def detect_language(text):
-	response=urllib.urlopen("https://translate.yandex.net/api/v1.5/tr.json/detect?key=trnsl.1.1.20150410T053856Z.1c57628dc3007498.d36b0117d8315e9cab26f8e0302f6055af8132d7&"+urllib.urlencode({"text":text.encode('utf-8')})).read()
-	response=json.loads(response)
-	return response['lang']
+#def detect_language(text):
+#	response=urllib.urlopen("https://translate.yandex.net/api/v1.5/tr.json/detect?key=trnsl.1.1.20150410T053856Z.1c57628dc3007498.d36b0117d8315e9cab26f8e0302f6055af8132d7&"+urllib.urlencode({"text":text.encode('utf-8')})).read()
+#	response=json.loads(response)
+#	return response['lang']
 
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	scriptCategory = unicode(_addonSummary)
@@ -81,11 +81,11 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		super(GlobalPlugin, self).__init__(*args, **kwargs)
 		if globalVars.appArgs.secure:
 			return
-		NVDASettingsDialog.categoryClasses.append(InstantTranslateSettingsPanel)
 		self.getUpdatedGlobalVars()
 		self.toggling = False
 		self.maxCachedResults = 5
 		self.cachedResults = []
+		gui.settingsDialogs.NVDASettingsDialog.categoryClasses.append(InstantTranslateSettingsPanel)
 
 	def getUpdatedGlobalVars(self):
 		global lang_from, lang_to, lang_swap, copyTranslation, autoSwap, isAutoSwapped
@@ -130,7 +130,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	script_ITLayer.__doc__=_("Instant Translate layer commands. t translates selected text, shift+t translates clipboard text, a announces current swap configuration, s swaps source and target languages, c copies last result to clipboard, i identify the language of selected text.")
 
 	def terminate(self):
-		NVDASettingsDialog.categoryClasses.remove(InstantTranslateSettingsPanel)
+		gui.settingsDialogs.NVDASettingsDialog.categoryClasses.remove(InstantTranslateSettingsPanel)
 
 	def script_translateClipboardText(self, gesture):
 		try:
@@ -165,8 +165,9 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	def translate(self, text):
 		self.getUpdatedGlobalVars()
 		global lang_from
-		if lang_from == "auto":
-			lang_from = detect_language(text)
+		# useful for yandex, that doesn't support auto option
+#		if lang_from == "auto":
+#			lang_from = detect_language(text)
 		translation = None
 		if (text, lang_to, lang_from) in [(x[0],x[1],x[2]) for x in self.cachedResults]:
 			translation = filter(lambda f: f[0] == text and f[1] == lang_to and f[2] == lang_from, self.cachedResults)[0][3]
@@ -278,7 +279,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 					beep(500, 100)
 					i = 0
 			myTranslator.join()
-			language = myTranslator.lang_translated
+			language = myTranslator.lang_detected
 			queueHandler.queueFunction(queueHandler.eventQueue, ui.message, g(language))
 	# Translators: Presented in input help mode.
 	script_identifyLanguage.__doc__ = _("It identifies the language of selected text")
@@ -290,7 +291,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# code from RapidSettings
 		def run():
 			gui.mainFrame.prePopup()
-			d = InstantTranslateSettingsDialog(None)
+			d = InstantTranslateSettingsPanel(None)
 			if d is not None:
 				d.Show()
 			gui.mainFrame.postPopup()
@@ -303,7 +304,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		"kb:a":"announceLanguages",
 		"kb:c":"copyLastResult",
 		"kb:i":"identifyLanguage",
-		"kb:o":"showSettings",
+#		"kb:o":"showSettings",
 		"kb:h":"displayHelp",
 	}
 
