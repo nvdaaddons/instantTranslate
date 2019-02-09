@@ -2,6 +2,8 @@
 
 # Build customizations
 # Change this file instead of sconstruct or manifest files, whenever possible.
+from datetime import datetime
+
 # Full getext (please don't change)
 _ = lambda x : x
 # Add-on information variables
@@ -17,7 +19,7 @@ addon_info = {
 	# Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 	"addon_description" : _("This addon translates selected or clipboard text using the Yandex Translate service and presents it."),
 	# version
-	"addon_version" : "4.3-20190208-dev",
+	"addon_version" : "4.3-{buildDate}-dev".format(buildDate=datetime.now().strftime('%Y%m%d')),
 	# Author(s)
 	"addon_author" : "Alexy Sadovoy aka Lex <lex@progger.su>, ruslan <ru2020slan@yandex.ru>, beqa <beqaprogger@gmail.com>, Mesar Hameed <mhameed@src.gnome.org>, Alberto Buffolino <a.buffolino@gmail.com>, and other NVDA contributors",
 	# URL for the add-on documentation support
