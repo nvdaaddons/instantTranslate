@@ -28,6 +28,8 @@ import textInfos
 import threading
 import tones
 import ui
+from speech import LangChangeCommand, speak
+import braille
 import urllib
 import wx
 
@@ -73,6 +75,18 @@ def finally_(func, final):
 #	response=urllib.urlopen("https://translate.yandex.net/api/v1.5/tr.json/detect?key=trnsl.1.1.20150410T053856Z.1c57628dc3007498.d36b0117d8315e9cab26f8e0302f6055af8132d7&"+urllib.urlencode({"text":text.encode('utf-8')})).read()
 #	response=json.loads(response)
 #	return response['lang']
+
+def messageWithLangDetection(msg):
+	autoLanguageSwitching=config.conf['speech']['autoLanguageSwitching']
+	if autoLanguageSwitching:
+		speechSequence=[]
+		speechSequence.append(LangChangeCommand(msg['lang']))
+		speechSequence.append(msg['text'])
+		speak(speechSequence)
+		braille.handler.message(msg['text'])
+	else:
+		ui.message(msg['text'])
+
 
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	scriptCategory = unicode(_addonSummary)
@@ -170,9 +184,9 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 #			lang_from = detect_language(text)
 		translation = None
 		if (text, lang_to, lang_from) in [(x[0],x[1],x[2]) for x in self.cachedResults]:
-			translation = filter(lambda f: f[0] == text and f[1] == lang_to and f[2] == lang_from, self.cachedResults)[0][3]
-			index = self.cachedResults.index((text, lang_to, lang_from, translation))
-			self.addResultToCache(text, translation, removeIndex=index)
+			translation,lang = filter(lambda f: f[0] == text and f[1] == lang_to and f[2] == lang_from, self.cachedResults)[0][3:5]
+			index = [(te,lt,lf,tr) for te, lt, lf, tr, lg in self.cachedResults].index((text, lang_to, lang_from, translation))
+			self.addResultToCache(text, translation, lang, removeIndex=index)
 		else:
 			myTranslator = None
 			if not autoSwap:
@@ -189,17 +203,19 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 					i = 0
 			myTranslator.join()
 			translation = myTranslator.translation
+			lang = myTranslator.lang_to
 			if translation != '':
-				self.addResultToCache(text, translation)
-		queueHandler.queueFunction(queueHandler.eventQueue, ui.message, translation)
+				self.addResultToCache(text, translation, lang)
+		msgTranslation = {'text': translation, 'lang': lang}
+		queueHandler.queueFunction(queueHandler.eventQueue, messageWithLangDetection, msgTranslation)
 		self.copyResult(translation)
 
-	def addResultToCache(self, text, translation, removeIndex=0):
+	def addResultToCache(self, text, translation, lang, removeIndex=0):
 		if removeIndex:
 			del self.cachedResults[removeIndex]
 		elif len(self.cachedResults) == self.maxCachedResults:
 			del self.cachedResults[0]
-		self.cachedResults.append((text, lang_to, lang_from, translation))
+		self.cachedResults.append((text, lang_to, lang_from, translation, lang))
 
 	def copyResult(self, translation, ignoreSetting=False):
 		if ignoreSetting:

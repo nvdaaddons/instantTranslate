@@ -26,6 +26,8 @@ A simple example: take again in mind the situation  imagined previously; if you 
 
 Anyway, this is a temporary configuration; if this option has no effect (it's experimental), try to commute manually to a stable configuration, using the gesture for swapping described below. It's experimental because in some situations (with short texts, tipically), Google does not recognize the real source language correctly, and you have to swap languages manually via script, so to force the source language to be the previous target language (English in our example).
 
+At least, in the speech settings parameters dialog (NVDA Menu >> Preferences >> Speech), you may want to check the "Automatic language switching (when supported)" option. This way, if you are using a multi-lingual synthesizer, the translation will be announced using the target language voice of the synthesizer.
+
 ## Using ##
 You can use this add-on in two ways:
 
