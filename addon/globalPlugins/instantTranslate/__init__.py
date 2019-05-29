@@ -301,17 +301,10 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	script_identifyLanguage.__doc__ = _("It identifies the language of selected text")
 
 	def script_displayHelp(self, gesture):
-		ui.message(_("t translates selected text, shift+t translates clipboard text, a announces current swap configuration, s swaps source and target languages, c copies last result to clipboard, i identify the language of selected text, h displays this message."))
+		ui.message(_("t translates selected text, shift+t translates clipboard text, a announces current swap configuration, s swaps source and target languages, c copies last result to clipboard, i identify the language of selected text, o open translation settings dialog, h displays this message."))
 
 	def script_showSettings(self, gesture):
-		# code from RapidSettings
-		def run():
-			gui.mainFrame.prePopup()
-			d = InstantTranslateSettingsPanel(None)
-			if d is not None:
-				d.Show()
-			gui.mainFrame.postPopup()
-		wx.CallAfter(run)
+		wx.CallAfter(gui.mainFrame._popupSettingsDialog, gui.settingsDialogs.NVDASettingsDialog, InstantTranslateSettingsPanel)
 
 	__ITGestures={
 		"kb:t":"translateSelection",
@@ -320,7 +313,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		"kb:a":"announceLanguages",
 		"kb:c":"copyLastResult",
 		"kb:i":"identifyLanguage",
-#		"kb:o":"showSettings",
+		"kb:o":"showSettings",
 		"kb:h":"displayHelp",
 	}
 
