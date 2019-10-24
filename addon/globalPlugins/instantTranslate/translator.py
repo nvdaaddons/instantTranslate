@@ -15,12 +15,14 @@ from logHandler import log
 import ui
 import queueHandler
 
-impPath = os.path.abspath(os.path.dirname(__file__))
-sys.path.append(impPath)
 import json
-import urllib2
-del sys.path[-1]
-
+if sys.version_info.major < 3:
+	impPath = os.path.abspath(os.path.dirname(__file__))
+	sys.path.append(impPath)
+	import urllib2 as urllibRequest
+	del sys.path[-1]
+else:
+	import urllib.request as urllibRequest
 ssl._create_default_https_context = ssl._create_unverified_context
 # Each group has to be a class of possible breaking points for the writing script.
 # Usually this is the major syntax marks, such as:
@@ -57,7 +59,7 @@ class Translator(threading.Thread):
 		self.lang_swap = lang_swap
 		self.translation = ''
 		self.lang_detected = ''
-		self.opener = urllib2.build_opener()
+		self.opener = urllibRequest.build_opener()
 		self.opener.addheaders = [('User-agent', 'Mozilla/5.0')]
 		self.firstChunk = True
 
@@ -71,7 +73,7 @@ class Translator(threading.Thread):
 			# Try to simulate a human.
 			if not self.firstChunk:
 				sleep(randint(1, 10))
-			url = urlTemplate.format(lang_from=self.lang_from, lang_to=self.lang_to, text=urllib2.quote(chunk.encode('utf-8')))
+			url = urlTemplate.format(lang_from=self.lang_from, lang_to=self.lang_to, text=urllibRequest.quote(chunk.encode('utf-8')))
 			try:
 				response = json.load(self.opener.open(url))
 				temp = response[-1][-1][-1]
@@ -82,7 +84,7 @@ class Translator(threading.Thread):
 				if self.firstChunk and self.lang_from == "auto" and self.lang_detected == self.lang_to and self.lang_swap is not None:
 					self.lang_to = self.lang_swap
 					self.firstChunk = False
-					url = urlTemplate.format(lang_from=self.lang_from, lang_to=self.lang_to, text=urllib2.quote(chunk.encode('utf-8')))
+					url = urlTemplate.format(lang_from=self.lang_from, lang_to=self.lang_to, text=urllibRequest.quote(chunk.encode('utf-8')))
 					response = json.load(self.opener.open(url))
 			except Exception as e:
 				# We have probably been blocked, so stop trying to translate.

@@ -25,9 +25,9 @@ addon_info = {
 	# Documentation file name
 	"addon_docFileName" : "readme.html",
 	# Minimum NVDA version supported
-	"addon_minimumNVDAVersion" : "2018.2.0",
+	"addon_minimumNVDAVersion" : "2018.3",
 	# Last NVDA version supported/tested
-	"addon_lastTestedNVDAVersion" : "2019.1.0"
+	"addon_lastTestedNVDAVersion" : "2019.3"
 }
 
 import os.path

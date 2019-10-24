@@ -30,11 +30,12 @@ import tones
 import ui
 from speech import LangChangeCommand, speak
 import braille
-import six.moves.urllib.request, six.moves.urllib.parse, six.moves.urllib.error
 import wx
 import six
 
-_addonDir = os.path.join(os.path.dirname(__file__), "..", "..").decode("mbcs")
+_addonDir = os.path.join(os.path.dirname(__file__), "..", "..")
+if isinstance(_addonDir, bytes):
+	_addonDir = _addonDir.decode("mbcs")
 _curAddon = addonHandler.Addon(_addonDir)
 _addonSummary = _curAddon.manifest['summary']
 addonHandler.initTranslation()
