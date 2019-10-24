@@ -197,7 +197,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				myTranslator = Translator(lang_from, lang_to, text, lang_swap)
 			myTranslator.start()
 			i=0
-			while  myTranslator.isAlive():
+			while myTranslator.is_alive():
 				sleep(0.1)
 				i+=1
 				if i == 10:

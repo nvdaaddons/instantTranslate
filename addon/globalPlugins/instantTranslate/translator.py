@@ -16,10 +16,11 @@ import ui
 import queueHandler
 
 import json
+import six
 if sys.version_info.major < 3:
 	impPath = os.path.abspath(os.path.dirname(__file__))
 	sys.path.append(impPath)
-	import urllib2 as urllibRequest
+	from . import urllib2 as urllibRequest
 	del sys.path[-1]
 else:
 	import urllib.request as urllibRequest
@@ -51,7 +52,7 @@ class Translator(threading.Thread):
 
 	def __init__(self, lang_from, lang_to, text, lang_swap=None, chunksize=3000, *args, **kwargs):
 		super(Translator, self).__init__(*args, **kwargs)
-		self._stop = threading.Event()
+		self._stopEvent = threading.Event()
 		self.text = text
 		self.chunksize = chunksize
 		self.lang_to = lang_to
@@ -64,7 +65,7 @@ class Translator(threading.Thread):
 		self.firstChunk = True
 
 	def stop(self):
-		self._stop.set()
+		self._stopEvent.set()
 
 	def run(self):
 		urlTemplate = 'https://translate.googleapis.com/translate_a/single?client=gtx&sl={lang_from}&tl={lang_to}&dt=t&q={text}'
@@ -77,7 +78,7 @@ class Translator(threading.Thread):
 			try:
 				response = json.load(self.opener.open(url))
 				temp = response[-1][-1][-1]
-				self.lang_detected = temp if isinstance(temp,unicode) else unicode()
+				self.lang_detected = temp if isinstance(temp,six.text_type) else six.text_type()
 				if not self.lang_detected:
 					self.lang_detected = _("unavailable")
 #				log.info("firstChunk=%s, lang_from=%s, lang_detected=%s, lang_to=%s, lang_swap=%s"%(self.firstChunk, self.lang_from, self.lang_detected, self.lang_to, self.lang_swap))
