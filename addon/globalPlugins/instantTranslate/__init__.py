@@ -8,12 +8,12 @@
 #See the file COPYING for more details.
 
 from functools import wraps
-from interface import InstantTranslateSettingsPanel
-from langslist import g
+from .interface import InstantTranslateSettingsPanel
+from .langslist import g
 from locale import getdefaultlocale
 from time import sleep
 from tones import beep
-from translator import Translator
+from .translator import Translator
 import addonHandler
 import api
 import config
@@ -30,8 +30,9 @@ import tones
 import ui
 from speech import LangChangeCommand, speak
 import braille
-import urllib
+import six.moves.urllib.request, six.moves.urllib.parse, six.moves.urllib.error
 import wx
+import six
 
 _addonDir = os.path.join(os.path.dirname(__file__), "..", "..").decode("mbcs")
 _curAddon = addonHandler.Addon(_addonDir)
@@ -89,7 +90,7 @@ def messageWithLangDetection(msg):
 
 
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
-	scriptCategory = unicode(_addonSummary)
+	scriptCategory = six.text_type(_addonSummary)
 
 	def __init__(self, *args, **kwargs):
 		super(GlobalPlugin, self).__init__(*args, **kwargs)
@@ -151,7 +152,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			text = api.getClipData()
 		except:
 			text = None
-		if not text or not isinstance(text,basestring) or text.isspace():
+		if not text or not isinstance(text,six.string_types) or text.isspace():
 			# Translators: message presented when user presses the shortcut key for translating clipboard text but the clipboard is empty.
 			ui.message(_("There is no text on the clipboard"))
 		else:
@@ -184,7 +185,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 #			lang_from = detect_language(text)
 		translation = None
 		if (text, lang_to, lang_from) in [(x[0],x[1],x[2]) for x in self.cachedResults]:
-			translation,lang = filter(lambda f: f[0] == text and f[1] == lang_to and f[2] == lang_from, self.cachedResults)[0][3:5]
+			translation,lang = [f for f in self.cachedResults if f[0] == text and f[1] == lang_to and f[2] == lang_from][0][3:5]
 			index = [(te,lt,lf,tr) for te, lt, lf, tr, lg in self.cachedResults].index((text, lang_to, lang_from, translation))
 			self.addResultToCache(text, translation, lang, removeIndex=index)
 		else:
