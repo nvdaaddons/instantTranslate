@@ -15,12 +15,15 @@ from logHandler import log
 import ui
 import queueHandler
 
-impPath = os.path.abspath(os.path.dirname(__file__))
-sys.path.append(impPath)
 import json
-import urllib2
-del sys.path[-1]
-
+import six
+if sys.version_info.major < 3:
+	impPath = os.path.abspath(os.path.dirname(__file__))
+	sys.path.append(impPath)
+	from . import urllib2 as urllibRequest
+	del sys.path[-1]
+else:
+	import urllib.request as urllibRequest
 ssl._create_default_https_context = ssl._create_unverified_context
 # Each group has to be a class of possible breaking points for the writing script.
 # Usually this is the major syntax marks, such as:
@@ -49,7 +52,7 @@ class Translator(threading.Thread):
 
 	def __init__(self, lang_from, lang_to, text, lang_swap=None, chunksize=3000, *args, **kwargs):
 		super(Translator, self).__init__(*args, **kwargs)
-		self._stop = threading.Event()
+		self._stopEvent = threading.Event()
 		self.text = text
 		self.chunksize = chunksize
 		self.lang_to = lang_to
@@ -57,12 +60,12 @@ class Translator(threading.Thread):
 		self.lang_swap = lang_swap
 		self.translation = ''
 		self.lang_detected = ''
-		self.opener = urllib2.build_opener()
+		self.opener = urllibRequest.build_opener()
 		self.opener.addheaders = [('User-agent', 'Mozilla/5.0')]
 		self.firstChunk = True
 
 	def stop(self):
-		self._stop.set()
+		self._stopEvent.set()
 
 	def run(self):
 		urlTemplate = 'https://translate.googleapis.com/translate_a/single?client=gtx&sl={lang_from}&tl={lang_to}&dt=t&q={text}'
@@ -71,18 +74,18 @@ class Translator(threading.Thread):
 			# Try to simulate a human.
 			if not self.firstChunk:
 				sleep(randint(1, 10))
-			url = urlTemplate.format(lang_from=self.lang_from, lang_to=self.lang_to, text=urllib2.quote(chunk.encode('utf-8')))
+			url = urlTemplate.format(lang_from=self.lang_from, lang_to=self.lang_to, text=urllibRequest.quote(chunk.encode('utf-8')))
 			try:
 				response = json.load(self.opener.open(url))
 				temp = response[-1][-1][-1]
-				self.lang_detected = temp if isinstance(temp,unicode) else unicode()
+				self.lang_detected = temp if isinstance(temp,six.text_type) else six.text_type()
 				if not self.lang_detected:
 					self.lang_detected = _("unavailable")
 #				log.info("firstChunk=%s, lang_from=%s, lang_detected=%s, lang_to=%s, lang_swap=%s"%(self.firstChunk, self.lang_from, self.lang_detected, self.lang_to, self.lang_swap))
 				if self.firstChunk and self.lang_from == "auto" and self.lang_detected == self.lang_to and self.lang_swap is not None:
 					self.lang_to = self.lang_swap
 					self.firstChunk = False
-					url = urlTemplate.format(lang_from=self.lang_from, lang_to=self.lang_to, text=urllib2.quote(chunk.encode('utf-8')))
+					url = urlTemplate.format(lang_from=self.lang_from, lang_to=self.lang_to, text=urllibRequest.quote(chunk.encode('utf-8')))
 					response = json.load(self.opener.open(url))
 			except Exception as e:
 				# We have probably been blocked, so stop trying to translate.

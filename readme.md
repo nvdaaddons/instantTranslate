@@ -47,6 +47,9 @@ All following commands must be pressed after modifier key "NVDA+Shift+t":
 * H: announces all available commands to user.
 
 ## Changes for 4.3 ##
+* Instant translate is now compatible with NVDA 2019.3 (Python 3 versions of NVDA)
+
+## Changes for 4.3 ##
 * nvda compatibility fix Now instant translate will be compatible with latest nvda builds.
 * found a way to use google as a translation service again.
 

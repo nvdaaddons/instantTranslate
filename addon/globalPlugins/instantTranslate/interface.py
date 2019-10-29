@@ -9,8 +9,8 @@
 import os.path
 import wx
 import gui
-from langslist import langslist
-import langslist as lngModule
+from .langslist import langslist
+from . import langslist as lngModule
 import globalVars
 import config
 import addonHandler
@@ -81,7 +81,7 @@ class InstantTranslateSettingsPanel(gui.SettingsPanel):
 		self._fromChoice.SetFocus()
 
 	def prepareChoices(self):
-		keys=langslist.keys()
+		keys=list(langslist.keys())
 		auto=lngModule.g("auto")
 		keys.remove(auto)
 		keys.sort()
@@ -107,7 +107,7 @@ class InstantTranslateSettingsPanel(gui.SettingsPanel):
 		config.conf['instanttranslate']['autoswap'] = self.autoSwapChk.GetValue()
 
 	def getDictKey(self, currentValue):
-		for key, value in langslist.iteritems():
+		for key, value in langslist.items():
 			if value == currentValue:
 				return key
 		# set English if search fails
