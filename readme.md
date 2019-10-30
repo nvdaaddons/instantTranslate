@@ -46,7 +46,7 @@ All following commands must be pressed after modifier key "NVDA+Shift+t":
 * O: open translation settings dialog
 * H: announces all available commands to user.
 
-## Changes for 4.3 ##
+## Changes for 4.4 ##
 * Instant translate is now compatible with NVDA 2019.3 (Python 3 versions of NVDA)
 
 ## Changes for 4.3 ##
