@@ -15,6 +15,7 @@ import globalVars
 import config
 import addonHandler
 from copy import deepcopy
+from locale import strxfrm
 
 addonHandler.initTranslation()
 
@@ -84,7 +85,7 @@ class InstantTranslateSettingsPanel(gui.SettingsPanel):
 		keys=list(langslist.keys())
 		auto=lngModule.g("auto")
 		keys.remove(auto)
-		keys.sort()
+		keys.sort(key=strxfrm)
 		choices=[]
 		choices.append(auto)
 		choices.extend(keys)
