@@ -77,10 +77,16 @@ class Translator(threading.Thread):
 			url = urlTemplate.format(lang_from=self.lang_from, lang_to=self.lang_to, text=urllibRequest.quote(chunk.encode('utf-8')))
 			try:
 				response = json.load(self.opener.open(url))
-				#temp = response[-1][-1][-1]
-				#self.lang_detected = temp if isinstance(temp,six.text_type) else six.text_type()
-				#if not self.lang_detected:
-					#self.lang_detected = _("unavailable")
+				if len(response[-1]) > 0:
+				# Case where source language is not defined
+					temp = response[-1][-1][0]
+					# Possible improvement: In case of multiple language detected, there are multiple languages in response[-1][-1].
+					self.lang_detected = temp if isinstance(temp,six.text_type) else six.text_type()
+					if not self.lang_detected:
+						self.lang_detected = _("unavailable")
+				else:
+				# Case where source language is defined
+					self.lang_detected = response[2]
 #				log.info("firstChunk=%s, lang_from=%s, lang_detected=%s, lang_to=%s, lang_swap=%s"%(self.firstChunk, self.lang_from, self.lang_detected, self.lang_to, self.lang_swap))
 				if self.firstChunk and self.lang_from == "auto" and self.lang_detected == self.lang_to and self.lang_swap is not None:
 					self.lang_to = self.lang_swap
