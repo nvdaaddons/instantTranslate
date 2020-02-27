@@ -79,6 +79,14 @@
 * I: التعرف على لغة النص المظلل,
 * H: الإعلان عن كافة أوامر الإضافة للمستخدم.
 
+## Changes for 4.1 ##
+* InstantTranslate is working again, now with Yandex translator service
+  instead of Google.
+
+## Changes for 4.0 ##
+* Translation is automatically performed after swapping.
+* Cache bug fixed.
+
 ## مستجدات الإصدار 3.0 ##
 * تغيير كيفية استخدام مفاتيح الاختصار, الآن يمكنك ضغط مفتاح الإضافة
   "NVDA+Shift+t", ثم الضغط على الأحرف المنفردها لأداء المهام المطلوبة (انظر
@@ -113,6 +121,6 @@
 
 [[!tag dev]]
 
-[1]: http://addons.nvda-project.org/files/get.php?file=it
+[1]: https://addons.nvda-project.org/files/get.php?file=it
 
-[2]: http://addons.nvda-project.org/files/get.php?file=it-dev
+[2]: https://addons.nvda-project.org/files/get.php?file=it-dev

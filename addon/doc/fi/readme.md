@@ -61,7 +61,7 @@ asianmukaisen käännöksen.
 
 Tämä asetus on oikeastaan tarkoitettu vain tilapäiseen käyttöön. Mikäli
 tällä kokeellisella toiminnolla ei ole vaikutusta, kokeile vaihtaa
-manuaalisesti vakaisiin asetuksiin alla kuvailtua kielenvaihtamiselettä
+manuaalisesti vakaisiin asetuksiin alla kuvailtua kielenvaihtamiskomentoa
 käyttäen. Toiminto on kokeellinen, koska Google ei tunnista todellista
 lähdekieltä oikein joissakin tilanteissa (tyypillisesti lyhyiden tekstien
 kanssa), ja sinun täytyy vaihtaa kieliä manuaalisesti näppäinkomentoa
@@ -87,6 +87,14 @@ Seuraavia komentoja  on painettava toimintonäppäimen NVDA+Shift+T jälkeen:
 * C: Kopioi viimeisin käännös leikepöydälle.
 * I: Tunnista valitun tekstin kieli.
 * H: Kertoo kaikki käytettävissä olevat komennot.
+
+## Muutokset versiossa 4.1 ##
+* Pikakääntäjä toimii taas, ja käyttää nyt Googlen sijaan
+  Yandex-kääntäjäpalvelua.
+
+## Muutokset versiossa 4.0 ##
+* Käännös suoritetaan automaattisesti kielen vaihtamisen jälkeen.
+* Välimuistibugi korjattu.
 
 ## Muutokset versiossa 3.0 ##
 * Pikanäppäinten käyttötapaa on muutettu. Paina ensin Pikakääntäjän
@@ -126,6 +134,6 @@ Seuraavia komentoja  on painettava toimintonäppäimen NVDA+Shift+T jälkeen:
 
 [[!tag dev]]
 
-[1]: http://addons.nvda-project.org/files/get.php?file=it
+[1]: https://addons.nvda-project.org/files/get.php?file=it
 
-[2]: http://addons.nvda-project.org/files/get.php?file=it-dev
+[2]: https://addons.nvda-project.org/files/get.php?file=it-dev

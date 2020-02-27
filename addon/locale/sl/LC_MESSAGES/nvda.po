@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: 'Instant-Translate' '2.1'\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2013-02-20 22:56+0100\n"
-"PO-Revision-Date: 2015-05-05 13:45+0100\n"
+"PO-Revision-Date: 2016-02-26 02:51-0800\n"
 "Last-Translator: jožef gregorc <jozko.gregorc@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: sl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.5.7\n"
+"X-Generator: Poedit 1.5.5\n"
 
 msgid ""
 "Instant Translate layer commands. t translates selected text, shift+t "
@@ -228,100 +228,3 @@ msgid ""
 msgstr ""
 "Ta dodatek prevede označeno besedilo ali besedilo v odložišču s pomočjo "
 "storitve Google Prevajalnika in ga prikaže."
-
-#~ msgid "Translating..."
-#~ msgstr "Prevajanje..."
-
-#~ msgid ""
-#~ "When pressed once, announces the current source and target languages. "
-#~ "Pressed twice will swap source and target."
-#~ msgstr ""
-#~ "Ko pritisnete enkrat, se naznani jezik izvora in ciljni jezik, dvojni "
-#~ "pritisk obrne jezik izvora in ciljni jezik."
-
-#~ msgid "Arabic"
-#~ msgstr "Arabščina"
-
-#~ msgid "Bangla"
-#~ msgstr "Bengalščina"
-
-#~ msgid "Welsh"
-#~ msgstr "Valižanščina"
-
-#~ msgid "Gujarati"
-#~ msgstr "Gujarati"
-
-#~ msgid "Armenian"
-#~ msgstr "Armenščina"
-
-#~ msgid "Norwegian"
-#~ msgstr "Norveščina"
-
-#~ msgid "Serbian (Latin)"
-#~ msgstr "Srbščina (Latinica)"
-
-#~ msgid "Swahili"
-#~ msgstr "Swahili"
-
-#~ msgid "Chinese (Simplified)"
-#~ msgstr "Kitajščina (Poenostavljena)"
-
-#~ msgid "Chinese (Traditional)"
-#~ msgstr "Kitajščina (Tradicionalna)"
-
-#~ msgid ""
-#~ "Instant Translate - Translates given text using the Google Translate "
-#~ "service."
-#~ msgstr "Hitro Prevedi - prevajanje besedila s pomočjo Google Prevajalnika"
-
-#~ msgid ""
-#~ "The clipboard contains a large portion of text. It is %s characters long. "
-#~ "The limit is 1500 characters."
-#~ msgstr ""
-#~ "V odložišču je večja količina besedila. Vsebuje %s znakov. Omejitev je "
-#~ "pri 1500 znakih."
-
-#~ msgid ""
-#~ "The selection contains a large portion of text. It is %s characters long. "
-#~ "The limit is 1500 characters."
-#~ msgstr ""
-#~ "Izbrana je večja količina besedila. Vsebuje %s znakov. Omejitev je pri "
-#~ "1500 znakih."
-
-#~ msgid "Error translating text. See log for details"
-#~ msgstr "Napaka pri prevodu besedila. Glejte dnevnik za podrobnosti"
-
-#~ msgid "Select Languages from and into to translate selected text"
-#~ msgstr ""
-#~ "Izberite Jezike iz katerih in v katere želite prevesti izbrano besedilo"
-
-#~ msgid ""
-#~ "Select language from which you want to translate text and into and press "
-#~ "ok to save."
-#~ msgstr ""
-#~ "Izberite jezik iz katerega želite prevajati inn jezik v katerega želite "
-#~ "prevesti, nato pritisnite V redu, da shranite izbrano."
-
-#~ msgid "Language Into:"
-#~ msgstr "V Jezik:"
-
-#~ msgid "Afrikaans"
-#~ msgstr "Afrikanščina"
-
-#~ msgid "Albanian"
-#~ msgstr "Albanščina"
-
-#~ msgid "Azerbaijani"
-#~ msgstr "Azerbajanščina"
-
-#~ msgid "Basque"
-#~ msgstr "Baskovščina"
-
-#~ msgid "Belorussian"
-#~ msgstr "Beloruščina"
-
-#~ msgid "Bengali"
-#~ msgstr "Bengalščina"
-
-#~ msgid "Bulgarian"
-#~ msgstr "Bolgarščina"

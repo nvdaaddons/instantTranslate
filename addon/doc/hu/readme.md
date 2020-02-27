@@ -6,18 +6,19 @@
 * Letöltés [Fejlesztői verzió][2]
 
 A kiegészítő használatával egy kijelölt és/vagy vágólapra másolt szöveget
-fordíthat le egyik nyelvről a másikra, a Google fordító segítségével.
+fordíthat le egyik nyelvről a másikra egy külső fordítási szolgáltató,
+jelenleg a Yandex  fordító segítségével.
 
 ## Nyelvek beállítása ##
 A forrás, célnyelv, és nyelvek felcserélésére szolgáló lehetőségeket az NVDA menü->beállítások->Gyorsfordító beállításai menüpontban érheti el.
 
 A megnyíló ablakban két kombinált listamező található a forrásnyelv és
 célnyelv beállítására, ill. egy jelölőnégyzet, mellyel a fordítás vágólapra
-másolását lehet szabályozni.
+másolását lehet elrendelni vagy tiltani.
 
 Amennyiben a forrásnyelvnél az automatikus nyelvfelismerését választotta ki
 (a listában az első elem), megjelenik egy "Felcserélés nyelve" megnevezésű
-lista amellyel a nyelv felcserélését lehet konfigurálni, és egy az
+lista, amellyel a nyelv felcserélését lehet konfigurálni, és egy az
 automatikus felcserélés beállítására való jelölőnégyzet is.
 
 Az első két kombinált listamező és a másolást szabályzó jelölőnégyzet
@@ -33,8 +34,8 @@ jelenik meg.
 Képzelje el a következő szituációt: Minden szöveget magyar nyelvre szeretne
 lefordítani, de olykor a magyarul begépelt szövegnek szeretné megnézni az
 angol fordítását is. Amennyiben a felcserélés nyelvét angolra állítja, úgy a
-két nyelv közötti fordítás automatikusan megtörténik, anélkül hogy megnyitná
-a kiegészítő párbeszédablakát.
+két nyelv közötti fordítás automatikusan megtörténik, anélkül, hogy
+megnyitná a kiegészítő párbeszédablakát.
 
 Ha a forrás nyelvnél az automatikus felismerés van kiválasztva, megjelenik
 egy jelölőnégyzet az automatikus forrás és célnyelv felcseréléséről. Ha
@@ -51,7 +52,7 @@ köszönhetően a kiegészítő felismeri, hogy az éppen kijelölt szöveget mi
 nyelvre kell lefordítania, ha a szöveg nyelve nem egyezik meg a
 célnyelvével, akkor automatikusan a célnyelven adja vissza.
 
-Ez egy kísérleti funkció, így főképp rövid szövegeknél a Google nem ismeri
+Ez egy kísérleti funkció, így főképp rövid szövegeknél a fordító nem ismeri
 fel a megadott forrás nyelvét, ekkor a fentebb taglalt funkció nem működik
 megfelelően.
 
@@ -61,7 +62,7 @@ Kétféle módon is használható ez a kiegészítő:
 1. Jelölje ki a lefordítandó szöveget a kijelölési parancsokkal
    (pl. Shift+nyilak), majd nyomja meg a fordításhoz szükséges
    billentyűparancsot. A lefordított szöveg egy kis idő elteltével elhangzik
-   a cél nyelven (feltéve ha a használatban lévő beszédszintetizátor
+   a célnyelven (feltéve, ha a használatban lévő beszédszintetizátor
    támogatja azt).
 2. A kiegészítő képes a vágólapon lévő szöveg lefordítására is.
 
@@ -77,8 +78,17 @@ után használhatók:
 * I: Felismeri a kijelölt szöveg nyelvét,
 * H: Bemondja az összes rendelkezésre álló felhasználói parancsot.
 
+## A 4.1 verzió változásai ##
+* A gyorsfordító újra működik, a Google szolgáltatása helyett Yandex fordító
+  szolgáltatásával.
+
+## A 4.0 verzió változásai ##
+* A fordítás eredménye automatikusan a vágólapra kerül a nyelv  felcserélést
+  követöen.
+* A gyorsítótárazási hibát javították.
+
 ## A 3.0 verzió változásai ##
-* Megváltoztatásra került a billentyűparancsok felépítése, az NVDA+shift+t
+* Megváltoztatták a billentyűparancsok felépítését, az NVDA+shift+t
   megnyomása után az egykarakteres gyorsbillentyűt lenyomva aktiválható a
   kiválasztott funkció. Bővebb információk a {"Billentyűparancsok"
   fejezetben} olvashatók.
@@ -113,6 +123,6 @@ után használhatók:
 
 [[!tag dev]]
 
-[1]: http://addons.nvda-project.org/files/get.php?file=it
+[1]: https://addons.nvda-project.org/files/get.php?file=it
 
-[2]: http://addons.nvda-project.org/files/get.php?file=it-dev
+[2]: https://addons.nvda-project.org/files/get.php?file=it-dev

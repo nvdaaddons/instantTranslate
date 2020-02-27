@@ -91,6 +91,14 @@ modificatrice "NVDA+Maj+t":
 * I: Identifie la langue du texte sélectionné,
 * H: Annonce toutes les commandes disponibles pour l'utilisateur.
 
+## Changements pour la version 4.1 ##
+* InstantTranslate fonctionne à nouveau, maintenant avec le Service de
+  Traduction Yandex au lieu de Google.
+
+## Changements pour la version 4.0 ##
+* La traduction est effectuée automatiquement après alternance.
+* Corrigé un bug dans la mémoire cache.).
+
 ## Changements pour la version 3.0 ##
 * La façon dont les Raccourcis sont utilisés a changé, maintenant vous
   pouvez appuyer sur  la touche modificatrice instantTranslate "NVDA+Maj+t",
@@ -131,6 +139,6 @@ modificatrice "NVDA+Maj+t":
 
 [[!tag dev]]
 
-[1]: http://addons.nvda-project.org/files/get.php?file=it
+[1]: https://addons.nvda-project.org/files/get.php?file=it
 
-[2]: http://addons.nvda-project.org/files/get.php?file=it-dev
+[2]: https://addons.nvda-project.org/files/get.php?file=it-dev

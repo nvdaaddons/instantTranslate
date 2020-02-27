@@ -88,6 +88,14 @@ Todas las órdenes que siguen deben pulsarse después de la tecla modificadora
 * I: identifica el idioma del texto seleccionado,
 * H: anuncia todas las órdenes disponibles al usuario.
 
+## Cambios para 4.1 ##
+* InstantTranslate está funcionando otra vez, ahora usa el servicio de
+  traducción de Yandex en vez de Google.
+
+## Cambios para 4.0 ##
+* La traducción se realiza automáticamente después del intercambio.
+* Corregido el error en la memoria caché.
+
 ## Cambios para 3.0 ##
 * Cambia la forma de cómo se utilizan los atajos de teclado, ahora puedes
   pulsar la tecla modificadora de instantTranslate "NVDA+Shift+t", y luego
@@ -128,6 +136,6 @@ Todas las órdenes que siguen deben pulsarse después de la tecla modificadora
 
 [[!tag dev]]
 
-[1]: http://addons.nvda-project.org/files/get.php?file=it
+[1]: https://addons.nvda-project.org/files/get.php?file=it
 
-[2]: http://addons.nvda-project.org/files/get.php?file=it-dev
+[2]: https://addons.nvda-project.org/files/get.php?file=it-dev

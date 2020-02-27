@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: instantTranslate 2.2beta1\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2013-02-09 18:30+0100\n"
-"PO-Revision-Date: 2015-05-08 21:58-0300\n"
+"PO-Revision-Date: 2016-02-26 02:30-0800\n"
 "Last-Translator: Cleverson Casarin Uliana <clcaul@live.com>\n"
 "Language-Team: Equipe de tradução do NVDA para Português do Brasil "
 "<clcaul@live.com>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Generator: Poedit 1.6.10\n"
+"X-Generator: Poedit 1.5.5\n"
 
 msgid ""
 "Instant Translate layer commands. t translates selected text, shift+t "
@@ -67,7 +67,6 @@ msgid "Languages swapped"
 msgstr "Idiomas trocados"
 
 #. Translators: message presented to announce the current source and target languages.
-#, python-brace-format
 msgid "Translate: from {lang1} to {lang2}"
 msgstr "Traduzir: de {lang1} para {lang2}"
 
@@ -230,67 +229,3 @@ msgid ""
 msgstr ""
 "Este complemento traduz um texto selecionado ou da área de transferência e "
 "exibe o mesmo."
-
-#~ msgid "Translating..."
-#~ msgstr "Traduzindo..."
-
-#~ msgid ""
-#~ "When pressed once, announces the current source and target languages. "
-#~ "Pressed twice will swap source and target."
-#~ msgstr ""
-#~ "Pressionado uma vez, anuncia os idiomas de origem e destino atuais. "
-#~ "Pressionado duas vezes troca origem e destino."
-
-#~ msgid "Arabic"
-#~ msgstr "Árabe"
-
-#~ msgid "Bangla"
-#~ msgstr "Bangla"
-
-#~ msgid "Welsh"
-#~ msgstr "Galês"
-
-#~ msgid "Gujarati"
-#~ msgstr "Gujarati"
-
-#~ msgid "Armenian"
-#~ msgstr "Armênio"
-
-#~ msgid "Norwegian"
-#~ msgstr "Norueguês"
-
-#~ msgid "Serbian (Latin)"
-#~ msgstr "Latim Vulgar"
-
-#~ msgid "Swahili"
-#~ msgstr "Swahili"
-
-#~ msgid "Chinese (Simplified)"
-#~ msgstr "Chinês Simplificado"
-
-#~ msgid "Chinese (Traditional)"
-#~ msgstr "Chinês tradicional"
-
-#~ msgid ""
-#~ "Instant Translate - Translates given text using the Google Translate "
-#~ "service."
-#~ msgstr ""
-#~ "Tradutor Instantâneo - traduz um dado texto usando o serviço Google "
-#~ "Translate."
-
-#~ msgid ""
-#~ "The clipboard contains a large portion of text. It is %s characters long. "
-#~ "The limit is 1500 characters."
-#~ msgstr ""
-#~ "A área de transferência contém um texto muito grande. O mesmo possui %s "
-#~ "caracteres. O limite é de 1500 caracteres."
-
-#~ msgid ""
-#~ "The selection contains a large portion of text. It is %s characters long. "
-#~ "The limit is 1500 characters."
-#~ msgstr ""
-#~ "A seleção contém um texto muito grande. O mesmo possui %s caracteres. O "
-#~ "limite é de 1500 caracteres."
-
-#~ msgid "Error translating text. See log for details"
-#~ msgstr "Erro a traduzir o texto. Por favor veja o log para detalhes"

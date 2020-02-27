@@ -8,23 +8,25 @@ msgstr ""
 "Project-Id-Version: 'Instant-Translate' '2.1'\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2013-02-09 18:30+0100\n"
-"PO-Revision-Date: 2015-07-04 07:35+0545\n"
+"PO-Revision-Date: 2016-02-26 02:17-0800\n"
 "Last-Translator: drishtibachak@gmail.com\n"
 "Language-Team: Nepali <drishtibachak@gmail.com>\n"
 "Language: ne\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.7.6\n"
+"X-Generator: Poedit 1.5.5\n"
 
 msgid ""
-"Instant Translate layer commands. t translates selected text, shift+t translates clipboard "
-"text, a announces current swap configuration, s swaps source and target languages, c "
-"copies last result to clipboard, i identify the language of selected text."
+"Instant Translate layer commands. t translates selected text, shift+t "
+"translates clipboard text, a announces current swap configuration, s swaps "
+"source and target languages, c copies last result to clipboard, i identify "
+"the language of selected text."
 msgstr ""
-"तुरुन्तै अनुवादका तहगत आदेशहरू: t ले चयनित पाठको अनुवाद गर्ने, shift+t ले क्लीपपाटिमा भएका पाठहरुको "
-"अनुवाद गर्ने, a ले चालु साटिएको अभियोजन बताउने, s ले श्रोत एवम् लक्षित भाषालाई साटोफेरो गर्ने, c ले "
-"अन्तिम नतिजालाई क्लिपपाटिमा उतार्ने र i ले चयनित पाठको भाषाको पहिचान गर्ने छ ।."
+"तुरुन्तै अनुवादका तहगत आदेशहरू: t ले चयनित पाठको अनुवाद गर्ने, shift+t ले क्लीपपाटिमा "
+"भएका पाठहरुको अनुवाद गर्ने, a ले चालु साटिएको अभियोजन बताउने, s ले श्रोत एवम् लक्षित "
+"भाषालाई साटोफेरो गर्ने, c ले अन्तिम नतिजालाई क्लिपपाटिमा उतार्ने र i ले चयनित पाठको "
+"भाषाको पहिचान गर्ने छ ।."
 
 #. Translators: name of the option in the menu.
 msgid "Instant &Translate Settings..."
@@ -39,8 +41,12 @@ msgid "There is no text on the clipboard"
 msgstr "क्लिपपाठिमा पाठहरू छैनन् ।"
 
 #. Translators: message presented in input help mode, when user presses the shortcut keys for this addon.
-msgid "Translates clipboard text from one language to another using Google Translate."
-msgstr "गुगल अनुवादको पर्योग गरी क्लिपपाठिका पाठहरूलाई  एक भाषाबाट अर्को भाषामा अनुवाद गर्ने छ ।"
+msgid ""
+"Translates clipboard text from one language to another using Google "
+"Translate."
+msgstr ""
+"गुगल अनुवादको पर्योग गरी क्लिपपाठिका पाठहरूलाई  एक भाषाबाट अर्को भाषामा अनुवाद गर्ने "
+"छ ।"
 
 #. Translators: user has pressed the shortcut key for translating selected text, but no text was actually selected.
 #. Translators: user has pressed the shortcut key for identifying the language of selected text, but no text was actually selected.
@@ -48,15 +54,16 @@ msgid "no selection"
 msgstr "कुनै चयन छैन"
 
 #. Translators: message presented in input help mode, when user presses the shortcut keys for this addon.
-msgid "Translates selected text from one language to another using Google Translate."
-msgstr "गुगल अनुवादको पर्योग गरेर चयनीत पाठहरूलाई  एक भाषाबाट अर्को भाषामा अनुवाद गर्ने छ ।"
+msgid ""
+"Translates selected text from one language to another using Google Translate."
+msgstr ""
+"गुगल अनुवादको पर्योग गरेर चयनीत पाठहरूलाई  एक भाषाबाट अर्को भाषामा अनुवाद गर्ने छ ।"
 
 #. Translators: message presented to announce that the source and target languages have been swapped.
 msgid "Languages swapped"
 msgstr "साटिएका भाषाहरू"
 
 #. Translators: message presented to announce the current source and target languages.
-#, python-brace-format
 msgid "Translate: from {lang1} to {lang2}"
 msgstr "अनुवाद: {lang1} बाट {lang2} मा"
 
@@ -88,13 +95,15 @@ msgid "It identifies the language of selected text"
 msgstr "यसले चयनित पाठको भाषाको पहिचान गर्ने छ "
 
 msgid ""
-"t translates selected text, shift+t translates clipboard text, a announces current swap "
-"configuration, s swaps source and target languages, c copies last result to clipboard, i "
-"identify the language of selected text, h displays this message."
+"t translates selected text, shift+t translates clipboard text, a announces "
+"current swap configuration, s swaps source and target languages, c copies "
+"last result to clipboard, i identify the language of selected text, h "
+"displays this message."
 msgstr ""
-"t ले चयनित पाठको अनुवाद गर्ने, shift+t ले क्लीपपाटिमा भएका पाठहरुको अनुवाद गर्ने, a ले चालु साटिएको "
-"अभियोजन बताउने, s ले श्रोत एवम् लक्षित भाषालाई साटोफेरो गर्ने, c ले अन्तिम नतिजालाई क्लिपपाटिमा "
-"उतार्ने, i ले चयनित पाठको भाषाको पहिचान गर्ने र h ले यो सन्देस देखाउने छ ।"
+"t ले चयनित पाठको अनुवाद गर्ने, shift+t ले क्लीपपाटिमा भएका पाठहरुको अनुवाद गर्ने, a ले "
+"चालु साटिएको अभियोजन बताउने, s ले श्रोत एवम् लक्षित भाषालाई साटोफेरो गर्ने, c ले अन्तिम "
+"नतिजालाई क्लिपपाटिमा उतार्ने, i ले चयनित पाठको भाषाको पहिचान गर्ने र h ले यो सन्देस "
+"देखाउने छ ।"
 
 #. Translators: name of the dialog.
 msgid "Instant Translate Settings"
@@ -121,9 +130,12 @@ msgid "Language for swapping:"
 msgstr "साटोफेरो हुने भाषाहरू"
 
 #. Translators: A setting in addon settings dialog, shown if source language is on auto.
-msgid "Activate the auto-swap if recognized source is equal to the target (experimental)"
+msgid ""
+"Activate the auto-swap if recognized source is equal to the target "
+"(experimental)"
 msgstr ""
-"यदी श्रोत बराबर लक्षित भाषा पहिचान भएमा स्वतः साटोफेरो प्रकृयालाई सक्रिय बनाउने छ (हाल परिख्षण) ।"
+"यदी श्रोत बराबर लक्षित भाषा पहिचान भएमा स्वतः साटोफेरो प्रकृयालाई सक्रिय बनाउने छ "
+"(हाल परिख्षण) ।"
 
 #. Translators: An option to automatically detect source language for translation.
 msgid "Automatically detect language"
@@ -190,10 +202,11 @@ msgstr "अनुपलब्ध"
 
 #. Translators: the label of a message box dialog.
 msgid ""
-"You have installed an old and incompatible version of this addon. Do you want to uninstall "
-"the old version?"
+"You have installed an old and incompatible version of this addon. Do you "
+"want to uninstall the old version?"
 msgstr ""
-"तपाइले यो उपकर्मीको पुरानो अथवा नमिल्दो प्रति भित्र्याउनु भएको रहेछ । के तपाइ यसलाई हटाउन चहानु हुन्छ ?"
+"तपाइले यो उपकर्मीको पुरानो अथवा नमिल्दो प्रति भित्र्याउनु भएको रहेछ । के तपाइ यसलाई "
+"हटाउन चहानु हुन्छ ?"
 
 #. Translators: the title of a message box dialog.
 msgid "Uninstall incompatible add-on"
@@ -207,87 +220,8 @@ msgstr "तुरुन्तै अनुवाद"
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid ""
-"This addon translates selected or clipboard text using the Google Translate service and "
-"presents it."
+"This addon translates selected or clipboard text using the Google Translate "
+"service and presents it."
 msgstr ""
-"यो उपकर्मीले चयनीत अथवा क्लीपपाटीका पाठहरूलाई गुगल अनुवादक सेवाको प्रयोग गरी अनुवाद गरेर प्रदर्सन गर्ने "
-"छ ।"
-
-#~ msgid "Translating..."
-#~ msgstr "अनुवाद गरिँदैँ"
-
-#~ msgid ""
-#~ "When pressed once, announces the current source and target languages. Pressed twice "
-#~ "will swap source and target."
-#~ msgstr ""
-#~ "एक पटकदबाएमा  वर्तमान श्रोत र लक्षीत भाषा बताउने छ । दुइ पटक दबाएमा श्रोत र लक्षित भाषालाई "
-#~ "साटि दिन्छ ।"
-
-#~ msgid "Arabic"
-#~ msgstr "अरबी"
-
-#~ msgid "Bangla"
-#~ msgstr "बङ्गाली"
-
-#~ msgid "Welsh"
-#~ msgstr "वेल्स"
-
-#~ msgid "Gujarati"
-#~ msgstr "गुजराती"
-
-#~ msgid "Armenian"
-#~ msgstr "आर्मेनियाली"
-
-#~ msgid "Norwegian"
-#~ msgstr "नर्बेजीयाली"
-
-#~ msgid "Serbian (Latin)"
-#~ msgstr "सर्बेयाली ल्याटीन"
-
-#~ msgid "Swahili"
-#~ msgstr "स्वाहिलि"
-
-#~ msgid "Chinese (Simplified)"
-#~ msgstr "चिनियाँ सरलीकृत"
-
-#~ msgid "Chinese (Traditional)"
-#~ msgstr "परम्परागत चीनियाँ"
-
-#~ msgid "Instant Translate - Translates given text using the Google Translate service."
-#~ msgstr "तुरुन्तै अनुवाद - गुगल अनुवाद सेवा द्वारा चयनीत पाठको अनुवाद गरिन्छ ।"
-
-#~ msgid ""
-#~ "The clipboard contains a large portion of text. It is %s characters long. The limit is "
-#~ "1500 characters."
-#~ msgstr ""
-#~ "क्लिपपाटीमा अति धेरै पाठहरू पाइयो ।यसमा %s वर्णहरु रहेछन् । अधिकतम सीमा १५०० वर्णहरू कायम गरिएको "
-#~ "छ ।"
-
-#~ msgid ""
-#~ "The selection contains a large portion of text. It is %s characters long. The limit is "
-#~ "1500 characters."
-#~ msgstr ""
-#~ "तपाइले धेरै पाठहरू चयन गर्नु भयो । यसमा %s वर्णहरु छन् । अधिकतम सीमा १५०० वर्णहरू कायम गरिएको छ ।"
-
-#~ msgid "Error translating text. See log for details"
-#~ msgstr "पाठ अनुवादनमा त्रुटी भयो । विस्तृत विवरण पुस्तिकामा हेर्नु होस् ।"
-
-#~ msgid "Select Languages from which text will be translated from, and into."
-#~ msgstr "चयनित पाठहरूलाई कुन भाषाबाट कुन भाषामा अनुवाद गर्ने हो उल्लेख गर्नु होस् ।"
-
-#~ msgid "Select language from which you want to translate from and into and press ok."
-#~ msgstr "कुन भाषाबाट कुन भाषामा अनुवाद गर्ने हो चयन गरी 'ठीक' टाँक दबाएर बचत  गर्नु  होस् ।"
-
-#~ msgid "Into Language:"
-#~ msgstr "भाषामा:"
-
-#~ msgid ""
-#~ "This addon translates selected text via Google Translator and says it. Press NVDA+Shift"
-#~ "+T for execute translation operation on selected text in Reech edit fields. This addon "
-#~ "was been repacked and optimized for executing without standalone Python by Outsider "
-#~ "<outsidepro@rambler.ru>."
-#~ msgstr ""
-#~ "यो उपकर्मीले चयनीत पाठलाई गुगल अनुवादको माध्यमले अनुवाद गरेर बताउने छ । अनुवादको कार्य सञ्चालनका "
-#~ "लागि सम्पादन क्षेत्रमा रहेका पाठहरूलाई चयन गरेर नेत्रवाणी+Shift+T कुञ्जी दबाउनु होस् ।यो उपकर्मीलाई "
-#~ "पुनर्लेखन र पूर्णक्षमतामा बाहिरिया <outsidepro@rambler.ru> द्वारा पाइथनको एकल प्रयोग नगरी "
-#~ "कार्यान्वयन गरिन्छ ।"
+"यो उपकर्मीले चयनीत अथवा क्लीपपाटीका पाठहरूलाई गुगल अनुवादक सेवाको प्रयोग गरी अनुवाद "
+"गरेर प्रदर्सन गर्ने छ ।"

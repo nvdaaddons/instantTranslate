@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: 'Instant-Translate' '2.1'\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2013-02-09 18:30+0100\n"
-"PO-Revision-Date: 2015-06-13 16:23+0200\n"
+"PO-Revision-Date: 2016-02-25 23:01-0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: ar\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.1\n"
+"X-Generator: Poedit 1.5.5\n"
 
 msgid ""
 "Instant Translate layer commands. t translates selected text, shift+t "
@@ -62,7 +62,6 @@ msgid "Languages swapped"
 msgstr "تم تبديل اللغة"
 
 #. Translators: message presented to announce the current source and target languages.
-#, python-brace-format
 msgid "Translate: from {lang1} to {lang2}"
 msgstr "ترجم: من {lang1} إلى {lang2} "
 
@@ -223,67 +222,3 @@ msgid ""
 msgstr ""
 "تعمل هذه الإضافة البرمجية على ترجمة النص المظلل أو الموجود بحافظة الويندوز "
 "مستخدمة في ذلك خدمة الترجمة من قوقل."
-
-#~ msgid "Translating..."
-#~ msgstr "جاري الترجمة..."
-
-#~ msgid ""
-#~ "When pressed once, announces the current source and target languages. "
-#~ "Pressed twice will swap source and target."
-#~ msgstr ""
-#~ "عند الضغط مرة واحدة يعلم عن لغة المصدر ولغة الهدف الحاليتين. وبالضغط "
-#~ "مرتين يقوم بالتبديل بين اللغتين الحاليتين ذاتهما. "
-
-#~ msgid "Arabic"
-#~ msgstr "العربية"
-
-#~ msgid "Bangla"
-#~ msgstr "البنغالية"
-
-#~ msgid "Welsh"
-#~ msgstr "ويلزي"
-
-#~ msgid "Gujarati"
-#~ msgstr "الغوجاراتية"
-
-#~ msgid "Armenian"
-#~ msgstr "الأرمينية"
-
-#~ msgid "Norwegian"
-#~ msgstr "النرويجية"
-
-#~ msgid "Serbian (Latin)"
-#~ msgstr "السربية (الاتينية)"
-
-#~ msgid "Swahili"
-#~ msgstr "السواحلية"
-
-#~ msgid "Chinese (Simplified)"
-#~ msgstr "الصينية (المبسطة)"
-
-#~ msgid "Chinese (Traditional)"
-#~ msgstr "الصينية (التقليدية)"
-
-#~ msgid ""
-#~ "Instant Translate - Translates given text using the Google Translate "
-#~ "service."
-#~ msgstr ""
-#~ "Instant Translate - تقوم بترجمة النص المراد مستعينة بخدمة الترجمة المقدمة "
-#~ "من قوقل."
-
-#~ msgid ""
-#~ "The clipboard contains a large portion of text. It is %s characters long. "
-#~ "The limit is 1500 characters."
-#~ msgstr ""
-#~ "تحتوي الحافظة على جزء كبير من النص. حيث يبلغ طوله %s حرف. الحد الأقصى "
-#~ "المسموح به هو 1500 حرف فقط."
-
-#~ msgid ""
-#~ "The selection contains a large portion of text. It is %s characters long. "
-#~ "The limit is 1500 characters."
-#~ msgstr ""
-#~ "الجزء المظلل من النص كبير. حيث يبلغ طوله %s حرف. الحد الأقصى المسموح به "
-#~ "1500 حرف فقط."
-
-#~ msgid "Error translating text. See log for details"
-#~ msgstr "حدث خطأ أثناء ترجمة النص. يرجى الطلاع على ملف التقارير للمزيد"

@@ -5,17 +5,20 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: 'Instant-Translate' '2.1'\n"
+"Project-Id-Version: instantTranslate 3.0\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
-"POT-Creation-Date: 2013-02-09 18:30+0100\n"
-"PO-Revision-Date: 2018-05-22 11:42+0200\n"
-"Last-Translator: oaron@nvda.hu\n"
-"Language-Team: HU <LL@li.org>\n"
-"Language: hu\n"
+"POT-Creation-Date: 2015-09-11 19:00+1000\n"
+"PO-Revision-Date: 2017-11-15 13:04+0200\n"
+"Last-Translator: shmuel_naaman@yahoo.com\n"
+"Language-Team: Shmuel Retbi , Shmuel NaamanLanguage: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.0.7\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"X-Generator: Poedit 2.0.4\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: he\n"
 
 msgid ""
 "Instant Translate layer commands. t translates selected text, shift+t "
@@ -23,77 +26,73 @@ msgid ""
 "source and target languages, c copies last result to clipboard, i identify "
 "the language of selected text."
 msgstr ""
-"Gyorsfordító vezérlőréteg. t lefordítja a kijelölt szöveget, shift+t "
-"lefordítja a vágólapon lévő szöveget, a bemondja a jelenlegi felcserélési "
-"beállítást, s felcseréli a forrás és cél nyelveket, c az utolsó fordítást a "
-"vágólapra másolja, i felismeri a kijelölt szöveg nyelvét."
+"הפקודות הישירות של Instant Translate   T תרגום הטקסט שנבחר,  Shift T  תרגום "
+"טקסט הזכרון הזמני,   A הקראת מצב ההחלפה,  S מחליף בין שפת המקור לשפת היעד,  "
+"C העתקת התרגום לזכרון הזמני,  I מקריא את שפת הטקסט שזוהה."
 
 #. Translators: name of the option in the menu.
 msgid "Instant &Translate Settings..."
-msgstr "&Gyorsfordító beállítások"
+msgstr "הגדרות Instant Translate..."
 
 #. Translators: tooltip text for the menu item.
 msgid "Select languages to be used for translation."
-msgstr "Válassza ki a nyelveket a fordításhoz."
+msgstr "נא לבחור את השפות המשתתפות בתרגום."
 
 #. Translators: message presented when user presses the shortcut key for translating clipboard text but the clipboard is empty.
 msgid "There is no text on the clipboard"
-msgstr "Nem található szöveg a vágólapon"
+msgstr "אין טקסט בזכרון הזמני"
 
 #. Translators: message presented in input help mode, when user presses the shortcut keys for this addon.
 msgid ""
 "Translates clipboard text from one language to another using Google "
 "Translate."
-msgstr ""
-"A vágólapon található szöveget lefordítja egy másik nyelvre a Google fordító "
-"segítségével."
+msgstr "מתרגם את הטקסט שבזכרון הזמני משפה לשפה בעזרת  Google Translate."
 
 #. Translators: user has pressed the shortcut key for translating selected text, but no text was actually selected.
 #. Translators: user has pressed the shortcut key for identifying the language of selected text, but no text was actually selected.
 msgid "no selection"
-msgstr "Nincs szöveg kijelölve"
+msgstr "לא נבחר טקסט"
 
 #. Translators: message presented in input help mode, when user presses the shortcut keys for this addon.
 msgid ""
 "Translates selected text from one language to another using Google Translate."
-msgstr ""
-"A kijelölt szöveget lefordítja egy másik nyelvre a Google fordító "
-"segítségével."
+msgstr "מתרגם את הטקסט שנבחר משפה לשפה בעזרת  Google Translate."
 
 #. Translators: message presented to announce that the source and target languages have been swapped.
 msgid "Languages swapped"
-msgstr "A nyelvek felcserélve"
+msgstr "השפות התחלפו"
 
 #. Translators: message presented to announce the current source and target languages.
+#, python-brace-format
 msgid "Translate: from {lang1} to {lang2}"
-msgstr "Fordítás {lang1} nyelvről {lang2} nyelvre"
+msgstr "תרגום מ: from {lang1} ל{lang2}"
 
 #. Translators: Presented in input help mode.
 msgid "It swaps source and target languages."
-msgstr "Felcseréli a forrás és cél nyelveket."
+msgstr "החלפה בין שפת המקור לשפת התרגום."
 
 #. Translators: Presented in input help mode.
 msgid "It announces the current source and target languages."
-msgstr "Bemondja a jelenlegi forrás és célnyelvet."
+msgstr "הקראת שפת המקור ושפת התרגום."
 
 #. Translators: message presented to announce a successful copy
 msgid "Last translation copied in clipboard"
-msgstr "A legutolsó fordítás vágólapra másolva"
+msgstr "התרגום האחרון הועתק לזכרון הזמני"
 
 #. Translators: message presented to announce no previous translation disponibility
 msgid "No stored translation"
-msgstr "Nincs tárolt fordítás"
+msgstr "אין תרגום בזכרון"
 
 #. Translators: Presented in input help mode.
 msgid "It copies the last translation to clipboard"
-msgstr "A legutolsó fordítás vágólapra másolása"
+msgstr "העתקת התרגום האחרון לזכרון הזמני"
 
 msgid "Language is..."
-msgstr "nyelv"
+msgstr "שפות..."
 
 #. Translators: Presented in input help mode.
 msgid "It identifies the language of selected text"
-msgstr "Felismeri a kijelölt szöveg nyelvét"
+msgstr "זיהוי השפה של הטקסט שנבחר"
 
 msgid ""
 "t translates selected text, shift+t translates clipboard text, a announces "
@@ -101,122 +100,117 @@ msgid ""
 "last result to clipboard, i identify the language of selected text, h "
 "displays this message."
 msgstr ""
-"t lefordítja a kijelölt szöveget, shift+t lefordítja a vágólapon lévő "
-"szöveget, a bemondja a jelenlegi felcserélési beállítást, s felcseréli a "
-"forrás és cél nyelveket, c az utolsó fordítást a vágólapra másolja, i "
-"felismeri a kijelölt szöveg nyelvét, h megjeleníti ezt az üzenetet."
+"  T תרגום הטקסט שנבחר,  Shift T  תרגום טקסט הזכרון הזמני,   A הקראת מצב "
+"ההחלפה,  S מחליף בין שפת המקור לשפת היעד,  C העתקת התרגום לזכרון הזמני,  I "
+"מקריא את שפת הטקסט שזוהה. H מקריא הודעה זו."
 
 #. Translators: name of the dialog.
 msgid "Instant Translate Settings"
-msgstr "Gyorsfordító beállítások"
+msgstr "הגדרות Instant Translate"
 
 #. Translators: Help message for a dialog.
 msgid "Select translation source and target language:"
-msgstr "Válassza ki a forrás, és célnyelvet"
+msgstr "נא לבחור את שפת המקור ואת שפת התרגום:"
 
 #. Translators: A setting in addon settings dialog.
 msgid "Source language:"
-msgstr "Forrásnyelv:"
+msgstr "שפת המקור:"
 
 #. Translators: A setting in addon settings dialog.
 msgid "Target language:"
-msgstr "Célnyelv:"
+msgstr "שפת התרגום:"
 
 #. Translators: A setting in addon settings dialog.
 msgid "Copy translation result to clipboard"
-msgstr "A fordítás eredményének vágólapra másolása"
+msgstr "העתקת תוצאות התרגום לזכרון הזמני"
 
 #. Translators: A setting in addon settings dialog, shown if source language is on auto.
 msgid "Language for swapping:"
-msgstr "Felcserélés nyelve"
+msgstr "השפה המיועדת להחלפה:"
 
 #. Translators: A setting in addon settings dialog, shown if source language is on auto.
 msgid ""
 "Activate the auto-swap if recognized source is equal to the target "
 "(experimental)"
-msgstr ""
-"Az automatikus felcserélés aktiválása ha a forrás megegyezik a céllal "
-"(kísérleti opció)"
+msgstr "הפעלת ההחלפה האוטומטית אם זוהה טקסט הכתוב בשפת התרגום (נסיוני)"
 
 #. Translators: An option to automatically detect source language for translation.
 msgid "Automatically detect language"
-msgstr "Automatikus nyelv felismerés"
+msgstr "זיהוי אוטומטי של השפה"
 
 #. Translators: The name of a language supported by this add-on.
 msgid "Cebuano"
-msgstr "Kecsua"
+msgstr "סבואנו"
 
 #. Translators: The name of a language supported by this add-on.
 msgid "Esperanto"
-msgstr "Eszperanto"
+msgstr "אספרנטו"
 
 #. Translators: The name of a language supported by this add-on.
 msgid "Hmong"
-msgstr "Mongol"
+msgstr "המונג"
 
 #. Translators: The name of a language supported by this add-on.
 msgid "Creole Haiti"
-msgstr "Kreol Haiti"
+msgstr "קראולית"
 
 #. Translators: The name of a language supported by this add-on.
 msgid "Javanese"
-msgstr "jávai"
+msgstr "אינדונזית"
 
 #. Translators: The name of a language supported by this add-on.
 msgid "Latin"
-msgstr "Latin"
+msgstr "לטינית"
 
 #. Translators: The name of a language supported by this add-on.
 msgid "Malagasy"
-msgstr "madagaszkári"
+msgstr "מלגשית"
 
 #. Translators: The name of a language supported by this add-on.
 msgid "Myanmar (Burmese)"
-msgstr "Mianmar ( burmai )"
+msgstr "בירמאנית"
 
 #. Translators: The name of a language supported by this add-on.
 msgid "Chichewa"
-msgstr "Chichewa"
+msgstr "צ'יצ'יווית"
 
 #. Translators: The name of a language supported by this add-on.
 msgid "Somali"
-msgstr "szomáliai"
+msgstr "סומלית"
 
 #. Translators: The name of a language supported by this add-on.
 msgid "Sesotho"
-msgstr "Sesotho"
+msgstr "ססותית"
 
 #. Translators: The name of a language supported by this add-on.
 msgid "Sundanese"
-msgstr "szundanéz"
+msgstr "סונדנית"
 
 #. Translators: The name of a language supported by this add-on.
 msgid "Tagalog"
-msgstr "Tagalog/filippínó"
+msgstr "טגלוגית"
 
 #. Translators: The name of a language supported by this add-on.
 msgid "Yiddish"
-msgstr "Jidd"
+msgstr "אידיש"
 
 msgid "unavailable"
-msgstr "nem elérhető"
+msgstr "לא מזוהה"
 
 #. Translators: the label of a message box dialog.
 msgid ""
 "You have installed an old and incompatible version of this addon. Do you "
 "want to uninstall the old version?"
-msgstr ""
-"Egy régi és nem kompatibilis kiegészítő található a számítógépén. Szeretné "
-"eltávolítani a régi verziót?"
+msgstr "מותקנת כרגע גרסה ישנה של תוסף זה. האם ברצונך להסיר אותה?"
 
 #. Translators: the title of a message box dialog.
 msgid "Uninstall incompatible add-on"
-msgstr "Nem kompatibilis kiegészítő eltávolítása"
+msgstr "הסרת גרסה בלתי מתאימה של התוסף"
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on to be shown on installation and add-on information.
 msgid "Instant Translate"
-msgstr "Gyorsfordító"
+msgstr "Instant Translate"
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
@@ -224,5 +218,5 @@ msgid ""
 "This addon translates selected or clipboard text using the Google Translate "
 "service and presents it."
 msgstr ""
-"A kiegészítő képes a kijelölt/vágólapon lévő  szöveget lefordítani, és "
-"megjeleníteni, a Google fordító használatával."
+"תוסף זה מתרגם את הטקסט שבזכרון הזמני משפה לשפה בעזרת  Google Translate ומציג "
+"אותו."

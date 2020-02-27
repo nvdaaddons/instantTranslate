@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: 'Instant-Translate' '2.1'\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2013-02-09 18:30+0100\n"
-"PO-Revision-Date: 2015-06-20 00:27+0100\n"
-"Last-Translator: Bernd Dorer <bdorer@mailbox.org>\n"
+"PO-Revision-Date: 2019-03-11 19:52+0100\n"
+"Last-Translator: Waldschmetterling <a.r.waldschmetterling@gmx.de>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.1\n"
+"X-Generator: Poedit 1.5.7\n"
 "Language-Team: \n"
 
 msgid ""
@@ -24,10 +24,12 @@ msgid ""
 "the language of selected text."
 msgstr ""
 "Schichtbefehle für die Sofortübersetzung. t übersetzt den markierten Text, "
-"shift + t übersetzt Texte aus der Zwischenablage,  a gibt die aktuell "
-"gewählte Übersetzungsrichtung aus,, s vertauscht Ausgangs- und Zielsprache,  "
+"Umschaltt + t übersetzt Texte aus der Zwischenablage,  a gibt die aktuell "
+"gewählte Übersetzungsrichtung aus, s vertauscht Ausgangs- und Zielsprache,  "
 "c kopiert das letzte Resultat in die Zwischenablage, i identifiziert die "
-"Sprache des gewählten Textes."
+"Sprache des gewählten Textes. Schichtbefehl bedeutet, dass die Befehle aus "
+"zwei Ebenen aufgebaut sind. Zuerst drücken Sie Umschalt+NVDA, t und direkt "
+"anschließen die oben angegebenen Tasten für den jeweiligen Befehl. "
 
 #. Translators: name of the option in the menu.
 msgid "Instant &Translate Settings..."
@@ -66,7 +68,6 @@ msgid "Languages swapped"
 msgstr "Sprachen vertauscht"
 
 #. Translators: message presented to announce the current source and target languages.
-#, python-brace-format
 msgid "Translate: from {lang1} to {lang2}"
 msgstr "Übersetze: von {lang1} nach {lang2}"
 
@@ -138,8 +139,8 @@ msgid ""
 "Activate the auto-swap if recognized source is equal to the target "
 "(experimental)"
 msgstr ""
-"Auto-Tausch wenn erkannt wird, dass Ausgangs- und Zielsprache gleich "
-"sindaktivieren (experimentell)"
+"Auto-Tausch aktivieren, wenn erkannt wird, dass Ausgangs- und Zielsprache "
+"gleich sind (experimentell)"
 
 #. Translators: An option to automatically detect source language for translation.
 msgid "Automatically detect language"
@@ -147,7 +148,7 @@ msgstr "Sprache automatisch erkennen"
 
 #. Translators: The name of a language supported by this add-on.
 msgid "Cebuano"
-msgstr ""
+msgstr "Cebuano"
 
 #. Translators: The name of a language supported by this add-on.
 msgid "Esperanto"
@@ -155,15 +156,15 @@ msgstr "Esperanto (Spanisch)"
 
 #. Translators: The name of a language supported by this add-on.
 msgid "Hmong"
-msgstr ""
+msgstr "Hmong"
 
 #. Translators: The name of a language supported by this add-on.
 msgid "Creole Haiti"
-msgstr ""
+msgstr "Creole Haiti"
 
 #. Translators: The name of a language supported by this add-on.
 msgid "Javanese"
-msgstr "japanisch"
+msgstr "javanisch"
 
 #. Translators: The name of a language supported by this add-on.
 msgid "Latin"
@@ -171,7 +172,7 @@ msgstr "Latein"
 
 #. Translators: The name of a language supported by this add-on.
 msgid "Malagasy"
-msgstr ""
+msgstr "Malagasy"
 
 #. Translators: The name of a language supported by this add-on.
 msgid "Myanmar (Burmese)"
@@ -179,23 +180,23 @@ msgstr "Burmesisch )Myanmar)"
 
 #. Translators: The name of a language supported by this add-on.
 msgid "Chichewa"
-msgstr ""
+msgstr "Chichewa"
 
 #. Translators: The name of a language supported by this add-on.
 msgid "Somali"
-msgstr ""
+msgstr "Somali"
 
 #. Translators: The name of a language supported by this add-on.
 msgid "Sesotho"
-msgstr ""
+msgstr "Sesotho"
 
 #. Translators: The name of a language supported by this add-on.
 msgid "Sundanese"
-msgstr ""
+msgstr "Sundanese"
 
 #. Translators: The name of a language supported by this add-on.
 msgid "Tagalog"
-msgstr ""
+msgstr "Tagalog"
 
 #. Translators: The name of a language supported by this add-on.
 msgid "Yiddish"
@@ -230,213 +231,3 @@ msgstr ""
 "Diese Erweiterung verwendet den Google Übersetzungsdienst, um den markierten "
 "Text bzw. den Inhalt der Zwischenablage zu übersetzen und die Übersetzung "
 "auszugeben."
-
-#~ msgid "Translating..."
-#~ msgstr "Übersetze..."
-
-#~ msgid ""
-#~ "When pressed once, announces the current source and target languages. "
-#~ "Pressed twice will swap source and target."
-#~ msgstr ""
-#~ "Wenn die Tastenkombination einmal gedrückt wird, wird die derzeitige "
-#~ "Ausgangs- und Zielsprache ausgegeben. Bei zweimaligem drücken werden "
-#~ "Quell- und Zielsprache vertauscht."
-
-#~ msgid "Arabic"
-#~ msgstr "Arabisch"
-
-#~ msgid "Bangla"
-#~ msgstr "Bangladesch"
-
-#~ msgid "Welsh"
-#~ msgstr "Walisisch"
-
-#~ msgid "Armenian"
-#~ msgstr "Armenisch"
-
-#~ msgid "Norwegian"
-#~ msgstr "Norwegisch"
-
-#~ msgid "Serbian (Latin)"
-#~ msgstr "Serbisch (Latein)"
-
-#~ msgid "Swahili"
-#~ msgstr "Swahili"
-
-#~ msgid "Chinese (Simplified)"
-#~ msgstr "Vereinfachtes Chinesisch"
-
-#~ msgid "Chinese (Traditional)"
-#~ msgstr "Traditionelles Chinesisch"
-
-#~ msgid ""
-#~ "Instant Translate - Translates given text using the Google Translate "
-#~ "service."
-#~ msgstr ""
-#~ "Sofortübersetzung - Übersetzt den ausgewählten Text mit dem Google-"
-#~ "Übersetzer"
-
-#~ msgid ""
-#~ "The clipboard contains a large portion of text. It is %s characters long. "
-#~ "The limit is 1500 characters."
-#~ msgstr ""
-#~ "Es befindet sich viel Text in der Zwischenablage. Er ist %s Zeichen lang. "
-#~ "Die Obergrenze liegt jedoch bei 1500 Zeichen."
-
-#~ msgid ""
-#~ "The selection contains a large portion of text. It is %s characters long. "
-#~ "The limit is 1500 characters."
-#~ msgstr ""
-#~ "Es befindet sich sehr viel Text in der Zwischenablage. Er ist %s Zeichen "
-#~ "lang. Das Limit beträgt jedoch maximal 1500 Zeichen."
-
-#~ msgid "Error translating text. See log for details"
-#~ msgstr ""
-#~ "Fehler beim Übersetzen! Für weitere Informationen sehen Sie im Protokoll "
-#~ "nach."
-
-#~ msgid "Select Languages from which text will be translated from, and into."
-#~ msgstr ""
-#~ "Wählen Sie bitte die Sprachen aus, von denen bzw. in die übersetzt werden "
-#~ "soll."
-
-#~ msgid ""
-#~ "Select language from which you want to translate from and into and press "
-#~ "ok."
-#~ msgstr ""
-#~ "Wählen Sie bitte die Ausgangs- und Zielsprache aus und klicken auf den "
-#~ "Schalter 'OK'."
-
-#~ msgid "Into Language:"
-#~ msgstr "Zielsprache:"
-
-#~ msgid ""
-#~ "This addon translates selected text via Google Translator and says it. "
-#~ "Press NVDA+Shift+T for execute translation operation on selected text in "
-#~ "Reech edit fields. This addon was been repacked and optimized for "
-#~ "executing without standalone Python by Outsider <outsidepro@rambler.ru>."
-#~ msgstr ""
-#~ "Diese Erweiterung benutzt den Google-Übersetzer, um den ausgewählten Text "
-#~ "zu übersetzen. Der übersetzte Text wird anschließend angesagt. Drücken "
-#~ "Sie NVDA+Umschalt+T, um den sofortübersetzer auf Text anzuwenden, den Sie "
-#~ "in den Eingabefeldern ausgewählt haben.. Diese Erweiterung wurde von "
-#~ "Outsider <outsidepro@rambler.ru> überarbeitet und für die Ausführung ohne "
-#~ "installiertes Python optimiert."
-
-#~ msgid "Select Languages from and into to translate selected text"
-#~ msgstr ""
-#~ "Wählen Sie die Sprachen aus, von denen Bzw. in die übersetzt werden soll."
-
-#~ msgid "Afrikaans"
-#~ msgstr "Afrikaans"
-
-#~ msgid "Albanian"
-#~ msgstr "albanisch"
-
-#~ msgid "Basque"
-#~ msgstr "baskisch"
-
-#~ msgid "Belorussian"
-#~ msgstr "weißrussisch"
-
-#~ msgid "Bulgarian"
-#~ msgstr "bulgarisch"
-
-#~ msgid "Czech"
-#~ msgstr "tschechisch"
-
-#~ msgid "Croatian"
-#~ msgstr "kroatisch"
-
-#~ msgid "Danish"
-#~ msgstr "dänisch"
-
-#~ msgid "Dutch"
-#~ msgstr "niederländisch"
-
-#~ msgid "English"
-#~ msgstr "englisch"
-
-#~ msgid "Estonian"
-#~ msgstr "estnisch"
-
-#~ msgid "Finnish"
-#~ msgstr "finnisch"
-
-#~ msgid "French"
-#~ msgstr "französisch"
-
-#~ msgid "Galician"
-#~ msgstr "galicisch"
-
-#~ msgid "Georgian"
-#~ msgstr "georgisch"
-
-#~ msgid "German"
-#~ msgstr "deutsch"
-
-#~ msgid "Greek"
-#~ msgstr "griechisch"
-
-#~ msgid "Hebrew"
-#~ msgstr "hebräisch"
-
-#~ msgid "Hungarian"
-#~ msgstr "ungarisch"
-
-#~ msgid "Indonesian"
-#~ msgstr "indonesisch"
-
-#~ msgid "Irish"
-#~ msgstr "irisch"
-
-#~ msgid "Icelandic"
-#~ msgstr "isländisch"
-
-#~ msgid "Italian"
-#~ msgstr "italienisch"
-
-#~ msgid "Korean"
-#~ msgstr "koreanisch"
-
-#~ msgid "Macedonian"
-#~ msgstr "mazedonisch"
-
-#~ msgid "Maltese"
-#~ msgstr "maltesisch"
-
-#~ msgid "Persian"
-#~ msgstr "persisch"
-
-#~ msgid "Polish"
-#~ msgstr "polnisch"
-
-#~ msgid "Portuguese"
-#~ msgstr "portugiesisch"
-
-#~ msgid "Romanian"
-#~ msgstr "romänisch"
-
-#~ msgid "Russian"
-#~ msgstr "russisch"
-
-#~ msgid "Slovak"
-#~ msgstr "slowakisch"
-
-#~ msgid "Slovenian"
-#~ msgstr "slovenisch"
-
-#~ msgid "Spanish"
-#~ msgstr "spanisch"
-
-#~ msgid "Swedish"
-#~ msgstr "schwedisch"
-
-#~ msgid "Turkish"
-#~ msgstr "türkisch"
-
-#~ msgid "Ukrainian"
-#~ msgstr "ukrainisch"
-
-#~ msgid "Vietnamese"
-#~ msgstr "vietnamesisch"

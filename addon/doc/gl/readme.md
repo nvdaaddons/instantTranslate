@@ -86,6 +86,14 @@ Todas as ordes que siguen deben premerse despois da tecla modificadora
 * I: identifica a lingua do texto seleccioado,
 * H: anuncia todas as ordes dispoñibles ó usuario.
 
+## Cambios para 4.1 ##
+* InstantTranslate funciona de novo, agora co servizo de tradución Yandex en
+  lugar de Google.
+
+## Cambios para 4.0 ##
+* Realízase automáticamente a tradución despois de intercambiar.
+* Correxido o fallo do Caché.
+
 ## Cambios para 3.0 ##
 * Cambia o xeito de cómo se usan os atallos de teclado, agora podes premer a
   tecla modificadora do instantTranslate "NVDA+Shift+t", e entón letras soas
@@ -126,6 +134,6 @@ Todas as ordes que siguen deben premerse despois da tecla modificadora
 
 [[!tag dev]]
 
-[1]: http://addons.nvda-project.org/files/get.php?file=it
+[1]: https://addons.nvda-project.org/files/get.php?file=it
 
-[2]: http://addons.nvda-project.org/files/get.php?file=it-dev
+[2]: https://addons.nvda-project.org/files/get.php?file=it-dev

@@ -48,6 +48,14 @@
 * I: 選択されたテキストの言語を識別
 * H: 全ての使用可能なコマンドをユーザーに通知
 
+## Changes for 4.1 ##
+* InstantTranslate is working again, now with Yandex translator service
+  instead of Google.
+
+## Changes for 4.0 ##
+* Translation is automatically performed after swapping.
+* Cache bug fixed.
+
 ## 3.0 での変更点 ##
 * ショートカットの使用方法を変更しました。インスタント翻訳用の修飾キーNVDA+Shift+tを押して、一文字キーで動作を選んで実行出来ます
   (ショートカットキーの節の全コマンドをご覧下さい)
@@ -76,6 +84,6 @@
 
 [[!tag dev]]
 
-[1]: http://addons.nvda-project.org/files/get.php?file=it
+[1]: https://addons.nvda-project.org/files/get.php?file=it
 
-[2]: http://addons.nvda-project.org/files/get.php?file=it-dev
+[2]: https://addons.nvda-project.org/files/get.php?file=it-dev

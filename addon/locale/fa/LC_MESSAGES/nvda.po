@@ -5,17 +5,17 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: 'Instant-Translate' '2.1'\n"
+"Project-Id-Version: instantTranslate 2.2beta2\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
-"POT-Creation-Date: 2013-02-09 18:30+0100\n"
-"PO-Revision-Date: 2018-05-22 11:42+0200\n"
-"Last-Translator: oaron@nvda.hu\n"
-"Language-Team: HU <LL@li.org>\n"
-"Language: hu\n"
+"POT-Creation-Date: 2013-07-14 19:24+0200\n"
+"PO-Revision-Date: 2016-02-25 23:47-0800\n"
+"Last-Translator: Mohammadreza Rashad <mohammadreza5712@gmail.com>\n"
+"Language-Team: NVDA Translation team <nvda-translations@freelists.org>\n"
+"Language: fa\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.0.7\n"
+"X-Generator: Poedit 1.5.5\n"
 
 msgid ""
 "Instant Translate layer commands. t translates selected text, shift+t "
@@ -23,77 +23,76 @@ msgid ""
 "source and target languages, c copies last result to clipboard, i identify "
 "the language of selected text."
 msgstr ""
-"Gyorsfordító vezérlőréteg. t lefordítja a kijelölt szöveget, shift+t "
-"lefordítja a vágólapon lévő szöveget, a bemondja a jelenlegi felcserélési "
-"beállítást, s felcseréli a forrás és cél nyelveket, c az utolsó fordítást a "
-"vágólapra másolja, i felismeri a kijelölt szöveg nyelvét."
+"فرمان‌های لایه‌ایِ مترجمِ سریع. T متنِ انتخاب‌شده را ترجمه میکند، Shift+T متنِ داخلِ "
+"کلیپ‌برد را ترجمه میکند، A تنظیماتِ فعلیِ جابجایی را اعلام میکند، S جایِ زبانِ "
+"مبدأ را با مقصد عوض میکند، C آخرین نتیجه را در کلیپ‌برد کپی میکند، I زبانِ متنِ "
+"انتخاب‌شده را مشخص میکند."
 
 #. Translators: name of the option in the menu.
 msgid "Instant &Translate Settings..."
-msgstr "&Gyorsfordító beállítások"
+msgstr "تنظیماتِ م&ترجمِ سریع"
 
 #. Translators: tooltip text for the menu item.
 msgid "Select languages to be used for translation."
-msgstr "Válassza ki a nyelveket a fordításhoz."
+msgstr "زبان‌هایی را که برای ترجمه میخواهید استفاده کنید انتخاب کنید."
 
 #. Translators: message presented when user presses the shortcut key for translating clipboard text but the clipboard is empty.
 msgid "There is no text on the clipboard"
-msgstr "Nem található szöveg a vágólapon"
+msgstr "متنی در کلیپ‌برد نیست"
 
 #. Translators: message presented in input help mode, when user presses the shortcut keys for this addon.
 msgid ""
 "Translates clipboard text from one language to another using Google "
 "Translate."
 msgstr ""
-"A vágólapon található szöveget lefordítja egy másik nyelvre a Google fordító "
-"segítségével."
+"با استفاده از مترجمِ گوگل، متنِ داخل کلیپ‌برد را از زبانی به زبانِ دیگر ترجمه "
+"میکند."
 
 #. Translators: user has pressed the shortcut key for translating selected text, but no text was actually selected.
 #. Translators: user has pressed the shortcut key for identifying the language of selected text, but no text was actually selected.
 msgid "no selection"
-msgstr "Nincs szöveg kijelölve"
+msgstr "متنی انتخاب نشده است"
 
 #. Translators: message presented in input help mode, when user presses the shortcut keys for this addon.
 msgid ""
 "Translates selected text from one language to another using Google Translate."
 msgstr ""
-"A kijelölt szöveget lefordítja egy másik nyelvre a Google fordító "
-"segítségével."
+"با استفاده از مترجمِ گوگل، متنِ انتخاب‌شده را از زبانی به زبانِ دیگر ترجمه میکند."
 
 #. Translators: message presented to announce that the source and target languages have been swapped.
 msgid "Languages swapped"
-msgstr "A nyelvek felcserélve"
+msgstr "زبان‌ها جابجا شدند"
 
 #. Translators: message presented to announce the current source and target languages.
 msgid "Translate: from {lang1} to {lang2}"
-msgstr "Fordítás {lang1} nyelvről {lang2} nyelvre"
+msgstr "ترجمه از {lang1} به {lang2}"
 
 #. Translators: Presented in input help mode.
 msgid "It swaps source and target languages."
-msgstr "Felcseréli a forrás és cél nyelveket."
+msgstr "جایِ زبانِ مبدأ را با زبانِ مقصد عوض میکند."
 
 #. Translators: Presented in input help mode.
 msgid "It announces the current source and target languages."
-msgstr "Bemondja a jelenlegi forrás és célnyelvet."
+msgstr "زبان‌های مبدأ و مقصد فعلی را اعلام میکند."
 
 #. Translators: message presented to announce a successful copy
 msgid "Last translation copied in clipboard"
-msgstr "A legutolsó fordítás vágólapra másolva"
+msgstr "آخرین ترجمه در کلیپ‌برد کپی شد."
 
 #. Translators: message presented to announce no previous translation disponibility
 msgid "No stored translation"
-msgstr "Nincs tárolt fordítás"
+msgstr "ترجمه‌ای از پیش ذخیره نشده است."
 
 #. Translators: Presented in input help mode.
 msgid "It copies the last translation to clipboard"
-msgstr "A legutolsó fordítás vágólapra másolása"
+msgstr "آخرین ترجمه را در کلیپ‌برد کپی میکند."
 
 msgid "Language is..."
-msgstr "nyelv"
+msgstr "زبان ... هست"
 
 #. Translators: Presented in input help mode.
 msgid "It identifies the language of selected text"
-msgstr "Felismeri a kijelölt szöveg nyelvét"
+msgstr "زبانِ متنِ انتخاب‌شده را مشخص میکند."
 
 msgid ""
 "t translates selected text, shift+t translates clipboard text, a announces "
@@ -101,122 +100,120 @@ msgid ""
 "last result to clipboard, i identify the language of selected text, h "
 "displays this message."
 msgstr ""
-"t lefordítja a kijelölt szöveget, shift+t lefordítja a vágólapon lévő "
-"szöveget, a bemondja a jelenlegi felcserélési beállítást, s felcseréli a "
-"forrás és cél nyelveket, c az utolsó fordítást a vágólapra másolja, i "
-"felismeri a kijelölt szöveg nyelvét, h megjeleníti ezt az üzenetet."
+"T متنِ انتخاب‌شده را ترجمه میکند، Shift+T متنِ داخلِ کلیپ‌برد را ترجمه میکند، A "
+"تنظیماتِ فعلیِ جابجایی را اعلام میکند، S جایِ زبانِ مبدأ را با مقصد عوض میکند، C "
+"آخرین نتیجه را در کلیپ‌برد کپی میکند، I زبانِ متنِ انتخاب‌شده را مشخص میکند، H "
+"این پیام را نمایش میدهد."
 
 #. Translators: name of the dialog.
 msgid "Instant Translate Settings"
-msgstr "Gyorsfordító beállítások"
+msgstr "تنظیماتِ مترجمِ سریع"
 
 #. Translators: Help message for a dialog.
 msgid "Select translation source and target language:"
-msgstr "Válassza ki a forrás, és célnyelvet"
+msgstr "زبانِ مبدأ و مقصدِ ترجمه را انتخاب کنید:"
 
 #. Translators: A setting in addon settings dialog.
 msgid "Source language:"
-msgstr "Forrásnyelv:"
+msgstr "زبانِ مبدأ:"
 
 #. Translators: A setting in addon settings dialog.
 msgid "Target language:"
-msgstr "Célnyelv:"
+msgstr "زبانِ مقصد:"
 
 #. Translators: A setting in addon settings dialog.
 msgid "Copy translation result to clipboard"
-msgstr "A fordítás eredményének vágólapra másolása"
+msgstr "کپی کردنِ نتیجه‌ی ترجمه در کلیپ‌برد"
 
 #. Translators: A setting in addon settings dialog, shown if source language is on auto.
 msgid "Language for swapping:"
-msgstr "Felcserélés nyelve"
+msgstr "زبان برای تعویض:"
 
 #. Translators: A setting in addon settings dialog, shown if source language is on auto.
 msgid ""
 "Activate the auto-swap if recognized source is equal to the target "
 "(experimental)"
-msgstr ""
-"Az automatikus felcserélés aktiválása ha a forrás megegyezik a céllal "
-"(kísérleti opció)"
+msgstr "فعال کردنِ جابجاییِ خودکار اگر مبدأ برابر با مقصد باشد (آزمایشی)"
 
 #. Translators: An option to automatically detect source language for translation.
 msgid "Automatically detect language"
-msgstr "Automatikus nyelv felismerés"
+msgstr "بازشناسیِ خودکارِ زبان"
 
 #. Translators: The name of a language supported by this add-on.
 msgid "Cebuano"
-msgstr "Kecsua"
+msgstr "چِبوانو"
 
 #. Translators: The name of a language supported by this add-on.
 msgid "Esperanto"
-msgstr "Eszperanto"
+msgstr "اسپرانتو"
 
 #. Translators: The name of a language supported by this add-on.
 msgid "Hmong"
-msgstr "Mongol"
+msgstr "مونْگ"
 
 #. Translators: The name of a language supported by this add-on.
 msgid "Creole Haiti"
-msgstr "Kreol Haiti"
+msgstr "هایتی کریول"
 
 #. Translators: The name of a language supported by this add-on.
 msgid "Javanese"
-msgstr "jávai"
+msgstr "جاوه‌ای"
 
 #. Translators: The name of a language supported by this add-on.
 msgid "Latin"
-msgstr "Latin"
+msgstr "لاتین"
 
 #. Translators: The name of a language supported by this add-on.
 msgid "Malagasy"
-msgstr "madagaszkári"
+msgstr "مالاگاسی"
 
 #. Translators: The name of a language supported by this add-on.
 msgid "Myanmar (Burmese)"
-msgstr "Mianmar ( burmai )"
+msgstr "میانمار (برمه‌ای)"
 
 #. Translators: The name of a language supported by this add-on.
 msgid "Chichewa"
-msgstr "Chichewa"
+msgstr "چیچوا"
 
 #. Translators: The name of a language supported by this add-on.
 msgid "Somali"
-msgstr "szomáliai"
+msgstr "سومالیایی"
 
 #. Translators: The name of a language supported by this add-on.
 msgid "Sesotho"
-msgstr "Sesotho"
+msgstr "سِسوتو"
 
 #. Translators: The name of a language supported by this add-on.
 msgid "Sundanese"
-msgstr "szundanéz"
+msgstr "سوندانی"
 
 #. Translators: The name of a language supported by this add-on.
 msgid "Tagalog"
-msgstr "Tagalog/filippínó"
+msgstr "تاگالوگ"
 
 #. Translators: The name of a language supported by this add-on.
 msgid "Yiddish"
-msgstr "Jidd"
+msgstr "عِبریِ آلمانی"
 
 msgid "unavailable"
-msgstr "nem elérhető"
+msgstr "موجود نیست"
 
 #. Translators: the label of a message box dialog.
 msgid ""
 "You have installed an old and incompatible version of this addon. Do you "
 "want to uninstall the old version?"
 msgstr ""
-"Egy régi és nem kompatibilis kiegészítő található a számítógépén. Szeretné "
-"eltávolítani a régi verziót?"
+"شما یک نسخه‌ی قدیمی و ناسازگار از این افزونه را نصب کرده اید. میخواهید نسخه‌ی "
+"قدیمی را حذف کنید؟"
 
 #. Translators: the title of a message box dialog.
 msgid "Uninstall incompatible add-on"
-msgstr "Nem kompatibilis kiegészítő eltávolítása"
+msgstr "حذفِ نسخه‌ی ناسازگار"
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on to be shown on installation and add-on information.
 msgid "Instant Translate"
-msgstr "Gyorsfordító"
+msgstr "مترجمِ سریع"
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
@@ -224,5 +221,5 @@ msgid ""
 "This addon translates selected or clipboard text using the Google Translate "
 "service and presents it."
 msgstr ""
-"A kiegészítő képes a kijelölt/vágólapon lévő  szöveget lefordítani, és "
-"megjeleníteni, a Google fordító használatával."
+"این افزونه متنِ انتخاب‌شده یا موجود در کلیپ‌برد را با استفاده از خدمتِ مترجمِ "
+"گوگل ترجمه کرده، ارائه میدهد."

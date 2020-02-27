@@ -82,6 +82,15 @@ script, so to force the source language to be the previous target language
 * I: определить язык выделенного текста,
 * H: объявляет все доступные пользователю команды.
 
+## Изменения  в версии 4.1 ##
+* InstantTranslate снова работает со службой переводчика Яндекс вместо
+  Google.
+
+## Изменения  в версии 4.0 ##
+* Результат перевода теперь автоматически выполняется при смене языков
+  местами.
+* Исправлена ошибка кэша.
+
 ## Изменения  в версии 3.0 ##
 * Изменён способ использования команд, теперь вам нужно нажать
   клавишу-модификатор instantTranslate "NVDA+Shift+t", а затем клавишу одной
@@ -119,6 +128,6 @@ script, so to force the source language to be the previous target language
 
 [[!tag dev]]
 
-[1]: http://addons.nvda-project.org/files/get.php?file=it
+[1]: https://addons.nvda-project.org/files/get.php?file=it
 
-[2]: http://addons.nvda-project.org/files/get.php?file=it-dev
+[2]: https://addons.nvda-project.org/files/get.php?file=it-dev

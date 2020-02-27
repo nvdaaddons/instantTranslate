@@ -2,75 +2,84 @@
 
 * Autoren: Alexy Sadovoy, Beqa Gozalishvili, Mesar Hameed, Alberto Buffolino
   und andere NVDA-Entwickler.
-* [stabile version][1] herunterladen
-* [Testversion][2] herunterladen
+* [Stabile Version herunterladen][1]
+* [Entwicklerversion herunterladen][2]
 
-This add-on is used to translate selected and/or clipboard text from one
-language to another.  This is done using an external service.
+Diese Erweiterung wird verwendet, um über einen externen Dienst markierten
+Text bzw. Text der Zwischenablage in eine andere Sprache zu übersetzen.
 
 ## Sprachen einstellen ##
-To configure source, target and in case swap language, go to: NVDA Menu >> Preferences >> Instant Translate Settings.
+Um die Quell-, Ziel- und ggf. Tauschsprache zu konfigurieren, gehen Sie zu: NVDA-Menü >> Einstellungen >> Einstellungen für die Sofortübersetzung.
 
-There are two comboboxes labeled "Source language" and "Target language",
-and a checkbox to decide if it must copy the translation to clipboard.
+Es gibt zwei Ausklapplisten mit den Bezeichnungen"Quellsprache"
+und"Zielsprache" und ein Kontrollkästchen, um zu entscheiden, ob die
+Übersetzung in die Zwischenablage kopiert werden soll.
 
-In addition, if you selected auto option (the first choice) from "Source
-language" combobox, there are also a combobox labeled "Language for
-swapping" and a checkbox about the auto-swap.
+Zusätzlich, wenn Sie die Auto-Option (die erste Wahl) aus der
+"Quellsprache"-Ausklappliste ausgewählt haben, gibt es auch eine
+Ausklappliste mit der Bezeichnung"Sprachentausch" und ein Kontrollkästchen
+Automatischer Tausch.
 
-The meaning of two first comboboxes and checkbox for copy is clear, but some
-words about the rest are necessary. Remember always that the explanations
-below assume the source language set on the auto option.
+Die Bedeutung der beiden ersten Ausklapplisten und des Kontrollfeldes für
+die Kopie ist klar, aber einige Worte über den Rest sind notwendig. Denken
+Sie immer daran, dass die folgenden Erklärungen die Quellsprache mit
+Auto-Option voraussetzen.
 
-The "Language for swapping" combobox is useful when you swap via script (see
-below) the source and target language; in fact, a target language set on the
-auto option has no sense, so the addon sets it to value of combobox above.
+Die Ausklappliste "Sprachentausch" ist nützlich, wenn Sie per Skript (siehe
+unten) die Quell- und Zielsprache austauschen. Tatsächlich hat eine
+Zielsprache, die auf der Auto-Option eingestellt ist, keinen Sinn, also
+setzt die Erweiterung sie auf den Wert der obigen Ausklappliste.
 
-So, imagine this situation: you usually translate into English (your main
-language), but sometimes (for example, when you write a document) you need
-to translate into Italian (your second language, suppose); you can set
-"Language for swapping" combobox to Italian, so you will translate from
-English to Italian without accessing directly to the addon
-settings. Obviously this function has a major or minor utility according to
-your more frequent needs.
+Stellen Sie sich diese Situation vor: Sie übersetzen normalerweise ins
+Englische (Ihre Hauptsprache). Manchmal (zum Beispiel, wenn Sie ein Dokument
+schreiben) müssen Sie ins Italienische übersetzen (Ihre zweite
+Sprache). Nehmen Sie an Sie könnten die "Sprachentausch"-Ausklappliste auf
+Italienisch einstellen, so dass Sie aus dem Englischen ins Italienische
+übersetzen ohne direkt auf die Erweiterungseinstellungen
+zuzugreifen. Offensichtlich hat diese Funktion einen höheren oder geringeren
+Nutzen, je nach Ihren individuellen Bedürfnissen.
 
-Now, the auto-swap checkbox: it appears if and only if you set the auto
-option in "Source language" combobox, and is directly connected with
-"Language for swapping" combobox. If you activate it, then the addon tries
-to commute automatically from your source and target configuration to a
-configuration where target becomes the source language, and language
-selected in "Language for swapping" combobox is the new target language;
-extremely useful if the source language of the text you want translate is
-the target language.
+Das Auto-Tausch-Kontrollkästchen erscheint ausschließlich wenn Sie die
+Auto-Option in der Ausklappliste "Quellsprache" eingestellt haben. Das
+Kontrollkästchen ist direkt mit der Ausklappliste "Sprachentausch"
+verbunden. Wenn Sie es aktivieren, dann versucht die Erweiterung automatisch
+von Ihrer Quell- und Zielkonfiguration in eine Konfiguration umzuwandeln,
+bei der die Ziel- zur Quellsprache wird und die Sprache, die in der
+"Sprachentausch"-Ausklappliste ausgewählt wurde, Zielsprache wird. Dies ist
+äußerst nützlich, wenn die Quellsprache des zu übersetzenden Textes die
+Zielsprache ist.
 
-A simple example: take again in mind the situation imagined previously; if
-you translate a text in a language different from English, there is no
-problem, you get the correct translation in English. But if you need to
-translate a text from English, normally you get a translation into English
-identical to original text, and this is a bit useless. Thanks to auto-swap
-function, however, assuming that you want to know how your text sounds into
-Italian, the addon commutes automatically the target language to Italian, so
-it returns a valid translation.
+Ein einfaches Beispiel: Denken Sie noch einmal an die Situation, die Sie
+sich vorher vorgestellt haben. Wenn Sie einen Text aus einer anderen Sprache
+als Englisch übersetzen, gibt es kein Problem. Sie erhalten die richtige
+Übersetzung ins Englische. Aber wenn Sie einen Text aus dem Englischen
+übersetzen müssen, erhalten Sie normalerweise eine Übersetzung ins
+Englische, die mit dem Originaltext identisch ist. Das ist ein Wenig
+nutzlos. Durch die Auto-Swap-Funktion geht die Erweiterung davon aus, dass
+Sie wissen wollen wie Ihr Text ins Italienische klingt. Die Funktion
+schaltet automatisch die Zielsprache ins Italienische um, so dass eine
+gültige Übersetzung ausgegeben wird.
 
-Anyway, this is a temporary configuration; if this option has no effect
-(it's experimental), try to commute manually to a stable configuration,
-using the gesture for swapping described below. It's experimental because in
-some situations (with short texts, tipically), Google does not recognize the
-real source language correctly, and you have to swap languages manually via
-script, so to force the source language to be the previous target language
-(English in our example).
+Wenn diese Option keine Wirkung hat (sie ist experimentell), versuchen Sie,
+manuell zu einer stabilen Konfiguration zu wechseln, indem Sie die unten
+beschriebene Geste verwenden. Sie ist noch nicht ausgereift, weil Google
+typischerweise in manchen Situationen die eigentliche Quellsprache in kurzen
+Texten nicht richtig erkennt. Sie müssen die Sprachen manuell per Skript
+wechseln, um die Quellsprache als vorherige Zielsprache zu erzwingen (in
+unserem Beispiel Englisch).
 
-## verwende ##
+## verwendung ##
 Sie können diese Erweiterung auf zwei Arten verwenden:
 
-1. Select some text using selection commands (shift with arrow keys, for
-   example) and press associated key to translate. translation result willbe
-   read with synthesizer which you are using.
-2. Sie können auch den Text, welcher sich in der Zwischenablage befindet
-   übersetzen lassen.
+1. Markieren Sie einen Text mit Hilfe von Auswahlbefehlen(z.B. Shift +
+   Pfeiltasten) und drücken Sie die zugehörige Taste, um ihn zu
+   übersetzen. Das Übersetzungsergebnis wird mit der Sprachausgabe, die Sie
+   verwenden, vorgelesen.
+2. Sie können auch den Text der Zwischenablage übersetzen lassen.
 
 ## Tastenkürzel ##
-All following commands must be pressed after modifier key "NVDA+Shift+t":
+Alle folgenden Befehle müssen nach der zuvor gedrückten Modifikationstaste
+"NVDA+Shift+t" gedrückt werden:
 
 * T: Markierten Text übersetzen,
 * Umschalt+t: Text aus der Zwischenablage übersetzen,
@@ -80,42 +89,53 @@ All following commands must be pressed after modifier key "NVDA+Shift+t":
 * I: die Sprache des markierten Texts ermitteln,
 * H: gibt alle verfügbaren Befehle aus.
 
-## Änderungen für 3.0 ##
-* Change way how Shortcuts are used, now you can press instantTranslate
-  modifier key "NVDA+Shift+t", and then single letter key to perform some
-  action (see all Commands in the "Shortcuts" section).
+## Änderungen in 4.1 ##
+* Sofortübersetzung funktioniert wieder, jetzt jedoch mit Yandex-Übersetzer
+  statt mit Google.
+
+## Änderungen in 4.0 ##
+* Übersetzungsergebnisse  werden nun automatisch in die Zwischenablage
+  kopiert, um diese weiter verwenden zu können.
+* Cache-Problem gelöst
+
+## Änderungen in 3.0 ##
+* Ändert die Art und Weise, wie Shortcuts verwendet werden. Jetzt können Sie
+  die Änderungstasten der Sofortübersetzung (NVDA+Shift+t) drücken und dann
+  einen Buchstaben, um eine Aktion auszuführen (siehe alle Befehle im
+  Abschnitt"Tastenbefehle").
 * Sprachen vertauschen implementiert.
-* Changed configuration format, now we can change instant translate settings
-  if we are in readonly pane, but remember that this will work before first
-  restart of NVDA.
-* Removed limit on amount of text that can be translated.
-* l
-* The auto option is now in first position in source combo, and absent in
-  target combo.
+* Geändertes Einstellungsformat, jetzt können Sie die Einstellungen für die
+  Sofortübersetzung ändern, wenn Sie sich im Nur-Lesen-Fenster
+  befinden. Dies wird nur vor dem ersten Neustart von NVDA funktionieren.
+* Die Begrenzung der Textmenge, die übersetzt werden kann, wurde entfernt.
+* Verknüpfung t zum Menüpunkt Einstellungen für Sofortübersetzung
+  hinzugefügt.
+* Die Auto-Option befindet sich jetzt an erster Stelle in der
+  Quellkombination und fehlt in der Zielkombination.
 * Option hinzugefügt, um festzulegen, ob das Resultat der Übersetzung
   kopiert werden soll.
 * Konfigurationsdatei wird im Einstellungsverzeichnis gespeichert.
-* Ausgangs- und Zielsprache mit dem, was Google Translate derzeit vorschlägt
-  synchronisiert ( 22. April 2015 ).
+* Ausgangs- und Zielsprache mit Google-Translate-Vorschlägen synchronisiert
+  ( 22. April 2015 ).
 
 
-## Änderungen für 2.1 ##
+## Änderungen in 2.1 ##
 * Die Erweiterung übersetzt nun den Text aus der Zwischenablage mittels
   nvda+y
 
-## Änderungen für 2.0 ##
+## Änderungen in 2.0 ##
 * Einstellungsdialog zur Wahl der Ein- und Ausgabesprache hinzugefügt.
 * Menü für die Erweiterung im Einstellungen-Menü hinzugefügt.
 * Einstellungen werden in eine separate Datei geschrieben.
 * Übersetzungsergebnisse  werden nun automatisch in die Zwischenablage
   kopiert, um diese weiter verwenden zu können.
 
-## Änderungen für 1.0 ##
+## Änderungen in 1.0 ##
 * Erstveröffentlichung
 
 
 [[!tag dev]]
 
-[1]: http://addons.nvda-project.org/files/get.php?file=it
+[1]: https://addons.nvda-project.org/files/get.php?file=it
 
-[2]: http://addons.nvda-project.org/files/get.php?file=it-dev
+[2]: https://addons.nvda-project.org/files/get.php?file=it-dev

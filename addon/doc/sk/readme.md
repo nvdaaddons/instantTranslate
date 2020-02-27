@@ -1,59 +1,92 @@
-# instantTranslate #
+# Rýchly prekladač #
 
-* Authors: Alexy Sadovoy, Beqa Gozalishvili, Mesar Hameed, Alberto Buffolino
-  and other nvda contributors.
-* Download [version 3.0-dev][1]
+* Autori: Alexy Sadovoy, Beqa Gozalishvili, Mesar Hameed, Alberto Buffolino
+  a ďalší.
+* Stiahnuť [stabilnú verziu][1]
+* Stiahnuť [Vývojovú verziu][2]
 
 pomocou tohto doplnku môžete prekladať vybratý text, alebo text umiestnený v
-schránke pomocou služby Prekladač Google.
+schránke. Na prekladanie sa používa externá služba.
 
 ## nastavenie jazykov ##
-To configure source, target and in case swap language, from NVDA menu, go to
-Preferences, then go to Instant Translate Settings.  There are three combo
-boxes labeled "translate from", "translate into" and "Language for swapping"
-(if you selected auto option from source languages).
+Zdrojový a cieľový jazyk a otáčanie jazykov nastavíte v menu nvda > nastavenia > Rýchly prekladač.
 
-If you selected the auto option from source languages, there is also a
-checkbox about the auto-swap: if you activate it, then the addon tries to
-commute automatically from your source and target configuration to a
-configuration where target becomes the source language, and language
-selected in "Language for swapping" combo is the new target language;
-extremely useful if the source language of the text you want translate is
-the target language.
+Sú tu dva zoznamy označené ako "zdrojový jazyk", "Cieľový jazyk" a
+začiarkávacie políčko, ktoré určuje, či sa bude preložený text automaticky
+kopírovať do schránky.
 
-However, this is a temporary configuration, if this option has no effect
-(it's experimental), try to commute manually to a stable configuration,
-using the gesture for swapping described below.
+Ak zvolíte ako zdrojový jazyk možnosť automaticky, pribudne v dialógu
+možnosť nastaviť jazyk pre automatické otáčanie a začiarkávacie políčko,
+ktorého začiarknutím zaistíte automatické otáčanie.
 
-## Ako prekladať ##
-Máte dve možnosti:
+Nastavenie zdrojového a cieľového jazyka je jasné. Preto si vysvetlíme
+ostatné nastavenia. Budeme predpokladať, že sme ako zdrojový jazyk zvolili
+možnosť automaticky.
 
-1. Select some text using selection commands (shift with arrow keys, for
-   example). Then press Shift+NVDA+T to translate the selected text. Then
-   the translated string will be read, providing that the synthesizer you
-   are using supports the target language.
-2. Copy some text to clipboard. Then press Shift+NVDA+Y to translate the
-   text in the clipboard to the target language.
+Jazyk, ktorý zvolíte v zozname "Sekundárny jazyk" sa použije, ak otočíte
+jazyky pomocou klávesovej skratky (popíšeme neskôr). Ak dáte preložiť text z
+rovnakého jazyka, ako je zdrojový jazyk, doplnok bude predpokladať, že ako
+zdrojový jazyk má použiť práve tento sekundárny jazyk.
 
-## Other useful commands ##
-* NVDA+shift+r: pressed once, announce current configuration; pressed twice,
-  swap source and target languages.
+Predpokladajme, že zvyčajne prekladáte do angličtiny. Niekedy ale chcete
+preložiť anglický text do taliančiny. Preto si nastavíte "sekundárny jazyk"
+na taliančinu.
 
-## Changes for 3.0 ##
-* Implemented swapping languages.
-* Changed configuration format, now we can change instant translate settings
-  if we are in readonly pane, but remember that this will work before first
-  restart of nvda.
-* Removed limit on amount of text that can be translated.
+Ak ste ako zdrojový jazyk vybrali možnosť automatická detekcia, môžete stále
+začiarknuť možnosť automatické otáčanie: ak ju začiarknete, doplnok sa
+pokúsi zistiť z akého do akého jazyka má prekladať, pričom bude vychádzať z
+jazyka, ktorý nastavíte v zozname "sekundárny jazyk". Toto je užitočné, ak
+prekladáte do nejakého jazyka a niekedy naopak potrebujete prekladať z tohto
+jazyka do iného jazyka.
+
+Ak napríklad prekladáte text z iného ako anglického jazyka, dostanete
+preklad do angličtiny. Ak ale zadáte na preloženie text v angličtine,
+doplnok rozpozná jazyk a automaticky bude prekladať do taliančiny.
+
+Upozorňujeme, že táto funkcia je experimentálna a nemusí správne
+fungovať. Ak narazíte na problémy, otočte jazyky ručne pomocou klávesovej
+skratky.
+
+## Použitie ##
+Ako prekladať
+
+1. Vyberte nejaký text (napríklad pomocou shift+šípky). Potom stlačte
+   príslušné klávesové skratky. NVDA prečíta preložený text.
+2. Takisto môžete prekladať text zo schránky.
+
+## Klávesové skratky ##
+Pred Každým príkazom najprv stlačte skratku NVDA+SHIFT+t.
+
+* T: Preloží vybratý text,
+* shift+t: preloží text v schránke,
+* S: Otočí zdrojový a cieľový jazyk,
+* A: Oznámi nastavenie jazykov,
+* C: Skopíruje preklad do schránky.
+* I: Zistí jazyk vybratého textu,
+* H: Oznámi dostupné klávesové skratky.
+
+## Zmeny vo verzii 4.1 ##
+* Namiesto Google sa teraz na preklad používa služba Yandex.
+
+## Zmeny vo verzii 4.0 ##
+* Text bude automaticky preložený po výmene jazykov.
+* Opravené problémy s pamäťou.
+
+## Zmeny vo verzii 3.0 ##
+* Prerobené klávesovéskratky. Všetky príkazy odteraz začínajú skratkou
+  NVDA+Shift+t. Zoznam skratiek nájdete v časti klávesové skratky.
+* Implementované otáčanie jazykov.
+* Zmenil sa formát ukladania konfigurácie. Nastavenia sa dajú meniť aj v
+  prípade, že je médium Iba na čítanie, nastavenia platia len po najbližší
+  reštart NVDA.
+* odstránený limit, P
 * pridaná skratka pre nastavenia Instant translate do názvu položky v menu
-* The auto option is now in first position in source combo, and absent in
-  target combo.
+* Možnosť automaticky detegovať jazyk je ako prvá v zozname zdrojový jazyk a
+  bola odstránená zo zoznamu do jazyka
 * pridané začiarkavacie políčko na nastavenie kopírovania prekladu.
 * Konfiguračný súbor je v hlavnom adresáry s nastaveniami.
-* Nové preklady: Aragónčina, arabčina, brazílska portugalčina, chorvátčina,
-  holandčina, fínčina, francúzština, galícijčina, nemčina, maďarčina,
-  taliančina, japončina, kórejčina, nepálčina, poľština, slovenčina,
-  slovinčina, španielčina, tamilčina, turečtina.
+* Pridané všetky podporované jazyky Google (sta k 22. 4. 2015).
+
 
 ## Zmeny vo verzii 2.1 ##
 * NVDA+shift+y preloží text v schránke.
@@ -67,6 +100,9 @@ Máte dve možnosti:
 ## Zmeny vo verzii 1.0 ##
 * Prvé vydanie.
 
+
 [[!tag dev]]
 
-[1]: http://addons.nvda-project.org/files/get.php?file=it-dev
+[1]: https://addons.nvda-project.org/files/get.php?file=it
+
+[2]: https://addons.nvda-project.org/files/get.php?file=it-dev

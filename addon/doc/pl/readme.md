@@ -5,8 +5,8 @@
 * Pobierz [wersja stabilna][1]
 * Pobierz [wersja rozwojowa][2]
 
-This add-on is used to translate selected and/or clipboard text from one
-language to another.  This is done using an external service.
+Ta wtyczka tłumaczy tekst ze schowka lub zaznaczenia z jednego języka na
+drugi. W tym celu używana jest usługa zewnętrzna.
 
 ## konfigurowanie języków ##
 Aby skonfigurować język źródłowy, docelowy, oraz ewentualnie język zamiany, idź do: menu NVDA >> Ustawienia >> Ustawienia Instant Translate.
@@ -82,10 +82,20 @@ Wszystkie poniższe polecenia muszą być wywołane po klawiszu modyfikatora
 * I: identyfikuje język zaznaczonego tekstu,
 * H: przedstawia użytkownikowi wszystkie dostępne polecenia.
 
+## Zmiany dla wersji 4.1 ##
+* Wtyczka Instant translate działa poprawnie, ale teraz zamiast Google
+  translate, używa yandexa.
+
+## zmiany dla wersji 4.0 ##
+* wyniki tłumaczenia automatycznie kopiowane są do schowka po zamiany
+  języka.
+* Poprawiony błąd z cache.
+
 ## zmiany dla wersji 3.0 ##
-* Change way how Shortcuts are used, now you can press instantTranslate
-  modifier key "NVDA+Shift+t", and then single letter key to perform some
-  action (see all Commands in the "Shortcuts" section).
+* Zmieniono sposób użycia klawiszy skrótu, obecnie możesz nacisnąć klawisz
+  modyfikatora instantTranslate "NVDA+Shift+t",  a następnie pojedynczą
+  literę dla wykonania określonej akcji {wszystkie polecenia w sekcji
+  "Klawisze skrótu"}.
 * Zaimplementowana zamiana języków.
 * Zmieniony format konfiguracji, teraz możemy zmieniać ustawienia dodatku w
   panelu tylko do odczytu, ale proszę pamiętać, że będzie to działać przed
@@ -115,6 +125,6 @@ Wszystkie poniższe polecenia muszą być wywołane po klawiszu modyfikatora
 
 [[!tag dev]]
 
-[1]: http://addons.nvda-project.org/files/get.php?file=it
+[1]: https://addons.nvda-project.org/files/get.php?file=it
 
-[2]: http://addons.nvda-project.org/files/get.php?file=it-dev
+[2]: https://addons.nvda-project.org/files/get.php?file=it-dev

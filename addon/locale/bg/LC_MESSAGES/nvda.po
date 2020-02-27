@@ -8,9 +8,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: instantTranslate 2.2beta1\n"
-"Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
+"Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2013-04-11 05:45+0100\n"
-"PO-Revision-Date: 2015-08-16 03:20+0200\n"
+"PO-Revision-Date: 2019-03-10 15:02+0200\n"
 "Last-Translator: Zahari Yurukov <zahari.yurukov@gmail.com>\n"
 "Language-Team: Български <>\n"
 "Language: bg\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
-"X-Generator: Poedit 1.5.4\n"
+"X-Generator: Poedit 1.6.10\n"
 
 msgid ""
 "Instant Translate layer commands. t translates selected text, shift+t "
@@ -28,7 +28,7 @@ msgid ""
 msgstr ""
 "Команди за слоя на Незабавен превод. t превежда маркирания текст, shift+t "
 "превежда текста от клипборда, a докладва текущата конфигурация за размяна, s "
-"разменя текущия и желания език, c копира последният превод в клипборда, i "
+"разменя текущия и желания език, c копира последния превод в клипборда, i "
 "разпознава езика на маркирания текст."
 
 #. Translators: name of the option in the menu.
@@ -68,7 +68,6 @@ msgid "Languages swapped"
 msgstr "Езиците са разменени"
 
 #. Translators: message presented to announce the current source and target languages.
-#, python-brace-format
 msgid "Translate: from {lang1} to {lang2}"
 msgstr "Превод: от {lang1} на {lang2}"
 
@@ -90,7 +89,7 @@ msgstr "Няма съхранен превод"
 
 #. Translators: Presented in input help mode.
 msgid "It copies the last translation to clipboard"
-msgstr "Копира последният превод в клипборда"
+msgstr "Копира последния превод в клипборда"
 
 msgid "Language is..."
 msgstr "Езикът е..."
@@ -107,7 +106,7 @@ msgid ""
 msgstr ""
 "t превежда маркирания текст, shift+t превежда текста от клипборда, a "
 "докладва текущата конфигурация за размяна, s разменя текущия и желания език, "
-"c копира последният превод в клипборда, i разпознава езика на маркирания "
+"c копира последния превод в клипборда, i разпознава езика на маркирания "
 "текст, h извежда това съобщение."
 
 #. Translators: name of the dialog.
@@ -210,7 +209,7 @@ msgid ""
 "You have installed an old and incompatible version of this addon. Do you "
 "want to uninstall the old version?"
 msgstr ""
-"Имате инсталирана най-вероятно стара и несъвместима версия на тази добавка. "
+"Най-вероятно имате инсталирана стара и несъвместима версия на тази добавка. "
 "Желаете ли да деинсталирате старата версия?"
 
 #. Translators: the title of a message box dialog.
@@ -230,67 +229,3 @@ msgid ""
 msgstr ""
 "Тази добавка превежда маркиран или намиращ се в клипборда текст чрез "
 "услугата Google Translate и ви го предоставя."
-
-#~ msgid "Translating..."
-#~ msgstr "В процес на превод..."
-
-#~ msgid ""
-#~ "When pressed once, announces the current source and target languages. "
-#~ "Pressed twice will swap source and target."
-#~ msgstr ""
-#~ "При еднократно натискане съобщава текущо зададените езици за превод. "
-#~ "Двукратното натискане разменя местата им."
-
-#~ msgid "Arabic"
-#~ msgstr "арабски"
-
-#~ msgid "Bangla"
-#~ msgstr "бангла"
-
-#~ msgid "Welsh"
-#~ msgstr "уелски"
-
-#~ msgid "Gujarati"
-#~ msgstr "гуджарати"
-
-#~ msgid "Armenian"
-#~ msgstr "арменски"
-
-#~ msgid "Norwegian"
-#~ msgstr "норвежки"
-
-#~ msgid "Serbian (Latin)"
-#~ msgstr "Сръбски (латиница)"
-
-#~ msgid "Swahili"
-#~ msgstr "суахили"
-
-#~ msgid "Chinese (Simplified)"
-#~ msgstr "китайски (опростен)"
-
-#~ msgid "Chinese (Traditional)"
-#~ msgstr "китайски (традиционен)"
-
-#~ msgid ""
-#~ "Instant Translate - Translates given text using the Google Translate "
-#~ "service."
-#~ msgstr ""
-#~ "Незабавен превод - Превежда даден текст, използвайки услугата Google "
-#~ "Translate."
-
-#~ msgid ""
-#~ "The clipboard contains a large portion of text. It is %s characters long. "
-#~ "The limit is 1500 characters."
-#~ msgstr ""
-#~ "Клипбордът съдържа голямо количество текст. Дължината му е %s символа. "
-#~ "Ограничението е 1500 символа."
-
-#~ msgid ""
-#~ "The selection contains a large portion of text. It is %s characters long. "
-#~ "The limit is 1500 characters."
-#~ msgstr ""
-#~ "Маркирали сте голямо количество текст. Дължината му е %s символа. "
-#~ "Ограничението е 1500 символа."
-
-#~ msgid "Error translating text. See log for details"
-#~ msgstr "Грешка при превода на текста. За повече информация вижте протокола"

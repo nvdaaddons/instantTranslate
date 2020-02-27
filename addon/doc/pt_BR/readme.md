@@ -87,6 +87,14 @@ Todos os seguintes comandos devem ser pressionados após a tecla modificadora
 * I: identifica o idioma do texto selecionado,
 * H: Anuncia ao usuário todos os comandos disponíveis.
 
+## Mudanças na 4.1 ##
+* O Tradutor Instantâneo funciona novamente, agora com o serviço Yandex
+  translator ao invés do Google.
+
+## Mudanças na 4.0 ##
+* Tradução é executada automaticamente após alternância.
+* Bug de cache corrigido.
+
 ## Mudanças na 3.0 ##
 * Alterado o modo como os atalhos são usados, agora pode pressionar a tecla
   modificadora do InstantTranslate "NVDA+Shift+t" e então uma tecla única
@@ -125,6 +133,6 @@ Todos os seguintes comandos devem ser pressionados após a tecla modificadora
 
 [[!tag dev]]
 
-[1]: http://addons.nvda-project.org/files/get.php?file=it
+[1]: https://addons.nvda-project.org/files/get.php?file=it
 
-[2]: http://addons.nvda-project.org/files/get.php?file=it-dev
+[2]: https://addons.nvda-project.org/files/get.php?file=it-dev

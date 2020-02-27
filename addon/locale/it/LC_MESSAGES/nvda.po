@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: 'InstantTranslate' '3.0'\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2013-02-09 18:30+0100\n"
-"PO-Revision-Date: 2015-05-22 15:46+0100\n"
+"PO-Revision-Date: 2016-02-26 02:10-0800\n"
 "Last-Translator: Simone Dal Maso <simone.dalmaso@juvox.it>\n"
 "Language-Team: Alberto Buffolino, Simone Dal Maso <a.buffolino@gmail.com, "
 "simone.dalmaso@gmail.com>\n"
@@ -16,7 +16,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8\n"
+"X-Generator: Poedit 1.5.5\n"
 
 msgid ""
 "Instant Translate layer commands. t translates selected text, shift+t "
@@ -66,7 +66,6 @@ msgid "Languages swapped"
 msgstr "Lingue scambiate"
 
 #. Translators: message presented to announce the current source and target languages.
-#, python-brace-format
 msgid "Translate: from {lang1} to {lang2}"
 msgstr "Traduce: da {lang1} a {lang2}"
 
@@ -229,92 +228,3 @@ msgid ""
 msgstr ""
 "Questo componente aggiuntivo traduce e annuncia il testo selezionato o "
 "presente negli appunti utilizzando il servizio Google Translate."
-
-#~ msgid "Translating..."
-#~ msgstr "Traduzione in corso..."
-
-#~ msgid ""
-#~ "When pressed once, announces the current source and target languages. "
-#~ "Pressed twice will swap source and target."
-#~ msgstr ""
-#~ "Se premuto una volta, annuncia le lingue di origine e di destinazione "
-#~ "correnti. Premuto due volte verranno scambiate le lingue."
-
-#~ msgid "Arabic"
-#~ msgstr "Araba"
-
-#~ msgid "Bangla"
-#~ msgstr "Bangla"
-
-#~ msgid "Welsh"
-#~ msgstr "Gallese"
-
-#~ msgid "Gujarati"
-#~ msgstr "Gujarati"
-
-#~ msgid "Armenian"
-#~ msgstr "Armena"
-
-#~ msgid "Norwegian"
-#~ msgstr "Norvegese"
-
-#~ msgid "Serbian (Latin)"
-#~ msgstr "Serba"
-
-#~ msgid "Swahili"
-#~ msgstr "Swahili"
-
-#~ msgid "Chinese (Simplified)"
-#~ msgstr "Cinese (semplificato)"
-
-#~ msgid "Chinese (Traditional)"
-#~ msgstr "Cinese (tradizionale)"
-
-#~ msgid ""
-#~ "Instant Translate - Translates given text using the Google Translate "
-#~ "service."
-#~ msgstr ""
-#~ "Instant Translate - Traduce il testo selezionato tramite il servizio "
-#~ "Google Translate."
-
-#~ msgid ""
-#~ "The clipboard contains a large portion of text. It is %s characters long. "
-#~ "The limit is 1500 characters."
-#~ msgstr ""
-#~ "Gli appunti contengono una grande porzione di testo. Si tratta di %s "
-#~ "caratteri. Il limite è di 1500 caratteri."
-
-#~ msgid ""
-#~ "The selection contains a large portion of text. It is %s characters long. "
-#~ "The limit is 1500 characters."
-#~ msgstr ""
-#~ "La selezione contiene una grande quantità di testo. Il totale ammonta a "
-#~ "%s caratteri. Il limite è di 1500 caratteri."
-
-#~ msgid "Error translating text. See log for details"
-#~ msgstr ""
-#~ "Errore nella traduzione del testo. Vedere il log per ulteriori "
-#~ "informazioni"
-
-#~ msgid "Select Languages from which text will be translated from, and into."
-#~ msgstr "Seleziona la lingua da e verso cui si desidera tradurre."
-
-#~ msgid ""
-#~ "Select language from which you want to translate from and into and press "
-#~ "ok."
-#~ msgstr "Seleziona la lingua da cui si desidera tradurre e premere ok."
-
-#~ msgid "Into Language:"
-#~ msgstr "Alla lingua:"
-
-#~ msgid ""
-#~ "This addon translates selected text via Google Translator and says it. "
-#~ "Press NVDA+Shift+T for execute translation operation on selected text in "
-#~ "Reech edit fields. This addon was been repacked and optimized for "
-#~ "executing without standalone Python by Outsider <outsidepro@rambler.ru>."
-#~ msgstr ""
-#~ "Questo componente aggiuntivo traduce il testo selezionato tramite Google "
-#~ "Translator e lo annuncia. Premere NVDA + Shift + T per eseguire "
-#~ "l'operazione di traduzione sul testo selezionato in un campo editazione. "
-#~ "Questo componente aggiuntivo è stato ottimizzato per l'esecuzione senza "
-#~ "Python standalone da Outsider <outsidepro@rambler.ru>."

@@ -5,8 +5,8 @@
 * Download [versione stabile][1]
 * Download [versione in sviluppo][2]
 
-This add-on is used to translate selected and/or clipboard text from one
-language to another.  This is done using an external service.
+Questo add-on viene utilizzato per tradurre del testo selezionato oppure
+presente negli appunti da una lingua ad un'altra.
 
 ## Configurazione delle lingue ##
 Per configurare la lingua di origine, di destinazione e, nel caso, di scambio, andare in: menu di NVDA >> Preferenze >> Instant Translate - Impostazioni.
@@ -87,6 +87,14 @@ Tutti i comandi seguenti devono essere premuti dopo il tasto modificatore
 * I: identifica la lingua del testo selezionato,
 * H: annuncia tutti i comandi disponibili all'utente.
 
+## Modifiche nella versione 4.1 ##
+* Instant Translate funziona di nuovo, ora con il servizio fornito da Yandex
+  invece di Google.
+
+## Modifiche nella versione 4.0 ##
+* Le traduzioni vengono effettuate automaticamente dopo lo scambio lingue.
+* Risolto un bug sulla cache.
+
 ## Modifiche nella versione 3.0 ##
 * Cambiato l'uso delle combinazioni di tasti, ora si può premere il tasto
   Instant Translate "NVDA+Shift+t", e poi lettere singole per eseguire una
@@ -126,6 +134,6 @@ Tutti i comandi seguenti devono essere premuti dopo il tasto modificatore
 
 [[!tag dev]]
 
-[1]: http://addons.nvda-project.org/files/get.php?file=it
+[1]: https://addons.nvda-project.org/files/get.php?file=it
 
-[2]: http://addons.nvda-project.org/files/get.php?file=it-dev
+[2]: https://addons.nvda-project.org/files/get.php?file=it-dev
