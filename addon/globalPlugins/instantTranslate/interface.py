@@ -7,6 +7,7 @@
 #See the file COPYING for more details.
 
 import os.path
+import sys
 import wx
 import gui
 from .langslist import langslist
@@ -85,7 +86,11 @@ class InstantTranslateSettingsPanel(gui.SettingsPanel):
 		keys=list(langslist.keys())
 		auto=lngModule.g("auto")
 		keys.remove(auto)
-		keys.sort(key=strxfrm)
+		if sys.version_info[0] >= 3:
+			keys.sort(key=strxfrm)
+		else:
+			# Python 2: strxfrm does not seem to work correctly, so do not use locale rules for sorting.
+			keys.sort()
 		choices=[]
 		choices.append(auto)
 		choices.extend(keys)

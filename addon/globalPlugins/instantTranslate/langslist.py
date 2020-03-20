@@ -26,12 +26,16 @@ needed_codes = {
 	# Translators: The name of a language supported by this add-on.
 	"eo":_("Esperanto"),
 	# Translators: The name of a language supported by this add-on.
+	"haw":_("Hawaiian"),
+	# Translators: The name of a language supported by this add-on.
 	"hmn":_("Hmong"),
 	# Translators: The name of a language supported by this add-on.
 	"ht":_("Creole Haiti"),
 	# Translators: The name of a language supported by this add-on.
 	"jv":_("Javanese"),
 	# Translators: The name of a language supported by this add-on.
+	# Translators: The name of a language supported by this add-on.
+	"ku":_("Kurdish"),
 	"la":_("Latin"),
 	# Translators: The name of a language supported by this add-on.
 	"mg":_("Malagasy"),
@@ -39,6 +43,8 @@ needed_codes = {
 	"my":_("Myanmar (Burmese)"),
 	# Translators: The name of a language supported by this add-on.
 	"ny":_("Chichewa"),
+	# Translators: The name of a language supported by this add-on.
+	"sd":_("Sindhi"),
 	# Translators: The name of a language supported by this add-on.
 	"sm":_("Samoan"),
 	# Translators: The name of a language supported by this add-on.
@@ -126,12 +132,14 @@ langcodes = [
 	"nl",
 	"no",
 	"ny",
+	"or",
 	"pa",
 	"pl",
 	"ps",
 	"pt",
 	"ro",
 	"ru",
+	"rw",
 	"sd",
 	"si",
 	"sk",
@@ -149,8 +157,11 @@ langcodes = [
 	"te",
 	"tg",
 	"th",
+	"tk",
 	"tl",
 	"tr",
+	"tt",
+	"ug",
 	"uk",
 	"ur",
 	"uz",
