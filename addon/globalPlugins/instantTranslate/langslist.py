@@ -63,8 +63,8 @@ needed_codes = {
 
 langcodes = [
 	"auto",
-	"am",
 	"af",
+	"am",
 	"ar",
 	"az",
 	"be",
