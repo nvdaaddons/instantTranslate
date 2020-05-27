@@ -26,6 +26,8 @@ A simple example: take again in mind the situation  imagined previously; if you 
 
 Anyway, this is a temporary configuration; if this option has no effect (it's experimental), try to commute manually to a stable configuration, using the gesture for swapping described below. It's experimental because in some situations (with short texts, tipically), Google does not recognize the real source language correctly, and you have to swap languages manually via script, so to force the source language to be the previous target language (English in our example).
 
+At least, in the speech settings parameters dialog (NVDA Menu >> Preferences >> Speech), you may want to check the "Automatic language switching (when supported)" option. This way, if you are using a multi-lingual synthesizer, the translation will be announced using the target language voice of the synthesizer.
+
 ## Using ##
 You can use this add-on in two ways:
 
@@ -41,7 +43,26 @@ All following commands must be pressed after modifier key "NVDA+Shift+t":
 * A: announce current configuration,
 * C: copy last result to clipboard,
 * I: identify the language of selected text,
+* O: open translation settings dialog
 * H: announces all available commands to user.
+
+## Changes for 4.4 ##
+* Instant translate is now compatible with NVDA 2019.3 (Python 3 versions of NVDA)
+
+## Changes for 4.3 ##
+* nvda compatibility fix Now instant translate will be compatible with latest nvda builds.
+* found a way to use google as a translation service again.
+
+## Changes for 4.2 ##
+* Restored working state with newer versions of nvda.
+* Restored automatic language detection.
+
+## Changes for 4.1 ##
+* InstantTranslate is working again, now with Yandex translator service instead of Google.
+
+## Changes for 4.0 ##
+* Translation is automatically performed after swapping.
+* Cache bug fixed.
 
 ## Changes for 3.0 ##
 * Change way how Shortcuts are used, now you can press instantTranslate modifier key "NVDA+Shift+t", and then single letter key to perform some action (see all Commands in the "Shortcuts" section).
@@ -53,7 +74,6 @@ All following commands must be pressed after modifier key "NVDA+Shift+t":
 * Added a checkbox for configuring copying translation results.
 * Store config file in the root of settings folder.
 * Source and target languages syncronized with what Google Translate currently exposes (22 Apr 2015).
-
 
 ## Changes for 2.1 ##
 * Now addon can translate text from clipboard when pressing nvda+shift+y. 

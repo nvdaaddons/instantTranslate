@@ -1,5 +1,5 @@
 #interface.py
-# Copyright (C) 2012-2014 Aleksey Sadovoy AKA Lex <lex@progger.ru>,
+# Copyright (C) 2012-2016 Aleksey Sadovoy AKA Lex <lex@progger.ru>,
 #ruslan <ru2020slan@yandex.ru>,
 #beqa <beqaprogger@gmail.com>
 #other nvda contributors
@@ -7,24 +7,25 @@
 #See the file COPYING for more details.
 
 import os.path
+import sys
 import wx
 import gui
-from langslist import langslist
-import langslist as lngModule
+from .langslist import langslist
+from . import langslist as lngModule
 import globalVars
 import config
-import _config
 import addonHandler
+from copy import deepcopy
+from locale import strxfrm
 
-_config.load()
 addonHandler.initTranslation()
 
-class InstantTranslateSettingsDialog(gui.SettingsDialog):
+class InstantTranslateSettingsPanel(gui.SettingsPanel):
 	# Translators: name of the dialog.
-	title = _("Instant Translate Settings")
+	title = _("Instant Translate")
 
 	def __init__(self, parent):
-		super(InstantTranslateSettingsDialog, self).__init__(parent)
+		super(InstantTranslateSettingsPanel, self).__init__(parent)
 
 	def makeSettings(self, sizer):
 		# Translators: Help message for a dialog.
@@ -36,8 +37,11 @@ class InstantTranslateSettingsDialog(gui.SettingsDialog):
 		fromLabel = wx.StaticText(self, label=_("Source language:"))
 		fromSizer.Add(fromLabel)
 		# list of choices, in alphabetical order but with auto in first position
-		temp=self.prepareChoices()
-		self._fromChoice = wx.Choice(self, choices=temp)
+		temp = self.prepareChoices()
+		# zh-TW is not present in sources, on site
+		temp1 = deepcopy(temp)
+		temp1.remove(lngModule.g("zh-TW"))
+		self._fromChoice = wx.Choice(self, choices=temp1)
 		fromSizer.Add(self._fromChoice)
 		intoSizer = wx.BoxSizer(wx.HORIZONTAL)
 		# Translators: A setting in addon settings dialog.
@@ -51,7 +55,7 @@ class InstantTranslateSettingsDialog(gui.SettingsDialog):
 		sizer.Add(intoSizer)
 		# Translators: A setting in addon settings dialog.
 		self.copyTranslationChk = wx.CheckBox(self, label=_("Copy translation result to clipboard"))
-		self.copyTranslationChk.SetValue(_config.instanttranslateConfig['settings']['copytranslatedtext'])
+		self.copyTranslationChk.SetValue(config.conf['instanttranslate']['copytranslatedtext'])
 		sizer.Add(self.copyTranslationChk)
 		self.swapSizer = wx.BoxSizer(wx.HORIZONTAL)
 		# Translators: A setting in addon settings dialog, shown if source language is on auto.
@@ -63,11 +67,11 @@ class InstantTranslateSettingsDialog(gui.SettingsDialog):
 		sizer.Add(self.swapSizer)
 		# Translators: A setting in addon settings dialog, shown if source language is on auto.
 		self.autoSwapChk = wx.CheckBox(self, label=_("Activate the auto-swap if recognized source is equal to the target (experimental)"))
-		self.autoSwapChk.SetValue(_config.instanttranslateConfig['settings']['autoswap'])
+		self.autoSwapChk.SetValue(config.conf['instanttranslate']['autoswap'])
 		sizer.Add(self.autoSwapChk)
-		iLang_from = self._fromChoice.FindString(self.getDictKey(_config.instanttranslateConfig['translation']['from']))
-		iLang_to = self._intoChoice.FindString(self.getDictKey(_config.instanttranslateConfig['translation']['into']))
-		iLang_swap = self._swapChoice.FindString(self.getDictKey(_config.instanttranslateConfig['translation']['swap']))
+		iLang_from = self._fromChoice.FindString(self.getDictKey(config.conf['instanttranslate']['from']))
+		iLang_to = self._intoChoice.FindString(self.getDictKey(config.conf['instanttranslate']['into']))
+		iLang_swap = self._swapChoice.FindString(self.getDictKey(config.conf['instanttranslate']['swap']))
 		self._fromChoice.Select(iLang_from)
 		self._intoChoice.Select(iLang_to)
 		self._swapChoice.Select(iLang_swap)
@@ -79,10 +83,14 @@ class InstantTranslateSettingsDialog(gui.SettingsDialog):
 		self._fromChoice.SetFocus()
 
 	def prepareChoices(self):
-		keys=langslist.keys()
+		keys=list(langslist.keys())
 		auto=lngModule.g("auto")
 		keys.remove(auto)
-		keys.sort()
+		if sys.version_info[0] >= 3:
+			keys.sort(key=strxfrm)
+		else:
+			# Python 2: strxfrm does not seem to work correctly, so do not use locale rules for sorting.
+			keys.sort()
 		choices=[]
 		choices.append(auto)
 		choices.extend(keys)
@@ -96,17 +104,17 @@ class InstantTranslateSettingsDialog(gui.SettingsDialog):
 			sizer.Hide(self.swapSizer)
 			sizer.Hide(self.autoSwapChk)
 
-	def onOk(self, event):
-		super(InstantTranslateSettingsDialog, self).onOk(event)
+	def onSave(self):
 		# Update Configuration
-		_config.instanttranslateConfig['translation']['from'] = langslist[self._fromChoice.GetStringSelection()]
-		_config.instanttranslateConfig['translation']['into'] = langslist[self._intoChoice.GetStringSelection()]
-		_config.instanttranslateConfig['translation']['swap'] = langslist[self._swapChoice.GetStringSelection()]
-		_config.instanttranslateConfig['settings']['copytranslatedtext'] = self.copyTranslationChk.GetValue()
-		_config.instanttranslateConfig['settings']['autoswap'] = self.autoSwapChk.GetValue()
-		_config.save()
+		config.conf['instanttranslate']['from'] = langslist[self._fromChoice.GetStringSelection()]
+		config.conf['instanttranslate']['into'] = langslist[self._intoChoice.GetStringSelection()]
+		config.conf['instanttranslate']['swap'] = langslist[self._swapChoice.GetStringSelection()]
+		config.conf['instanttranslate']['copytranslatedtext'] = self.copyTranslationChk.GetValue()
+		config.conf['instanttranslate']['autoswap'] = self.autoSwapChk.GetValue()
 
-	def getDictKey (self, currentValue):
-		for key, value in langslist.iteritems():
+	def getDictKey(self, currentValue):
+		for key, value in langslist.items():
 			if value == currentValue:
 				return key
+		# set English if search fails
+		return lngModule.g("en")
