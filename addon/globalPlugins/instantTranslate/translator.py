@@ -48,6 +48,11 @@ def splitChunks(text, chunksize):
 			potentialPos = splitMark.start()
 	yield text[pos:]
 
+# A dictionnary storing non-ISO language code returned by Google.
+# Hebrew: iw (old ISO code) instead of he (actual ISO code)
+# Javanese: jw instead of jv
+langConversionDic = {'iw':'he', 'jw':'jv'}
+
 class Translator(threading.Thread):
 
 	def __init__(self, lang_from, lang_to, text, lang_swap=None, chunksize=3000, *args, **kwargs):
@@ -87,6 +92,7 @@ class Translator(threading.Thread):
 				else:
 				# Case where source language is defined
 					self.lang_detected = response[2]
+				self.lang_detected = langConversionDic.get(self.lang_detected, self.lang_detected)
 #				log.info("firstChunk=%s, lang_from=%s, lang_detected=%s, lang_to=%s, lang_swap=%s"%(self.firstChunk, self.lang_from, self.lang_detected, self.lang_to, self.lang_swap))
 				if self.firstChunk and self.lang_from == "auto" and self.lang_detected == self.lang_to and self.lang_swap is not None:
 					self.lang_to = self.lang_swap

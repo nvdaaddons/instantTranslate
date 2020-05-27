@@ -26,11 +26,15 @@ needed_codes = {
 	# Translators: The name of a language supported by this add-on.
 	"eo":_("Esperanto"),
 	# Translators: The name of a language supported by this add-on.
+	"haw":_("Hawaiian"),
+	# Translators: The name of a language supported by this add-on.
 	"hmn":_("Hmong"),
 	# Translators: The name of a language supported by this add-on.
 	"ht":_("Creole Haiti"),
 	# Translators: The name of a language supported by this add-on.
 	"jv":_("Javanese"),
+	# Translators: The name of a language supported by this add-on.
+	"ku":_("Kurdish"),
 	# Translators: The name of a language supported by this add-on.
 	"la":_("Latin"),
 	# Translators: The name of a language supported by this add-on.
@@ -39,6 +43,12 @@ needed_codes = {
 	"my":_("Myanmar (Burmese)"),
 	# Translators: The name of a language supported by this add-on.
 	"ny":_("Chichewa"),
+	# Translators: The name of a language supported by this add-on.
+	"sd":_("Sindhi"),
+	# Translators: The name of a language supported by this add-on.
+	"sm":_("Samoan"),
+	# Translators: The name of a language supported by this add-on.
+	"sn":_("Shona"),
 	# Translators: The name of a language supported by this add-on.
 	"so":_("Somali"),
 	# Translators: The name of a language supported by this add-on.
@@ -53,6 +63,7 @@ needed_codes = {
 
 langcodes = [
 	"auto",
+	"am",
 	"af",
 	"ar",
 	"az",
@@ -62,6 +73,7 @@ langcodes = [
 	"bs",
 	"ca",
 	"ceb",
+	"co",
 	"cs",
 	"cy",
 	"da",
@@ -75,10 +87,13 @@ langcodes = [
 	"fa",
 	"fi",
 	"fr",
+	"fy",
 	"ga",
+	"gd",
 	"gl",
 	"gu",
 	"ha",
+	"haw",
 	"he",
 	"hi",
 	"hmn",
@@ -97,7 +112,10 @@ langcodes = [
 	"km",
 	"kn",
 	"ko",
+	"ku",
+	"ky",
 	"la",
+	"lb",
 	"lo",
 	"lt",
 	"lv",
@@ -114,14 +132,20 @@ langcodes = [
 	"nl",
 	"no",
 	"ny",
+	"or",
 	"pa",
 	"pl",
+	"ps",
 	"pt",
 	"ro",
 	"ru",
+	"rw",
+	"sd",
 	"si",
 	"sk",
 	"sl",
+	"sm",
+	"sn",
 	"so",
 	"sq",
 	"sr",
@@ -133,12 +157,16 @@ langcodes = [
 	"te",
 	"tg",
 	"th",
+	"tk",
 	"tl",
 	"tr",
+	"tt",
+	"ug",
 	"uk",
 	"ur",
 	"uz",
 	"vi",
+	"xh",
 	"yi",
 	"yo",
 	"zh-CN",
