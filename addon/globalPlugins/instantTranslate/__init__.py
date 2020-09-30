@@ -104,9 +104,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		self.maxCachedResults = 5
 		self.cachedResults = []
 		gui.settingsDialogs.NVDASettingsDialog.categoryClasses.append(InstantTranslateSettingsPanel)
-		global oldSpeak
-		oldSpeak = speech.speak
-		speech.speak = self.mySpeak
+		self._speak = speech.speak
+		speech.speak = self._localSpeak
 		self.lastSpokenText = ''
 
 	def getUpdatedGlobalVars(self):
@@ -152,7 +151,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	script_ITLayer.__doc__=_("Instant Translate layer commands. t translates selected text, shift+t translates clipboard text, a announces current swap configuration, s swaps source and target languages, c copies last result to clipboard, i identify the language of selected text.")
 
 	def terminate(self):
-		speech.speak = oldSpeak
+		speech.speak = self._speak
 		gui.settingsDialogs.NVDASettingsDialog.categoryClasses.remove(InstantTranslateSettingsPanel)
 
 	def script_translateClipboardText(self, gesture):
@@ -309,8 +308,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	# Translators: Presented in input help mode.
 	script_identifyLanguage.__doc__ = _("It identifies the language of selected text")
 
-	def mySpeak(self, sequence, *args, **kwargs):
-		oldSpeak(sequence, *args, **kwargs)
+	def _localSpeak(self, sequence, *args, **kwargs):
+		self._speak(sequence, *args, **kwargs)
 		self.lastSpokenText = speechViewer.SPEECH_ITEM_SEPARATOR.join([x for x in sequence if isinstance(x, str)])
 
 	def script_translateLastSpokenText(self, gesture):
