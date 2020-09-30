@@ -315,6 +315,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def script_translateLastSpokenText(self, gesture):
 		self.lastSpokenText and threading.Thread(target=self.translate, args=(self.lastSpokenText,)).start()
+	script_translateLastSpokenText.__doc__ = _("It translates the last spoken text")
 
 	def script_displayHelp(self, gesture):
 		ui.message(_("t translates selected text, shift+t translates clipboard text, a announces current swap configuration, s swaps source and target languages, c copies last result to clipboard, i identify the language of selected text, o open translation settings dialog, h displays this message."))
