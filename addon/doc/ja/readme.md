@@ -82,7 +82,7 @@
 * 最初のバージョン
 
 
-[[!tag dev]]
+[[!tag dev stable]]
 
 [1]: https://addons.nvda-project.org/files/get.php?file=it
 

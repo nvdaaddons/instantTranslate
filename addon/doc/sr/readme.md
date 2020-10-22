@@ -118,7 +118,7 @@ tastera"NVDA+Šift+t":
 * Prva verzija
 
 
-[[!tag dev]]
+[[!tag dev stable]]
 
 [1]: https://addons.nvda-project.org/files/get.php?file=it
 

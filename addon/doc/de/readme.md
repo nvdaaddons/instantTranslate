@@ -68,7 +68,7 @@ Texten nicht richtig erkennt. Sie müssen die Sprachen manuell per Skript
 wechseln, um die Quellsprache als vorherige Zielsprache zu erzwingen (in
 unserem Beispiel Englisch).
 
-## verwendung ##
+## Verwendung ##
 Sie können diese Erweiterung auf zwei Arten verwenden:
 
 1. Markieren Sie einen Text mit Hilfe von Auswahlbefehlen(z.B. Shift +
@@ -96,7 +96,7 @@ Alle folgenden Befehle müssen nach der zuvor gedrückten Modifikationstaste
 ## Änderungen in 4.0 ##
 * Übersetzungsergebnisse  werden nun automatisch in die Zwischenablage
   kopiert, um diese weiter verwenden zu können.
-* Cache-Problem gelöst
+* Cache-Problem behoben.
 
 ## Änderungen in 3.0 ##
 * Ändert die Art und Weise, wie Shortcuts verwendet werden. Jetzt können Sie
@@ -108,8 +108,8 @@ Alle folgenden Befehle müssen nach der zuvor gedrückten Modifikationstaste
   Sofortübersetzung ändern, wenn Sie sich im Nur-Lesen-Fenster
   befinden. Dies wird nur vor dem ersten Neustart von NVDA funktionieren.
 * Die Begrenzung der Textmenge, die übersetzt werden kann, wurde entfernt.
-* Verknüpfung t zum Menüpunkt Einstellungen für Sofortübersetzung
-  hinzugefügt.
+* Tastenkürzel T zum Menüpunkt für die Einstellungen von Sofortübersetzung
+  hinzugefügt
 * Die Auto-Option befindet sich jetzt an erster Stelle in der
   Quellkombination und fehlt in der Zielkombination.
 * Option hinzugefügt, um festzulegen, ob das Resultat der Übersetzung
@@ -121,7 +121,7 @@ Alle folgenden Befehle müssen nach der zuvor gedrückten Modifikationstaste
 
 ## Änderungen in 2.1 ##
 * Die Erweiterung übersetzt nun den Text aus der Zwischenablage mittels
-  nvda+y
+  NVDA+Y
 
 ## Änderungen in 2.0 ##
 * Einstellungsdialog zur Wahl der Ein- und Ausgabesprache hinzugefügt.
@@ -131,10 +131,10 @@ Alle folgenden Befehle müssen nach der zuvor gedrückten Modifikationstaste
   kopiert, um diese weiter verwenden zu können.
 
 ## Änderungen in 1.0 ##
-* Erstveröffentlichung
+* Erste Version.
 
 
-[[!tag dev]]
+[[!tag dev stable]]
 
 [1]: https://addons.nvda-project.org/files/get.php?file=it
 

@@ -126,7 +126,7 @@ script, so to force the source language to be the previous target language
 * Начальная версия.
 
 
-[[!tag dev]]
+[[!tag dev stable]]
 
 [1]: https://addons.nvda-project.org/files/get.php?file=it
 

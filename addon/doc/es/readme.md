@@ -134,7 +134,7 @@ Todas las órdenes que siguen deben pulsarse después de la tecla modificadora
 * Versión Inicial.
 
 
-[[!tag dev]]
+[[!tag dev stable]]
 
 [1]: https://addons.nvda-project.org/files/get.php?file=it
 

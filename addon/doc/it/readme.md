@@ -133,7 +133,7 @@ Tutti i comandi seguenti devono essere premuti dopo il tasto modificatore
 * Versione Iniziale.
 
 
-[[!tag dev]]
+[[!tag dev stable]]
 
 [1]: https://addons.nvda-project.org/files/get.php?file=it
 
