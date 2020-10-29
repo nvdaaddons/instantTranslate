@@ -106,7 +106,7 @@ Tutti i comandi seguenti devono essere premuti dopo il tasto modificatore
   NVDA.
 * Rimossi i limiti sulla quantità di testo che si poteva tradurre.
 * Aggiunto il tasto rapido t alla voce impostazioni del menu di Instant
-  Translate.
+  Translate
 * L'opzione auto è ora in prima posizione nella casella combinata lingua
   d'origine, e assente in quella di destinazione.
 * Aggiunta una casella di controllo per configurare la copia dei risultati
