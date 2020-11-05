@@ -1,0 +1,229 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: instantTranslate 3.0\n"
+"Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
+"POT-Creation-Date: 2015-05-05 16:47+1000\n"
+"PO-Revision-Date: 2020-11-01 14:06+0200\n"
+"Language: uk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: Volodymyr Pyrih <vp88.mobile@gmail.com>\n"
+"Language-Team: \n"
+"X-Generator: Poedit 2.4.1\n"
+
+msgid ""
+"Instant Translate layer commands. t translates selected text, shift+t "
+"translates clipboard text, a announces current swap configuration, s swaps "
+"source and target languages, c copies last result to clipboard, i identify "
+"the language of selected text."
+msgstr ""
+"Гарячі клавіші Instant Translate. t перекладає виділений текст, shift+t "
+"перекладає текст у буфері обміну, a повідомляє поточну конфігурацію, s міняє "
+"місцями мови оригіналу й перекладу, c копіює останній переклад до буфера "
+"обміну, i визначає мову виділеного тексту."
+
+#. Translators: name of the option in the menu.
+msgid "Instant &Translate Settings..."
+msgstr "Налаштування Instant &Translate..."
+
+#. Translators: tooltip text for the menu item.
+msgid "Select languages to be used for translation."
+msgstr "Оберіть мови для перекладу."
+
+#. Translators: message presented when user presses the shortcut key for translating clipboard text but the clipboard is empty.
+msgid "There is no text on the clipboard"
+msgstr "В буфері обміну немає тексту"
+
+#. Translators: message presented in input help mode, when user presses the shortcut keys for this addon.
+msgid ""
+"Translates clipboard text from one language to another using Google "
+"Translate."
+msgstr ""
+"Перекладає текст у буфері обміну з однієї мови на іншу за допомогою "
+"перекладача Google."
+
+#. Translators: user has pressed the shortcut key for translating selected text, but no text was actually selected.
+#. Translators: user has pressed the shortcut key for identifying the language of selected text, but no text was actually selected.
+msgid "no selection"
+msgstr "немає виділення"
+
+#. Translators: message presented in input help mode, when user presses the shortcut keys for this addon.
+msgid ""
+"Translates selected text from one language to another using Google Translate."
+msgstr ""
+"Перекладає позначений текст з однієї мови на іншу за допомогою перекладача "
+"Google."
+
+#. Translators: message presented to announce that the source and target languages have been swapped.
+msgid "Languages swapped"
+msgstr "Мови змінено"
+
+#. Translators: message presented to announce the current source and target languages.
+#, python-brace-format
+msgid "Translate: from {lang1} to {lang2}"
+msgstr "Перекласти: з {lang1} на {lang2}"
+
+#. Translators: Presented in input help mode.
+msgid "It swaps source and target languages."
+msgstr "Міняє місцями мови оригіналу й перекладу."
+
+#. Translators: Presented in input help mode.
+msgid "It announces the current source and target languages."
+msgstr "Промовляє мову оригіналу й перекладу."
+
+#. Translators: message presented to announce a successful copy
+msgid "Last translation copied in clipboard"
+msgstr "Останній переклад скопійовано в буфер обміну"
+
+#. Translators: message presented to announce no previous translation disponibility
+msgid "No stored translation"
+msgstr "Немає збережених перекладів"
+
+#. Translators: Presented in input help mode.
+msgid "It copies the last translation to clipboard"
+msgstr "Копіює останній переклад у буфер обміну"
+
+msgid "Language is..."
+msgstr "Мова..."
+
+#. Translators: Presented in input help mode.
+msgid "It identifies the language of selected text"
+msgstr "Визначає мову виділеного тексту"
+
+msgid ""
+"t translates selected text, shift+t translates clipboard text, a announces "
+"current swap configuration, s swaps source and target languages, c copies "
+"last result to clipboard, i identify the language of selected text, h "
+"displays this message."
+msgstr ""
+"t перекладає виділений текст, shift+t перекладає текст у буфері обміну, a "
+"повідомляє поточну конфігурацію, s змінює мову оригіналу та перекладу, c "
+"копіює останній переклад у буфер обміну, i визначає мову виділеного тексту, "
+"h показує це повідомлення."
+
+#. Translators: name of the dialog.
+msgid "Instant Translate Settings"
+msgstr "Налаштування Instant Translate"
+
+#. Translators: Help message for a dialog.
+msgid "Select translation source and target language:"
+msgstr "Оберіть мову оригіналу й перекладу:"
+
+#. Translators: A setting in addon settings dialog.
+msgid "Source language:"
+msgstr "Мова оригіналу:"
+
+#. Translators: A setting in addon settings dialog.
+msgid "Target language:"
+msgstr "Мова перекладу:"
+
+#. Translators: A setting in addon settings dialog.
+msgid "Copy translation result to clipboard"
+msgstr "Скопіювати результат перекладу в буфер обміну"
+
+#. Translators: A setting in addon settings dialog, shown if source language is on auto.
+msgid "Language for swapping:"
+msgstr "Мова для зміни:"
+
+#. Translators: A setting in addon settings dialog, shown if source language is on auto.
+msgid ""
+"Activate the auto-swap if recognized source is equal to the target "
+"(experimental)"
+msgstr ""
+"Активувати автозміну, якщо розпізнана мова оригіналу дорівнює мові перекладу "
+"(експериментально)"
+
+#. Translators: An option to automatically detect source language for translation.
+msgid "Automatically detect language"
+msgstr "Автоматично визначати мову"
+
+#. Translators: The name of a language supported by this add-on.
+msgid "Cebuano"
+msgstr "Себуанська"
+
+#. Translators: The name of a language supported by this add-on.
+msgid "Esperanto"
+msgstr "Есперанто"
+
+#. Translators: The name of a language supported by this add-on.
+msgid "Hmong"
+msgstr "хмонзька"
+
+#. Translators: The name of a language supported by this add-on.
+msgid "Creole Haiti"
+msgstr "Креольська Гаїті"
+
+#. Translators: The name of a language supported by this add-on.
+msgid "Javanese"
+msgstr "Яванська"
+
+#. Translators: The name of a language supported by this add-on.
+msgid "Latin"
+msgstr "Латина"
+
+#. Translators: The name of a language supported by this add-on.
+msgid "Malagasy"
+msgstr "Малагасійська"
+
+#. Translators: The name of a language supported by this add-on.
+msgid "Myanmar (Burmese)"
+msgstr "М'янма (Бірманська)"
+
+#. Translators: The name of a language supported by this add-on.
+msgid "Chichewa"
+msgstr "Ньянджа"
+
+#. Translators: The name of a language supported by this add-on.
+msgid "Somali"
+msgstr "Сомалійська"
+
+#. Translators: The name of a language supported by this add-on.
+msgid "Sesotho"
+msgstr "Сесото"
+
+#. Translators: The name of a language supported by this add-on.
+msgid "Sundanese"
+msgstr "Сунданська"
+
+#. Translators: The name of a language supported by this add-on.
+msgid "Tagalog"
+msgstr "Тагальська"
+
+#. Translators: The name of a language supported by this add-on.
+msgid "Yiddish"
+msgstr "Ідиш"
+
+msgid "unavailable"
+msgstr "Недоступно"
+
+#. Translators: the label of a message box dialog.
+msgid ""
+"You have installed an old and incompatible version of this addon. Do you "
+"want to uninstall the old version?"
+msgstr ""
+"Ви встановили стару та несумісну версію додатка. Хочете видалити стару "
+"версію?"
+
+#. Translators: the title of a message box dialog.
+msgid "Uninstall incompatible add-on"
+msgstr "Видалити несумісний додаток"
+
+#. Add-on summary, usually the user visible name of the addon.
+#. Translators: Summary for this add-on to be shown on installation and add-on information.
+msgid "Instant Translate"
+msgstr "Instant Translate"
+
+#. Add-on description
+#. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
+msgid ""
+"This addon translates selected or clipboard text using the Google Translate "
+"service and presents it."
+msgstr ""
+"Цей додаток перекладає виділений текст або текст у буфері обміну за "
+"допомогою перекладача Google та показує його."
