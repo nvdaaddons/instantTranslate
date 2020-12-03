@@ -121,7 +121,7 @@ Alle folgenden Befehle müssen nach der zuvor gedrückten Modifikationstaste
 
 ## Änderungen in 2.1 ##
 * Die Erweiterung übersetzt nun den Text aus der Zwischenablage mittels
-  NVDA+Y
+  NVDA+Y.
 
 ## Änderungen in 2.0 ##
 * Einstellungsdialog zur Wahl der Ein- und Ausgabesprache hinzugefügt.
