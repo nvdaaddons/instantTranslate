@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 'Instant-Translate' '2.1'\n"
-"Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
+"Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2013-02-09 18:30+0100\n"
 "PO-Revision-Date: 2019-01-14 12:34+0100\n"
 "Last-Translator: Nicolai Svendsen <chojiro1990@gmail.com>\n"
