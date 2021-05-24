@@ -17,7 +17,7 @@ addon_info = {
 	# Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 	"addon_description" : _("This addon translates selected or clipboard text using the Yandex Translate service and presents it."),
 	# version
-	"addon_version" : "4.4.2",
+	"addon_version" : "4.4.2-by_grisov",
 	# Author(s)
 	"addon_author" : "Alexy Sadovoy aka Lex <lex@progger.su>, ruslan <ru2020slan@yandex.ru>, beqa <beqaprogger@gmail.com>, Mesar Hameed <mhameed@src.gnome.org>, Alberto Buffolino <a.buffolino@gmail.com>, and other NVDA contributors",
 	# URL for the add-on documentation support
@@ -27,7 +27,7 @@ addon_info = {
 	# Minimum NVDA version supported
 	"addon_minimumNVDAVersion" : "2018.3",
 	# Last NVDA version supported/tested
-	"addon_lastTestedNVDAVersion" : "2020.1"
+	"addon_lastTestedNVDAVersion" : "2021.1"
 }
 
 import os.path

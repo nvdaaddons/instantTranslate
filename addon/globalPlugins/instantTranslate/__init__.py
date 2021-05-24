@@ -28,12 +28,13 @@ import textInfos
 import threading
 import tones
 import ui
-from speech import LangChangeCommand, speak
+from speech.commands import LangChangeCommand
 import braille
 import wx
 import six
 import speech
 import speechViewer
+import versionInfo
 
 _addonDir = os.path.join(os.path.dirname(__file__), "..", "..")
 if isinstance(_addonDir, bytes):
@@ -50,6 +51,8 @@ elif s.startswith("zh"):
 	lo_lang = s.replace('_', '-')
 else:
 	lo_lang = s[0:s.find("_")]
+
+speechModule = speech.speech if versionInfo.version_year>=2021 else speech
 
 confspec = {
 "from": "string(default=auto)",
@@ -104,8 +107,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		self.maxCachedResults = 5
 		self.cachedResults = []
 		gui.settingsDialogs.NVDASettingsDialog.categoryClasses.append(InstantTranslateSettingsPanel)
-		self._speak = speech.speak
-		speech.speak = self._localSpeak
+		self._speak = speechModule.speak
+		speechModule.speak = self._localSpeak
 		self.lastSpokenText = ''
 
 	def getUpdatedGlobalVars(self):
@@ -151,7 +154,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	script_ITLayer.__doc__=_("Instant Translate layer commands. t translates selected text, shift+t translates clipboard text, a announces current swap configuration, s swaps source and target languages, c copies last result to clipboard, i identify the language of selected text.")
 
 	def terminate(self):
-		speech.speak = self._speak
+		speechModule.speak = self._speak
 		gui.settingsDialogs.NVDASettingsDialog.categoryClasses.remove(InstantTranslateSettingsPanel)
 
 	def script_translateClipboardText(self, gesture):
@@ -314,6 +317,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def script_translateLastSpokenText(self, gesture):
 		self.lastSpokenText and threading.Thread(target=self.translate, args=(self.lastSpokenText,)).start()
+	# Translators: Presented in input help mode.
 	script_translateLastSpokenText.__doc__ = _("It translates the last spoken text")
 
 	def script_displayHelp(self, gesture):
