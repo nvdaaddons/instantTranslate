@@ -36,6 +36,9 @@ except:
 import braille
 import wx
 import six
+import speech
+import speechViewer
+from versionInfo import version_year
 
 _addonDir = os.path.join(os.path.dirname(__file__), "..", "..")
 if isinstance(_addonDir, bytes):
@@ -52,6 +55,8 @@ elif s.startswith("zh"):
 	lo_lang = s.replace('_', '-')
 else:
 	lo_lang = s[0:s.find("_")]
+
+speechModule = speech.speech if version_year>=2021 else speech
 
 confspec = {
 "from": "string(default=auto)",
@@ -106,6 +111,9 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		self.maxCachedResults = 5
 		self.cachedResults = []
 		gui.settingsDialogs.NVDASettingsDialog.categoryClasses.append(InstantTranslateSettingsPanel)
+		self._speak = speechModule.speak
+		speechModule.speak = self._localSpeak
+		self.lastSpokenText = ''
 
 	def getUpdatedGlobalVars(self):
 		global lang_from, lang_to, lang_swap, copyTranslation, autoSwap, isAutoSwapped
@@ -306,6 +314,15 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	# Translators: Presented in input help mode.
 	script_identifyLanguage.__doc__ = _("It identifies the language of selected text")
 
+	def _localSpeak(self, sequence, *args, **kwargs):
+		self._speak(sequence, *args, **kwargs)
+		self.lastSpokenText = speechViewer.SPEECH_ITEM_SEPARATOR.join([x for x in sequence if isinstance(x, str)])
+
+	def script_translateLastSpokenText(self, gesture):
+		self.lastSpokenText and threading.Thread(target=self.translate, args=(self.lastSpokenText,)).start()
+	# Translators: Presented in input help mode.
+	script_translateLastSpokenText.__doc__ = _("It translates the last spoken text")
+
 	def script_displayHelp(self, gesture):
 		ui.message(_("t translates selected text, shift+t translates clipboard text, a announces current swap configuration, s swaps source and target languages, c copies last result to clipboard, i identify the language of selected text, o open translation settings dialog, h displays this message."))
 
@@ -319,6 +336,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		"kb:a":"announceLanguages",
 		"kb:c":"copyLastResult",
 		"kb:i":"identifyLanguage",
+		"kb:l":"translateLastSpokenText",
 		"kb:o":"showSettings",
 		"kb:h":"displayHelp",
 	}
