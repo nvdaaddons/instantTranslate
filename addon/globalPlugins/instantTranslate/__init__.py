@@ -28,13 +28,17 @@ import textInfos
 import threading
 import tones
 import ui
-from speech.commands import LangChangeCommand
+from speech import speak
+try:
+	from speech.commands import LangChangeCommand
+except:
+	from speech import LangChangeCommand
 import braille
 import wx
 import six
 import speech
 import speechViewer
-import versionInfo
+from versionInfo import version_year
 
 _addonDir = os.path.join(os.path.dirname(__file__), "..", "..")
 if isinstance(_addonDir, bytes):
@@ -52,7 +56,7 @@ elif s.startswith("zh"):
 else:
 	lo_lang = s[0:s.find("_")]
 
-speechModule = speech.speech if versionInfo.version_year>=2021 else speech
+speechModule = speech.speech if version_year>=2021 else speech
 
 confspec = {
 "from": "string(default=auto)",
@@ -154,7 +158,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	script_ITLayer.__doc__=_("Instant Translate layer commands. t translates selected text, shift+t translates clipboard text, a announces current swap configuration, s swaps source and target languages, c copies last result to clipboard, i identify the language of selected text.")
 
 	def terminate(self):
-		speechModule.speak = self._speak
 		gui.settingsDialogs.NVDASettingsDialog.categoryClasses.remove(InstantTranslateSettingsPanel)
 
 	def script_translateClipboardText(self, gesture):
