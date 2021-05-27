@@ -28,7 +28,11 @@ import textInfos
 import threading
 import tones
 import ui
-from speech import LangChangeCommand, speak
+from speech import speak
+try:
+	from speech.commands import LangChangeCommand
+except:
+	from speech import LangChangeCommand
 import braille
 import wx
 import six
