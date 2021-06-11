@@ -60,7 +60,7 @@ speechModule = speech.speech if version_year>=2021 else speech
 
 confspec = {
 "from": "string(default=auto)",
-"into": "string(default={lo_lang})",
+"into": "string(default={lo_lang})".format(lo_lang=lo_lang),
 "swap": "string(default=en)",
 "copytranslatedtext": "boolean(default=true)",
 "autoswap": "boolean(default=true)",
