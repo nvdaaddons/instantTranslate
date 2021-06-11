@@ -10,6 +10,7 @@ import os.path
 import sys
 import wx
 import gui
+import gui.guiHelper
 from .langslist import langslist
 from . import langslist as lngModule
 import globalVars
@@ -28,47 +29,40 @@ class InstantTranslateSettingsPanel(gui.SettingsPanel):
 		super(InstantTranslateSettingsPanel, self).__init__(parent)
 
 	def makeSettings(self, sizer):
+		helper = gui.guiHelper.BoxSizerHelper(self, sizer=sizer)
+		
 		# Translators: Help message for a dialog.
 		helpLabel = wx.StaticText(self, label=_("Select translation source and target language:"))
-		helpLabel.Wrap(self.GetSize()[0])
 		sizer.Add(helpLabel)
-		fromSizer = wx.BoxSizer(wx.HORIZONTAL)
+		
 		# Translators: A setting in addon settings dialog.
-		fromLabel = wx.StaticText(self, label=_("Source language:"))
-		fromSizer.Add(fromLabel)
+		fromLabelText = _("Source language:")
 		# list of choices, in alphabetical order but with auto in first position
 		temp = self.prepareChoices()
 		# zh-TW is not present in sources, on site
 		temp1 = deepcopy(temp)
 		temp1.remove(lngModule.g("zh-TW"))
-		self._fromChoice = wx.Choice(self, choices=temp1)
-		fromSizer.Add(self._fromChoice)
-		intoSizer = wx.BoxSizer(wx.HORIZONTAL)
+		self._fromChoice = helper.addLabeledControl(fromLabelText, wx.Choice, choices=temp1)
+		
 		# Translators: A setting in addon settings dialog.
-		intoLabel = wx.StaticText(self, label=_("Target language:"))
-		intoSizer.Add(intoLabel)
+		intoLabelText = _("Target language:")
 		# auto has no sense in target
 		temp.remove(lngModule.g("auto"))
-		self._intoChoice = wx.Choice(self, choices=temp)
-		intoSizer.Add(self._intoChoice)
-		sizer.Add(fromSizer)
-		sizer.Add(intoSizer)
-		# Translators: A setting in addon settings dialog.
-		self.copyTranslationChk = wx.CheckBox(self, label=_("Copy translation result to clipboard"))
-		self.copyTranslationChk.SetValue(config.conf['instanttranslate']['copytranslatedtext'])
-		sizer.Add(self.copyTranslationChk)
-		self.swapSizer = wx.BoxSizer(wx.HORIZONTAL)
+		self._intoChoice = helper.addLabeledControl(intoLabelText, wx.Choice, choices=temp)
+		
 		# Translators: A setting in addon settings dialog, shown if source language is on auto.
-		swapLabel = wx.StaticText(self, label=_("Language for swapping:"))
-		self.swapSizer.Add(swapLabel)
-		self._swapChoice = wx.Choice(self, choices=temp)
-		self._fromChoice.Bind(wx.EVT_CHOICE, lambda event, sizer=sizer: self.onFromSelect(event, sizer))
-		self.swapSizer.Add(self._swapChoice)
-		sizer.Add(self.swapSizer)
+		swapLabelText = _("Language for swapping:")
+		self._swapChoice = helper.addLabeledControl(swapLabelText, wx.Choice, choices=temp)
+		self._fromChoice.Bind(wx.EVT_CHOICE, self.onFromSelect)
+		
 		# Translators: A setting in addon settings dialog, shown if source language is on auto.
-		self.autoSwapChk = wx.CheckBox(self, label=_("Activate the auto-swap if recognized source is equal to the target (experimental)"))
+		self.autoSwapChk = helper.addItem(wx.CheckBox(self, label=_("Activate the auto-swap if recognized source is equal to the target (experimental)")))
 		self.autoSwapChk.SetValue(config.conf['instanttranslate']['autoswap'])
-		sizer.Add(self.autoSwapChk)
+		
+		# Translators: A setting in addon settings dialog.
+		self.copyTranslationChk = helper.addItem(wx.CheckBox(self, label=_("Copy translation result to clipboard")))
+		self.copyTranslationChk.SetValue(config.conf['instanttranslate']['copytranslatedtext'])
+				
 		iLang_from = self._fromChoice.FindString(self.getDictKey(config.conf['instanttranslate']['from']))
 		iLang_to = self._intoChoice.FindString(self.getDictKey(config.conf['instanttranslate']['into']))
 		iLang_swap = self._swapChoice.FindString(self.getDictKey(config.conf['instanttranslate']['swap']))
@@ -76,8 +70,8 @@ class InstantTranslateSettingsPanel(gui.SettingsPanel):
 		self._intoChoice.Select(iLang_to)
 		self._swapChoice.Select(iLang_swap)
 		if iLang_from != 0:
-			sizer.Hide(self.swapSizer)
-			sizer.Hide(self.autoSwapChk)
+		 	self._swapChoice.Disable()
+		 	self.autoSwapChk.Disable()
 
 	def postInit(self):
 		self._fromChoice.SetFocus()
@@ -96,13 +90,13 @@ class InstantTranslateSettingsPanel(gui.SettingsPanel):
 		choices.extend(keys)
 		return choices
 
-	def onFromSelect(self, event, sizer):
+	def onFromSelect(self, event):
 		if event.GetString() == lngModule.g("auto"):
-			sizer.Show(self.swapSizer)
-			sizer.Show(self.autoSwapChk)
+			self._swapChoice.Enable()
+			self.autoSwapChk.Enable()
 		else:
-			sizer.Hide(self.swapSizer)
-			sizer.Hide(self.autoSwapChk)
+			self._swapChoice.Disable()
+			self.autoSwapChk.Disable()
 
 	def onSave(self):
 		# Update Configuration
