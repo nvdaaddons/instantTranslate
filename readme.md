@@ -43,6 +43,7 @@ All following commands must be pressed after modifier key "NVDA+Shift+t":
 * A: announce current configuration,
 * C: copy last result to clipboard,
 * I: identify the language of selected text,
+* L: translate the last spoken text,
 * O: open translation settings dialog
 * H: announces all available commands to user.
 
