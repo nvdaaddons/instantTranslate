@@ -15,7 +15,7 @@ addon_info = {
 	"addon_summary" : _("Instant Translate"),
 	# Add-on description
 	# Translators: Long description to be shown for this add-on on add-on information from add-ons manager
-	"addon_description" : _("This addon translates selected or clipboard text using the Yandex Translate service and presents it."),
+	"addon_description" : _("This addon translates selected or clipboard text using the Google Translate service and presents it."),
 	# version
 	"addon_version" : "4.4.2",
 	# Author(s)

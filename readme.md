@@ -24,15 +24,16 @@ Now, the auto-swap checkbox: it appears if and only if you set the auto option i
 
 A simple example: take again in mind the situation  imagined previously; if you translate a text in a language different from English, there is no problem, you get the correct translation in English. But if you need to translate a text from English, normally you get a translation into English identical to original text, and this is a bit useless. Thanks to auto-swap function, however, assuming that you want to know how your text sounds into Italian, the addon commutes automatically the target language to Italian, so it returns a valid translation.
 
-Anyway, this is a temporary configuration; if this option has no effect (it's experimental), try to commute manually to a stable configuration, using the gesture for swapping described below. It's experimental because in some situations (with short texts, tipically), Google does not recognize the real source language correctly, and you have to swap languages manually via script, so to force the source language to be the previous target language (English in our example).
+Anyway, this is a temporary configuration; if this option has no effect (it's experimental), try to commute manually to a stable configuration, using the gesture for swapping described below. It's experimental because in some situations (with short texts, typically), Google does not recognize the real source language correctly, and you have to swap languages manually via script, so to force the source language to be the previous target language (English in our example).
 
 At least, in the speech settings parameters dialog (NVDA Menu >> Preferences >> Speech), you may want to check the "Automatic language switching (when supported)" option. This way, if you are using a multi-lingual synthesizer, the translation will be announced using the target language voice of the synthesizer.
 
 ## Using ##
-You can use this add-on in two ways:
+You can use this add-on in three ways:
 
-1. Select some text using selection commands (shift with arrow keys, for example) and press associated key to translate. translation result willbe read with synthesizer which you are using.
+1. Select some text using selection commands (shift with arrow keys, for example) and press associated key to translate. translation result will be read with synthesizer which you are using.
 2. You can also translate text from the Clipboard.
+3. Press the dedicated shortcut key to translate the last spoken text.
 
 ## Shortcuts ##
 All following commands must be pressed after modifier key "NVDA+Shift+t":
@@ -45,7 +46,7 @@ All following commands must be pressed after modifier key "NVDA+Shift+t":
 * I: identify the language of selected text,
 * L: translate the last spoken text,
 * O: open translation settings dialog
-* H: announces all available commands to user.
+* H: announces all available layered commands.
 
 ## Changes for 4.4.2 ##
 * Restore language detection and auto-swapping (Thanks to Cyrille for fix)
