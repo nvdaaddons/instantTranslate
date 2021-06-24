@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: instantTranslate 3.0\n"
-"Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
+"Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2015-09-11 19:00+1000\n"
 "PO-Revision-Date: 2017-11-15 13:04+0200\n"
 "Last-Translator: shmuel_naaman@yahoo.com\n"

@@ -62,17 +62,17 @@ ciljni jezik (engleski u našem primjeru).
 ## Primjena ##
 Dodatak je moguće koristiti na dva načina:
 
-1. Označi neki tekst koristeći naredbe za označavanje (na primjer shift i
+1. Označi neki tekst koristeći naredbe za označavanje (na primjer šift i
    tipke sa strelicama) i pritisni odgovarajuću tipku za prijevod. Rezultat
    prevođenja će se pročitati pomoću korištene govorne jedinice.
 2. Moguće je prevesti i tekst iz međuspremnika.
 
 ## Tipkovni prečaci ##
 Sve sljedeće naredbe se moraju pritisnuti nakon modifikacijske tipke
-„NVDA+Shift+t”:
+„NVDA+šift+t”:
 
 * T: prevedi označeni tekst,
-* Shift+t: prevedi tekst iz međuspremnika,
+* Šift+t: prevedi tekst iz međuspremnika,
 * S: zamijeni izvorni i ciljni jezik,
 * A: najavi trenutačnu konfiguraciju,
 * C: kopiraj zadnji rezultat u međuspremnik,
@@ -89,7 +89,7 @@ Sve sljedeće naredbe se moraju pritisnuti nakon modifikacijske tipke
 
 ## Promjene u 3.0 ##
 * Promijenjen je način korištenja tipkovnih prečaca, sada za Brzo prevođenje
-  možeš pritisnuti modifikacijsku tipku „NVDA+shift+t”, a nakon toga tipku
+  možeš pritisnuti modifikacijsku tipku „NVDA+šift+t”, a nakon toga tipku
   prvog slova za izvršavanje nekih radnji (vidi sve naredbe u odjeljku
   „Tipkovni prečaci”).
 * Uvedena je zamjena jezika.
@@ -109,7 +109,7 @@ Sve sljedeće naredbe se moraju pritisnuti nakon modifikacijske tipke
 
 ## Promjene u 2.1 ##
 * Sada dodatak može prevoditi tekst iz međuspremnika kad se pritisnu tipke
-  nvda+shift+y.
+  nvda+šift+y.
 
 ## Promjene u 2.0 ##
 * Konfiguratoru je dadano grafičko sučelje gdje je moguće odabrati izvorni i
@@ -124,7 +124,7 @@ Sve sljedeće naredbe se moraju pritisnuti nakon modifikacijske tipke
 * Prva verzija.
 
 
-[[!tag dev]]
+[[!tag dev stable]]
 
 [1]: https://addons.nvda-project.org/files/get.php?file=it
 

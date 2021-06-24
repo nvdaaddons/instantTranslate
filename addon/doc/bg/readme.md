@@ -128,10 +128,10 @@
   използване.
 
 ## Промени във версия 1.0 ##
-* Първоначално издание
+* Първоначално издание.
 
 
-[[!tag dev]]
+[[!tag dev stable]]
 
 [1]: https://addons.nvda-project.org/files/get.php?file=it
 

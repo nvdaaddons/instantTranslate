@@ -123,7 +123,7 @@ Wszystkie poniższe polecenia muszą być wywołane po klawiszu modyfikatora
 * Wstępne wydanie.
 
 
-[[!tag dev]]
+[[!tag dev stable]]
 
 [1]: https://addons.nvda-project.org/files/get.php?file=it
 

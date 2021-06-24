@@ -101,7 +101,7 @@ Pred Každým príkazom najprv stlačte skratku NVDA+SHIFT+t.
 * Prvé vydanie.
 
 
-[[!tag dev]]
+[[!tag dev stable]]
 
 [1]: https://addons.nvda-project.org/files/get.php?file=it
 

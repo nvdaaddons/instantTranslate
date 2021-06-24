@@ -5,9 +5,9 @@
 * Télécharger [version stable][1]
 * Télécharger [[version de développement][2]
 
-Ce module complémentaire permet de traduire le texte sélectionné et ou le
-texte copié dans le presse-papiers d'une langue à une autre.  Il utilise un
-service externe.
+Cette extension permet de traduire le texte sélectionné et ou le texte copié
+dans le presse-papiers d'une langue à une autre.  Il utilise un service
+externe.
 
 ## Configurer les langues ##
 Pour configurer la langue source, destination et dans le cas d'une permutation, allez à : Menu NVDA >> Préférences >> Paramètres d'Instant Translate.
@@ -28,28 +28,27 @@ supposent la langue source, définie sur l'option automatique.
 
 La liste déroulante "Langue d'alternance" est utile lorsque vous permutez
 par script (voir ci-dessous) la langue source et la langue cible ; en effet,
-une langue cible définie sur l'option automatique n'a aucun sens, donc le
-module complémentaire  lui affecte la valeur de la liste déroulante
-ci-dessus.
+une langue cible définie sur l'option automatique n'a aucun sens, donc
+l'extension lui affecte la valeur de la liste déroulante ci-dessus.
 
 Alors, Imaginez cette situation : vous traduisez généralement vers l'Anglais
 (votre langue principale), mais parfois (par exemple, lorsque vous écrivez
 un document), vous avez besoin de traduire vers l'Italien (votre seconde
 langue, supposons); vous pouvez définir la zone de liste déroulante  "Langue
 d'alternance" à l'Italien, donc vous ferez la traduction de l'Anglais vers
-l'Italien sans accéder directement aux paramètres du module
-complémentaire. Évidemment, cette fonction a une utilité majeure ou mineure
+l'Italien sans accéder directement aux paramètres de
+l'extension. Évidemment, cette fonction a une utilité majeure ou mineure
 selon vos besoins plus fréquents.
 
 Maintenant, la case à cocher alternance automatique : elle apparaît si et
 seulement si vous définissez l'option automatique dans la liste déroulante
 "Langue source", et est directement connectée avec la liste déroulante
-"Langue d'alternance". Si vous l'activez, le module complémentaire tente de
-permuter automatiquement depuis la configuration de votre source et
-destination à une configuration où la destination devient la langue source,
-et la langue sélectionnée dans la liste déroulante "Langue d'alternance" est
-la nouvelle langue destination ; très utile si la langue source du texte que
-vous voulez traduire est la langue destination.
+"Langue d'alternance". Si vous l'activez, l'extension tente de permuter
+automatiquement depuis la configuration de votre source et destination à une
+configuration où la destination devient la langue source, et la langue
+sélectionnée dans la liste déroulante "Langue d'alternance" est la nouvelle
+langue destination ; très utile si la langue source du texte que vous voulez
+traduire est la langue destination.
 
 Un exemple simple : reprenons à l'esprit la situation imaginée précédemment
 ; Si vous traduisez un texte dans une langue différente de l'Anglais, il n'y
@@ -57,9 +56,9 @@ a pas de problème, vous obtenez la traduction correcte en Anglais. Mais si
 vous avez besoin de traduire un texte de l'Anglais, normalement vous obtenez
 une traduction en Anglais  identique au texte original, et c'est un peu
 inutile. Grâce à la fonction alternance automatique, cependant, en supposant
-que vous voulez savoir comment votre texte sonne en Italien, le module
-complémentaire commute automatiquement la langue cible à l'Italien, donc
-elle retourne une traduction valide.
+que vous voulez savoir comment votre texte sonne en Italien, l'extension
+commute automatiquement la langue cible à l'Italien, donc elle retourne une
+traduction valide.
 
 En tout cas, il s'agit d'une configuration temporaire ; si cette option n'a
 aucun effet (c'est expérimental), essayez de permuter manuellement à une
@@ -71,7 +70,7 @@ script, afin de forcer la langue source à la langue cible précédente
 (Anglais dans notre exemple).
 
 ## Utilisation ##
-Vous pouvez utiliser ce module complémentaire de deux façons :
+Vous pouvez utiliser cette extension de deux façons :
 
 1. Sélectionnez du texte en utilisant les commandes de sélection (maj avec
    les touches fléchées, par exemple) et appuyez sur la touche associée pour
@@ -137,7 +136,8 @@ modificatrice "NVDA+Maj+t":
 * Version initiale.
 
 
-[[!tag dev]]
+[[!tag dev stable]]
+
 
 [1]: https://addons.nvda-project.org/files/get.php?file=it
 
