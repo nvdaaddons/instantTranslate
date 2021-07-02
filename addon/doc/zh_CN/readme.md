@@ -1,4 +1,4 @@
-# 实时翻译 #
+# 及时翻译 #
 
 * 作者: Alexy Sadovoy, Beqa Gozalishvili, Mesar Hameed, Alberto Buffolino and
   other NVDA contributors.

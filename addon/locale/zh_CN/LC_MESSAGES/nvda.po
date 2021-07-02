@@ -5,81 +5,84 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: instantTranslate 4.1\n"
-"Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
-"POT-Creation-Date: 2013-03-13 16:44+0100\n"
-"PO-Revision-Date: 2019-01-09 07:51+0800\n"
+"Project-Id-Version: instantTranslate\n"
+"Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
+"POT-Creation-Date: 2021-06-13 16:30+0800\n"
+"PO-Revision-Date: 2021-06-19 18:11+0800\n"
 "Last-Translator: dingpengyu <dingpengyu06@gmail.com>\n"
-"Language-Team: NVDASimplified Chinese team All volunteers <Copyright (C) "
-"2010-2019>\n"
+"Language-Team: Cary-Rowen <manchen_0528@outlook.com>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.2\n"
+"X-Generator: Poedit 3.0\n"
 "X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
+#, fuzzy
 msgid ""
 "Instant Translate layer commands. t translates selected text, shift+t "
 "translates clipboard text, a announces current swap configuration, s swaps "
 "source and target languages, c copies last result to clipboard, i identify "
 "the language of selected text."
 msgstr ""
-"实时翻译命令： t 翻译选择的文本， shift+t 翻译剪贴板中的文本， a 朗读当前语言"
+"命令接收面板： t 翻译选择的文本， shift+t 翻译剪贴板中的文本， a 朗读当前语言"
 "配置， s 切换来源和目标语言， c 复制最近的结果到剪贴板， i 显示当前文本的语"
-"言， h 显示此消息"
+"言， l 翻译最后朗读的文本， o 打开翻译设置对话框， h 显示此帮助信息。"
 
 #. Translators: name of the option in the menu.
+#, fuzzy
 msgid "Instant &Translate Settings..."
-msgstr "实时翻译设置(&T)"
+msgstr "及时翻译"
 
 #. Translators: tooltip text for the menu item.
 msgid "Select languages to be used for translation."
-msgstr "选择一个需要翻译的语言。"
+msgstr ""
 
 #. Translators: message presented when user presses the shortcut key for translating clipboard text but the clipboard is empty.
 msgid "There is no text on the clipboard"
-msgstr "未在剪贴板中找到文本"
+msgstr "剪贴板内无文本"
 
 #. Translators: message presented in input help mode, when user presses the shortcut keys for this addon.
 msgid ""
 "Translates clipboard text from one language to another using Google "
 "Translate."
-msgstr "使用 google 翻译将剪贴板上的文本翻译为其他语言。"
+msgstr "翻译剪贴板文本"
 
 #. Translators: user has pressed the shortcut key for translating selected text, but no text was actually selected.
 #. Translators: user has pressed the shortcut key for identifying the language of selected text, but no text was actually selected.
 msgid "no selection"
-msgstr "没有选择的文本"
+msgstr "未选择文本"
 
 #. Translators: message presented in input help mode, when user presses the shortcut keys for this addon.
 msgid ""
 "Translates selected text from one language to another using Google Translate."
-msgstr "使用 google 翻译将剪贴板上的文本翻译为其他语言。"
+msgstr "翻译所选文本。"
 
 #. Translators: message presented to announce that the source and target languages have been swapped.
 msgid "Languages swapped"
-msgstr "语言已交换"
+msgstr "已切换语言。"
 
 #. Translators: message presented to announce the current source and target languages.
+#, python-brace-format
 msgid "Translate: from {lang1} to {lang2}"
 msgstr "翻译：从{lang1}到{lang2}"
 
 #. Translators: Presented in input help mode.
 msgid "It swaps source and target languages."
-msgstr "切换来源和目标语言。"
+msgstr "切换源语言和目标语言。"
 
 #. Translators: Presented in input help mode.
 msgid "It announces the current source and target languages."
-msgstr "朗读当前来源和目标语言。"
+msgstr "朗读元语言和目标语言。"
 
 #. Translators: message presented to announce a successful copy
 msgid "Last translation copied in clipboard"
-msgstr "拷贝最近的翻译结果到剪贴板"
+msgstr "拷贝最后一次翻译结果到剪贴板"
 
 #. Translators: message presented to announce no previous translation disponibility
 msgid "No stored translation"
-msgstr "未存储翻译结果"
+msgstr "未保存翻译结果"
 
 #. Translators: Presented in input help mode.
 msgid "It copies the last translation to clipboard"
@@ -90,8 +93,9 @@ msgstr "语言是..."
 
 #. Translators: Presented in input help mode.
 msgid "It identifies the language of selected text"
-msgstr "显示所选文本的语言"
+msgstr "读出所选文本的语言"
 
+#, fuzzy
 msgid ""
 "t translates selected text, shift+t translates clipboard text, a announces "
 "current swap configuration, s swaps source and target languages, c copies "
@@ -99,20 +103,21 @@ msgid ""
 "displays this message."
 msgstr ""
 "t 翻译选择的文本， shift+t 翻译剪贴板中的文本， a 朗读当前语言配置， s 切换来"
-"源和目标语言， c 复制最近的结果到剪贴板， i 显示当前文本的语言， h 显示此消"
-"息。"
+"源和目标语言， c 复制最近的结果到剪贴板， i 读出当前文本的语言， l 翻译最后一"
+"次朗读的文本， o 打开翻译设置对话框， h 读出此帮助信息。"
 
 #. Translators: name of the dialog.
+#, fuzzy
 msgid "Instant Translate Settings"
-msgstr "实时翻译设置"
+msgstr "及时翻译"
 
 #. Translators: Help message for a dialog.
 msgid "Select translation source and target language:"
-msgstr "选择翻译来源和目标语言："
+msgstr "选择翻译的源语言和目标语言："
 
 #. Translators: A setting in addon settings dialog.
 msgid "Source language:"
-msgstr "来源语言："
+msgstr "源语言："
 
 #. Translators: A setting in addon settings dialog.
 msgid "Target language:"
@@ -124,13 +129,13 @@ msgstr "拷贝翻译结果到剪贴板"
 
 #. Translators: A setting in addon settings dialog, shown if source language is on auto.
 msgid "Language for swapping:"
-msgstr "自动来源语言切换："
+msgstr "语言切换"
 
 #. Translators: A setting in addon settings dialog, shown if source language is on auto.
 msgid ""
 "Activate the auto-swap if recognized source is equal to the target "
 "(experimental)"
-msgstr "激活自动语言交换（如果识别出的来源与目标语言相同）。"
+msgstr "启用自动切换语言（如果检测到源语言和目标语言相同）。"
 
 #. Translators: An option to automatically detect source language for translation.
 msgid "Automatically detect language"
@@ -199,23 +204,44 @@ msgstr "不可用"
 msgid ""
 "You have installed an old and incompatible version of this addon. Do you "
 "want to uninstall the old version?"
-msgstr "您已经安装了一个不匹配的旧的add-on版本。请问您要卸载此老版本吗？"
+msgstr "您已经安装了一个不兼容的旧版插件。请问您要卸载旧版吗？"
 
 #. Translators: the title of a message box dialog.
 msgid "Uninstall incompatible add-on"
-msgstr "卸载不匹配的 add-on"
+msgstr "卸载不兼容的插件"
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on to be shown on installation and add-on information.
 msgid "Instant Translate"
-msgstr "实时翻译"
+msgstr "及时翻译"
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
+#, fuzzy
 msgid ""
 "This addon translates selected or clipboard text using the Google Translate "
 "service and presents it."
 msgstr ""
-"此插件利用 google 提供的翻译服务，将选中的或剪贴板内的文字进行翻译和呈现。按"
-"下“NVDA+SHIFT+T”组合键可翻译选中的文本；按下“NVDA+SHIFT+Y”组合键可翻译剪贴板"
-"中包含的文本。"
+"该插件使用 google 服务翻译所选文本或剪贴板文本以及NVDA最后一次朗读的文本，并"
+"在翻译后将其读出。"
+
+#~ msgid "It translates the last spoken text"
+#~ msgstr "翻译最后一次朗读的文本"
+
+#~ msgid "Hawaiian"
+#~ msgstr "Hawaiian"
+
+#~ msgid "Kurdish"
+#~ msgstr "Kurdish"
+
+#~ msgid "Sindhi"
+#~ msgstr "Sindhi"
+
+#~ msgid "Samoan"
+#~ msgstr "萨摩亚语"
+
+#~ msgid "Shona"
+#~ msgstr "修纳语"
+
+#~ msgid "Translation failed"
+#~ msgstr "翻译失败"
