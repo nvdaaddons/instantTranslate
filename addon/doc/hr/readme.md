@@ -6,7 +6,8 @@
 * Preuzmi [razvojnu verziju][2]
 
 Ovaj se dodatak koristi za prevođenje odabranog teksta ili teksta iz
-međuspremnika s jednog jezika na drugi. Za to se koristi dodatna usluga.
+međuspremnika s jednog jezika na drugi. Za to se koristi usluga Google
+Prevoditelj.
 
 ## Konfiguriranje jezika ##
 Za podešavanje izvornog i ciljanog jezika te jezika zamjene, prijeđi na: NVDA izbornik>Postavke>Postavke za brzo prevođenje.
@@ -51,21 +52,24 @@ automatske zamjene, pretpostavljajući da želite znati kako vaš tekst zvuči
 na talijanskom jeziku, dodatak automatski prebacuje ciljni jezik na
 talijanski jezik i vraća valjani prijevod.
 
-U svakom slučaju, to je privremena konfiguracija; ako ova opcija nema
-nikakav učinak (to je eksperimentalno), pokušajte ručno prebaciti na
-stabilnu konfiguraciju, koristeći gestu za zamjenu, koja je opisana niže
-dolje. Eksperimentalno je, jer u nekim situacijama (obično kratkim
-tekstovima) Google ne prepoznaje pravi izvorni jezik i morate ručno
-mijenjati jezike pomoću skripte, tako da bi izvorni jezik bio prethodni
-ciljni jezik (engleski u našem primjeru).
+Anyway, this is a temporary configuration; if this option has no effect
+(it's experimental), try to commute manually to a stable configuration,
+using the gesture for swapping described below. It's experimental because in
+some situations (with short texts, typically), Google does not recognize the
+real source language correctly, and you have to swap languages manually via
+script, so to force the source language to be the previous target language
+(English in our example).
+
+At least, in the speech settings parameters dialog (NVDA Menu >> Preferences >> Speech), you may want to check the "Automatic language switching (when supported)" option. This way, if you are using a multi-lingual synthesizer, the translation will be announced using the target language voice of the synthesizer.
 
 ## Primjena ##
-Dodatak je moguće koristiti na dva načina:
+Ovaj se dodatak može koristiti na tri načina:
 
-1. Označi neki tekst koristeći naredbe za označavanje (na primjer šift i
-   tipke sa strelicama) i pritisni odgovarajuću tipku za prijevod. Rezultat
+1. Označi tekst koristeći naredbe za označavanje (na primjer šift i tipke sa
+   strelicama) i pritisni odgovarajuću tipku za prijevod. Rezultat
    prevođenja će se pročitati pomoću korištene govorne jedinice.
 2. Moguće je prevesti i tekst iz međuspremnika.
+3. Pritisni tipku prečaca za prevođenje zadnjeg izgovorenog teksta.
 
 ## Tipkovni prečaci ##
 Sve sljedeće naredbe se moraju pritisnuti nakon modifikacijske tipke
@@ -77,7 +81,26 @@ Sve sljedeće naredbe se moraju pritisnuti nakon modifikacijske tipke
 * A: najavi trenutačnu konfiguraciju,
 * C: kopiraj zadnji rezultat u međuspremnik,
 * I: identificiraj jezik odabranog teksta,
-* H: izgovara sve dostupne naredbe korisniku.
+* L: prevedi zadnji izgovoreni tekst,
+* O: otvori dijaloški okvir s postavkama za prijevod
+* H: izgovara sve dostupne slojevne naredbe.
+
+## Promjene u 4.4.2 ##
+* Restore language detection and auto-swapping (Thanks to Cyrille for fix)
+* updated languages for translation (thanks to Cyrille)
+
+## Promjene u 4.4 ##
+* Instant translate is now compatible with NVDA 2019.3 (Python 3 versions of
+  NVDA)
+
+## Promjene u 4.3 ##
+* nvda compatibility fix Now instant translate will be compatible with
+  latest nvda builds.
+* found a way to use google as a translation service again.
+
+## Promjene u 4.2 ##
+* Restored working state with newer versions of nvda.
+* Restored automatic language detection.
 
 ## Promjene u 4.1 ##
 * Brzo prevođenje opet radi, sada s Yandex uslugom za prevođenje, umjesto

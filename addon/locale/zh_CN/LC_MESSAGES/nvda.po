@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: instantTranslate\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
 "POT-Creation-Date: 2021-06-13 16:30+0800\n"
-"PO-Revision-Date: 2021-06-19 18:11+0800\n"
+"PO-Revision-Date: 2021-07-04 10:12+0800\n"
 "Last-Translator: dingpengyu <dingpengyu06@gmail.com>\n"
 "Language-Team: Cary-Rowen <manchen_0528@outlook.com>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.0\n"
+"X-Generator: Poedit 2.4.3\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
@@ -24,20 +24,12 @@ msgid ""
 "Instant Translate layer commands. t translates selected text, shift+t "
 "translates clipboard text, a announces current swap configuration, s swaps "
 "source and target languages, c copies last result to clipboard, i identify "
-"the language of selected text."
+"the language of selected text, l translates last spoken text, o opens "
+"translation setting dialog."
 msgstr ""
 "命令接收面板： t 翻译选择的文本， shift+t 翻译剪贴板中的文本， a 朗读当前语言"
 "配置， s 切换来源和目标语言， c 复制最近的结果到剪贴板， i 显示当前文本的语"
 "言， l 翻译最后朗读的文本， o 打开翻译设置对话框， h 显示此帮助信息。"
-
-#. Translators: name of the option in the menu.
-#, fuzzy
-msgid "Instant &Translate Settings..."
-msgstr "及时翻译"
-
-#. Translators: tooltip text for the menu item.
-msgid "Select languages to be used for translation."
-msgstr ""
 
 #. Translators: message presented when user presses the shortcut key for translating clipboard text but the clipboard is empty.
 msgid "There is no text on the clipboard"
@@ -95,20 +87,35 @@ msgstr "语言是..."
 msgid "It identifies the language of selected text"
 msgstr "读出所选文本的语言"
 
+#. Translators: Presented in input help mode.
+msgid "It translates the last spoken text"
+msgstr "翻译最后一次朗读的文本"
+
 #, fuzzy
 msgid ""
 "t translates selected text, shift+t translates clipboard text, a announces "
 "current swap configuration, s swaps source and target languages, c copies "
-"last result to clipboard, i identify the language of selected text, h "
-"displays this message."
+"last result to clipboard, i identify the language of selected text, l "
+"translates last spoken text, o open translation settings dialog, h displays "
+"this message."
 msgstr ""
 "t 翻译选择的文本， shift+t 翻译剪贴板中的文本， a 朗读当前语言配置， s 切换来"
 "源和目标语言， c 复制最近的结果到剪贴板， i 读出当前文本的语言， l 翻译最后一"
 "次朗读的文本， o 打开翻译设置对话框， h 读出此帮助信息。"
 
-#. Translators: name of the dialog.
+#. Translators: Presented in input help mode.
+msgid "Announces all available layered commands"
+msgstr ""
+
+#. Translators: Presented in input help mode.
 #, fuzzy
-msgid "Instant Translate Settings"
+msgid "Opens Instant Translate settings dialog."
+msgstr "即时翻译设置"
+
+#. Translators: name of the dialog.
+#. Add-on summary, usually the user visible name of the addon.
+#. Translators: Summary for this add-on to be shown on installation and add-on information.
+msgid "Instant Translate"
 msgstr "及时翻译"
 
 #. Translators: Help message for a dialog.
@@ -123,10 +130,6 @@ msgstr "源语言："
 msgid "Target language:"
 msgstr "目标语言："
 
-#. Translators: A setting in addon settings dialog.
-msgid "Copy translation result to clipboard"
-msgstr "拷贝翻译结果到剪贴板"
-
 #. Translators: A setting in addon settings dialog, shown if source language is on auto.
 msgid "Language for swapping:"
 msgstr "语言切换"
@@ -136,6 +139,10 @@ msgid ""
 "Activate the auto-swap if recognized source is equal to the target "
 "(experimental)"
 msgstr "启用自动切换语言（如果检测到源语言和目标语言相同）。"
+
+#. Translators: A setting in addon settings dialog.
+msgid "Copy translation result to clipboard"
+msgstr "拷贝翻译结果到剪贴板"
 
 #. Translators: An option to automatically detect source language for translation.
 msgid "Automatically detect language"
@@ -150,6 +157,10 @@ msgid "Esperanto"
 msgstr "世界语"
 
 #. Translators: The name of a language supported by this add-on.
+msgid "Hawaiian"
+msgstr "Hawaiian"
+
+#. Translators: The name of a language supported by this add-on.
 msgid "Hmong"
 msgstr "苗语"
 
@@ -160,6 +171,10 @@ msgstr "海地克里奥尔语"
 #. Translators: The name of a language supported by this add-on.
 msgid "Javanese"
 msgstr "日语"
+
+#. Translators: The name of a language supported by this add-on.
+msgid "Kurdish"
+msgstr "Kurdish"
 
 #. Translators: The name of a language supported by this add-on.
 msgid "Latin"
@@ -176,6 +191,18 @@ msgstr "缅甸语（缅甸）"
 #. Translators: The name of a language supported by this add-on.
 msgid "Chichewa"
 msgstr "奇切瓦语"
+
+#. Translators: The name of a language supported by this add-on.
+msgid "Sindhi"
+msgstr "Sindhi"
+
+#. Translators: The name of a language supported by this add-on.
+msgid "Samoan"
+msgstr "萨摩亚语"
+
+#. Translators: The name of a language supported by this add-on.
+msgid "Shona"
+msgstr "修纳语"
 
 #. Translators: The name of a language supported by this add-on.
 msgid "Somali"
@@ -200,6 +227,12 @@ msgstr "意第绪语"
 msgid "unavailable"
 msgstr "不可用"
 
+#. We have probably been blocked, so stop trying to translate.
+#. log.exception("Instant translate: Can not translate text '%s'" %chunk)
+#. raise e
+msgid "Translation failed"
+msgstr "翻译失败"
+
 #. Translators: the label of a message box dialog.
 msgid ""
 "You have installed an old and incompatible version of this addon. Do you "
@@ -210,14 +243,8 @@ msgstr "您已经安装了一个不兼容的旧版插件。请问您要卸载旧
 msgid "Uninstall incompatible add-on"
 msgstr "卸载不兼容的插件"
 
-#. Add-on summary, usually the user visible name of the addon.
-#. Translators: Summary for this add-on to be shown on installation and add-on information.
-msgid "Instant Translate"
-msgstr "及时翻译"
-
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
-#, fuzzy
 msgid ""
 "This addon translates selected or clipboard text using the Google Translate "
 "service and presents it."
@@ -225,23 +252,8 @@ msgstr ""
 "该插件使用 google 服务翻译所选文本或剪贴板文本以及NVDA最后一次朗读的文本，并"
 "在翻译后将其读出。"
 
-#~ msgid "It translates the last spoken text"
-#~ msgstr "翻译最后一次朗读的文本"
+#~ msgid "Instant &Translate Settings..."
+#~ msgstr "及时翻译设置(&T)..."
 
-#~ msgid "Hawaiian"
-#~ msgstr "Hawaiian"
-
-#~ msgid "Kurdish"
-#~ msgstr "Kurdish"
-
-#~ msgid "Sindhi"
-#~ msgstr "Sindhi"
-
-#~ msgid "Samoan"
-#~ msgstr "萨摩亚语"
-
-#~ msgid "Shona"
-#~ msgstr "修纳语"
-
-#~ msgid "Translation failed"
-#~ msgstr "翻译失败"
+#~ msgid "Select languages to be used for translation."
+#~ msgstr "选择需要翻译的语言。"

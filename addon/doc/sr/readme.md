@@ -5,8 +5,8 @@
 * Preuzmi[stabilnu verziju][1]
 * Preuzmi[razvojnu verziju][2]
 
-Ovaj dodatak se koristi za prevođenje izabranog teksta ili teksta iz
-privremene memorije sa jednog jezika na drugi. Za ovo se koristi servis
+This add-on is used to translate selected and/or clipboard text from one
+language to another.  This is done using the Google Translate service.
 
 ## Podešavanje jezika ##
 Da podesite izvorni, jezik za prevođenje i za zamenu, uđite u: NVDA meni>> podešavanja>> Instant Translate podešavanja.
@@ -50,21 +50,24 @@ beskorisno. Zahvaljujući opciji automatske zamene, međutim, ukoliko želite
 da znate kako vaš tekst zvuči na Italijanskom, dodatak automatski prebacuje
 jezik za prevođenje na Italijanski, pa daje ispravan prevod.
 
-Uglavnom, ovo je privremeno podešavanje; ako ne radi(eksperimentalna je),
-pokušajte ručno da se vratite na ispravna podešavanja, koristeći komandu za
-menjanje koja je opisana ispod. Eksperimentalna je zato što u nekim
-situacijama(sa kratkim tekstovima, obično), Google ne prepoznaje izvorni
-jezik ispravno, i morate zameniti jezike ručno pomoću skripte, kako biste
-naterali izvorni jezik da bude prethodni jezik za prevođenje(Engleski u
-našem primeru).
+Anyway, this is a temporary configuration; if this option has no effect
+(it's experimental), try to commute manually to a stable configuration,
+using the gesture for swapping described below. It's experimental because in
+some situations (with short texts, typically), Google does not recognize the
+real source language correctly, and you have to swap languages manually via
+script, so to force the source language to be the previous target language
+(English in our example).
+
+At least, in the speech settings parameters dialog (NVDA Menu >> Preferences >> Speech), you may want to check the "Automatic language switching (when supported)" option. This way, if you are using a multi-lingual synthesizer, the translation will be announced using the target language voice of the synthesizer.
 
 ## Korišćenje ##
-Možete koristiti ovaj dodatak na dva načina:
+You can use this add-on in three ways:
 
-1. Izaberite tekst koristeći komande za izbor(šift sa strelicama, na primer)
-   i koristite komandu za prevod. Prevod će biti pročitan sa sintetizatorom
-   kojeg koristite.
+1. Select some text using selection commands (shift with arrow keys, for
+   example) and press associated key to translate. translation result will
+   be read with synthesizer which you are using.
 2. Takođe možete prevesti tekst iz privremene memorije.
+3. Press the dedicated shortcut key to translate the last spoken text.
 
 ## Prečice ##
 Sve komande u nastavku se moraju pritisnuti nakon modifikatorskog
@@ -76,7 +79,26 @@ tastera"NVDA+Šift+t":
 * A: Izgovori trenutna podešavanja,
 * C: Kopiraj poslednji rezultat u privremenu memoriju
 * I: Prepoznaj jezik izabranog teksta
-* H: Izgovara sve dostupne komande
+* L: translate the last spoken text,
+* O: open translation settings dialog
+* H: announces all available layered commands.
+
+## Changes for 4.4.2 ##
+* Restore language detection and auto-swapping (Thanks to Cyrille for fix)
+* updated languages for translation (thanks to Cyrille)
+
+## Changes for 4.4 ##
+* Instant translate is now compatible with NVDA 2019.3 (Python 3 versions of
+  NVDA)
+
+## Changes for 4.3 ##
+* nvda compatibility fix Now instant translate will be compatible with
+  latest nvda builds.
+* found a way to use google as a translation service again.
+
+## Changes for 4.2 ##
+* Restored working state with newer versions of nvda.
+* Restored automatic language detection.
 
 ## Promene u 4.1 ##
 * Instant translate radi ponovo, sada koristi Yandex translate umesto Google

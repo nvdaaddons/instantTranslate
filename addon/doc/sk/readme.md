@@ -5,8 +5,8 @@
 * Stiahnuť [stabilnú verziu][1]
 * Stiahnuť [Vývojovú verziu][2]
 
-pomocou tohto doplnku môžete prekladať vybratý text, alebo text umiestnený v
-schránke. Na prekladanie sa používa externá služba.
+This add-on is used to translate selected and/or clipboard text from one
+language to another.  This is done using the Google Translate service.
 
 ## nastavenie jazykov ##
 Zdrojový a cieľový jazyk a otáčanie jazykov nastavíte v menu nvda > nastavenia > Rýchly prekladač.
@@ -43,16 +43,24 @@ Ak napríklad prekladáte text z iného ako anglického jazyka, dostanete
 preklad do angličtiny. Ak ale zadáte na preloženie text v angličtine,
 doplnok rozpozná jazyk a automaticky bude prekladať do taliančiny.
 
-Upozorňujeme, že táto funkcia je experimentálna a nemusí správne
-fungovať. Ak narazíte na problémy, otočte jazyky ručne pomocou klávesovej
-skratky.
+Anyway, this is a temporary configuration; if this option has no effect
+(it's experimental), try to commute manually to a stable configuration,
+using the gesture for swapping described below. It's experimental because in
+some situations (with short texts, typically), Google does not recognize the
+real source language correctly, and you have to swap languages manually via
+script, so to force the source language to be the previous target language
+(English in our example).
+
+At least, in the speech settings parameters dialog (NVDA Menu >> Preferences >> Speech), you may want to check the "Automatic language switching (when supported)" option. This way, if you are using a multi-lingual synthesizer, the translation will be announced using the target language voice of the synthesizer.
 
 ## Použitie ##
-Ako prekladať
+You can use this add-on in three ways:
 
-1. Vyberte nejaký text (napríklad pomocou shift+šípky). Potom stlačte
-   príslušné klávesové skratky. NVDA prečíta preložený text.
+1. Select some text using selection commands (shift with arrow keys, for
+   example) and press associated key to translate. translation result will
+   be read with synthesizer which you are using.
 2. Takisto môžete prekladať text zo schránky.
+3. Press the dedicated shortcut key to translate the last spoken text.
 
 ## Klávesové skratky ##
 Pred Každým príkazom najprv stlačte skratku NVDA+SHIFT+t.
@@ -63,7 +71,26 @@ Pred Každým príkazom najprv stlačte skratku NVDA+SHIFT+t.
 * A: Oznámi nastavenie jazykov,
 * C: Skopíruje preklad do schránky.
 * I: Zistí jazyk vybratého textu,
-* H: Oznámi dostupné klávesové skratky.
+* L: translate the last spoken text,
+* O: open translation settings dialog
+* H: announces all available layered commands.
+
+## Changes for 4.4.2 ##
+* Restore language detection and auto-swapping (Thanks to Cyrille for fix)
+* updated languages for translation (thanks to Cyrille)
+
+## Changes for 4.4 ##
+* Instant translate is now compatible with NVDA 2019.3 (Python 3 versions of
+  NVDA)
+
+## Changes for 4.3 ##
+* nvda compatibility fix Now instant translate will be compatible with
+  latest nvda builds.
+* found a way to use google as a translation service again.
+
+## Changes for 4.2 ##
+* Restored working state with newer versions of nvda.
+* Restored automatic language detection.
 
 ## Zmeny vo verzii 4.1 ##
 * Namiesto Google sa teraz na preklad používa služba Yandex.

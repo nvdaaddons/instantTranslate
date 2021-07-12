@@ -5,9 +5,8 @@
 * Загрузить [стабильную версию][1]
 * Загрузить [разрабатываемую версию][2]
 
-Это дополнение используется для перевода выбранного текста и текста из
-буфера обмена с одного языка на другой. Это делается с помощью внешней
-службы.
+This add-on is used to translate selected and/or clipboard text from one
+language to another.  This is done using the Google Translate service.
 
 ## Настройка языков ##
 Чтобы настроить исходный, целевой и иногда  язык для перемены местами, перейдите: NVDA Меню >> Параметры >> Настройки Instant Translate.
@@ -56,19 +55,21 @@ it returns a valid translation.
 Anyway, this is a temporary configuration; if this option has no effect
 (it's experimental), try to commute manually to a stable configuration,
 using the gesture for swapping described below. It's experimental because in
-some situations (with short texts, tipically), Google does not recognize the
+some situations (with short texts, typically), Google does not recognize the
 real source language correctly, and you have to swap languages manually via
 script, so to force the source language to be the previous target language
 (English in our example).
 
-## Использование ##
-Вы можете использовать это дополнение двумя способами:
+At least, in the speech settings parameters dialog (NVDA Menu >> Preferences >> Speech), you may want to check the "Automatic language switching (when supported)" option. This way, if you are using a multi-lingual synthesizer, the translation will be announced using the target language voice of the synthesizer.
 
-1. Выделите текст с помощью команд выделения (например, shift со
-   стрелками). Затем нажмите связанную с переводом клавишную
-   команду. Переведённая строка прочтётся синтезатором, который вы
-   используете.
+## Использование ##
+You can use this add-on in three ways:
+
+1. Select some text using selection commands (shift with arrow keys, for
+   example) and press associated key to translate. translation result will
+   be read with synthesizer which you are using.
 2. Вы также можете перевести текст из буфера обмена.
+3. Press the dedicated shortcut key to translate the last spoken text.
 
 ## Команды ##
 Все следующие команды клавиш нужно нажимать после клавишного модификатора
@@ -80,7 +81,26 @@ script, so to force the source language to be the previous target language
 * A: объявить текущую конфигурацию,
 * C: скопировать последний результат в буфер обмена,
 * I: определить язык выделенного текста,
-* H: объявляет все доступные пользователю команды.
+* L: translate the last spoken text,
+* O: open translation settings dialog
+* H: announces all available layered commands.
+
+## Changes for 4.4.2 ##
+* Restore language detection and auto-swapping (Thanks to Cyrille for fix)
+* updated languages for translation (thanks to Cyrille)
+
+## Changes for 4.4 ##
+* Instant translate is now compatible with NVDA 2019.3 (Python 3 versions of
+  NVDA)
+
+## Changes for 4.3 ##
+* nvda compatibility fix Now instant translate will be compatible with
+  latest nvda builds.
+* found a way to use google as a translation service again.
+
+## Changes for 4.2 ##
+* Restored working state with newer versions of nvda.
+* Restored automatic language detection.
 
 ## Изменения  в версии 4.1 ##
 * InstantTranslate снова работает со службой переводчика Яндекс вместо

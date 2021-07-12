@@ -5,7 +5,8 @@
 * ダウンロード [安定版][1]
 * ダウンロード [開発版][2]
 
-このアドオンは選択されたテキストやクリップボードのテキストを、他の言語に翻訳するのに使用されます。これは、外部のサービスを用いて行われます。
+This add-on is used to translate selected and/or clipboard text from one
+language to another.  This is done using the Google Translate service.
 
 ## 言語設定 ##
 翻訳元の言語および翻訳先の言語、あるいは入れ替え言語を設定するには、NVDAメニュー、設定、インスタント翻訳の設定に進んで下さい。
@@ -27,15 +28,24 @@
 簡単な例:
 また、前に想像した場面を思い出して下さい。もし英語ではない言語のテキストを翻訳するなら、特に問題はなく、正しい英語への翻訳文を得ることが出来ます。しかし、もし、英語からテキストを翻訳したい場合、通常は、原文と同一の英語への翻訳が得られます。これはあまり意味がありません。しかしながら、テキストをイタリア語でどう読むのか知りたいとしたら、この自動入れ替え機能により、自動的に翻訳先の言語をイタリア語にして、有用な翻訳を得ることが出来ます。
 
-しかしながら、これは一時的な設定です。この機能に効果が見られない場合
-(実験的な機能です)、以下に示す入れ替えのためのジェスチャーを使って、手動で安定的な設定に入れ替えてみて下さい。これは、状況によっては
-(典型的には短いテキストでは)、Googleが実際の翻訳元の言語を正しく認識しないためで、その場合は、翻訳元の言語を、前の翻訳先の言語(この例では英語)にするために、スクリプトを通じて言語を手動で入れ替えなければなりません。
+Anyway, this is a temporary configuration; if this option has no effect
+(it's experimental), try to commute manually to a stable configuration,
+using the gesture for swapping described below. It's experimental because in
+some situations (with short texts, typically), Google does not recognize the
+real source language correctly, and you have to swap languages manually via
+script, so to force the source language to be the previous target language
+(English in our example).
+
+At least, in the speech settings parameters dialog (NVDA Menu >> Preferences >> Speech), you may want to check the "Automatic language switching (when supported)" option. This way, if you are using a multi-lingual synthesizer, the translation will be announced using the target language voice of the synthesizer.
 
 ## 使用方法 ##
-二つの方法でこのアドオンを使用出来ます。
+You can use this add-on in three ways:
 
-1. 選択コマンドでテキストを選択し(例えばshiftキーと矢印キー)、翻訳用のキーを押します。翻訳結果が使用されている合成音声によって読み上げられます。
+1. Select some text using selection commands (shift with arrow keys, for
+   example) and press associated key to translate. translation result will
+   be read with synthesizer which you are using.
 2. クリップボードからもテキストを翻訳出来ます。
+3. Press the dedicated shortcut key to translate the last spoken text.
 
 ## ショートカットキー ##
 以下のキーを、いずれも、修飾キーNVDA+Shift+tの後に押して下さい。
@@ -46,7 +56,26 @@
 * A: 現在の設定を通知
 * C: 最後の結果をクリップボードにコピー
 * I: 選択されたテキストの言語を識別
-* H: 全ての使用可能なコマンドをユーザーに通知
+* L: translate the last spoken text,
+* O: open translation settings dialog
+* H: announces all available layered commands.
+
+## Changes for 4.4.2 ##
+* Restore language detection and auto-swapping (Thanks to Cyrille for fix)
+* updated languages for translation (thanks to Cyrille)
+
+## Changes for 4.4 ##
+* Instant translate is now compatible with NVDA 2019.3 (Python 3 versions of
+  NVDA)
+
+## Changes for 4.3 ##
+* nvda compatibility fix Now instant translate will be compatible with
+  latest nvda builds.
+* found a way to use google as a translation service again.
+
+## Changes for 4.2 ##
+* Restored working state with newer versions of nvda.
+* Restored automatic language detection.
 
 ## Changes for 4.1 ##
 * InstantTranslate is working again, now with Yandex translator service

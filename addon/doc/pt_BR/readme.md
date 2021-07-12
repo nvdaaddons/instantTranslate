@@ -5,9 +5,8 @@
 * Baixe a [versão estável][1]
 * Baixe a [versão de desenvolvimento][2]
 
-Este complemento serve para traduzir um texto selecionado e/ou da área de
-transferência dum idioma para outro. Isso é feito por meio de um serviço
-externo.
+This add-on is used to translate selected and/or clipboard text from one
+language to another.  This is done using the Google Translate service.
 
 ## Configurar idiomas ##
 Para configurar os idiomas de origem, de destino e nalguns casos de alternância, vá para: Menu do NVDA >> Preferências >> Opções do tradutor instantânio.
@@ -58,22 +57,24 @@ porém, supondo que você queira saber como o texto soa em Italiano, o
 complemento comuta automaticamente o idioma de destino para Italiano e
 portanto devolve uma tradução válida.
 
-Em todo caso, isso é uma configuração temporária; se a opção não tiver
-efeito (a mesma é experimental), tente comutar manualmente para uma
-configuração estável usando o gesto de alternância descrito abaixo. Ela é
-experimental porque, em certas situações (geralmente com textos curtos), o
-Google não reconhece corretamente o verdadeiro idioma de origem e é preciso
-alternar os idiomas manualmente via script, de modo a forçar o idioma de
-origem a ser o anterior idioma de destino (Inglês em nosso exemplo).
+Anyway, this is a temporary configuration; if this option has no effect
+(it's experimental), try to commute manually to a stable configuration,
+using the gesture for swapping described below. It's experimental because in
+some situations (with short texts, typically), Google does not recognize the
+real source language correctly, and you have to swap languages manually via
+script, so to force the source language to be the previous target language
+(English in our example).
+
+At least, in the speech settings parameters dialog (NVDA Menu >> Preferences >> Speech), you may want to check the "Automatic language switching (when supported)" option. This way, if you are using a multi-lingual synthesizer, the translation will be announced using the target language voice of the synthesizer.
 
 ## Usando ##
-Você pode usar este complemento de duas maneiras:
+You can use this add-on in three ways:
 
-1. Selecione um texto usando comandos de seleção (shift com setas, por
-   exemplo). Aí pressione a tecla atribuída para traduzir o texto
-   selecionado. A tradução resultante será lida com o sintetizador que está
-   a usar.
+1. Select some text using selection commands (shift with arrow keys, for
+   example) and press associated key to translate. translation result will
+   be read with synthesizer which you are using.
 2. Pode também traduzir o texto da área de transferência.
+3. Press the dedicated shortcut key to translate the last spoken text.
 
 ## Atalhos ##
 Todos os seguintes comandos devem ser pressionados após a tecla modificadora
@@ -85,7 +86,26 @@ Todos os seguintes comandos devem ser pressionados após a tecla modificadora
 * A: Anuncia a configuração atual,
 * C: Copia o último resultado para a área de transferência,
 * I: identifica o idioma do texto selecionado,
-* H: Anuncia ao usuário todos os comandos disponíveis.
+* L: translate the last spoken text,
+* O: open translation settings dialog
+* H: announces all available layered commands.
+
+## Changes for 4.4.2 ##
+* Restore language detection and auto-swapping (Thanks to Cyrille for fix)
+* updated languages for translation (thanks to Cyrille)
+
+## Changes for 4.4 ##
+* Instant translate is now compatible with NVDA 2019.3 (Python 3 versions of
+  NVDA)
+
+## Changes for 4.3 ##
+* nvda compatibility fix Now instant translate will be compatible with
+  latest nvda builds.
+* found a way to use google as a translation service again.
+
+## Changes for 4.2 ##
+* Restored working state with newer versions of nvda.
+* Restored automatic language detection.
 
 ## Mudanças na 4.1 ##
 * O Tradutor Instantâneo funciona novamente, agora com o serviço Yandex

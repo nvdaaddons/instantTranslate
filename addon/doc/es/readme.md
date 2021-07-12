@@ -6,8 +6,8 @@
 * Descargar [versión de desarrollo][2]
 
 Este complemento se utiliza para traducir texto seleccionado y/o del
-portapapeles de un idioma a otro.  Esto se hace utilizando un servicio
-externo.
+portapapeles de un idioma a otro.  Esto se hace utilizando el servicio
+Traductor de Google.
 
 ## Configurando idiomas ##
 Para configurar el idioma origen, el destino y, en su caso, el intercambio, ve a: NVDA Menú >> Preferenciass >> Opciones de Instant Translate.
@@ -60,21 +60,24 @@ a Italiano, tal que devuelve una traducción válida.
 
 De todos modos, esto es una configuración temporal; si esta opción no tiene
 efecto (es experimental), intenta conmutar manualmente a una configuración
-estable, utilizando el gesto para intercambio descrita más abajo. Es
+estable, utilizando el gesto para intercambio descrito más abajo. Es
 experimental porque en algunas situaciones (con textos cortos, típicamente),
 Google no reconoze el idioma origen real correctamente, y tienes que
 intercambiar idiomas manualmente a través de script, así fuerzas al idioma
 origen a ser el  idioma destino anterior (inglés en nuestro ejemplo).
 
+Al menos, en el diálogo de configuración de parámetros de voz (menú NVDA >> Preferencias >> Voz), puedes querer marcar la opción "Cambio automático de idioma (cuando esté soportado)". De este modo, si usas un sintetizador multiidioma, se anunciará la traducción usando la voz del sintetizador del idioma de destino.
+
 ## Utilizando ##
-Puedes utilizar este complemento de dos maneras:
+Puedes utilizar este complemento de tres maneras:
 
 1. Selecciona texto usando las órdenes de selección(shift con teclas de
    flecha, por ejemplo) y pulsa la tecla asociada para traducir. A
-   continuación, la traducción de la cadena será leída, siempre que el
-   sintetizador que se esté utilizando sea compatible con el idioma de
-   destino.
+   continuación, el resultado de la traducción se leerá con el sintetizador
+   que estés utilizando.
 2. También puedes traducir texto desde el portapapeles.
+3. Pulsa la tecla de atajo asociada para traducir el último texto
+   verbalizado.
 
 ## Atajos de teclado ##
 Todas las órdenes que siguen deben pulsarse después de la tecla modificadora
@@ -86,7 +89,28 @@ Todas las órdenes que siguen deben pulsarse después de la tecla modificadora
 * A: anuncia la configuración actual,
 * C: copia el último resultado al portapapeles,
 * I: identifica el idioma del texto seleccionado,
-* H: anuncia todas las órdenes disponibles al usuario.
+* L: traduce el último texto verbalizado,
+* O: abre el diálogo de opciones de traducción
+* H: anuncia todas las órdenes disponibles de capa.
+
+## Cambios para 4.4.2 ##
+* Se restaura la detección de idiomas y el intercambio automático (gracias a
+  Cyrille por la corrección)
+* se han actualizado los idiomas para traducir (gracias a Cyrille)
+
+## Cambios para 4.4 ##
+* Instant Translate ahora es compatible con NVDA 2019.3 (versiones de NVDA
+  basadas en Python 3)
+
+## Cambios para 4.3 ##
+* corrección de compatibilidad con NVDA. Ahora, Instant Translate es
+  compatible con las compilaciones de NVDA más recientes.
+* se ha encontrado una forma de usar Google como servicio de traducción otra
+  vez.
+
+## Cambios para 4.2 ##
+* Se restaura el funcionamiento con versiones más recientes de NVDA.
+* Se restaura la detección automática de idiomas.
 
 ## Cambios para 4.1 ##
 * InstantTranslate está funcionando otra vez, ahora usa el servicio de

@@ -6,8 +6,8 @@
 * Descargar [versión de desenvolvemento][2]
 
 Este complemento utilízase para traducir texto seleccionado e/ou do
-portapapeis dunha lingua a outra.  Esto faise utilizando un servicio
-externo.
+portapapeis dunha lingua a outra.  Isto faise utilizando o servizo Google
+Translate.
 
 ## Configurando linguas ##
 Para configurar a lingua orixe, o destiño e, no seu caso, o intercambio, vai ó: Menú NVDA >> Preferenciass >> Opcións de Instant Translate.
@@ -57,22 +57,24 @@ auto-intercambiar, sen embargo, asumindo que queres saber cómo soa o teu
 texto en Italiano, o complemento conmuta automáticamente a lingua destiño ó
 Italiano, tal que devolve unha traducción válida.
 
-De todos os xeitos, esto é unha configuración temporal; se esta opción non
+De todos os xeitos, ésta é unha configuración temporal; se esta opción non
 ten efecto (é experimental), tenta conmutar manualmente a unha configuración
 estable, utilizando o xesto para intercambio descrito máis abaixo. É
-experimental porque nalgunhas situacións (con textos curtos, típicamente),
+experimental porque nalgunhas situacións (con textos curtos, tipicamente),
 Google non recoñece a lingua orixe real correctamente, e tes que
 intercambiar linguas manualmente a través de script, así forzas á lingua
-orixe a ser a lingua destiño anterior (inglés no noso exemplo).
+orixe a ser a lingua destino anterior (inglés no noso exemplo).
+
+Cando menos, no diálogo de opcións de parámetros de voz (Menú NVDA >> Preferencias >> Voz), poderías querer marcar a opción "Cambio automático de lingua (cando se soporte)". Deste xeito, se utilizas un sintetizador multilingüe, a tradución anunciarase utilizando a voz do sintetizador no idioma de destino.
 
 ## Utilizando ##
-Podes utilizar este complemento de dous xeitos:
+Podes utilizar este complemento de tres xeitos:
 
-1. Selecciona texto usando as ordes de selección(shift con teclas de flecha,
+1. Selecciona texto usando as ordes de selección(shift con teclas de frecha,
    por exemplo) e preme a tecla asociada para traducir. A continuación, a
-   traducción da cadea será lida, sempre que o sintetizador que se estea
-   utilizando sexa compatible ca lingua de destiño.
+   traducción da cadea será lida co sintetizador que esteas utilizando.
 2. Tamén podes traducir texto dende o portapapeis.
+3. Preme a tecla de orde adicada para traducir o último texto falado.
 
 ## Atallos de teclado ##
 Todas as ordes que siguen deben premerse despois da tecla modificadora
@@ -84,7 +86,28 @@ Todas as ordes que siguen deben premerse despois da tecla modificadora
 * A: anuncia a configuración actual,
 * C: copia o derradeiro resultado ó portapapeis,
 * I: identifica a lingua do texto seleccioado,
-* H: anuncia todas as ordes dispoñibles ó usuario.
+* L: traducir o último texto falado,
+* O: abrir o diálogo de opcións do complemento
+* H: anuncia todas as ordes en capa dispoñibles.
+
+## Trocos para 4.4.2 ##
+* Restaurada a detección de idioma e o intercambio automático (grazas a
+  Cyrille polo arranxo)
+* actualizadas linguas de tradución (grazas a Cyrille)
+
+## Cambios para 4.4 ##
+* Instant Translate é agora compatible con NVDA 2019.3 (versións Python 3 de
+  NVDA)
+
+## Trocos para 4.3 ##
+* arranxo de compatibilidade con nvda Agora Instant Translate será
+  compatible coas últimas versións de NVDA.
+* atopado un xeito para utilizar google como un servizo de tradución de
+  novo.
+
+## Trocos para 4.2 ##
+* Restaurado o estado de traballo con versións máis recentes de NVDA.
+* Restaurada a detección automática de lingua.
 
 ## Cambios para 4.1 ##
 * InstantTranslate funciona de novo, agora co servizo de tradución Yandex en

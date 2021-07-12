@@ -5,8 +5,8 @@
 * Завантажити [стабільну версію][1]
 * Завантажити [версію в розробці][2]
 
-Цей додаток дозволяє перекладати виділений текст чи текст з буфера обміну з
-однієї мови на іншу. Для перекладу використовуються зовнішні сервіси.
+This add-on is used to translate selected and/or clipboard text from one
+language to another.  This is done using the Google Translate service.
 
 ## Конфігурування мов ##
 Щоб налаштувати мову оригіналу і перекладу, а також випадки зміни мов, перейдіть до меню NVDA >> «Налаштування» >> «Налаштування Instant Translate».
@@ -54,22 +54,24 @@
 звучить італійською, додаток автоматично замінює мову перекладу на
 італійську, тому він повертає дійсний переклад.
 
-У будь-якому разі, це тимчасова конфігурація; якщо ця опція не має ефекту
-(це експериментально), спробуйте перемкнутися вручну до стабільної
-конфігурації, використовуючи жест для зміни, описаний нижче. Це
-експериментально, оскільки в деяких ситуаціях (з короткими текстами, як
-правило) Google не розпізнає справжню мову оригіналу правильно і вам
-доводиться за допомогою скрипта вручну примушувати мову оригіналу стати
-мовою перекладу (англійською мовою в нашому прикладі).
+Anyway, this is a temporary configuration; if this option has no effect
+(it's experimental), try to commute manually to a stable configuration,
+using the gesture for swapping described below. It's experimental because in
+some situations (with short texts, typically), Google does not recognize the
+real source language correctly, and you have to swap languages manually via
+script, so to force the source language to be the previous target language
+(English in our example).
+
+At least, in the speech settings parameters dialog (NVDA Menu >> Preferences >> Speech), you may want to check the "Automatic language switching (when supported)" option. This way, if you are using a multi-lingual synthesizer, the translation will be announced using the target language voice of the synthesizer.
 
 ## Як користуватися ##
-Ви можете  використати цей додаток двома способами:
+You can use this add-on in three ways:
 
-1. Виділіть частину тексту стандартними методами (наприклад, шіфт зі
-   стрілками), після чого натисніть відповідну клавішу, щоб перекласти
-   виділений текст. Після цього перекладені рядки прочитає синтезатор
-   мовлення, який ви використовуєте.
+1. Select some text using selection commands (shift with arrow keys, for
+   example) and press associated key to translate. translation result will
+   be read with synthesizer which you are using.
 2. Ви також можете перекласти текст з буфера обміну.
+3. Press the dedicated shortcut key to translate the last spoken text.
 
 ## Гарячі клавіші ##
 Усі нижченаведені команди необхідно натискати після комбінації
@@ -81,7 +83,26 @@
 * A: промовляє поточну конфігурацію,
 * C: копіює останній результат в буфер обміну,
 * I: визначає мову виділеного тексту,
-* H: промовляє всі доступні для користувача команди.
+* L: translate the last spoken text,
+* O: open translation settings dialog
+* H: announces all available layered commands.
+
+## Changes for 4.4.2 ##
+* Restore language detection and auto-swapping (Thanks to Cyrille for fix)
+* updated languages for translation (thanks to Cyrille)
+
+## Changes for 4.4 ##
+* Instant translate is now compatible with NVDA 2019.3 (Python 3 versions of
+  NVDA)
+
+## Changes for 4.3 ##
+* nvda compatibility fix Now instant translate will be compatible with
+  latest nvda builds.
+* found a way to use google as a translation service again.
+
+## Changes for 4.2 ##
+* Restored working state with newer versions of nvda.
+* Restored automatic language detection.
 
 ## Зміни у версії 4.1 ##
 * Додаток InstantTranslate знову працює, але замість Google Translate

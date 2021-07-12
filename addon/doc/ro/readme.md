@@ -5,8 +5,8 @@
 * Descărcați [versiunea stabilă][1]
 * Descărcați [versiunea în dezvoltare][2]
 
-Acest supliment este folosit pentru a traduce un text selectat dintr-o limbă
-în alta.  Acesta utilizează un serviciu extern.
+This add-on is used to translate selected and/or clipboard text from one
+language to another.  This is done using the Google Translate service.
 
 ## Configurarea limbilor ##
 Pentru a configura limba sursă, cea aleasă și cea pentru schimbare, mergeți la: Meniul NVDA, Preferințe, Setări Instant Translate.
@@ -55,20 +55,24 @@ inutil. Mulțumiri funcției auto-schimbare! Totuși,presupunând că vreți să
 știți cum sună textul în italiană, add-on-ul comută automat limba aleasă la
 italiană, așa că returnează o traducere validă.
 
-Oricum, aceasta este o configurație temporară; dacă această opțiune nu are
-efect (este experimentală), încercațisă comutați manual la o configurație
-stabilă, folosind gestul pentru schimbarea descrisă mai jos. Este
-experimentală, deoarece în unele situații (cu texte scurte, Google nu
-recunoaște limba sursă reală corect, iar dumneavoastră trebuie să schimbați
-limbile manual prin script.
+Anyway, this is a temporary configuration; if this option has no effect
+(it's experimental), try to commute manually to a stable configuration,
+using the gesture for swapping described below. It's experimental because in
+some situations (with short texts, typically), Google does not recognize the
+real source language correctly, and you have to swap languages manually via
+script, so to force the source language to be the previous target language
+(English in our example).
+
+At least, in the speech settings parameters dialog (NVDA Menu >> Preferences >> Speech), you may want to check the "Automatic language switching (when supported)" option. This way, if you are using a multi-lingual synthesizer, the translation will be announced using the target language voice of the synthesizer.
 
 ## Utilizare ##
-Puteți folosi acest add-on în două moduri:
+You can use this add-on in three ways:
 
-1. Selectații un text folosind comenzi de selectare (de exemplu, shift cu
-   săgețile) și apăsați tasta asociată pentru a traduce. Rezultatul
-   traducerii va fi citit cu sintetizatorul pe care îl folosiți.
+1. Select some text using selection commands (shift with arrow keys, for
+   example) and press associated key to translate. translation result will
+   be read with synthesizer which you are using.
 2. De asemenea, puteți traduce un text de pe planșetă.
+3. Press the dedicated shortcut key to translate the last spoken text.
 
 ## Scurtături ##
 Toate comenzile afișate mai jos trebuiesc apăsate după tasta de modificare
@@ -80,7 +84,26 @@ Toate comenzile afișate mai jos trebuiesc apăsate după tasta de modificare
 * A: Anunță configurația curentă,
 * C: Copiază ultimul rezultat pe planșetă,
 * I: Identifică limba textului selectat,
-* H: Anunță toate comenzile disponibile pentru utilizator.
+* L: translate the last spoken text,
+* O: open translation settings dialog
+* H: announces all available layered commands.
+
+## Changes for 4.4.2 ##
+* Restore language detection and auto-swapping (Thanks to Cyrille for fix)
+* updated languages for translation (thanks to Cyrille)
+
+## Changes for 4.4 ##
+* Instant translate is now compatible with NVDA 2019.3 (Python 3 versions of
+  NVDA)
+
+## Changes for 4.3 ##
+* nvda compatibility fix Now instant translate will be compatible with
+  latest nvda builds.
+* found a way to use google as a translation service again.
+
+## Changes for 4.2 ##
+* Restored working state with newer versions of nvda.
+* Restored automatic language detection.
 
 ## Modificări în 4.1 ##
 * InstantTranslate funcționează din nou, acum cu serviciul Yandex translator

@@ -5,8 +5,9 @@
 * [Stabile Version herunterladen][1]
 * [Entwicklerversion herunterladen][2]
 
-Diese Erweiterung wird verwendet, um über einen externen Dienst markierten
-Text bzw. Text der Zwischenablage in eine andere Sprache zu übersetzen.
+Diese Erweiterung wird verwendet, um ausgewählten Text und/oder Text aus der
+Zwischenablage von einer Sprache in eine andere zu übersetzen. Dies
+geschieht über den Google-Dienst für Übersetzungen.
 
 ## Sprachen einstellen ##
 Um die Quell-, Ziel- und ggf. Tauschsprache zu konfigurieren, gehen Sie zu: NVDA-Menü >> Einstellungen >> Einstellungen für die Sofortübersetzung.
@@ -60,22 +61,27 @@ Sie wissen wollen wie Ihr Text ins Italienische klingt. Die Funktion
 schaltet automatisch die Zielsprache ins Italienische um, so dass eine
 gültige Übersetzung ausgegeben wird.
 
-Wenn diese Option keine Wirkung hat (sie ist experimentell), versuchen Sie,
-manuell zu einer stabilen Konfiguration zu wechseln, indem Sie die unten
-beschriebene Geste verwenden. Sie ist noch nicht ausgereift, weil Google
-typischerweise in manchen Situationen die eigentliche Quellsprache in kurzen
-Texten nicht richtig erkennt. Sie müssen die Sprachen manuell per Skript
-wechseln, um die Quellsprache als vorherige Zielsprache zu erzwingen (in
-unserem Beispiel Englisch).
+Wie auch immer, dies ist eine temporäre Konfiguration; Wenn diese Option
+keine Wirkung hat (sie ist experimentell), versuchen Sie, manuell zu einer
+stabilen Konfiguration zu wechseln, indem Sie die unten beschriebene
+Tastenkombination zum Wechseln verwenden. Es ist experimentell, da Google in
+einigen Situationen (in der Regel bei kurzen Texten) die echte
+Ausgangssprache nicht richtig erkennt und Sie die Sprachen manuell per
+Skript austauschen müssen, um die Ausgangssprache als vorherige Zielsprache
+zu erzwingen (Englisch in unserem Beispiel).
+
+Zumindest im Dialogfeld mit den Sprach-Einstellungen (NVDA-Menü -> Einstellungen -> Sprache) möchten Sie vielleicht die Option "Automatische Sprachumschaltung (wenn unterstützt)" aktivieren. Wenn Sie einen mehrsprachigen Synthesizer verwenden, wird die Übersetzung auf diese Weise mit der zielsprachlichen Stimme der Sprachausgabe angesagt.
 
 ## Verwendung ##
-Sie können diese Erweiterung auf zwei Arten verwenden:
+Sie können diese Erweiterung auf drei Arten verwenden:
 
-1. Markieren Sie einen Text mit Hilfe von Auswahlbefehlen(z.B. Shift +
-   Pfeiltasten) und drücken Sie die zugehörige Taste, um ihn zu
-   übersetzen. Das Übersetzungsergebnis wird mit der Sprachausgabe, die Sie
-   verwenden, vorgelesen.
+1. Wählen Sie Text mit Tastenkombinationen zur Auswahl aus (z. B. Umschalten
+   mit den Pfeiltasten) und drücken Sie zum Übersetzen die entsprechende
+   Taste. Das Übersetzungsergebnis wird von der verwendeten Sprachausgabe
+   mitgeteilt.
 2. Sie können auch den Text der Zwischenablage übersetzen lassen.
+3. Drücken Sie die entsprechende Tastenkombination, um den zuletzt
+   gesprochenen Text zu übersetzen.
 
 ## Tastenkürzel ##
 Alle folgenden Befehle müssen nach der zuvor gedrückten Modifikationstaste
@@ -87,7 +93,25 @@ Alle folgenden Befehle müssen nach der zuvor gedrückten Modifikationstaste
 * A: aktuelle Konfiguration ansagen,
 * C: kopiere letztes Ergebnis in die Zwischenablage,
 * I: die Sprache des markierten Texts ermitteln,
-* H: gibt alle verfügbaren Befehle aus.
+* L: Den zuletzt vorgelesenen Text übersetzen,
+* O: Einstellungen für die Übersetzungen öffnen
+* H: Nennt alle verfügbaren Tastenbefehle.
+
+## Änderungen in 4.4.2 ##
+* Stellt die Spracherkennung und den automatischen Austausch wieder her
+  (Danke an Cyrille für die Korrektur)
+* aktualisierte Sprachen für die Übersetzung (Dank an Cyrille)
+
+## Änderungen in 4.4 ##
+* Instant Translate ist jetzt mit neueren NVDA (Python 3) kompatibel.
+
+## Änderungen in 4.3 ##
+* Instant Translate ist mit den neuesten NVDA-Builds kompatibel.
+* einen Weg gefunden, Google wieder als Übersetzungsdienst zu nutzen.
+
+## Änderungen in 4.2 ##
+* Betriebszustand mit neueren Versionen von NVDA wiederhergestellt.
+* Automatische Spracherkennung wiederhergestellt.
 
 ## Änderungen in 4.1 ##
 * Sofortübersetzung funktioniert wieder, jetzt jedoch mit Yandex-Übersetzer

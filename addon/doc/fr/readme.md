@@ -6,8 +6,8 @@
 * Télécharger [[version de développement][2]
 
 Cette extension permet de traduire le texte sélectionné et ou le texte copié
-dans le presse-papiers d'une langue à une autre.  Il utilise un service
-externe.
+dans le presse-papiers d'une langue à une autre.  Il utilise le service de
+traduction de Google.
 
 ## Configurer les langues ##
 Pour configurer la langue source, destination et dans le cas d'une permutation, allez à : Menu NVDA >> Préférences >> Paramètres d'Instant Translate.
@@ -60,23 +60,26 @@ que vous voulez savoir comment votre texte sonne en Italien, l'extension
 commute automatiquement la langue cible à l'Italien, donc elle retourne une
 traduction valide.
 
-En tout cas, il s'agit d'une configuration temporaire ; si cette option n'a
-aucun effet (c'est expérimental), essayez de permuter manuellement à une
-configuration stable, en utilisant le geste d'alternance décrites
-ci-dessous. C'est expérimental car dans certaines situations (avec des
-textes courts, typiquement), Google ne reconnaît pas la véritable langue
-source correctement, et vous devrez permuter manuellement  les langues par
-script, afin de forcer la langue source à la langue cible précédente
-(Anglais dans notre exemple).
+Quoi qu'il en soit, il s'agit d'une configuration temporaire ; si cette
+option n'a aucun effet (elle est expérimentale), essayez de passer
+manuellement à une configuration stable, en utilisant le geste de
+permutation décrit ci-dessous. C'est expérimental parce que dans certaines
+situations (typiquement avec des textes courts), Google ne reconnaît pas
+correctement la langue source et vous devez intervertir les langues
+manuellement via un script, afin de forcer la langue source à être la langue
+cible précédente (l'anglais dans notre exemple).
+
+Dans les paramètres de parole (Menu NVDA >> Préférences >> Paramètres >> Parole), vous pouvez au moins cocher l'option "Changement automatique de langue (si supporté)". De cette façon, si vous utilisez un synthétiseur multilingue, la traduction sera énoncée dans la langue du synthétiseur.
 
 ## Utilisation ##
-Vous pouvez utiliser cette extension de deux façons :
+Vous pouvez utiliser cette extension de trois façons :
 
 1. Sélectionnez du texte en utilisant les commandes de sélection (maj avec
-   les touches fléchées, par exemple) et appuyez sur la touche associée pour
+   les touches fléchées par exemple) et appuyez sur la touche associée pour
    traduire. Le résultat de la traduction sera lu avec le synthétiseur que
    vous utilisez.
 2. Vous pouvez également traduire le texte depuis le presse-papiers.
+3. Effectuez le raccourci dédié pour traduire le dernier texte énoncée.
 
 ## Raccourcis clavier ##
 Toutes les commandes suivantes doivent être frappées après la touche
@@ -88,7 +91,27 @@ modificatrice "NVDA+Maj+t":
 * A: Annonce la configuration courante,
 * C: Copie le dernier résultat dans le presse-papiers,
 * I: Identifie la langue du texte sélectionné,
-* H: Annonce toutes les commandes disponibles pour l'utilisateur.
+* l: Traduit le texte récemment énoncé,
+* O: Affiche le dialogue des paramètres de traduction
+* H: Annonce toutes les commandes séquentielles.
+
+## Changements pour la version 4.4.2 ##
+* Rétablissement de la détection et du changement automatique de langue
+  (Merci à Cyrille pour la correction)
+* Mise à jour des langues de traduction (Merci à Cyrille)
+
+## Changements pour la version 4.4 ##
+* Instant Translate est désormais compatible avec la version 2019.3 (Python
+  3) de NVDA.
+
+## Changements pour la version 4.3 ##
+* Correction de compatibilité : Instant Translate sera désormais compatible
+  avec les dernières versions de NVDA.
+* Possibilité d'utiliser le service de traduction Google à nouveau.
+
+## Changements pour la version 4.2 ##
+* Rétablissement de la compatibilité avec les nouvelles versions de NVDA
+* Rétablissement de la détection automatique de la langue.
 
 ## Changements pour la version 4.1 ##
 * InstantTranslate fonctionne à nouveau, maintenant avec le Service de
