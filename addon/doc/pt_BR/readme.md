@@ -1,111 +1,112 @@
-# instantTranslate #
+# Tradutor Instantâneo (instantTranslate) #
 
 * Autores: Alexy Sadovoy, Beqa Gozalishvili, Mesar Hameed, Alberto Buffolino
   e outros colaboradores do NVDA.
 * Baixe a [versão estável][1]
-* Baixe a [versão de desenvolvimento][2]
+* Baixe a [versão em desenvolvimento][2]
 
-This add-on is used to translate selected and/or clipboard text from one
-language to another.  This is done using the Google Translate service.
+Este complemento é usado para traduzir o texto selecionado e/ou da área de
+transferência de um idioma para outro. Isso é feito usando o serviço Google
+Tradutor.
 
 ## Configurar idiomas ##
-Para configurar os idiomas de origem, de destino e nalguns casos de alternância, vá para: Menu do NVDA >> Preferências >> Opções do tradutor instantânio.
+Para configurar os idiomas de origem, de destino e nalguns casos de permuta, vá para: Menu do NVDA >> Preferências >> Configurações do Tradutor Instantânio.
 
 Existem duas caixas de combinação rotuladas "Idioma de origem" e "Idioma de
 destino", e uma caixa de seleção para decidir se deve ser copiada a tradução
 para a área de transferência.
 
-Além disso, caso tenha selecionado a opção auto (a primeira escolha na caixa
-de combinação "Idioma de origem", haverá também uma caixa de combinação
-rotulada "Idioma para alternância" e uma caixa de seleção para alternância
+Além disso, caso tenha selecionado a opção automático (a primeira escolha na
+caixa de combinação "Idioma de origem", haverá também uma caixa de
+combinação rotulada "Idioma de permuta" e uma caixa de seleção para permuta
 automática.
 
 O significado das duas primeiras caixas de combinação e da caixa de seleção
-de copiar é claro, mas algumas palavras acerca do restante se fazem
+para cópia é claro, mas algumas palavras acerca do restante se fazem
 necessárias.Lembre sempre que a explicação abaixo pressupõe que o idioma de
-origem está configurado na opção auto.
+origem está configurado na opção automática.
 
-A caixa de combinação "Idioma para alternância" é útil quando você alterna
-por script (ver abaixo) os idiomas de origem e de destino; com efeito, um
-idioma de destino configurado na opção auto não faz sentido, portanto o
+A caixa de combinação "Idioma de permuta" é útil quando você alterna por
+script (ver abaixo) os idiomas de origem e de destino; com efeito, um idioma
+de destino configurado na opção automática não faz sentido, portanto o
 complemento o configura para o valor da caixa de combinação acima.
 
-Assim, imagine a situação: você geralmente taduz para Inglês (seu idioma
+Assim, imagine a situação: você geralmente taduz para Português (seu idioma
 principal), mas às vezes (por exemplo quando escreve um documento) necessita
 traduzir para Italiano (digamos seu segundo idioma); você pode colocar a
-caixa de combinação "Idioma para alternância" para Italiano, de modo que
-traduzirá de Inglês para Italianosem acessar diretamente as opções de
+caixa de combinação "Idioma de permuta" para Italiano, de modo que traduzirá
+de Português para Italiano sem acessar diretamente as configurações do
 complemento. Obviamente, essa função tem maior ou menor utilidade, conforme
 sua necessidade mais freqüente.
 
-Aí vem a caixa de seleção alternância automática: ela aparece se e somente
-se você seleciona a opção auto na caixa de combinação "Idioma de origem" e
-está diretamente conectada à caixa de combinação "Idioma com o qual
-alternar". Caso você a ative, o complemento tenta comutar automaticamente da
+Agora, vem a caixa de seleção permuta automática: ela aparece se e somente
+se você seleciona a opção automático na caixa de combinação "Idioma de
+origem" e está diretamente conectada à caixa de combinação "Idioma de
+permuta". Caso você a ative, o complemento tenta comutar automaticamente da
 atual configuração de origem e destino para uma configuração na qual o
 idioma de destino torna-se o de origem e o idioma escolhido na caixa de
-combinação "Idioma com o qual alternar" é o novo idioma de destino;
-extremamente útil se o idioma de origem do texto que você quer traduzir é o
-idioma destino.
+combinação "Idioma de permuta" é o novo idioma de destino; extremamente útil
+se o idioma de origem do texto que você quer traduzir é o idioma destino.
 
 Um exemplo simple: tenha de novo em mente a situação imaginada antes; se
-você traduz um texto num idioma diferente de Inglês, não há problemas, você
-obtém a tradução correta em Inglês. Agora se você precisa traduzir um texto
-do Inglês, normalmente você obtém uma tradução para Inglês idêntica ao texto
-original e isso é pouco útil. Graças a opção de alternância automática,
-porém, supondo que você queira saber como o texto soa em Italiano, o
-complemento comuta automaticamente o idioma de destino para Italiano e
-portanto devolve uma tradução válida.
+você traduz um texto num idioma diferente de Português, não há problemas,
+você obtém a tradução correta em Português. Agora se você precisa traduzir
+um texto do Português, normalmente você obtém uma tradução para Português
+idêntica ao texto original e isso é pouco útil. Graças a opção de permuta
+automática, porém, supondo que você queira saber como o texto soa em
+Italiano, o complemento comuta automaticamente o idioma de destino para
+Italiano e portanto devolve uma tradução válida.
 
-Anyway, this is a temporary configuration; if this option has no effect
-(it's experimental), try to commute manually to a stable configuration,
-using the gesture for swapping described below. It's experimental because in
-some situations (with short texts, typically), Google does not recognize the
-real source language correctly, and you have to swap languages manually via
-script, so to force the source language to be the previous target language
-(English in our example).
+Em todo caso, isso é uma configuração temporária; se a opção não tiver
+efeito (a mesma é experimental), tente comutar manualmente para uma
+configuração estável usando o gesto de alternância descrito abaixo. Ela é
+experimental porque, em certas situações (geralmente com textos curtos), o
+Google não reconhece corretamente o verdadeiro idioma de origem e é preciso
+alternar os idiomas manualmente via script, de modo a forçar o idioma de
+origem a ser o anterior idioma de destino (Português em nosso exemplo).
 
-At least, in the speech settings parameters dialog (NVDA Menu >> Preferences >> Speech), you may want to check the "Automatic language switching (when supported)" option. This way, if you are using a multi-lingual synthesizer, the translation will be announced using the target language voice of the synthesizer.
+Pelo menos, no diálogo dos parâmetros de configuração de fala (Menu NVDA >> Preferências >> Fala), você pode querer marcar a opção "Alternância automática de idioma (quando suportado)". Desta forma, se você estiver usando um sintetizador multilíngue, a tradução será anunciada usando a voz do idioma de destino do sintetizador.
 
 ## Usando ##
-You can use this add-on in three ways:
+Você pode usar este complemento de três maneiras:
 
-1. Select some text using selection commands (shift with arrow keys, for
-   example) and press associated key to translate. translation result will
-   be read with synthesizer which you are using.
+1. Selecione algum texto usando comandos de seleção (shift com as teclas de
+   seta, por exemplo) e pressione a tecla associada para traduzir; o
+   resultado da tradução será lido com o sintetizador que você está usando.
 2. Pode também traduzir o texto da área de transferência.
-3. Press the dedicated shortcut key to translate the last spoken text.
+3. Pressione a tecla de atalho dedicada para traduzir o último texto falado.
 
 ## Atalhos ##
 Todos os seguintes comandos devem ser pressionados após a tecla modificadora
 "NVDA+Shift+t":
 
 * T: Traduz o texto selecionado,
-* Shift+t: Traduz o texto da área de transferência,
-* S: Alterna os idiomas de origem e destino,
-* A: Anuncia a configuração atual,
-* C: Copia o último resultado para a área de transferência,
+* Shift+t: traduz o texto da área de transferência,
+* S: permuta os idiomas de origem e destino,
+* A: anuncia a configuração atual,
+* C: copia o último resultado para a área de transferência,
 * I: identifica o idioma do texto selecionado,
-* L: translate the last spoken text,
-* O: open translation settings dialog
-* H: announces all available layered commands.
+* L: traduz o último texto falado,
+* O: abrir diálogo de configurações de tradução
+* H: anuncia ao usuário todos os comandos disponíveis de camada.
 
-## Changes for 4.4.2 ##
-* Restore language detection and auto-swapping (Thanks to Cyrille for fix)
-* updated languages for translation (thanks to Cyrille)
+## Mudanças na 4.4.2 ##
+* Restaura detecção de idioma e permuta automática (agradecimentos a Cyrille
+  pela correção)
+* idiomas atualizados para tradução (graças ao Cyrille)
 
-## Changes for 4.4 ##
-* Instant translate is now compatible with NVDA 2019.3 (Python 3 versions of
-  NVDA)
+## Mudanças na 4.4 ##
+* Tradutor instantâneo agora é compatível com NVDA 2019.3 (versões Python 3
+  do NVDA)
 
-## Changes for 4.3 ##
-* nvda compatibility fix Now instant translate will be compatible with
-  latest nvda builds.
-* found a way to use google as a translation service again.
+## Mudanças na 4.3 ##
+* correção de compatibilidade com nvda Agora o tradutor instantâneo será
+  compatível com as compilações do nvda mais recentes.
+* descobri uma maneira de usar o google como serviço de tradução novamente.
 
-## Changes for 4.2 ##
-* Restored working state with newer versions of nvda.
-* Restored automatic language detection.
+## Mudanças na 4.2 ##
+* Estado de trabalho restaurado com versões mais recentes do nvda.
+* Detecção automática de idioma restaurada.
 
 ## Mudanças na 4.1 ##
 * O Tradutor Instantâneo funciona novamente, agora com o serviço Yandex
@@ -113,7 +114,7 @@ Todos os seguintes comandos devem ser pressionados após a tecla modificadora
 
 ## Mudanças na 4.0 ##
 * Tradução é executada automaticamente após alternância.
-* Bug de cache corrigido.
+* Falha de cache corrigida.
 
 ## Mudanças na 3.0 ##
 * Alterado o modo como os atalhos são usados, agora pode pressionar a tecla
@@ -131,7 +132,7 @@ Todos os seguintes comandos devem ser pressionados após a tecla modificadora
 * Adicionada uma caixa de seleção para configurar a cópia de resultados de
   traduções.
 * Armazena arquivo de configuração na raiz da pasta de opções.
-* Idiomas de origem e destino sincronizados com o que o Google Translate
+* Idiomas de origem e destino sincronizados com o que o Google Tradutor
   expõe atualmente (22 de abril de 2015).
 
 

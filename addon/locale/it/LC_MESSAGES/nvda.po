@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: 'InstantTranslate' '3.0'\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2013-02-09 18:30+0100\n"
-"PO-Revision-Date: 2016-02-26 02:10-0800\n"
-"Last-Translator: Simone Dal Maso <simone.dalmaso@juvox.it>\n"
+"PO-Revision-Date: 2021-07-14 15:41+0100\n"
+"Last-Translator: Simone Dal Maso <simone.dalmaso@gmail.com>\n"
 "Language-Team: Alberto Buffolino, Simone Dal Maso <a.buffolino@gmail.com, "
 "simone.dalmaso@gmail.com>\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.5.5\n"
+"X-Generator: Poedit 1.6.10\n"
 
 #, fuzzy
 msgid ""
@@ -93,7 +93,7 @@ msgstr "Identifica la lingua del testo selezionato"
 
 #. Translators: Presented in input help mode.
 msgid "It translates the last spoken text"
-msgstr ""
+msgstr "Traduce l'ultimo testo letto dalla sintesi vocale"
 
 #, fuzzy
 msgid ""
@@ -110,7 +110,7 @@ msgstr ""
 
 #. Translators: Presented in input help mode.
 msgid "Announces all available layered commands"
-msgstr ""
+msgstr "Annuncia tutti i comandi disponibili"
 
 #. Translators: Presented in input help mode.
 #, fuzzy
@@ -166,7 +166,7 @@ msgstr "Esperanto"
 
 #. Translators: The name of a language supported by this add-on.
 msgid "Hawaiian"
-msgstr ""
+msgstr "hawaiano"
 
 #. Translators: The name of a language supported by this add-on.
 msgid "Hmong"
