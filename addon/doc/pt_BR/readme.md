@@ -10,7 +10,7 @@ transferência de um idioma para outro. Isso é feito usando o serviço Google
 Tradutor.
 
 ## Configurar idiomas ##
-Para configurar os idiomas de origem, de destino e nalguns casos de permuta, vá para: Menu do NVDA >> Preferências >> Configurações do Tradutor Instantânio.
+Para configurar os idiomas de origem, de destino e nalguns casos de permuta, vá para: Menu do NVDA >> Preferências >> Configurações do Tradutor Instantâneo.
 
 Existem duas caixas de combinação rotuladas "Idioma de origem" e "Idioma de
 destino", e uma caixa de seleção para decidir se deve ser copiada a tradução

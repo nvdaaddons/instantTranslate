@@ -5,8 +5,9 @@
 * Baixar [versão estável][1]
 * Baixar [versão de desenvolvimento][2]
 
-This add-on is used to translate selected and/or clipboard text from one
-language to another.  This is done using the Google Translate service.
+Este extra é utilizado para traduzir texto seleccionado e/ou da área de
+transferência de uma língua para outra.  Isto é feito utilizando o tradutor
+do google.
 
 ## Configurar idiomas ##
 Para configurar os idiomas de origem, de destino e, em alguns casos, de alternância, vá para: Menu do NVDA >> Preferências >> configurações << tradutor instantânio.
@@ -56,24 +57,25 @@ você queira saber como o texto fica em Italiano, o extra comuta
 automaticamente o idioma de destino para Italiano e portanto devolve uma
 tradução válida.
 
-Anyway, this is a temporary configuration; if this option has no effect
-(it's experimental), try to commute manually to a stable configuration,
-using the gesture for swapping described below. It's experimental because in
-some situations (with short texts, typically), Google does not recognize the
-real source language correctly, and you have to swap languages manually via
-script, so to force the source language to be the previous target language
-(English in our example).
+De qualquer modo, esta é uma configuração temporária; se esta opção não
+tiver efeito (é experimental), tente comutar manualmente para uma
+configuração estável, usando o comando de troca descrito abaixo. É
+experimental porque em algumas situações (com textos curtos, tipicamente), o
+Google não reconhece correctamente a verdadeira língua de origem, e é
+necessário trocar as línguas manualmente através de script, de modo a forçar
+a língua de origem a ser a língua de destino anterior (inglês no nosso
+exemplo).
 
-At least, in the speech settings parameters dialog (NVDA Menu >> Preferences >> Speech), you may want to check the "Automatic language switching (when supported)" option. This way, if you are using a multi-lingual synthesizer, the translation will be announced using the target language voice of the synthesizer.
+Pelo menos, no diálogo de parâmetros de definições de voz (Menu NVDA >> Preferências >> vozes), pode querer verificar a opção "Mudança automática de idioma (quando suportado)". Desta forma, se estiver a utilizar um sintetizador multilingue, a tradução será anunciada utilizando a voz do idioma de destino do sintetizador.
 
 ## Como Usar ##
-You can use this add-on in three ways:
+Pode usar este extra de três formas:
 
-1. Select some text using selection commands (shift with arrow keys, for
-   example) and press associated key to translate. translation result will
-   be read with synthesizer which you are using.
+1. Seleccione algum texto utilizando os comandos de selecção (shift com
+   teclas de seta, por exemplo) e prima a tecla associada para traduzir. o
+   resultado da tradução será lido com o sintetizador que está a utilizar.
 2. Também pode traduzir o texto da área de transferência.
-3. Press the dedicated shortcut key to translate the last spoken text.
+3. Pressione a tecla de atalho dedicada para traduzir o último texto falado.
 
 ## Teclas de atalho: ##
 Estes comandos só são válidos após ter sido pressionada a tecla modificadora
@@ -85,26 +87,28 @@ Estes comandos só são válidos após ter sido pressionada a tecla modificadora
 * A: indica a configuração atual,
 * C: Copia o último resultado para a área de transferência,
 * I: identifica o idioma do texto seleccionado,
-* L: translate the last spoken text,
-* O: open translation settings dialog
-* H: announces all available layered commands.
+* L: traduz o último texto falado,
+* O: abrir o diálogo de configurações de tradução
+* H: anuncia todos os comandos em camada disponíveis.
 
-## Changes for 4.4.2 ##
-* Restore language detection and auto-swapping (Thanks to Cyrille for fix)
-* updated languages for translation (thanks to Cyrille)
+## Alterações para 4.4.2 ##
+* Restauração da detecção linguística e auto-swapping (Graças ao Cyrille
+  para correcção)
+* línguas actualizadas para tradução (graças ao Cyrille)
 
-## Changes for 4.4 ##
-* Instant translate is now compatible with NVDA 2019.3 (Python 3 versions of
-  NVDA)
+## Alterações para 4.4 ##
+* A tradução instantânea é agora compatível com a NVDA 2019.3 (versões
+  Python 3 do NVDA)
 
-## Changes for 4.3 ##
-* nvda compatibility fix Now instant translate will be compatible with
-  latest nvda builds.
-* found a way to use google as a translation service again.
+## Alterações para 4.3 ##
+* Resolvido o problema de compatibilidade: Agora a tradução instantânea será
+  compatível com as últimas compilações do nvda.
+* encontrou-se  uma forma de utilizar novamente o google como um serviço de
+  tradução.
 
-## Changes for 4.2 ##
-* Restored working state with newer versions of nvda.
-* Restored automatic language detection.
+## Alterações para 4.2 ##
+* Estado de funcionamento restaurado com versões mais recentes do nvda.
+* Restauração da detecção automática do idioma.
 
 ## Mudanças para a 4.1 ##
 * O Tradutor Instantâneo está novamente a funcionar, agora com o serviço
