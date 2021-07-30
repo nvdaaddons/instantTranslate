@@ -5,8 +5,9 @@
 * Lataa [vakaa versio][1]
 * Lataa [kehitysversio][2]
 
-This add-on is used to translate selected and/or clipboard text from one
-language to another.  This is done using the Google Translate service.
+Tätä lisäosaa käytetään valitun ja/tai leikepöydällä olevan tekstin
+kääntämiseen kielestä toiselle.  Käännös suoritetaan
+Google-kääntäjä-palvelua käyttäen.
 
 ## Kielten määrittäminen ##
 Määritä lähde-, kohde- ja vaihdettava kieli valitsemalla "Pikakääntäjä..."-vaihtoehto kohdasta NVDA-valikko -> Asetukset.
@@ -58,24 +59,26 @@ tietää, miltä tekstisi italiankielinen käännös kuulostaa, lisäosa voi
 kuitenkin vaihtaa kohdekielen automaattisesti italiaksi, jolloin saat
 asianmukaisen käännöksen.
 
-Anyway, this is a temporary configuration; if this option has no effect
-(it's experimental), try to commute manually to a stable configuration,
-using the gesture for swapping described below. It's experimental because in
-some situations (with short texts, typically), Google does not recognize the
-real source language correctly, and you have to swap languages manually via
-script, so to force the source language to be the previous target language
-(English in our example).
+Tämä asetus on oikeastaan tarkoitettu vain tilapäiseen käyttöön. Mikäli
+tällä kokeellisella toiminnolla ei ole vaikutusta, kokeile vaihtaa
+manuaalisesti vakaisiin asetuksiin alla kuvailtua kielenvaihtamiskomentoa
+käyttäen. Toiminto on kokeellinen, koska Google ei tunnista todellista
+lähdekieltä oikein joissakin tilanteissa (tyypillisesti lyhyiden tekstien
+kanssa), ja sinun täytyy vaihtaa kieliä manuaalisesti näppäinkomentoa
+käyttäen pakottaaksesi lähdekieleksi aiemman kohdekielen (meidän
+tapauksessamme englanti).
 
-At least, in the speech settings parameters dialog (NVDA Menu >> Preferences >> Speech), you may want to check the "Automatic language switching (when supported)" option. This way, if you are using a multi-lingual synthesizer, the translation will be announced using the target language voice of the synthesizer.
+Voit halutessasi valita "Vaihda kieltä automaattisesti (kun sitä tuetaan)" -asetuksen Puheasetukset-asetuspaneelista (NVDA-valikko -> Asetukset -> Asetukset -> Puhe). Tällä tavoin syntetisaattori puhuu käännöksen kohdekielen äänellä, mikäli käytät monikielistä syntetisaattoria.
 
 ## Käyttö ##
-You can use this add-on in three ways:
+Voit käyttää tätä lisäosaa kolmella eri tavalla:
 
-1. Select some text using selection commands (shift with arrow keys, for
-   example) and press associated key to translate. translation result will
-   be read with synthesizer which you are using.
+1. Valitse tekstiä valitsemiskomennoilla
+   (esim. Shift+nuolinäppäimet). Käännä sitten valittu teksti painamalla
+   määritettyä näppäinkomentoa. Tämän jälkeen käännös luetaan käyttämälläsi
+   puhesyntetisaattorilla.
 2. Voit kääntää myös leikepöydällä olevaa tekstiä.
-3. Press the dedicated shortcut key to translate the last spoken text.
+3. Käännä viimeksi puhuttu teksti painamalla erillistä pikanäppäintä.
 
 ## Pikanäppäimet ##
 Seuraavia komentoja  on painettava toimintonäppäimen NVDA+Shift+T jälkeen:
@@ -86,26 +89,27 @@ Seuraavia komentoja  on painettava toimintonäppäimen NVDA+Shift+T jälkeen:
 * A: Ilmoita nykyiset asetukset.
 * C: Kopioi viimeisin käännös leikepöydälle.
 * I: Tunnista valitun tekstin kieli.
-* L: translate the last spoken text,
-* O: open translation settings dialog
-* H: announces all available layered commands.
+* L: Käännä viimeksi puhuttu teksti.
+* O: Avaa käännösasetusten valintaikkuna.
+* H: Puhuu kaikki käytettävissä olevat komentokerroksen komennot.
 
-## Changes for 4.4.2 ##
-* Restore language detection and auto-swapping (Thanks to Cyrille for fix)
-* updated languages for translation (thanks to Cyrille)
+## Muutokset versiossa 4.4.2 ##
+* Kielen tunnistus ja automaattinen vaihto palautettu (kiitos Cyrille'lle
+  korjauksesta).
+* Käännöskieliä päivitetty (kiitos Cyrille'lle).
 
-## Changes for 4.4 ##
-* Instant translate is now compatible with NVDA 2019.3 (Python 3 versions of
-  NVDA)
+## Muutokset versiossa 4.4 ##
+* Pikakääntäjä on nyt yhteensopiva NVDA 2019.3:n kanssa (NVDA:n Python 3
+  -versiot).
 
-## Changes for 4.3 ##
-* nvda compatibility fix Now instant translate will be compatible with
-  latest nvda builds.
-* found a way to use google as a translation service again.
+## Muutokset versiossa 4.3 ##
+* NVDA-yhteensopivuus korjattu. Pikakääntäjä on nyt yhteensopiva
+  viimeisimpien NVDA-versioiden kanssa.
+* Löydetty jälleen keino Googlen käyttämiseen käännöspalveluna.
 
-## Changes for 4.2 ##
-* Restored working state with newer versions of nvda.
-* Restored automatic language detection.
+## Muutokset versiossa 4.2 ##
+* Palautettu toimivuus uudempien NVDA-versioiden kanssa.
+* Automaattinen kielen tunnistus palautettu.
 
 ## Muutokset versiossa 4.1 ##
 * Pikakääntäjä toimii taas, ja käyttää nyt Googlen sijaan
