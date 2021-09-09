@@ -65,6 +65,7 @@ confspec = {
 "copytranslatedtext": "boolean(default=true)",
 "autoswap": "boolean(default=true)",
 "isautoswapped": "boolean(default=false)",
+"replaceUnderscores": "boolean(default=false)",
 }
 config.conf.spec["instanttranslate"] = confspec
 
@@ -116,7 +117,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		self.lastSpokenText = ''
 
 	def getUpdatedGlobalVars(self):
-		global lang_from, lang_to, lang_swap, copyTranslation, autoSwap, isAutoSwapped
+		global lang_from, lang_to, lang_swap, copyTranslation, autoSwap, isAutoSwapped, replaceUnderscores
 		# source language
 		lang_from = config.conf['instanttranslate']['from']
 		# target language
@@ -129,6 +130,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		autoSwap = config.conf['instanttranslate']['autoswap']
 		# keep track if there was a swapping from source=auto during previous NVDA session
 		isAutoSwapped = config.conf['instanttranslate']['isautoswapped']
+		replaceUnderscores = config.conf['instanttranslate']['replaceUnderscores']
 
 	def getScript(self, gesture):
 		if not self.toggling:
@@ -193,6 +195,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	def translate(self, text):
 		self.getUpdatedGlobalVars()
 		global lang_from
+		if replaceUnderscores:
+			text = text.replace("_", " ")
 		# useful for yandex, that doesn't support auto option
 #		if lang_from == "auto":
 #			lang_from = detect_language(text)

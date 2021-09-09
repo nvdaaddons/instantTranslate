@@ -63,6 +63,10 @@ class InstantTranslateSettingsPanel(gui.SettingsPanel):
 		self.copyTranslationChk = helper.addItem(wx.CheckBox(self, label=_("Copy translation result to clipboard")))
 		self.copyTranslationChk.SetValue(config.conf['instanttranslate']['copytranslatedtext'])
 				
+		# Translators: A setting in addon settings dialog.
+		self.replaceUnderscores = helper.addItem(wx.CheckBox(self, label=_("Replace underscores with spaces (May provide better translation results depending on context)")))
+		self.replaceUnderscores.SetValue(config.conf['instanttranslate']['replaceUnderscores'])
+				
 		iLang_from = self._fromChoice.FindString(self.getDictKey(config.conf['instanttranslate']['from']))
 		iLang_to = self._intoChoice.FindString(self.getDictKey(config.conf['instanttranslate']['into']))
 		iLang_swap = self._swapChoice.FindString(self.getDictKey(config.conf['instanttranslate']['swap']))
@@ -105,6 +109,7 @@ class InstantTranslateSettingsPanel(gui.SettingsPanel):
 		config.conf['instanttranslate']['swap'] = langslist[self._swapChoice.GetStringSelection()]
 		config.conf['instanttranslate']['copytranslatedtext'] = self.copyTranslationChk.GetValue()
 		config.conf['instanttranslate']['autoswap'] = self.autoSwapChk.GetValue()
+		config.conf['instanttranslate']['replaceUnderscores'] = self.replaceUnderscores.GetValue()
 
 	def getDictKey(self, currentValue):
 		for key, value in langslist.items():
