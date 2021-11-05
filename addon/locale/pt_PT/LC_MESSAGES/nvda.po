@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: instantTranslate 3.0\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2015-05-05 16:47+1000\n"
-"PO-Revision-Date: 2021-07-12 19:02+0100\n"
+"PO-Revision-Date: 2021-10-30 22:17+0100\n"
 "Last-Translator: Ângelo Abrantes <ampa4374@gmail.com>\n"
 "Language-Team: Equipa Portuguesa do NVDA <angelomiguelabrantes@gmail.com; "
 "rui.fontes@tiflotecnia.com>\n"
@@ -41,19 +41,19 @@ msgstr "Sem Texto na área de transferência"
 msgid ""
 "Translates clipboard text from one language to another using Google "
 "Translate."
-msgstr "Traduz texto de um idioma para outro, utilizando o tradutor do Google"
+msgstr "Traduz texto de um idioma para outro, utilizando o tradutor do Google."
 
 #. Translators: user has pressed the shortcut key for translating selected text, but no text was actually selected.
 #. Translators: user has pressed the shortcut key for identifying the language of selected text, but no text was actually selected.
 msgid "no selection"
-msgstr "Sem selecção"
+msgstr "sSem selecção"
 
 #. Translators: message presented in input help mode, when user presses the shortcut keys for this addon.
 msgid ""
 "Translates selected text from one language to another using Google Translate."
 msgstr ""
 "Traduz o texto seleccionado de um idioma para outro, usando o tradutor do "
-"Google"
+"Google."
 
 #. Translators: message presented to announce that the source and target languages have been swapped.
 msgid "Languages swapped"
@@ -62,15 +62,15 @@ msgstr "Idiomas permutados"
 #. Translators: message presented to announce the current source and target languages.
 #, python-brace-format
 msgid "Translate: from {lang1} to {lang2}"
-msgstr "traduzir: de {lang1} para {lang2}"
+msgstr "Traduzir: de {lang1} para {lang2}"
 
 #. Translators: Presented in input help mode.
 msgid "It swaps source and target languages."
-msgstr "Troca entre idioma de origem e de destino"
+msgstr "Troca entre idioma de origem e de destino."
 
 #. Translators: Presented in input help mode.
 msgid "It announces the current source and target languages."
-msgstr "Anuncia o idioma fonte e o de destino"
+msgstr "Anuncia o idioma fonte e o de destino."
 
 #. Translators: message presented to announce a successful copy
 msgid "Last translation copied in clipboard"
@@ -124,19 +124,19 @@ msgstr "Instant Translate"
 
 #. Translators: Help message for a dialog.
 msgid "Select translation source and target language:"
-msgstr "Seleccione o idioma de origem e o de destino"
+msgstr "Seleccione o idioma de origem e o de destino."
 
 #. Translators: A setting in addon settings dialog.
 msgid "Source language:"
-msgstr "Idioma fonte"
+msgstr "Idioma fonte."
 
 #. Translators: A setting in addon settings dialog.
 msgid "Target language:"
-msgstr "Idioma destino"
+msgstr "Idioma destino."
 
 #. Translators: A setting in addon settings dialog, shown if source language is on auto.
 msgid "Language for swapping:"
-msgstr "Idioma para trocar"
+msgstr "Idioma para trocar."
 
 #. Translators: A setting in addon settings dialog, shown if source language is on auto.
 msgid ""
@@ -231,7 +231,7 @@ msgid "Yiddish"
 msgstr "Yiddish"
 
 msgid "unavailable"
-msgstr "Indisponível"
+msgstr "indisponível"
 
 #. We have probably been blocked, so stop trying to translate.
 #. log.exception("Instant translate: Can not translate text '%s'" %chunk)
