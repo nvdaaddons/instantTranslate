@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: instantTranslate 3.0\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2015-05-05 16:47+1000\n"
-"PO-Revision-Date: 2021-10-30 22:17+0100\n"
+"PO-Revision-Date: 2021-11-18 23:15+0000\n"
 "Last-Translator: Ângelo Abrantes <ampa4374@gmail.com>\n"
 "Language-Team: Equipa Portuguesa do NVDA <angelomiguelabrantes@gmail.com; "
 "rui.fontes@tiflotecnia.com>\n"
@@ -124,11 +124,11 @@ msgstr "Instant Translate"
 
 #. Translators: Help message for a dialog.
 msgid "Select translation source and target language:"
-msgstr "Seleccione o idioma de origem e o de destino."
+msgstr "Seleccione o idioma de origem e o de destino:"
 
 #. Translators: A setting in addon settings dialog.
 msgid "Source language:"
-msgstr "Idioma fonte."
+msgstr "Idioma fonte:"
 
 #. Translators: A setting in addon settings dialog.
 msgid "Target language:"
@@ -136,7 +136,7 @@ msgstr "Idioma destino."
 
 #. Translators: A setting in addon settings dialog, shown if source language is on auto.
 msgid "Language for swapping:"
-msgstr "Idioma para trocar."
+msgstr "Idioma para trocar:"
 
 #. Translators: A setting in addon settings dialog, shown if source language is on auto.
 msgid ""
