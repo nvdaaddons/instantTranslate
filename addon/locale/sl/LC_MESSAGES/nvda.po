@@ -8,16 +8,15 @@ msgstr ""
 "Project-Id-Version: 'Instant-Translate' '2.1'\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2013-02-20 22:56+0100\n"
-"PO-Revision-Date: 2016-02-26 02:51-0800\n"
-"Last-Translator: jožef gregorc <jozko.gregorc@gmail.com>\n"
+"PO-Revision-Date: 2021-12-15 08:40+0100\n"
+"Last-Translator: Jožef Gregorc <jozko.gregorc@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: sl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.5.5\n"
+"X-Generator: Poedit 1.5.7\n"
 
-#, fuzzy
 msgid ""
 "Instant Translate layer commands. t translates selected text, shift+t "
 "translates clipboard text, a announces current swap configuration, s swaps "
@@ -25,10 +24,11 @@ msgid ""
 "the language of selected text, l translates last spoken text, o opens "
 "translation setting dialog."
 msgstr ""
-"Ukazi za hitri prevod so v plasti. t prevede označeno besedilo, shift t "
+"Ukazi za hitri prevod so v plasti. t prevede označeno besedilo, shift+t "
 "prevede besedilo v odložišču, a naznani trenutne nastavitve menjave jezikov, "
 "s  zamenja jezik vira in ciljni jezik, c preslika zadnji rezultat v "
-"odložišče, i identificira jezik označenega besedila."
+"odložišče, i identificira jezik označenega besedila, l prevede zadnje "
+"govorjeno besedilo, o odpre pogovorno okno nastavitev prevajanja."
 
 #. Translators: message presented when user presses the shortcut key for translating clipboard text but the clipboard is empty.
 msgid "There is no text on the clipboard"
@@ -59,7 +59,6 @@ msgid "Languages swapped"
 msgstr "Menjava jezikov uspela."
 
 #. Translators: message presented to announce the current source and target languages.
-#, python-brace-format
 msgid "Translate: from {lang1} to {lang2}"
 msgstr "Prevedi: iz {lang1} v {lang2}"
 
@@ -93,9 +92,8 @@ msgstr "To identificira jezik označenega besedila"
 
 #. Translators: Presented in input help mode.
 msgid "It translates the last spoken text"
-msgstr ""
+msgstr "Prevede zadnje govorjeno besedilo"
 
-#, fuzzy
 msgid ""
 "t translates selected text, shift+t translates clipboard text, a announces "
 "current swap configuration, s swaps source and target languages, c copies "
@@ -106,16 +104,16 @@ msgstr ""
 "t prevede označeno besedilo, shift+t prevede besedilo v odložišču, a naznani "
 "trenutno konfiguracijo zamenjave jezikov, s menja jezike vira in cilja, c "
 "preslika zadnji rezultat v odložišče, i identificira jezik označenega "
-"besedila, h prikaže to sporočilo."
+"besedila, l prevede zadnje govorjeno besedilo, o odpre pogovorno okno "
+"nastavitev prevajanja, h prikaže to sporočilo."
 
 #. Translators: Presented in input help mode.
 msgid "Announces all available layered commands"
-msgstr ""
+msgstr "Naznani vse ukaze v plasti, ki so na voljo"
 
 #. Translators: Presented in input help mode.
-#, fuzzy
 msgid "Opens Instant Translate settings dialog."
-msgstr "Nastavitve Hitro Prevedi"
+msgstr "Odpre pogovorno okno Nastavitev za Hitro Prevedi."
 
 #. Translators: name of the dialog.
 #. Add-on summary, usually the user visible name of the addon.
@@ -165,7 +163,7 @@ msgstr "Esperanto"
 
 #. Translators: The name of a language supported by this add-on.
 msgid "Hawaiian"
-msgstr ""
+msgstr "Havajski"
 
 #. Translators: The name of a language supported by this add-on.
 msgid "Hmong"
@@ -181,7 +179,7 @@ msgstr "Javanski"
 
 #. Translators: The name of a language supported by this add-on.
 msgid "Kurdish"
-msgstr ""
+msgstr "Kurdski"
 
 #. Translators: The name of a language supported by this add-on.
 msgid "Latin"
@@ -201,15 +199,15 @@ msgstr "Chichewa"
 
 #. Translators: The name of a language supported by this add-on.
 msgid "Sindhi"
-msgstr ""
+msgstr "Sindhi"
 
 #. Translators: The name of a language supported by this add-on.
 msgid "Samoan"
-msgstr ""
+msgstr "Samoaski"
 
 #. Translators: The name of a language supported by this add-on.
 msgid "Shona"
-msgstr ""
+msgstr "Šona"
 
 #. Translators: The name of a language supported by this add-on.
 msgid "Somali"
@@ -238,7 +236,7 @@ msgstr "ni na voljo"
 #. log.exception("Instant translate: Can not translate text '%s'" %chunk)
 #. raise e
 msgid "Translation failed"
-msgstr ""
+msgstr "Prevod spodletel"
 
 #. Translators: the label of a message box dialog.
 msgid ""
@@ -263,7 +261,3 @@ msgstr ""
 
 #~ msgid "Instant &Translate Settings..."
 #~ msgstr "Nastavitve &Hitro Prevedi..."
-
-# več po testu
-#~ msgid "Select languages to be used for translation."
-#~ msgstr "Izberite jezike, ki jih želite uporabljati pri prevodu."
