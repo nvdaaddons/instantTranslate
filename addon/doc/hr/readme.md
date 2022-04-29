@@ -1,4 +1,4 @@
-# Brzo prevođenje (instantTranslate) #
+# Izravno prevođenje (instantTranslate) #
 
 * Autori: Alexy Sadovoy, Beqa Gozalishvili, Mesar Hameed, Alberto Buffolino
   i drugi NVDA suradnici.
@@ -10,7 +10,7 @@ međuspremnika s jednog jezika na drugi. Za to se koristi usluga Google
 Prevoditelj.
 
 ## Konfiguriranje jezika ##
-Za podešavanje izvornog i ciljanog jezika te jezika zamjene, prijeđi na: NVDA izbornik>Postavke>Postavke za brzo prevođenje.
+Za podešavanje izvornog i ciljanog jezika te jezika zamjene, prijeđi na: NVDA izbornik >> Postavke >> Postavke za izravno prevođenje.
 
 Tu se nalaze dva odabirna okvira s nazivima „Izvorni jezik” i „Jezik za
 prevođenje”, kao i odabirno polje za određivanje, treba li prijevod kopirati
@@ -52,15 +52,15 @@ automatske zamjene, pretpostavljajući da želite znati kako vaš tekst zvuči
 na talijanskom jeziku, dodatak automatski prebacuje ciljni jezik na
 talijanski jezik i vraća valjani prijevod.
 
-Anyway, this is a temporary configuration; if this option has no effect
-(it's experimental), try to commute manually to a stable configuration,
-using the gesture for swapping described below. It's experimental because in
-some situations (with short texts, typically), Google does not recognize the
-real source language correctly, and you have to swap languages manually via
-script, so to force the source language to be the previous target language
-(English in our example).
+U svakom slučaju, to je privremena konfiguracija; ako ova opcija nema
+nikakav učinak (to je eksperimentalno), pokušajte ručno prebaciti na
+stabilnu konfiguraciju, koristeći gestu za zamjenu, koja je opisana niže
+dolje. Eksperimentalno je, jer u nekim situacijama (obično kratkim
+tekstovima) Google ne prepoznaje pravi izvorni jezik i morate ručno
+mijenjati jezike pomoću skripte, tako da bi izvorni jezik bio prethodni
+ciljni jezik (engleski u našem primjeru).
 
-At least, in the speech settings parameters dialog (NVDA Menu >> Preferences >> Speech), you may want to check the "Automatic language switching (when supported)" option. This way, if you are using a multi-lingual synthesizer, the translation will be announced using the target language voice of the synthesizer.
+U dijaloškom okviru parametara postavki govora (NVDA izbornik >> Postavke >> Govor) provjeri opciju „Automatsko mijenjanje jezika (kada je podržano)”. Na ovaj način, ako koristiš višejezičnu govornu jedinicu, prijevod će se objavliti korištenjem glasa ciljnog jezika govorne jedinice.
 
 ## Primjena ##
 Ovaj se dodatak može koristiti na tri načina:
@@ -86,24 +86,25 @@ Sve sljedeće naredbe se moraju pritisnuti nakon modifikacijske tipke
 * H: izgovara sve dostupne slojevne naredbe.
 
 ## Promjene u 4.4.2 ##
-* Restore language detection and auto-swapping (Thanks to Cyrille for fix)
-* updated languages for translation (thanks to Cyrille)
+* Obnovljeno je automatsko otkrivanje jezika i automatsko
+  zamijenjivanje. (Hvala Cyrille za ispravak)
+* aktualizirani su jezici za prevođenje (hvala Cyrille)
 
 ## Promjene u 4.4 ##
-* Instant translate is now compatible with NVDA 2019.3 (Python 3 versions of
-  NVDA)
+* Izravno prevođenje je sada kompatibilno s NVDA 2019.3 (Python 3 verzije
+  NVDA čitača)
 
 ## Promjene u 4.3 ##
-* nvda compatibility fix Now instant translate will be compatible with
-  latest nvda builds.
-* found a way to use google as a translation service again.
+* Popravak NVDA kompatibilnosti: Dodatak „Izravno prevođenje” bit će
+  kompatibilan s najnovijim NVDA verzijama.
+* pronađen je način za ponovno korištenje googlea kao uslugu za prevođenje.
 
 ## Promjene u 4.2 ##
-* Restored working state with newer versions of nvda.
-* Restored automatic language detection.
+* Obnovljeno je radno stanje s novijim NVDA verzijama.
+* Obnovljeno je automatsko otkrivanje jezika.
 
 ## Promjene u 4.1 ##
-* Brzo prevođenje opet radi, sada s Yandex uslugom za prevođenje, umjesto
+* Izravno prevođenje opet radi, sada s Yandex uslugom za prevođenje, umjesto
   Google usluge.
 
 ## Promjene u 4.0 ##
@@ -111,16 +112,16 @@ Sve sljedeće naredbe se moraju pritisnuti nakon modifikacijske tipke
 * Ispravljena greška s predmemorijom.
 
 ## Promjene u 3.0 ##
-* Promijenjen je način korištenja tipkovnih prečaca, sada za Brzo prevođenje
-  možeš pritisnuti modifikacijsku tipku „NVDA+šift+t”, a nakon toga tipku
-  prvog slova za izvršavanje nekih radnji (vidi sve naredbe u odjeljku
+* Promijenjen je način korištenja tipkovnih prečaca. Za „Izravno prevođenje”
+  sada možeš pritisnuti modifikacijsku tipku „NVDA+šift+t”, a nakon toga
+  jednu tipku za izvršavanje nekih radnji (vidi sve naredbe u odjeljku
   „Tipkovni prečaci”).
 * Uvedena je zamjena jezika.
 * Promijenjen je format konfiguracije, sad je moguće promijeniti postavke
-  brzog prevođenja za prikaz koji je samo za čitanje, ali misli na to, da će
-  to funkcionirati prije prvog ponovnog pokretanja NVDA.
+  izravnog prevođenja za prikaz koji je samo za čitanje, ali misli na to, da
+  će to funkcionirati prije prvog ponovnog pokretanja NVDA čitača.
 * Uklonjeno je ograničenje za tekst koji se može prevesti.
-* Dodan je tipkovnički prečac „t” u stavku izbornika „Postavke za brzo
+* Dodan je tipkovnički prečac „t” u stavku izbornika „Postavke za izravno
   prevođenje”
 * Opcija za automatsku stavku se sada nalazi na prvoj mjestu u kombiniranom
   okviru izvora i nema je u kombiniranom okviru cilja.
