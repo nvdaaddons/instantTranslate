@@ -145,6 +145,12 @@ msgstr ""
 msgid "Copy translation result to clipboard"
 msgstr "Skopírovať preklad do schránky"
 
+#. Translators: A setting in addon settings dialog.
+msgid ""
+"Replace underscores with spaces (May provide better translation results "
+"depending on context)"
+msgstr ""
+
 #. Translators: An option to automatically detect source language for translation.
 msgid "Automatically detect language"
 msgstr "Automatická detekcia jazyka"

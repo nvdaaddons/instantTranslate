@@ -146,6 +146,12 @@ msgstr "فعال کردنِ جابجاییِ خودکار اگر مبدأ برا
 msgid "Copy translation result to clipboard"
 msgstr "کپی کردنِ نتیجه‌ی ترجمه در کلیپ‌برد"
 
+#. Translators: A setting in addon settings dialog.
+msgid ""
+"Replace underscores with spaces (May provide better translation results "
+"depending on context)"
+msgstr ""
+
 #. Translators: An option to automatically detect source language for translation.
 msgid "Automatically detect language"
 msgstr "بازشناسیِ خودکارِ زبان"

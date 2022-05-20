@@ -160,6 +160,12 @@ msgstr ""
 msgid "Copy translation result to clipboard"
 msgstr "Копиране на резултата от превода в клипборда"
 
+#. Translators: A setting in addon settings dialog.
+msgid ""
+"Replace underscores with spaces (May provide better translation results "
+"depending on context)"
+msgstr ""
+
 #. Translators: An option to automatically detect source language for translation.
 msgid "Automatically detect language"
 msgstr "Автоматично откриване на езика"

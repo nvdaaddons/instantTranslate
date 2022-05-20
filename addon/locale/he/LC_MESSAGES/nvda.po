@@ -143,6 +143,12 @@ msgstr "הפעלת ההחלפה האוטומטית אם זוהה טקסט הכת
 msgid "Copy translation result to clipboard"
 msgstr "העתקת תוצאות התרגום לזכרון הזמני"
 
+#. Translators: A setting in addon settings dialog.
+msgid ""
+"Replace underscores with spaces (May provide better translation results "
+"depending on context)"
+msgstr ""
+
 #. Translators: An option to automatically detect source language for translation.
 msgid "Automatically detect language"
 msgstr "זיהוי אוטומטי של השפה"

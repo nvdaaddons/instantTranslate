@@ -142,6 +142,12 @@ msgstr "當偵測到來源語言等同於目標語言時，啟用自動對調(�
 msgid "Copy translation result to clipboard"
 msgstr "將翻譯結果複製到剪貼簿"
 
+#. Translators: A setting in addon settings dialog.
+msgid ""
+"Replace underscores with spaces (May provide better translation results "
+"depending on context)"
+msgstr ""
+
 #. Translators: An option to automatically detect source language for translation.
 msgid "Automatically detect language"
 msgstr "自動偵測語言"
