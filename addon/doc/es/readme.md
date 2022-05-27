@@ -93,6 +93,12 @@ Todas las órdenes que siguen deben pulsarse después de la tecla modificadora
 * O: abre el diálogo de opciones de traducción
 * H: anuncia todas las órdenes disponibles de capa.
 
+## Cambios para 4.4.3 ##
+* Añadida la posibilidad de reemplazar subrayados con espacios, puede
+  proporcionar mejores resultados de traducción según el contexto (gracias a
+  Beka Gozalishvili)
+* Añadida compatibilidad con NVDA 2022.1
+
 ## Cambios para 4.4.2 ##
 * Se restaura la detección de idiomas y el intercambio automático (gracias a
   Cyrille por la corrección)

@@ -93,6 +93,12 @@ Seuraavia komentoja  on painettava toimintonäppäimen NVDA+Shift+T jälkeen:
 * O: Avaa käännösasetusten valintaikkuna.
 * H: Puhuu kaikki käytettävissä olevat komentokerroksen komennot.
 
+## Muutokset versiossa 4.4.3 ##
+* Lisätty mahdollisuus alaviivojen korvaamiseen välilyönneillä, mikä saattaa
+  kontekstista riippuen tarjota parempia käännöstuloksia (kiitos Beka
+  Gozalishvilille)
+* Lisätty yhteensopivuus NVDA 2022.1:lle
+
 ## Muutokset versiossa 4.4.2 ##
 * Kielen tunnistus ja automaattinen vaihto palautettu (kiitos Cyrille'lle
   korjauksesta).

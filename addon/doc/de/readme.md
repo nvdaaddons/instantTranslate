@@ -97,6 +97,12 @@ Alle folgenden Befehle müssen nach der zuvor gedrückten Modifikationstaste
 * O: Einstellungen für die Übersetzungen öffnen
 * H: Nennt alle verfügbaren Tastenbefehle.
 
+## Änderungen in 4.4.3 ##
+* Es wurde die Möglichkeit hinzugefügt, Unterstriche durch Leerzeichen zu
+  ersetzen, was je nach Kontext zu besseren Übersetzungsergebnissen führen
+  kann (Dank an Beka Gozalishvili)
+* Kompatibilität für NVDA 2022.1 hinzugefügt
+
 ## Änderungen in 4.4.2 ##
 * Stellt die Spracherkennung und den automatischen Austausch wieder her
   (Danke an Cyrille für die Korrektur)

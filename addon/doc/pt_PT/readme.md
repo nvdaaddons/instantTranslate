@@ -91,6 +91,11 @@ Estes comandos só são válidos após ter sido pressionada a tecla modificadora
 * O: abrir o diálogo de configurações de tradução
 * H: anuncia todos os comandos em camada disponíveis.
 
+## Changes for 4.4.3 ##
+* Added the ability to replace underscores with spaces, may provide better
+  translation results depending on context (thanks to Beka Gozalishvili)
+* Added compatibility for NVDA 2022.1
+
 ## Alterações para 4.4.2 ##
 * Restauração da detecção linguística e auto-swapping (Graças ao Cyrille
   para correcção)

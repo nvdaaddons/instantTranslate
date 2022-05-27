@@ -8,16 +8,15 @@ msgstr ""
 "Project-Id-Version: instantTranslate 3.0\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2015-05-05 16:47+1000\n"
-"PO-Revision-Date: 2020-11-01 14:06+0200\n"
+"PO-Revision-Date: 2022-05-24 11:14+0300\n"
 "Last-Translator: Volodymyr Pyrih <vp88.mobile@gmail.com>\n"
 "Language-Team: \n"
 "Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.4.1\n"
+"X-Generator: Poedit 3.0.1\n"
 
-#, fuzzy
 msgid ""
 "Instant Translate layer commands. t translates selected text, shift+t "
 "translates clipboard text, a announces current swap configuration, s swaps "
@@ -25,10 +24,11 @@ msgid ""
 "the language of selected text, l translates last spoken text, o opens "
 "translation setting dialog."
 msgstr ""
-"Гарячі клавіші Instant Translate. t перекладає виділений текст, shift+t "
-"перекладає текст у буфері обміну, a повідомляє поточну конфігурацію, s міняє "
-"місцями мови оригіналу й перекладу, c копіює останній переклад до буфера "
-"обміну, i визначає мову виділеного тексту."
+"Багаторівневі команди Instant Translate. t перекладає виділений текст, shift"
+"+t перекладає текст у буфері обміну, a повідомляє поточну конфігурацію, s "
+"міняє місцями мови оригіналу й перекладу, c копіює останній переклад до "
+"буфера обміну, i визначає мову виділеного тексту, l перекладає останню "
+"вимовлену фразу, o відкриває налаштування перекладу."
 
 #. Translators: message presented when user presses the shortcut key for translating clipboard text but the clipboard is empty.
 msgid "There is no text on the clipboard"
@@ -92,9 +92,8 @@ msgstr "Визначає мову виділеного тексту"
 
 #. Translators: Presented in input help mode.
 msgid "It translates the last spoken text"
-msgstr ""
+msgstr "Перекладає останню вимовлену фразу"
 
-#, fuzzy
 msgid ""
 "t translates selected text, shift+t translates clipboard text, a announces "
 "current swap configuration, s swaps source and target languages, c copies "
@@ -103,18 +102,18 @@ msgid ""
 "this message."
 msgstr ""
 "t перекладає виділений текст, shift+t перекладає текст у буфері обміну, a "
-"повідомляє поточну конфігурацію, s змінює мову оригіналу та перекладу, c "
-"копіює останній переклад у буфер обміну, i визначає мову виділеного тексту, "
-"h показує це повідомлення."
+"повідомляє поточну конфігурацію, s міняє місцями мови оригіналу й перекладу, "
+"c копіює останній переклад у буфер обміну, i визначає мову виділеного "
+"тексту, l перекладає останню вимовлену фразу, o відкриває налаштування "
+"перекладу, h показує це повідомлення."
 
 #. Translators: Presented in input help mode.
 msgid "Announces all available layered commands"
-msgstr ""
+msgstr "Промовляє всі доступні багаторівневі команди"
 
 #. Translators: Presented in input help mode.
-#, fuzzy
 msgid "Opens Instant Translate settings dialog."
-msgstr "Налаштування Instant Translate"
+msgstr "Відкриває діалог налаштування Instant Translate."
 
 #. Translators: name of the dialog.
 #. Add-on summary, usually the user visible name of the addon.
@@ -155,6 +154,8 @@ msgid ""
 "Replace underscores with spaces (May provide better translation results "
 "depending on context)"
 msgstr ""
+"Замінити підкреслення пробілами (може забезпечити кращі результати перекладу "
+"в залежності від контексту)"
 
 #. Translators: An option to automatically detect source language for translation.
 msgid "Automatically detect language"
@@ -170,7 +171,7 @@ msgstr "Есперанто"
 
 #. Translators: The name of a language supported by this add-on.
 msgid "Hawaiian"
-msgstr ""
+msgstr "гавайська"
 
 #. Translators: The name of a language supported by this add-on.
 msgid "Hmong"
@@ -186,7 +187,7 @@ msgstr "Яванська"
 
 #. Translators: The name of a language supported by this add-on.
 msgid "Kurdish"
-msgstr ""
+msgstr "курдська"
 
 #. Translators: The name of a language supported by this add-on.
 msgid "Latin"
@@ -206,15 +207,15 @@ msgstr "Ньянджа"
 
 #. Translators: The name of a language supported by this add-on.
 msgid "Sindhi"
-msgstr ""
+msgstr "синдхі"
 
 #. Translators: The name of a language supported by this add-on.
 msgid "Samoan"
-msgstr ""
+msgstr "самоанська"
 
 #. Translators: The name of a language supported by this add-on.
 msgid "Shona"
-msgstr ""
+msgstr "шона"
 
 #. Translators: The name of a language supported by this add-on.
 msgid "Somali"
@@ -237,13 +238,13 @@ msgid "Yiddish"
 msgstr "Ідиш"
 
 msgid "unavailable"
-msgstr "Недоступно"
+msgstr "недоступно"
 
 #. We have probably been blocked, so stop trying to translate.
 #. log.exception("Instant translate: Can not translate text '%s'" %chunk)
 #. raise e
 msgid "Translation failed"
-msgstr ""
+msgstr "Не вдалося перекласти"
 
 #. Translators: the label of a message box dialog.
 msgid ""

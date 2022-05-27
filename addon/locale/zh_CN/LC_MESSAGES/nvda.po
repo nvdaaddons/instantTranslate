@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: instantTranslate\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
 "POT-Creation-Date: 2021-06-13 16:30+0800\n"
-"PO-Revision-Date: 2021-07-04 10:12+0800\n"
+"PO-Revision-Date: 2022-05-21 10:58+0800\n"
 "Last-Translator: dingpengyu <dingpengyu06@gmail.com>\n"
 "Language-Team: Cary-Rowen <manchen_0528@outlook.com>\n"
 "Language: zh_CN\n"
@@ -19,7 +19,6 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#, fuzzy
 msgid ""
 "Instant Translate layer commands. t translates selected text, shift+t "
 "translates clipboard text, a announces current swap configuration, s swaps "
@@ -28,8 +27,8 @@ msgid ""
 "translation setting dialog."
 msgstr ""
 "命令接收面板： t 翻译选择的文本， shift+t 翻译剪贴板中的文本， a 朗读当前语言"
-"配置， s 切换来源和目标语言， c 复制最近的结果到剪贴板， i 显示当前文本的语"
-"言， l 翻译最后朗读的文本， o 打开翻译设置对话框， h 显示此帮助信息。"
+"配置， s 切换来源和目标语言， c 复制最后一次的翻译结果到剪贴板， i 显示当前文"
+"本的语言， l 翻译最后朗读的文本， o 打开翻译设置对话框， h 显示此帮助信息。"
 
 #. Translators: message presented when user presses the shortcut key for translating clipboard text but the clipboard is empty.
 msgid "There is no text on the clipboard"
@@ -91,7 +90,6 @@ msgstr "读出所选文本的语言"
 msgid "It translates the last spoken text"
 msgstr "翻译最后一次朗读的文本"
 
-#, fuzzy
 msgid ""
 "t translates selected text, shift+t translates clipboard text, a announces "
 "current swap configuration, s swaps source and target languages, c copies "
@@ -105,12 +103,11 @@ msgstr ""
 
 #. Translators: Presented in input help mode.
 msgid "Announces all available layered commands"
-msgstr ""
+msgstr "读出所有可用的快捷键"
 
 #. Translators: Presented in input help mode.
-#, fuzzy
 msgid "Opens Instant Translate settings dialog."
-msgstr "即时翻译设置"
+msgstr "打开即时翻译设置对话框"
 
 #. Translators: name of the dialog.
 #. Add-on summary, usually the user visible name of the addon.
@@ -148,7 +145,7 @@ msgstr "拷贝翻译结果到剪贴板"
 msgid ""
 "Replace underscores with spaces (May provide better translation results "
 "depending on context)"
-msgstr ""
+msgstr "用空格替换下划线（可能会根据上下文提供更好的翻译结果）"
 
 #. Translators: An option to automatically detect source language for translation.
 msgid "Automatically detect language"

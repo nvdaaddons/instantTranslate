@@ -86,6 +86,11 @@ sonra kullanılabilir:
 * O: çeviri ayarları iletişim kutusunu aç
 * H: mevcut tüm katman komutlarını duyurur.
 
+## Changes for 4.4.3 ##
+* Added the ability to replace underscores with spaces, may provide better
+  translation results depending on context (thanks to Beka Gozalishvili)
+* Added compatibility for NVDA 2022.1
+
 ## 4.4.2 için değişiklikler ##
 * Dil algılama ve otomatik dil değiştirme restore edildi (Düzeltme için
   Cyrille'a teşekkürler)

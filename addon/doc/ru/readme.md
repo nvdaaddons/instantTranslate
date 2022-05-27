@@ -85,6 +85,11 @@ You can use this add-on in three ways:
 * O: open translation settings dialog
 * H: announces all available layered commands.
 
+## Changes for 4.4.3 ##
+* Added the ability to replace underscores with spaces, may provide better
+  translation results depending on context (thanks to Beka Gozalishvili)
+* Added compatibility for NVDA 2022.1
+
 ## Changes for 4.4.2 ##
 * Restore language detection and auto-swapping (Thanks to Cyrille for fix)
 * updated languages for translation (thanks to Cyrille)

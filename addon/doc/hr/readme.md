@@ -85,6 +85,11 @@ Sve sljedeće naredbe se moraju pritisnuti nakon modifikacijske tipke
 * O: otvori dijaloški okvir s postavkama za prijevod
 * H: izgovara sve dostupne slojevne naredbe.
 
+## Changes for 4.4.3 ##
+* Added the ability to replace underscores with spaces, may provide better
+  translation results depending on context (thanks to Beka Gozalishvili)
+* Added compatibility for NVDA 2022.1
+
 ## Promjene u 4.4.2 ##
 * Obnovljeno je automatsko otkrivanje jezika i automatsko
   zamijenjivanje. (Hvala Cyrille za ispravak)

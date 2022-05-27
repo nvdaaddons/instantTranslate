@@ -87,6 +87,11 @@ trykket:
 * O: Åbn dialogen med oversættelsesindstillinger
 * H: annoncerer alle tilgængelige lagdelte kommandoer.
 
+## Changes for 4.4.3 ##
+* Added the ability to replace underscores with spaces, may provide better
+  translation results depending on context (thanks to Beka Gozalishvili)
+* Added compatibility for NVDA 2022.1
+
 ## Ændringer for 4.4.2 ##
 * Gendannet sprogregistrering og automatisk ombytning af sprog(Tak til
   Cyrille for rettelsen)
