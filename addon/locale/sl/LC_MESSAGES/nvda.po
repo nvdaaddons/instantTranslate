@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: 'Instant-Translate' '2.1'\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2013-02-20 22:56+0100\n"
-"PO-Revision-Date: 2021-12-15 08:40+0100\n"
+"PO-Revision-Date: 2022-06-14 15:59+0100\n"
 "Last-Translator: Jožef Gregorc <jozko.gregorc@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: sl\n"
@@ -59,7 +59,6 @@ msgid "Languages swapped"
 msgstr "Menjava jezikov uspela."
 
 #. Translators: message presented to announce the current source and target languages.
-#, python-brace-format
 msgid "Translate: from {lang1} to {lang2}"
 msgstr "Prevedi: iz {lang1} v {lang2}"
 
@@ -155,6 +154,8 @@ msgid ""
 "Replace underscores with spaces (May provide better translation results "
 "depending on context)"
 msgstr ""
+"Zamenja podčrtaje s presledki (Lahko oskrbi boljše rezultate prevoda glede "
+"na kontekst)"
 
 #. Translators: An option to automatically detect source language for translation.
 msgid "Automatically detect language"
