@@ -105,7 +105,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			return
 		config.conf.spec[addonName] = confspec
 		self.addonConf = config.conf[addonName]
-		self.getUpdatedGlobalVars()
 		self.toggling = False
 		self.maxCachedResults = 5
 		self.cachedResults = []
@@ -115,21 +114,61 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		speechModule.speak = self._localSpeak
 		self.lastSpokenText = ''
 
-	def getUpdatedGlobalVars(self):
-		global lang_from, lang_to, lang_swap, copyTranslation, autoSwap, isAutoSwapped, replaceUnderscores
-		# source language
-		lang_from = self.addonConf['from']
-		# target language
-		lang_to = self.addonConf['into']
-		# language used to swap source and target when source is auto
-		lang_swap = self.addonConf['swap']
-		# determine whether to copy translation on clipboard
-		copyTranslation = self.addonConf['copytranslatedtext']
-		# determine whether to swap automatically lang_swap and target language, if source recognized equal to the target
-		autoSwap = self.addonConf['autoswap']
-		# keep track if there was a swapping from source=auto during previous NVDA session
-		isAutoSwapped = self.addonConf['isautoswapped']
-		replaceUnderscores = self.addonConf['replaceUnderscores']
+	@property
+	def lang_from(self):
+		return self.addonConf['from']
+
+	@lang_from.setter
+	def lang_from(self, lang):
+		self.addonConf['from'] = lang
+
+	@property
+	def lang_to(self):
+		return self.addonConf['into']
+
+	@lang_to.setter
+	def lang_to(self, lang):
+		self.addonConf['into'] = lang
+
+	@property
+	def lang_swap(self):
+		return self.addonConf['swap']
+
+	@lang_swap.setter
+	def lang_swap(self, lang):
+		self.addonConf['swap'] = lang
+
+	@property
+	def copyTranslation(self):
+		return self.addonConf['copytranslatedtext']
+
+	@copyTranslation.setter
+	def copyTranslation(self, enable):
+		self.addonConf['copytranslatedtext'] = enable
+
+	@property
+	def autoSwap(self):
+		return self.addonConf['autoswap']
+
+	@autoSwap.setter
+	def autoSwap(self, enable):
+		self.addonConf['autoswap'] = enable
+
+	@property
+	def isAutoSwapped(self):
+		return self.addonConf['isautoswapped']
+
+	@isAutoSwapped.setter
+	def isAutoSwapped(self, enable):
+		self.addonConf['isautoswapped'] = enable
+
+	@property
+	def replaceUnderscores(self):
+		return self.addonConf['replaceUnderscores']
+
+	@replaceUnderscores.setter
+	def replaceUnderscores(self, enable):
+		self.addonConf['replaceUnderscores'] = enable
 
 	def getScript(self, gesture):
 		if not self.toggling:
@@ -192,24 +231,22 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	script_translateSelection.__doc__=_("Translates selected text from one language to another using Google Translate.")
 
 	def translate(self, text):
-		self.getUpdatedGlobalVars()
-		global lang_from
-		if replaceUnderscores:
+		if self.replaceUnderscores:
 			text = text.replace("_", " ")
 		# useful for yandex, that doesn't support auto option
-#		if lang_from == "auto":
-#			lang_from = detect_language(text)
+#		if self.lang_from == "auto":
+#			self.lang_from = detect_language(text)
 		translation = None
-		if (text, lang_to, lang_from) in [(x[0],x[1],x[2]) for x in self.cachedResults]:
-			translation,lang = [f for f in self.cachedResults if f[0] == text and f[1] == lang_to and f[2] == lang_from][0][3:5]
-			index = [(te,lt,lf,tr) for te, lt, lf, tr, lg in self.cachedResults].index((text, lang_to, lang_from, translation))
+		if (text, self.lang_to, self.lang_from) in [(x[0],x[1],x[2]) for x in self.cachedResults]:
+			translation,lang = [f for f in self.cachedResults if f[0] == text and f[1] == self.lang_to and f[2] == self.lang_from][0][3:5]
+			index = [(te,lt,lf,tr) for te, lt, lf, tr, lg in self.cachedResults].index((text, self.lang_to, self.lang_from, translation))
 			self.addResultToCache(text, translation, lang, removeIndex=index)
 		else:
 			myTranslator = None
-			if not autoSwap:
-				myTranslator = Translator(lang_from, lang_to, text)
+			if not self.autoSwap:
+				myTranslator = Translator(self.lang_from, self.lang_to, text)
 			else:
-				myTranslator = Translator(lang_from, lang_to, text, lang_swap)
+				myTranslator = Translator(self.lang_from, self.lang_to, text, self.lang_swap)
 			myTranslator.start()
 			i=0
 			while myTranslator.is_alive():
@@ -232,50 +269,41 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			del self.cachedResults[removeIndex]
 		elif len(self.cachedResults) == self.maxCachedResults:
 			del self.cachedResults[0]
-		self.cachedResults.append((text, lang_to, lang_from, translation, lang))
+		self.cachedResults.append((text, self.lang_to, self.lang_from, translation, lang))
 
 	def copyResult(self, translation, ignoreSetting=False):
 		if ignoreSetting:
 			api.copyToClip(translation)
-		elif copyTranslation:
+		elif self.copyTranslation:
 			api.copyToClip(translation)
 
 	def swapLanguages(self, langFrom, langTo):
-		global lang_from, lang_to
-		lang_from=langTo
-		lang_to=langFrom
+		self.lang_from, self.lang_to = langTo, langFrom
 
 	def script_swapLanguages(self, gesture):
-		self.getUpdatedGlobalVars()
-		global isAutoSwapped
-		if lang_from == "auto":
-			self.swapLanguages(lang_swap, lang_to)
-			isAutoSwapped = True
-		elif isAutoSwapped and lang_to == lang_swap:
-			self.swapLanguages(lang_from, "auto")
-			isAutoSwapped = False
+		if self.lang_from == "auto":
+			self.swapLanguages(self.lang_swap, self.lang_to)
+			self.isAutoSwapped = True
+		elif self.isAutoSwapped and self.lang_to == self.lang_swap:
+			self.swapLanguages(self.lang_from, "auto")
+			self.isAutoSwapped = False
 		else:
-			self.swapLanguages(lang_from, lang_to)
-		self.addonConf['from'] = lang_from
-		self.addonConf['into'] = lang_to
-		self.addonConf['isautoswapped'] = isAutoSwapped
+			self.swapLanguages(self.lang_from, self.lang_to)
 		# Translators: message presented to announce that the source and target languages have been swapped.
 		ui.message(_("Languages swapped"))
 		# Translators: message presented to announce the current source and target languages.
-		ui.message(_("Translate: from {lang1} to {lang2}").format(lang1=lang_from, lang2=lang_to))
+		ui.message(_("Translate: from {lang1} to {lang2}").format(lang1=self.lang_from, lang2=self.lang_to))
 		self.script_translateSelection(gesture)
 	# Translators: Presented in input help mode.
 	script_swapLanguages.__doc__ = _("It swaps source and target languages.")
 
 	def script_announceLanguages(self, gesture):
-		self.getUpdatedGlobalVars()
 		# Translators: message presented to announce the current source and target languages.
-		ui.message(_("Translate: from {lang1} to {lang2}").format(lang1=lang_from, lang2=lang_to))
+		ui.message(_("Translate: from {lang1} to {lang2}").format(lang1=self.lang_from, lang2=self.lang_to))
 	# Translators: Presented in input help mode.
 	script_announceLanguages.__doc__ = _("It announces the current source and target languages.")
 
 	def script_copyLastResult(self, gesture):
-		self.getUpdatedGlobalVars()
 		if len(self.cachedResults) > 0:
 			translation = self.cachedResults[len(self.cachedResults)-1][3]
 			self.copyResult(translation, ignoreSetting=True)
@@ -300,8 +328,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			# Translators: user has pressed the shortcut key for identifying the language of selected text, but no text was actually selected.
 			ui.message(_("no selection"))
 		else:
-			self.getUpdatedGlobalVars()
-			myTranslator = Translator("auto", lang_to, info.text)
+			myTranslator = Translator("auto", self.lang_to, info.text)
 			ui.message(_("Language is..."))
 			myTranslator.start()
 			i=0
