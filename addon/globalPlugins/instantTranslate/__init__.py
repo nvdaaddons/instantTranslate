@@ -214,23 +214,20 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	script_translateClipboardText.__doc__=_("Translates clipboard text from one language to another using Google Translate.")
 
 	def getSelectedText(self):
-		obj=api.getFocusObject()
-		treeInterceptor=obj.treeInterceptor
-		if hasattr(treeInterceptor,'TextInfo') and not treeInterceptor.passThrough:
-			obj=treeInterceptor
+		obj=api.getCaretObject()
 		try:
 			info=obj.makeTextInfo(textInfos.POSITION_SELECTION)
+			if info or not info.isCollapsed:
+				return info.text
 		except (RuntimeError, NotImplementedError):
-			info=None
-		if not info or info.isCollapsed:
-			# Translators: user has pressed the shortcut key for translating selected text, but no text was actually selected.
-			ui.message(_("no selection"))
-			return
-		else:
-			return info.text
+			return None
 
 	def script_translateSelection(self, gesture):
 		text = self.getSelectedText()
+		if not text:
+			# Translators: user has pressed the shortcut key for translating selected text, but no text was actually selected.
+			ui.message(_("no selection"))
+			return
 		threading.Thread(target=self.translate, args=(text,)).start()
 	# Translators: message presented in input help mode, when user presses the shortcut keys for this addon.
 	script_translateSelection.__doc__=_("Translates selected text from one language to another using Google Translate.")
@@ -322,6 +319,10 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def script_identifyLanguage(self, gesture):
 		text = self.getSelectedText()
+		if not text:
+			# Translators: user has pressed the shortcut key for translating selected text, but no text was actually selected.
+			ui.message(_("no selection"))
+			return
 		myTranslator = Translator("auto", self.lang_to, text)
 		ui.message(_("Language is..."))
 		myTranslator.start()
