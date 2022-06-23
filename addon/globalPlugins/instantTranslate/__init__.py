@@ -35,15 +35,11 @@ except:
 	from speech import LangChangeCommand
 import braille
 import wx
-import six
 import speech
 import speechViewer
 from versionInfo import version_year
 
-_addonDir = os.path.join(os.path.dirname(__file__), "..", "..")
-if isinstance(_addonDir, bytes):
-	_addonDir = _addonDir.decode("mbcs")
-_curAddon = addonHandler.Addon(_addonDir)
+_curAddon = addonHandler.getCodeAddon()
 _addonSummary = _curAddon.manifest['summary']
 addonHandler.initTranslation()
 
@@ -60,7 +56,7 @@ speechModule = speech.speech if version_year>=2021 else speech
 
 confspec = {
 "from": "string(default=auto)",
-"into": "string(default={lo_lang})".format(lo_lang=lo_lang),
+"into": f"string(default={lo_lang})",
 "swap": "string(default=en)",
 "copytranslatedtext": "boolean(default=true)",
 "autoswap": "boolean(default=true)",
@@ -101,10 +97,10 @@ def messageWithLangDetection(msg):
 
 
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
-	scriptCategory = six.text_type(_addonSummary)
+	scriptCategory = _addonSummary
 
 	def __init__(self, *args, **kwargs):
-		super(GlobalPlugin, self).__init__(*args, **kwargs)
+		super().__init__(*args, **kwargs)
 		if globalVars.appArgs.secure:
 			return
 		self.getUpdatedGlobalVars()
@@ -167,7 +163,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			text = api.getClipData()
 		except:
 			text = None
-		if not text or not isinstance(text,six.string_types) or text.isspace():
+		if not text or not isinstance(text, str) or text.isspace():
 			# Translators: message presented when user presses the shortcut key for translating clipboard text but the clipboard is empty.
 			ui.message(_("There is no text on the clipboard"))
 		else:

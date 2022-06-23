@@ -16,14 +16,7 @@ import ui
 import queueHandler
 
 import json
-import six
-if sys.version_info.major < 3:
-	impPath = os.path.abspath(os.path.dirname(__file__))
-	sys.path.append(impPath)
-	from . import urllib2 as urllibRequest
-	del sys.path[-1]
-else:
-	import urllib.request as urllibRequest
+import urllib.request as urllibRequest
 ssl._create_default_https_context = ssl._create_unverified_context
 # Each group has to be a class of possible breaking points for the writing script.
 # Usually this is the major syntax marks, such as:
@@ -56,7 +49,7 @@ langConversionDic = {'iw':'he', 'jw':'jv'}
 class Translator(threading.Thread):
 
 	def __init__(self, lang_from, lang_to, text, lang_swap=None, chunksize=3000, *args, **kwargs):
-		super(Translator, self).__init__(*args, **kwargs)
+		super().__init__(*args, **kwargs)
 		self._stopEvent = threading.Event()
 		self.text = text
 		self.chunksize = chunksize
@@ -86,7 +79,7 @@ class Translator(threading.Thread):
 				# Case where source language is not defined
 					temp = response[-1][-1][0]
 					# Possible improvement: In case of multiple language detected, there are multiple languages in response[-1][-1].
-					self.lang_detected = temp if isinstance(temp,six.text_type) else six.text_type()
+					self.lang_detected = temp if isinstance(temp, str) else str()
 					if not self.lang_detected:
 						self.lang_detected = _("unavailable")
 				else:
