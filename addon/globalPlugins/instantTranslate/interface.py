@@ -6,15 +6,11 @@
 #This file is covered by the GNU General Public License.
 #See the file COPYING for more details.
 
-import os.path
-import sys
 import wx
 import gui
 import gui.guiHelper
 from .langslist import langslist
 from . import langslist as lngModule
-import globalVars
-import config
 import addonHandler
 from copy import deepcopy
 from locale import strxfrm
@@ -24,9 +20,6 @@ addonHandler.initTranslation()
 class InstantTranslateSettingsPanel(gui.SettingsPanel):
 	# Translators: name of the dialog.
 	title = _("Instant Translate")
-
-	def __init__(self, parent):
-		super(InstantTranslateSettingsPanel, self).__init__(parent)
 
 	def makeSettings(self, sizer):
 		helper = gui.guiHelper.BoxSizerHelper(self, sizer=sizer)
@@ -57,19 +50,19 @@ class InstantTranslateSettingsPanel(gui.SettingsPanel):
 		
 		# Translators: A setting in addon settings dialog, shown if source language is on auto.
 		self.autoSwapChk = helper.addItem(wx.CheckBox(self, label=_("Activate the auto-swap if recognized source is equal to the target (experimental)")))
-		self.autoSwapChk.SetValue(config.conf['instanttranslate']['autoswap'])
+		self.autoSwapChk.SetValue(self.addonConf['autoswap'])
 		
 		# Translators: A setting in addon settings dialog.
 		self.copyTranslationChk = helper.addItem(wx.CheckBox(self, label=_("Copy translation result to clipboard")))
-		self.copyTranslationChk.SetValue(config.conf['instanttranslate']['copytranslatedtext'])
+		self.copyTranslationChk.SetValue(self.addonConf['copytranslatedtext'])
 				
 		# Translators: A setting in addon settings dialog.
 		self.replaceUnderscores = helper.addItem(wx.CheckBox(self, label=_("Replace underscores with spaces (May provide better translation results depending on context)")))
-		self.replaceUnderscores.SetValue(config.conf['instanttranslate']['replaceUnderscores'])
+		self.replaceUnderscores.SetValue(self.addonConf['replaceUnderscores'])
 				
-		iLang_from = self._fromChoice.FindString(self.getDictKey(config.conf['instanttranslate']['from']))
-		iLang_to = self._intoChoice.FindString(self.getDictKey(config.conf['instanttranslate']['into']))
-		iLang_swap = self._swapChoice.FindString(self.getDictKey(config.conf['instanttranslate']['swap']))
+		iLang_from = self._fromChoice.FindString(self.getDictKey(self.addonConf['from']))
+		iLang_to = self._intoChoice.FindString(self.getDictKey(self.addonConf['into']))
+		iLang_swap = self._swapChoice.FindString(self.getDictKey(self.addonConf['swap']))
 		self._fromChoice.Select(iLang_from)
 		self._intoChoice.Select(iLang_to)
 		self._swapChoice.Select(iLang_swap)
@@ -84,11 +77,7 @@ class InstantTranslateSettingsPanel(gui.SettingsPanel):
 		keys=list(langslist.keys())
 		auto=lngModule.g("auto")
 		keys.remove(auto)
-		if sys.version_info[0] >= 3:
-			keys.sort(key=strxfrm)
-		else:
-			# Python 2: strxfrm does not seem to work correctly, so do not use locale rules for sorting.
-			keys.sort()
+		keys.sort(key=strxfrm)
 		choices=[]
 		choices.append(auto)
 		choices.extend(keys)
@@ -103,13 +92,12 @@ class InstantTranslateSettingsPanel(gui.SettingsPanel):
 			self.autoSwapChk.Disable()
 
 	def onSave(self):
-		# Update Configuration
-		config.conf['instanttranslate']['from'] = langslist[self._fromChoice.GetStringSelection()]
-		config.conf['instanttranslate']['into'] = langslist[self._intoChoice.GetStringSelection()]
-		config.conf['instanttranslate']['swap'] = langslist[self._swapChoice.GetStringSelection()]
-		config.conf['instanttranslate']['copytranslatedtext'] = self.copyTranslationChk.GetValue()
-		config.conf['instanttranslate']['autoswap'] = self.autoSwapChk.GetValue()
-		config.conf['instanttranslate']['replaceUnderscores'] = self.replaceUnderscores.GetValue()
+		self.addonConf['from'] = langslist[self._fromChoice.GetStringSelection()]
+		self.addonConf['into'] = langslist[self._intoChoice.GetStringSelection()]
+		self.addonConf['swap'] = langslist[self._swapChoice.GetStringSelection()]
+		self.addonConf['copytranslatedtext'] = self.copyTranslationChk.GetValue()
+		self.addonConf['autoswap'] = self.autoSwapChk.GetValue()
+		self.addonConf['replaceUnderscores'] = self.replaceUnderscores.GetValue()
 
 	def getDictKey(self, currentValue):
 		for key, value in langslist.items():
