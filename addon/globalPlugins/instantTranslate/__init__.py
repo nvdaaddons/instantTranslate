@@ -7,7 +7,7 @@
 #This file is covered by the GNU General Public License.
 #See the file COPYING for more details.
 
-from functools import wraps
+from functools import wraps, lru_cache
 from .interface import InstantTranslateSettingsPanel
 from .langslist import g
 from locale import getdefaultlocale
@@ -106,8 +106,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		config.conf.spec[addonName] = confspec
 		self.addonConf = config.conf[addonName]
 		self.toggling = False
-		self.maxCachedResults = 5
-		self.cachedResults = []
+		self.lastTranslation = None
 		InstantTranslateSettingsPanel.addonConf = self.addonConf
 		gui.settingsDialogs.NVDASettingsDialog.categoryClasses.append(InstantTranslateSettingsPanel)
 		self._speak = speechModule.speak
@@ -209,7 +208,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			# Translators: message presented when user presses the shortcut key for translating clipboard text but the clipboard is empty.
 			ui.message(_("There is no text on the clipboard"))
 		else:
-			threading.Thread(target=self.translate, args=(text,)).start()
+			threading.Thread(target=self.translate, args=(text,self.lang_from, self.lang_to,)).start()
 	# Translators: message presented in input help mode, when user presses the shortcut keys for this addon.
 	script_translateClipboardText.__doc__=_("Translates clipboard text from one language to another using Google Translate.")
 
@@ -228,50 +227,40 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			# Translators: user has pressed the shortcut key for translating selected text, but no text was actually selected.
 			ui.message(_("no selection"))
 			return
-		threading.Thread(target=self.translate, args=(text,)).start()
+		threading.Thread(target=self.translate, args=(text,self.lang_from,self.lang_to,)).start()
 	# Translators: message presented in input help mode, when user presses the shortcut keys for this addon.
 	script_translateSelection.__doc__=_("Translates selected text from one language to another using Google Translate.")
 
-	def translate(self, text):
+	def translate(self, text, langFrom, langTo):
+		result = self.translateAndCache(text, langFrom, langTo)
+		self.lastTranslation = result.translation
+		msgTranslation = {'text': result.translation, 'lang': result.lang_to}
+		queueHandler.queueFunction(queueHandler.eventQueue, messageWithLangDetection, msgTranslation)
+		self.copyResult(result.translation)
+
+	@lru_cache()
+	def translateAndCache(self, text, langFrom, langTo):
 		if self.replaceUnderscores:
 			text = text.replace("_", " ")
 		# useful for yandex, that doesn't support auto option
 #		if self.lang_from == "auto":
 #			self.lang_from = detect_language(text)
 		translation = None
-		if (text, self.lang_to, self.lang_from) in [(x[0],x[1],x[2]) for x in self.cachedResults]:
-			translation,lang = [f for f in self.cachedResults if f[0] == text and f[1] == self.lang_to and f[2] == self.lang_from][0][3:5]
-			index = [(te,lt,lf,tr) for te, lt, lf, tr, lg in self.cachedResults].index((text, self.lang_to, self.lang_from, translation))
-			self.addResultToCache(text, translation, lang, removeIndex=index)
+		myTranslator = None
+		if not self.autoSwap:
+			myTranslator = Translator(langFrom, langTo, text)
 		else:
-			myTranslator = None
-			if not self.autoSwap:
-				myTranslator = Translator(self.lang_from, self.lang_to, text)
-			else:
-				myTranslator = Translator(self.lang_from, self.lang_to, text, self.lang_swap)
-			myTranslator.start()
-			i=0
-			while myTranslator.is_alive():
-				sleep(0.1)
-				i+=1
-				if i == 10:
-					beep(500, 100)
-					i = 0
-			myTranslator.join()
-			translation = myTranslator.translation
-			lang = myTranslator.lang_to
-			if translation != '':
-				self.addResultToCache(text, translation, lang)
-		msgTranslation = {'text': translation, 'lang': lang}
-		queueHandler.queueFunction(queueHandler.eventQueue, messageWithLangDetection, msgTranslation)
-		self.copyResult(translation)
-
-	def addResultToCache(self, text, translation, lang, removeIndex=0):
-		if removeIndex:
-			del self.cachedResults[removeIndex]
-		elif len(self.cachedResults) == self.maxCachedResults:
-			del self.cachedResults[0]
-		self.cachedResults.append((text, self.lang_to, self.lang_from, translation, lang))
+			myTranslator = Translator(langFrom, langTo, text, self.lang_swap)
+		myTranslator.start()
+		i=0
+		while myTranslator.is_alive():
+			sleep(0.1)
+			i+=1
+			if i == 10:
+				beep(500, 100)
+				i = 0
+		myTranslator.join()
+		return myTranslator
 
 	def copyResult(self, translation, ignoreSetting=False):
 		if ignoreSetting:
@@ -306,9 +295,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	script_announceLanguages.__doc__ = _("It announces the current source and target languages.")
 
 	def script_copyLastResult(self, gesture):
-		if len(self.cachedResults) > 0:
-			translation = self.cachedResults[len(self.cachedResults)-1][3]
-			self.copyResult(translation, ignoreSetting=True)
+		if self.lastTranslation:
+			self.copyResult(self.lastTranslation, ignoreSetting=True)
 			# Translators: message presented to announce a successful copy
 			ui.message(_("Last translation copied in clipboard"))
 		else:
@@ -344,7 +332,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		self.lastSpokenText = speechViewer.SPEECH_ITEM_SEPARATOR.join([x for x in sequence if isinstance(x, str)])
 
 	def script_translateLastSpokenText(self, gesture):
-		self.lastSpokenText and threading.Thread(target=self.translate, args=(self.lastSpokenText,)).start()
+		self.lastSpokenText and threading.Thread(target=self.translate, args=(self.lastSpokenText, self.lang_from, self.lang_to)).start()
 	# Translators: Presented in input help mode.
 	script_translateLastSpokenText.__doc__ = _("It translates the last spoken text")
 
