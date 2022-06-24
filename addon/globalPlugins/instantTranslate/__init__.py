@@ -112,62 +112,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		self._speak = speechModule.speak
 		speechModule.speak = self._localSpeak
 		self.lastSpokenText = ''
-
-	@property
-	def lang_from(self):
-		return self.addonConf['from']
-
-	@lang_from.setter
-	def lang_from(self, lang):
-		self.addonConf['from'] = lang
-
-	@property
-	def lang_to(self):
-		return self.addonConf['into']
-
-	@lang_to.setter
-	def lang_to(self, lang):
-		self.addonConf['into'] = lang
-
-	@property
-	def lang_swap(self):
-		return self.addonConf['swap']
-
-	@lang_swap.setter
-	def lang_swap(self, lang):
-		self.addonConf['swap'] = lang
-
-	@property
-	def copyTranslation(self):
-		return self.addonConf['copytranslatedtext']
-
-	@copyTranslation.setter
-	def copyTranslation(self, enable):
-		self.addonConf['copytranslatedtext'] = enable
-
-	@property
-	def autoSwap(self):
-		return self.addonConf['autoswap']
-
-	@autoSwap.setter
-	def autoSwap(self, enable):
-		self.addonConf['autoswap'] = enable
-
-	@property
-	def isAutoSwapped(self):
-		return self.addonConf['isautoswapped']
-
-	@isAutoSwapped.setter
-	def isAutoSwapped(self, enable):
-		self.addonConf['isautoswapped'] = enable
-
-	@property
-	def replaceUnderscores(self):
-		return self.addonConf['replaceUnderscores']
-
-	@replaceUnderscores.setter
-	def replaceUnderscores(self, enable):
-		self.addonConf['replaceUnderscores'] = enable
+		self.settings = {"lang_from": "from", "lang_to": "into", "lang_swap": "swap", "copyTranslation": "copytranslatedtext", "autoSwap": "autoswap", "isAutoSwapped": "isautoswapped", "replaceUnderscores": "replaceUnderscores"}
+		[setattr(self.__class__, propertyMethod, property(lambda self, propertyName=propertyName: self.addonConf[propertyName], lambda self, value, propertyName=propertyName: self.addonConf.__setitem__(propertyName, value))) for propertyMethod, propertyName in self.settings.items()]
 
 	def getScript(self, gesture):
 		if not self.toggling:
