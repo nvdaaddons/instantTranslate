@@ -178,25 +178,35 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	script_translateSelection.__doc__=_("Translates selected text from one language to another using Google Translate.")
 
 	def translate(self, text, langFrom, langTo):
-		result = self.translateAndCache(text, langFrom, langTo)
+		if self.replaceUnderscores:
+			text = text.replace("_", " ")
+		if langFrom == "auto" and self.autoSwap:
+			langSwap = self.lang_swap
+		else:
+			langSwap = None
+		result = self.translateAndCache(text, langFrom, langTo, langSwap)
 		self.lastTranslation = result.translation
 		msgTranslation = {'text': result.translation, 'lang': result.lang_to}
 		queueHandler.queueFunction(queueHandler.eventQueue, messageWithLangDetection, msgTranslation)
 		self.copyResult(result.translation)
 
 	@lru_cache()
-	def translateAndCache(self, text, langFrom, langTo):
-		if self.replaceUnderscores:
-			text = text.replace("_", " ")
+	def translateAndCache(self, text, langFrom, langTo, langSwap=None):
+		"""Translates a text and caches the result:
+		@param text: text to translate
+		@param langFrom: language of the text to be translated.
+			"auto" triggers auto-detection of the language of this text.
+		@param langTo: language to which the text should be translated.
+		@param langSwap: if langFrom is set to "auto" and the text is detected to be from langTo language,
+			translates the text to langSwap instead.
+		"""
+		if langFrom != "auto" and langSwap is not None:
+			raise RuntimeError("Unexpected arguments: langFrom={}, langTo={}, langSwap={}, {}".format(text, langFrom, langTo, langSwap))
 		# useful for yandex, that doesn't support auto option
-#		if self.lang_from == "auto":
-#			self.lang_from = detect_language(text)
+#		if langFrom == "auto":
+#			langFrom = detect_language(text)
 		translation = None
-		myTranslator = None
-		if not self.autoSwap:
-			myTranslator = Translator(langFrom, langTo, text)
-		else:
-			myTranslator = Translator(langFrom, langTo, text, self.lang_swap)
+		myTranslator = Translator(langFrom, langTo, text, langSwap)
 		myTranslator.start()
 		i=0
 		while myTranslator.is_alive():

@@ -50,6 +50,8 @@ class Translator(threading.Thread):
 
 	def __init__(self, lang_from, lang_to, text, lang_swap=None, chunksize=3000, *args, **kwargs):
 		super().__init__(*args, **kwargs)
+		if lang_from != "auto" and lang_swap is not None:
+			raise RuntimeError("Unexpected arguments: langFrom={}, langTo={}, langSwap={}, {}".format(text, langFrom, langTo, langSwap))
 		self._stopEvent = threading.Event()
 		self.text = text
 		self.chunksize = chunksize
