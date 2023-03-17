@@ -95,10 +95,11 @@ modificatrice "NVDA+Maj+t":
 * O: Affiche le dialogue des paramètres de traduction
 * H: Annonce toutes les commandes séquentielles.
 
-## Changes for 4.4.3 ##
-* Added the ability to replace underscores with spaces, may provide better
-  translation results depending on context (thanks to Beka Gozalishvili)
-* Added compatibility for NVDA 2022.1
+## Changements pour la version 4.4.3 ##
+* Ajout de la possibilité de remplacer les caractères de soulignement par
+  des espaces, peut fournir de meilleurs résultats de traduction en fonction
+  du contexte (grâce à Beka Gozalishvili)
+* Ajout de la compatibilité pour NVDA 2022.1
 
 ## Changements pour la version 4.4.2 ##
 * Rétablissement de la détection et du changement automatique de langue
