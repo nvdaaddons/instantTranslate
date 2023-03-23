@@ -90,10 +90,11 @@ Todas as ordes que siguen deben premerse despois da tecla modificadora
 * O: abrir o diálogo de opcións do complemento
 * H: anuncia todas as ordes en capa dispoñibles.
 
-## Changes for 4.4.3 ##
-* Added the ability to replace underscores with spaces, may provide better
-  translation results depending on context (thanks to Beka Gozalishvili)
-* Added compatibility for NVDA 2022.1
+## Trocos para 4.4.3 ##
+* Engadida a posibilidade de reemprazar guión con espazos, podería
+  proporcionar mellores resultados de tradución dependendo do contexto
+  (grazas a Beka Gozalishvili)
+* Engadida compatibilidade con NVDA 2022.1.
 
 ## Trocos para 4.4.2 ##
 * Restaurada a detección de idioma e o intercambio automático (grazas a
