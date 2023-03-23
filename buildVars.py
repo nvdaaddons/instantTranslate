@@ -17,11 +17,11 @@ addon_info = {
 	# Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 	"addon_description" : _("This addon translates selected or clipboard text using the Google Translate service and presents it."),
 	# version
-	"addon_version" : "4.5",
+	"addon_version" : "4.5.1",
 	# Author(s)
 	"addon_author" : "Alexy Sadovoy aka Lex <lex@progger.su>, ruslan <ru2020slan@yandex.ru>, beqa <beqaprogger@gmail.com>, Mesar Hameed <mhameed@src.gnome.org>, Alberto Buffolino <a.buffolino@gmail.com>, and other NVDA contributors",
 	# URL for the add-on documentation support
-	"addon_url" : "http://addons.nvda-project.org/",
+	"addon_url" : "https://addons.nvda-project.org/addons/instantTranslate",
 	# Documentation file name
 	"addon_docFileName" : "readme.html",
 	# Minimum NVDA version supported
