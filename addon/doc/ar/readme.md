@@ -148,6 +148,6 @@ You can use this add-on in three ways:
 
 [[!tag dev stable]]
 
-[1]: https://addons.nvda-project.org/files/get.php?file=it
+[1]: https://addons.nvda-project.org/files/get.php?file=instantTranslate
 
 [2]: https://addons.nvda-project.org/files/get.php?file=it-dev
