@@ -14,7 +14,7 @@ from . import langslist as lngModule
 import addonHandler
 from copy import deepcopy
 from locale import strxfrm
-from donate_dialog import requestDonations
+from .donate_dialog import requestDonations
 
 addonHandler.initTranslation()
 
