@@ -14,6 +14,7 @@ from . import langslist as lngModule
 import addonHandler
 from copy import deepcopy
 from locale import strxfrm
+from donate_dialog import requestDonations
 
 addonHandler.initTranslation()
 
@@ -59,7 +60,10 @@ class InstantTranslateSettingsPanel(gui.SettingsPanel):
 		# Translators: A setting in addon settings dialog.
 		self.replaceUnderscores = helper.addItem(wx.CheckBox(self, label=_("Replace underscores with spaces (May provide better translation results depending on context)")))
 		self.replaceUnderscores.SetValue(self.addonConf['replaceUnderscores'])
-				
+		# Translators: A setting in addon settings dialog.
+		self.donateBtn = helper.addItem(wx.Button(self, label=_("Support an author...")))
+		self.donateBtn.Bind(wx.EVT_BUTTON, self.onDonate)
+
 		iLang_from = self._fromChoice.FindString(self.getDictKey(self.addonConf['from']))
 		iLang_to = self._intoChoice.FindString(self.getDictKey(self.addonConf['into']))
 		iLang_swap = self._swapChoice.FindString(self.getDictKey(self.addonConf['swap']))
@@ -72,6 +76,9 @@ class InstantTranslateSettingsPanel(gui.SettingsPanel):
 
 	def postInit(self):
 		self._fromChoice.SetFocus()
+
+	def onDonate(self, evt):
+		requestDonations(self)
 
 	def prepareChoices(self):
 		keys=list(langslist.keys())
