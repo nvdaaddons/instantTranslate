@@ -154,7 +154,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			# Translators: message presented when user presses the shortcut key for translating clipboard text but the clipboard is empty.
 			ui.message(_("There is no text on the clipboard"))
 		else:
-			threading.Thread(target=self.translate, args=(text,self.lang_from, self.lang_to,)).start()
+			threading.Thread(target=self.translate, args=(text,config.conf[addonName]["from"], config.conf[addonName]["into"],)).start()
 	# Translators: message presented in input help mode, when user presses the shortcut keys for this addon.
 	script_translateClipboardText.__doc__=_("Translates clipboard text from one language to another using Google Translate.")
 
@@ -225,7 +225,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			api.copyToClip(translation)
 
 	def swapLanguages(self, langFrom, langTo):
-		self.lang_from, self.lang_to = langTo, langFrom
+		config.conf[addonName]["from"], config.conf[addonName]["into"]=langTo, langFrom
 
 	def script_swapLanguages(self, gesture):
 		if self.lang_from == "auto":
@@ -235,18 +235,18 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			self.swapLanguages(self.lang_from, "auto")
 			self.isAutoSwapped = False
 		else:
-			self.swapLanguages(self.lang_from, self.lang_to)
+			self.swapLanguages(config.conf[addonName]["from"], config.conf[addonName]["into"])
 		# Translators: message presented to announce that the source and target languages have been swapped.
 		ui.message(_("Languages swapped"))
 		# Translators: message presented to announce the current source and target languages.
-		ui.message(_("Translate: from {lang1} to {lang2}").format(lang1=self.lang_from, lang2=self.lang_to))
+		ui.message(_("Translate: from {lang1} to {lang2}").format(lang1=config.conf[addonName]["from"], lang2=config.conf[addonName]["into"]))
 		self.script_translateSelection(gesture)
 	# Translators: Presented in input help mode.
 	script_swapLanguages.__doc__ = _("It swaps source and target languages.")
 
 	def script_announceLanguages(self, gesture):
 		# Translators: message presented to announce the current source and target languages.
-		ui.message(_("Translate: from {lang1} to {lang2}").format(lang1=self.lang_from, lang2=self.lang_to))
+		ui.message(_("Translate: from {lang1} to {lang2}").format(lang1=config.conf[addonName]["from"], lang2=config.conf[addonName]["into"]))
 	# Translators: Presented in input help mode.
 	script_announceLanguages.__doc__ = _("It announces the current source and target languages.")
 
