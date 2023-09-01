@@ -18,7 +18,7 @@ from donate_dialog import requestDonations
 
 addonHandler.initTranslation()
 
-class InstantTranslateSettingsPanel(gui.SettingsPanel):
+class InstantTranslateSettingsPanel(gui.settingsDialogs.SettingsPanel):
 	# Translators: name of the dialog.
 	title = _("Instant Translate")
 
