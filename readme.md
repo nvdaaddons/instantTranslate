@@ -93,6 +93,6 @@ All following commands must be pressed after modifier key "NVDA+Shift+t":
 ## Changes for 1.0 ##
 * Initial version.
 
-[1]: http://addons.nvda-project.org/files/get.php?file=instantTranslate
+[1]: https://addons.nvda-project.org/legacy?file=instantTranslate
 
 [2]: http://addons.nvda-project.org/files/get.php?file=it-dev

@@ -9,6 +9,7 @@
 import wx
 import gui
 import gui.guiHelper
+from gui.settingsDialogs import SettingsPanel
 from .langslist import langslist
 from . import langslist as lngModule
 import addonHandler
@@ -18,7 +19,7 @@ from .donate_dialog import requestDonations
 
 addonHandler.initTranslation()
 
-class InstantTranslateSettingsPanel(gui.SettingsPanel):
+class InstantTranslateSettingsPanel(SettingsPanel):
 	# Translators: name of the dialog.
 	title = _("Instant Translate")
 
