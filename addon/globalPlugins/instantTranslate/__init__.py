@@ -184,7 +184,10 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			langSwap = self.lang_swap
 		else:
 			langSwap = None
-		result = self.translateAndCache(text, langFrom, langTo, langSwap)
+		try:
+			result = self.translateAndCache(text, langFrom, langTo, langSwap)
+		except RuntimeError:
+			return
 		self.lastTranslation = result.translation
 		msgTranslation = {'text': result.translation, 'lang': result.lang_to}
 		queueHandler.queueFunction(queueHandler.eventQueue, messageWithLangDetection, msgTranslation)
@@ -216,6 +219,9 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				beep(500, 100)
 				i = 0
 		myTranslator.join()
+		if myTranslator.error:
+			queueHandler.queueFunction(queueHandler.eventQueue, ui.message, _("Translation failed"))
+			raise RuntimeError('Translation failure')
 		return myTranslator
 
 	def copyResult(self, translation, ignoreSetting=False):

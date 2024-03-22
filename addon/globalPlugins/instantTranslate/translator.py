@@ -13,7 +13,6 @@ from time import sleep
 from random import randint
 from logHandler import log
 import ui
-import queueHandler
 
 import json
 import urllib.request as urllibRequest
@@ -75,6 +74,7 @@ class Translator(threading.Thread):
 			if not self.firstChunk:
 				sleep(randint(1, 10))
 			url = urlTemplate.format(lang_from=self.lang_from, lang_to=self.lang_to, text=urllibRequest.quote(chunk.encode('utf-8')))
+			self.error = False
 			try:
 				response = json.load(self.opener.open(url))
 				self.lang_detected = response['src']
@@ -89,6 +89,6 @@ class Translator(threading.Thread):
 				# We have probably been blocked, so stop trying to translate.
 #				log.exception("Instant translate: Can not translate text '%s'" %chunk)
 #				raise e
-				queueHandler.queueFunction(queueHandler.eventQueue, ui.message, _("Translation failed"))
+				self.error = True
 				return
 			self.translation += "".join(sentence["trans"] for sentence in response["sentences"])
