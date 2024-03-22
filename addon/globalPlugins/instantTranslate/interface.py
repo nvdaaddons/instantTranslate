@@ -15,7 +15,6 @@ from . import langslist as lngModule
 import addonHandler
 from copy import deepcopy
 from locale import strxfrm
-from .donate_dialog import requestDonations
 
 addonHandler.initTranslation()
 
@@ -79,6 +78,7 @@ class InstantTranslateSettingsPanel(SettingsPanel):
 		self._fromChoice.SetFocus()
 
 	def onDonate(self, evt):
+		from .donate_dialog import requestDonations
 		requestDonations(self)
 
 	def prepareChoices(self):
