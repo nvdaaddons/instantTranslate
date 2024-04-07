@@ -61,6 +61,9 @@ class InstantTranslateSettingsPanel(SettingsPanel):
 		self.replaceUnderscores = helper.addItem(wx.CheckBox(self, label=_("Replace underscores with spaces (May provide better translation results depending on context)")))
 		self.replaceUnderscores.SetValue(self.addonConf['replaceUnderscores'])
 		# Translators: A setting in addon settings dialog.
+		self.useMirror = helper.addItem(wx.CheckBox(self, label=_("Use mirror (Mainly for chinese users)")))
+		self.useMirror.SetValue(self.addonConf['useMirror'])
+		# Translators: A setting in addon settings dialog.
 		self.donateBtn = helper.addItem(wx.Button(self, label=_("Support an author...")))
 		self.donateBtn.Bind(wx.EVT_BUTTON, self.onDonate)
 
@@ -106,6 +109,7 @@ class InstantTranslateSettingsPanel(SettingsPanel):
 		self.addonConf['copytranslatedtext'] = self.copyTranslationChk.GetValue()
 		self.addonConf['autoswap'] = self.autoSwapChk.GetValue()
 		self.addonConf['replaceUnderscores'] = self.replaceUnderscores.GetValue()
+		self.addonConf['useMirror'] = self.useMirror.GetValue()
 
 	def getDictKey(self, currentValue):
 		for key, value in langslist.items():

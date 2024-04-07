@@ -1,6 +1,6 @@
 # encoding: utf-8
 #
-# Copyright (C) 2013 - 2016 Mesar Hameed <mhameed@src.gnome.org>, Beqa gozalishvili
+# Copyright (C) 2013 - 2024 Mesar Hameed <mhameed@src.gnome.org>, Beqa gozalishvili
 # This file is covered by the GNU General Public License.
 # See the file COPYING for more details.
 
@@ -47,7 +47,7 @@ langConversionDic = {'iw':'he', 'jw':'jv'}
 
 class Translator(threading.Thread):
 
-	def __init__(self, lang_from, lang_to, text, lang_swap=None, chunksize=3000, *args, **kwargs):
+	def __init__(self, lang_from, lang_to, text, lang_swap=None, useMirror=False, chunksize=3000, *args, **kwargs):
 		super().__init__(*args, **kwargs)
 		if lang_from != "auto" and lang_swap is not None:
 			raise RuntimeError("Unexpected arguments: langFrom={}, langTo={}, langSwap={}, {}".format(text, langFrom, langTo, langSwap))
@@ -57,6 +57,7 @@ class Translator(threading.Thread):
 		self.lang_to = lang_to
 		self.lang_from = lang_from
 		self.lang_swap = lang_swap
+		self.useMirror = useMirror
 		self.translation = ''
 		self.lang_detected = ''
 		self.opener = urllibRequest.build_opener()
@@ -67,7 +68,9 @@ class Translator(threading.Thread):
 		self._stopEvent.set()
 
 	def run(self):
-		urlTemplate = 'https://translate.googleapis.com/translate_a/single?client=gtx&sl={lang_from}&tl={lang_to}&dt=t&q={text}&dj=1'
+		urlTemplate = "https://translate.googleapis.com/translate_a/single?client=gtx&sl={lang_from}&tl={lang_to}&dt=t&q={text}&dj=1"
+		if self.useMirror:
+			urlTemplate = "https://translate.googleapis.mirror.nvdadr.com/translate_a/single?client=gtx&sl={lang_from}&tl={lang_to}&dt=t&q={text}&dj=1"
 		for chunk in splitChunks(self.text, self.chunksize):
 			# Make sure we don't send requests to google too often.
 			# Try to simulate a human.
