@@ -48,6 +48,13 @@ All following commands must be pressed after modifier key "NVDA+Shift+t":
 * O: open translation settings dialog
 * H: announces all available layered commands.
 
+## Changes for 4.7 ##
+* Updated to be compatible with python3.11 and nvda 2024.1
+* Implemented speakOnDemand mode
+* Fixed case with caching failled translations
+* Added chinese mirror for translation
+
+
 ## Changes for 4.4.2 ##
 * Restore language detection and auto-swapping (Thanks to Cyrille for fix)
 * updated languages for translation (thanks to Cyrille)
