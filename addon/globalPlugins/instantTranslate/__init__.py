@@ -64,6 +64,7 @@ confspec = {
 "autoswap": "boolean(default=true)",
 "isautoswapped": "boolean(default=false)",
 "replaceUnderscores": "boolean(default=false)",
+"useMirror": "boolean(default=false)",
 }
 
 # Define speakOnDemand parameter for all scripts needing it
@@ -114,7 +115,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		self._speak = speechModule.speak
 		speechModule.speak = self._localSpeak
 		self.lastSpokenText = ''
-		self.settings = {"lang_from": "from", "lang_to": "into", "lang_swap": "swap", "copyTranslation": "copytranslatedtext", "autoSwap": "autoswap", "isAutoSwapped": "isautoswapped", "replaceUnderscores": "replaceUnderscores"}
+		self.settings = {"lang_from": "from", "lang_to": "into", "lang_swap": "swap", "copyTranslation": "copytranslatedtext", "autoSwap": "autoswap", "isAutoSwapped": "isautoswapped", "replaceUnderscores": "replaceUnderscores", "useMirror": "useMirror"}
 		[setattr(self.__class__, propertyMethod, property(lambda self, propertyName=propertyName: self.addonConf[propertyName], lambda self, value, propertyName=propertyName: self.addonConf.__setitem__(propertyName, value))) for propertyMethod, propertyName in self.settings.items()]
 
 	def getScript(self, gesture):
@@ -219,7 +220,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 #		if langFrom == "auto":
 #			langFrom = detect_language(text)
 		translation = None
-		myTranslator = Translator(langFrom, langTo, text, langSwap)
+		myTranslator = Translator(langFrom, langTo, text, langSwap, self.useMirror)
 		myTranslator.start()
 		i=0
 		while myTranslator.is_alive():
