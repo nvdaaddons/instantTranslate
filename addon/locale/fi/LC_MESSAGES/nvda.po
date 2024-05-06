@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: Instant-Translate\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2013-02-09 18:30+0100\n"
-"PO-Revision-Date: 2022-05-20 21:08+0200\n"
+"PO-Revision-Date: 2024-04-30 22:49+0300\n"
 "Last-Translator: Jani Kinnunen <janikinnunen340@gmail.com>\n"
 "Language-Team: Jani Kinnunen <jani.kinnunen@wippies.fi>\n"
 "Language: fi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.6.11\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.4.2\n"
 
 msgid ""
 "Instant Translate layer commands. t translates selected text, shift+t "
@@ -32,10 +32,6 @@ msgstr ""
 "kielen, L kääntää viimeksi puhutun tekstin, O avaa käännösasetusten "
 "valintaikkunan."
 
-#. Translators: message presented when user presses the shortcut key for translating clipboard text but the clipboard is empty.
-msgid "There is no text on the clipboard"
-msgstr "Leikepöydällä ei ole tekstiä."
-
 #. Translators: message presented in input help mode, when user presses the shortcut keys for this addon.
 msgid ""
 "Translates clipboard text from one language to another using Google "
@@ -44,15 +40,25 @@ msgstr ""
 "Kääntää leikepöydällä olevan tekstin kieleltä toiselle Google-kääntäjää "
 "käyttäen."
 
-#. Translators: user has pressed the shortcut key for translating selected text, but no text was actually selected.
-#. Translators: user has pressed the shortcut key for identifying the language of selected text, but no text was actually selected.
-msgid "no selection"
-msgstr "Ei valintaa"
+#. Translators: message presented when user presses the shortcut key for translating clipboard text but the clipboard is empty.
+msgid "There is no text on the clipboard"
+msgstr "Leikepöydällä ei ole tekstiä."
 
 #. Translators: message presented in input help mode, when user presses the shortcut keys for this addon.
 msgid ""
 "Translates selected text from one language to another using Google Translate."
 msgstr "Kääntää valitun tekstin kieleltä toiselle Google-kääntäjää käyttäen."
+
+#. Translators: user has pressed the shortcut key for translating selected text, but no text was actually selected.
+msgid "no selection"
+msgstr "Ei valintaa"
+
+msgid "Translation failed"
+msgstr "Käännös epäonnistui"
+
+#. Translators: Presented in input help mode.
+msgid "It swaps source and target languages."
+msgstr "Vaihtaa lähde- ja kohdekieliä."
 
 #. Translators: message presented to announce that the source and target languages have been swapped.
 msgid "Languages swapped"
@@ -62,10 +68,6 @@ msgstr "Kielet vaihdettu"
 #, python-brace-format
 msgid "Translate: from {lang1} to {lang2}"
 msgstr "Käännä: kielestä {lang1} kielelle {lang2}"
-
-#. Translators: Presented in input help mode.
-msgid "It swaps source and target languages."
-msgstr "Vaihtaa lähde- ja kohdekieliä."
 
 #. Translators: Presented in input help mode.
 msgid "It announces the current source and target languages."
@@ -83,16 +85,20 @@ msgstr "Ei tallennettua käännöstä"
 msgid "It copies the last translation to clipboard"
 msgstr "Kopioi viimeisimmän käännöksen leikepöydälle."
 
-msgid "Language is..."
-msgstr "Language is..."
-
 #. Translators: Presented in input help mode.
 msgid "It identifies the language of selected text"
 msgstr "Tunnistaa valitun tekstin kielen."
 
+msgid "Language is..."
+msgstr "Language is..."
+
 #. Translators: Presented in input help mode.
 msgid "It translates the last spoken text"
 msgstr "Kääntää viimeksi puhutun tekstin."
+
+#. Translators: Presented in input help mode.
+msgid "Announces all available layered commands"
+msgstr "Puhuu kaikki komentokerroksen komennot."
 
 msgid ""
 "t translates selected text, shift+t translates clipboard text, a announces "
@@ -108,12 +114,33 @@ msgstr ""
 "käännösasetusten valintaikkunan, H näyttää tämän ohjeen."
 
 #. Translators: Presented in input help mode.
-msgid "Announces all available layered commands"
-msgstr "Puhuu kaikki komentokerroksen komennot."
-
-#. Translators: Presented in input help mode.
 msgid "Opens Instant Translate settings dialog."
 msgstr "Avaa Pikakääntäjän asetusvalintaikkunan."
+
+msgid "Donate via Paypal"
+msgstr "Lahjoita Paypalin kautta"
+
+msgid "Donate via Yoomoney"
+msgstr "Lahjoita Yoomoneyn kautta"
+
+#, python-brace-format
+msgid "Request for contributions to {name}"
+msgstr "Avustuspyyntö {name} -lisäosalle"
+
+#, python-brace-format
+msgid ""
+"{name} is a free add-on for NVDA.\n"
+"You can make a donation to its author to support further development of this "
+"and other free projects.\n"
+"Do you want to donate now? Choose one of the available payment methods. You "
+"will be redirected to the corresponding website to complete a donation"
+msgstr ""
+"{name} on ilmainen lisäosa NVDA:lle.\n"
+"Voit tehdä lahjoituksen tekijälle tukeaksesi tämän ja muiden ilmaisten "
+"projektien jatkokehitystä.\n"
+"Haluatko lahjoittaa nyt? Valitse jokin käytettävissä olevista "
+"maksuvaihtoehdoista, jonka jälkeen sinut uudelleenohjataan asianmukaiselle "
+"sivustolle lahjoituksen tekemistä varten."
 
 #. Translators: name of the dialog.
 #. Add-on summary, usually the user visible name of the addon.
@@ -156,6 +183,14 @@ msgid ""
 msgstr ""
 "Korvaa alaviivat välilyönneillä (saattaa tarjota parempia käännöstuloksia "
 "kontekstista riippuen)"
+
+#. Translators: A setting in addon settings dialog.
+msgid "Use mirror (Mainly for chinese users)"
+msgstr "Käytä peilipalvelinta (pääasiassa kiinalaisille käyttäjille)"
+
+#. Translators: A setting in addon settings dialog.
+msgid "Support an author..."
+msgstr "Tue tekijää..."
 
 #. Translators: An option to automatically detect source language for translation.
 msgid "Automatically detect language"
@@ -237,27 +272,6 @@ msgstr "Tagalog"
 msgid "Yiddish"
 msgstr "Jiddish"
 
-msgid "unavailable"
-msgstr "ei käytettävissä"
-
-#. We have probably been blocked, so stop trying to translate.
-#. log.exception("Instant translate: Can not translate text '%s'" %chunk)
-#. raise e
-msgid "Translation failed"
-msgstr "Käännös epäonnistui"
-
-#. Translators: the label of a message box dialog.
-msgid ""
-"You have installed an old and incompatible version of this addon. Do you "
-"want to uninstall the old version?"
-msgstr ""
-"Sinulla on asennettuna tämän lisäosan vanha ja yhteensopimaton versio. "
-"Haluatko poistaa sen?"
-
-#. Translators: the title of a message box dialog.
-msgid "Uninstall incompatible add-on"
-msgstr "Poista yhteensopimaton lisäosa"
-
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid ""
@@ -266,6 +280,19 @@ msgid ""
 msgstr ""
 "Tämä lisäosa kääntää valitun tai leikepöydällä olevan tekstin Google-"
 "kääntäjä-palvelua käyttäen ja lukee käännöksen."
+
+#~ msgid "unavailable"
+#~ msgstr "ei käytettävissä"
+
+#~ msgid ""
+#~ "You have installed an old and incompatible version of this addon. Do you "
+#~ "want to uninstall the old version?"
+#~ msgstr ""
+#~ "Sinulla on asennettuna tämän lisäosan vanha ja yhteensopimaton versio. "
+#~ "Haluatko poistaa sen?"
+
+#~ msgid "Uninstall incompatible add-on"
+#~ msgstr "Poista yhteensopimaton lisäosa"
 
 #~ msgid "Instant &Translate Settings..."
 #~ msgstr "Pikakääntä&jä..."

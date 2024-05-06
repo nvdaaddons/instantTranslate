@@ -166,6 +166,6 @@ Todas las órdenes que siguen deben pulsarse después de la tecla modificadora
 
 [[!tag dev stable]]
 
-[1]: https://addons.nvda-project.org/files/get.php?file=instantTranslate
+[1]: https://www.nvaccess.org/addonStore/legacy?file=instantTranslate
 
-[2]: https://addons.nvda-project.org/files/get.php?file=it-dev
+[2]: https://www.nvaccess.org/addonStore/legacy?file=it-dev

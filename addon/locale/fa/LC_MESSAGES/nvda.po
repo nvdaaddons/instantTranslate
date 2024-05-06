@@ -8,50 +8,40 @@ msgstr ""
 "Project-Id-Version: instantTranslate 2.2beta2\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2013-07-14 19:24+0200\n"
-"PO-Revision-Date: 2021-07-17 21:43+0330\n"
+"PO-Revision-Date: 2024-05-05 17:17+0330\n"
 "Last-Translator: Mohammadreza Rashad <mohammadreza5712@gmail.com>\n"
 "Language-Team: NVDA Translation team <nvda-translations@groups.io>\n"
 "Language: fa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.6.10\n"
+"X-Generator: Poedit 3.4.2\n"
 
-msgid ""
-"Instant Translate layer commands. t translates selected text, shift+t "
-"translates clipboard text, a announces current swap configuration, s swaps "
-"source and target languages, c copies last result to clipboard, i identify "
-"the language of selected text, l translates last spoken text, o opens "
-"translation setting dialog."
-msgstr ""
-"فرمان‌های لایه‌ایِ مترجمِ سریع. T متنِ انتخاب‌شده را ترجمه میکند، Shift+T متنِ داخلِ "
-"کلیپ‌برد را ترجمه میکند، A تنظیماتِ فعلیِ جابجایی را اعلام میکند، S جایِ زبانِ "
-"مبدأ را با مقصد عوض میکند، C آخرین نتیجه را در کلیپ‌برد کپی میکند، I زبانِ متنِ "
-"انتخاب‌شده را مشخص میکند، L آخرین متنِ خوانده‌شده را ترجمه میکند، O پنجره‌ی "
-"تنظیماتِ مترجم را باز میکند."
+msgid "Instant Translate layer commands. t translates selected text, shift+t translates clipboard text, a announces current swap configuration, s swaps source and target languages, c copies last result to clipboard, i identify the language of selected text, l translates last spoken text, o opens translation setting dialog."
+msgstr "فرمان‌های لایه‌ایِ مترجمِ سریع. T متنِ انتخاب‌شده را ترجمه میکند، Shift+T متنِ داخلِ کلیپ‌برد را ترجمه میکند، A تنظیماتِ فعلیِ جابجایی را اعلام میکند، S جایِ زبانِ مبدأ را با مقصد عوض میکند، C آخرین نتیجه را در کلیپ‌برد کپی میکند، I زبانِ متنِ انتخاب‌شده را مشخص میکند، L آخرین متنِ خوانده‌شده را ترجمه میکند، O پنجره‌ی تنظیماتِ مترجم را باز میکند."
+
+#. Translators: message presented in input help mode, when user presses the shortcut keys for this addon.
+msgid "Translates clipboard text from one language to another using Google Translate."
+msgstr "با استفاده از مترجمِ گوگل، متنِ داخل کلیپ‌برد را از زبانی به زبانِ دیگر ترجمه میکند."
 
 #. Translators: message presented when user presses the shortcut key for translating clipboard text but the clipboard is empty.
 msgid "There is no text on the clipboard"
 msgstr "متنی در کلیپ‌برد نیست"
 
 #. Translators: message presented in input help mode, when user presses the shortcut keys for this addon.
-msgid ""
-"Translates clipboard text from one language to another using Google "
-"Translate."
-msgstr ""
-"با استفاده از مترجمِ گوگل، متنِ داخل کلیپ‌برد را از زبانی به زبانِ دیگر ترجمه "
-"میکند."
+msgid "Translates selected text from one language to another using Google Translate."
+msgstr "با استفاده از مترجمِ گوگل، متنِ انتخاب‌شده را از زبانی به زبانِ دیگر ترجمه میکند."
 
 #. Translators: user has pressed the shortcut key for translating selected text, but no text was actually selected.
-#. Translators: user has pressed the shortcut key for identifying the language of selected text, but no text was actually selected.
 msgid "no selection"
 msgstr "متنی انتخاب نشده است"
 
-#. Translators: message presented in input help mode, when user presses the shortcut keys for this addon.
-msgid ""
-"Translates selected text from one language to another using Google Translate."
-msgstr ""
-"با استفاده از مترجمِ گوگل، متنِ انتخاب‌شده را از زبانی به زبانِ دیگر ترجمه میکند."
+msgid "Translation failed"
+msgstr "ترجمه دچارِ خطا شد"
+
+#. Translators: Presented in input help mode.
+msgid "It swaps source and target languages."
+msgstr "جایِ زبانِ مبدأ را با زبانِ مقصد عوض میکند."
 
 #. Translators: message presented to announce that the source and target languages have been swapped.
 msgid "Languages swapped"
@@ -63,56 +53,60 @@ msgid "Translate: from {lang1} to {lang2}"
 msgstr "ترجمه از {lang1} به {lang2}"
 
 #. Translators: Presented in input help mode.
-msgid "It swaps source and target languages."
-msgstr "جایِ زبانِ مبدأ را با زبانِ مقصد عوض میکند."
-
-#. Translators: Presented in input help mode.
 msgid "It announces the current source and target languages."
 msgstr "زبان‌های مبدأ و مقصد فعلی را اعلام میکند."
 
 #. Translators: message presented to announce a successful copy
 msgid "Last translation copied in clipboard"
-msgstr "آخرین ترجمه در کلیپ‌برد کپی شد."
+msgstr "آخرین ترجمه در کلیپ‌برد کپی شد"
 
 #. Translators: message presented to announce no previous translation disponibility
 msgid "No stored translation"
-msgstr "ترجمه‌ای از پیش ذخیره نشده است."
+msgstr "ترجمه‌ای از پیش ذخیره نشده است"
 
 #. Translators: Presented in input help mode.
 msgid "It copies the last translation to clipboard"
-msgstr "آخرین ترجمه را در کلیپ‌برد کپی میکند."
-
-msgid "Language is..."
-msgstr "زبان ... هست"
+msgstr "آخرین ترجمه را در کلیپ‌برد کپی میکند"
 
 #. Translators: Presented in input help mode.
 msgid "It identifies the language of selected text"
-msgstr "زبانِ متنِ انتخاب‌شده را مشخص میکند."
+msgstr "زبانِ متنِ انتخاب‌شده را مشخص میکند"
+
+msgid "Language is..."
+msgstr "زبان هست..."
 
 #. Translators: Presented in input help mode.
 msgid "It translates the last spoken text"
-msgstr "آخرین متنِ خوانده‌شده را ترجمه میکند."
-
-msgid ""
-"t translates selected text, shift+t translates clipboard text, a announces "
-"current swap configuration, s swaps source and target languages, c copies "
-"last result to clipboard, i identify the language of selected text, l "
-"translates last spoken text, o open translation settings dialog, h displays "
-"this message."
-msgstr ""
-"فرمان‌های لایه‌ایِ مترجمِ سریع. T متنِ انتخاب‌شده را ترجمه میکند، Shift+T متنِ داخلِ "
-"کلیپ‌برد را ترجمه میکند، A تنظیماتِ فعلیِ جابجایی را اعلام میکند، S جایِ زبانِ "
-"مبدأ را با مقصد عوض میکند، C آخرین نتیجه را در کلیپ‌برد کپی میکند، I زبانِ متنِ "
-"انتخاب‌شده را مشخص میکند، L آخرین متنِ خوانده‌شده را ترجمه میکند، O پنجره‌ی "
-"تنظیماتِ مترجم را باز میکند، H این پیام را نمایش میدهد."
+msgstr "آخرین متنِ خوانده‌شده را ترجمه میکند"
 
 #. Translators: Presented in input help mode.
 msgid "Announces all available layered commands"
-msgstr "همه‌ی فرمان‌های لایه‌دار را اعلام میکند."
+msgstr "همه‌ی فرمان‌های لایه‌دار را اعلام میکند"
+
+msgid "t translates selected text, shift+t translates clipboard text, a announces current swap configuration, s swaps source and target languages, c copies last result to clipboard, i identify the language of selected text, l translates last spoken text, o open translation settings dialog, h displays this message."
+msgstr "فرمان‌های لایه‌ایِ مترجمِ سریع. T متنِ انتخاب‌شده را ترجمه میکند، Shift+T متنِ داخلِ کلیپ‌برد را ترجمه میکند، A تنظیماتِ فعلیِ جابجایی را اعلام میکند، S جایِ زبانِ مبدأ را با مقصد عوض میکند، C آخرین نتیجه را در کلیپ‌برد کپی میکند، I زبانِ متنِ انتخاب‌شده را مشخص میکند، L آخرین متنِ خوانده‌شده را ترجمه میکند، O پنجره‌ی تنظیماتِ مترجم را باز میکند، H این پیام را نمایش میدهد."
 
 #. Translators: Presented in input help mode.
 msgid "Opens Instant Translate settings dialog."
 msgstr "پنجره‌ی تنظیماتِ مترجمِ سریع را باز میکند."
+
+msgid "Donate via Paypal"
+msgstr "کمکِ مالی با Paypal"
+
+msgid "Donate via Yoomoney"
+msgstr "کمکِ مالی با Yoomoney"
+
+#, python-brace-format
+msgid "Request for contributions to {name}"
+msgstr "درخواست برای مشارکت در {name}"
+
+#, python-brace-format
+msgid "{name} is a free add-on for NVDA.\n"
+"You can make a donation to its author to support further development of this and other free projects.\n"
+"Do you want to donate now? Choose one of the available payment methods. You will be redirected to the corresponding website to complete a donation"
+msgstr "{name} یک افزونه‌ی رایگان برای NVDA است.\n"
+"میتوانید برای حمایت از توسعه‌ی بیشتر این افزونه و پروژه‌های رایگانِ دیگر، به نویسنده‌ی افزونه کمک مالی کنید.\n"
+"میخواهید حالا کمک کنید؟ یکی از روش‌های پرداختِ موجود را انتخاب کنید. برای تکمیلِ کمکِ مالی به وب‌سایتِ مربوطه هدایت خواهید شد"
 
 #. Translators: name of the dialog.
 #. Add-on summary, usually the user visible name of the addon.
@@ -137,9 +131,7 @@ msgid "Language for swapping:"
 msgstr "زبان برای تعویض:"
 
 #. Translators: A setting in addon settings dialog, shown if source language is on auto.
-msgid ""
-"Activate the auto-swap if recognized source is equal to the target "
-"(experimental)"
+msgid "Activate the auto-swap if recognized source is equal to the target (experimental)"
 msgstr "فعال کردنِ جابجاییِ خودکار اگر مبدأ برابر با مقصد باشد (آزمایشی)"
 
 #. Translators: A setting in addon settings dialog.
@@ -147,10 +139,16 @@ msgid "Copy translation result to clipboard"
 msgstr "کپی کردنِ نتیجه‌ی ترجمه در کلیپ‌برد"
 
 #. Translators: A setting in addon settings dialog.
-msgid ""
-"Replace underscores with spaces (May provide better translation results "
-"depending on context)"
-msgstr ""
+msgid "Replace underscores with spaces (May provide better translation results depending on context)"
+msgstr "جاگذاریِ زیرخط‌ها با فاصله‌ها (ممکن است بسته به زمینه، نتایج بهتری در ترجمه ارائه کند)."
+
+#. Translators: A setting in addon settings dialog.
+msgid "Use mirror (Mainly for chinese users)"
+msgstr "استفاده از سِروِرِ جایگزین (عمدتا برای کاربرانِ چینی)"
+
+#. Translators: A setting in addon settings dialog.
+msgid "Support an author..."
+msgstr "حمایت از نویسنده..."
 
 #. Translators: An option to automatically detect source language for translation.
 msgid "Automatically detect language"
@@ -232,35 +230,23 @@ msgstr "تاگالوگ"
 msgid "Yiddish"
 msgstr "عِبریِ آلمانی"
 
-msgid "unavailable"
-msgstr "موجود نیست"
-
-#. We have probably been blocked, so stop trying to translate.
-#. log.exception("Instant translate: Can not translate text '%s'" %chunk)
-#. raise e
-msgid "Translation failed"
-msgstr "ترجمه دچارِ خطا شد."
-
-#. Translators: the label of a message box dialog.
-msgid ""
-"You have installed an old and incompatible version of this addon. Do you "
-"want to uninstall the old version?"
-msgstr ""
-"شما یک نسخه‌ی قدیمی و ناسازگار از این افزونه را نصب کرده اید. میخواهید نسخه‌ی "
-"قدیمی را حذف کنید؟"
-
-#. Translators: the title of a message box dialog.
-msgid "Uninstall incompatible add-on"
-msgstr "حذفِ نسخه‌ی ناسازگار"
-
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
-msgid ""
-"This addon translates selected or clipboard text using the Google Translate "
-"service and presents it."
-msgstr ""
-"این افزونه متنِ انتخاب‌شده یا موجود در کلیپ‌برد را با استفاده از خدمتِ مترجمِ "
-"گوگل ترجمه کرده، ارائه میدهد."
+msgid "This addon translates selected or clipboard text using the Google Translate service and presents it."
+msgstr "این افزونه متنِ انتخاب‌شده یا موجود در کلیپ‌برد را با استفاده از خدمتِ مترجمِ گوگل ترجمه کرده، ارائه میدهد."
+
+#~ msgid "unavailable"
+#~ msgstr "موجود نیست"
+
+#~ msgid ""
+#~ "You have installed an old and incompatible version of this addon. Do you "
+#~ "want to uninstall the old version?"
+#~ msgstr ""
+#~ "شما یک نسخه‌ی قدیمی و ناسازگار از این افزونه را نصب کرده اید. میخواهید "
+#~ "نسخه‌ی قدیمی را حذف کنید؟"
+
+#~ msgid "Uninstall incompatible add-on"
+#~ msgstr "حذفِ نسخه‌ی ناسازگار"
 
 #~ msgid "Instant &Translate Settings..."
 #~ msgstr "تنظیماتِ م&ترجمِ سریع"

@@ -5,8 +5,9 @@
 * Загрузить [стабильную версию][1]
 * Загрузить [разрабатываемую версию][2]
 
-This add-on is used to translate selected and/or clipboard text from one
-language to another.  This is done using the Google Translate service.
+Это дополнение используется для перевода выделенного текста и/или текста из
+буфера обмена с одного языка на другой.  Это делается с помощью сервиса
+Google Translate.
 
 ## Настройка языков ##
 Чтобы настроить исходный, целевой и иногда  язык для перемены местами, перейдите: NVDA Меню >> Параметры >> Настройки Instant Translate.
@@ -60,16 +61,18 @@ real source language correctly, and you have to swap languages manually via
 script, so to force the source language to be the previous target language
 (English in our example).
 
-At least, in the speech settings parameters dialog (NVDA Menu >> Preferences >> Speech), you may want to check the "Automatic language switching (when supported)" option. This way, if you are using a multi-lingual synthesizer, the translation will be announced using the target language voice of the synthesizer.
+По крайней мере, в диалоге параметров настройки речи (меню NVDA >> Параметры >> Речь) вы можете захотеть установить флажок "Автоматическое переключение языка (если поддерживается)". Таким образом, если вы используете многоязычный синтезатор, перевод будет озвучен голосом синтезатора на целевом языке.
 
 ## Использование ##
-You can use this add-on in three ways:
+Вы можете использовать это дополнение тремя способами:
 
-1. Select some text using selection commands (shift with arrow keys, for
-   example) and press associated key to translate. translation result will
-   be read with synthesizer which you are using.
+1. Выделите текст с помощью команд выделения (например, shift с помощью
+   клавиш со стрелками) и нажмите соответствующую клавишу для
+   перевода. результат перевода будет прочитан с помощью синтезатора,
+   который вы используете.
 2. Вы также можете перевести текст из буфера обмена.
-3. Press the dedicated shortcut key to translate the last spoken text.
+3. Нажмите специальную комбинацию клавиш, чтобы перевести последний
+   произнесенный текст.
 
 ## Команды ##
 Все следующие команды клавиш нужно нажимать после клавишного модификатора
@@ -81,31 +84,31 @@ You can use this add-on in three ways:
 * A: объявить текущую конфигурацию,
 * C: скопировать последний результат в буфер обмена,
 * I: определить язык выделенного текста,
-* L: translate the last spoken text,
-* O: open translation settings dialog
-* H: announces all available layered commands.
+* L: перевести последний произнесённый текст,
+* O: открыть диалог настроек перевода
+* H: объявляет все доступные многоуровневые команды.
 
-## Changes for 4.4.3 ##
+## Изменения  в версии 4.4.3 ##
 * Added the ability to replace underscores with spaces, may provide better
   translation results depending on context (thanks to Beka Gozalishvili)
 * Added compatibility for NVDA 2022.1
 
-## Changes for 4.4.2 ##
+## Изменения  в версии 4.4.2 ##
 * Restore language detection and auto-swapping (Thanks to Cyrille for fix)
 * updated languages for translation (thanks to Cyrille)
 
-## Changes for 4.4 ##
+## Изменения  в версии 4.4 ##
 * Instant translate is now compatible with NVDA 2019.3 (Python 3 versions of
   NVDA)
 
-## Changes for 4.3 ##
+## Изменения  в версии 4.3 ##
 * nvda compatibility fix Now instant translate will be compatible with
   latest nvda builds.
-* found a way to use google as a translation service again.
+* снова найден способ использовать Google в качестве сервиса переводов.
 
-## Changes for 4.2 ##
+## Изменения  в версии 4.2 ##
 * Restored working state with newer versions of nvda.
-* Restored automatic language detection.
+* Восстановлено автоматическое определение языка.
 
 ## Изменения  в версии 4.1 ##
 * InstantTranslate снова работает со службой переводчика Яндекс вместо
@@ -153,6 +156,6 @@ You can use this add-on in three ways:
 
 [[!tag dev stable]]
 
-[1]: https://addons.nvda-project.org/files/get.php?file=instantTranslate
+[1]: https://www.nvaccess.org/addonStore/legacy?file=instantTranslate
 
-[2]: https://addons.nvda-project.org/files/get.php?file=it-dev
+[2]: https://www.nvaccess.org/addonStore/legacy?file=it-dev

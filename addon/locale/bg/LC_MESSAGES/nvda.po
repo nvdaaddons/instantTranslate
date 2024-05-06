@@ -10,15 +10,15 @@ msgstr ""
 "Project-Id-Version: instantTranslate 2.2beta1\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2013-04-11 05:45+0100\n"
-"PO-Revision-Date: 2022-05-20 12:45+0300\n"
-"Last-Translator: Kostadin Kolev <k_kolev1985@mail.bg>\n"
+"PO-Revision-Date: 2024-05-03 17:00+0300\n"
+"Last-Translator: Kostadin Kolev <k.kolev1985@gmail.com>\n"
 "Language-Team: Български <>\n"
 "Language: bg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
-"X-Generator: Poedit 3.0.1\n"
+"X-Generator: Poedit 3.4.2\n"
 
 msgid ""
 "Instant Translate layer commands. t translates selected text, shift+t "
@@ -37,10 +37,6 @@ msgstr ""
 "\t- L: Превежда последно изговорения текст\n"
 "\t- O: Отваря прозореца с настройките за превод"
 
-#. Translators: message presented when user presses the shortcut key for translating clipboard text but the clipboard is empty.
-msgid "There is no text on the clipboard"
-msgstr "Няма текст в клипборда"
-
 #. Translators: message presented in input help mode, when user presses the shortcut keys for this addon.
 msgid ""
 "Translates clipboard text from one language to another using Google "
@@ -49,10 +45,9 @@ msgstr ""
 "Превежда текста, намиращ се в клипборда, от един език на друг, като използва "
 "Google Translate."
 
-#. Translators: user has pressed the shortcut key for translating selected text, but no text was actually selected.
-#. Translators: user has pressed the shortcut key for identifying the language of selected text, but no text was actually selected.
-msgid "no selection"
-msgstr "няма нищо маркирано"
+#. Translators: message presented when user presses the shortcut key for translating clipboard text but the clipboard is empty.
+msgid "There is no text on the clipboard"
+msgstr "Няма текст в клипборда"
 
 #. Translators: message presented in input help mode, when user presses the shortcut keys for this addon.
 msgid ""
@@ -60,6 +55,17 @@ msgid ""
 msgstr ""
 "Превежда маркирания текст от един език на друг, като използва Google "
 "Translate."
+
+#. Translators: user has pressed the shortcut key for translating selected text, but no text was actually selected.
+msgid "no selection"
+msgstr "няма нищо маркирано"
+
+msgid "Translation failed"
+msgstr "Превеждането е неуспешно"
+
+#. Translators: Presented in input help mode.
+msgid "It swaps source and target languages."
+msgstr "Разменя текущия и желания език."
 
 #. Translators: message presented to announce that the source and target languages have been swapped.
 msgid "Languages swapped"
@@ -69,10 +75,6 @@ msgstr "Езиците са разменени"
 #, python-brace-format
 msgid "Translate: from {lang1} to {lang2}"
 msgstr "Превод: от {lang1} на {lang2}"
-
-#. Translators: Presented in input help mode.
-msgid "It swaps source and target languages."
-msgstr "Разменя текущия и желания език."
 
 #. Translators: Presented in input help mode.
 msgid "It announces the current source and target languages."
@@ -90,16 +92,20 @@ msgstr "Няма съхранен превод"
 msgid "It copies the last translation to clipboard"
 msgstr "Копира последния превод в клипборда"
 
-msgid "Language is..."
-msgstr "Езикът е..."
-
 #. Translators: Presented in input help mode.
 msgid "It identifies the language of selected text"
 msgstr "Разпознава езика на текущо маркирания текст"
 
+msgid "Language is..."
+msgstr "Езикът е..."
+
 #. Translators: Presented in input help mode.
 msgid "It translates the last spoken text"
 msgstr "Превод на последно изговорения текст"
+
+#. Translators: Presented in input help mode.
+msgid "Announces all available layered commands"
+msgstr "Съобщава всички налични слоеви команди"
 
 msgid ""
 "t translates selected text, shift+t translates clipboard text, a announces "
@@ -119,18 +125,38 @@ msgstr ""
 "\tH: Извежда това съобщение"
 
 #. Translators: Presented in input help mode.
-msgid "Announces all available layered commands"
-msgstr "Съобщава всички налични слоеви команди"
-
-#. Translators: Presented in input help mode.
 msgid "Opens Instant Translate settings dialog."
 msgstr "Отваря прозореца с настройките за Незабавен Превод."
+
+msgid "Donate via Paypal"
+msgstr "Дари чрез Paypal"
+
+msgid "Donate via Yoomoney"
+msgstr "Дари чрез Yoomoney"
+
+#, python-brace-format
+msgid "Request for contributions to {name}"
+msgstr "Молба за дарение към {name}"
+
+#, python-brace-format
+msgid ""
+"{name} is a free add-on for NVDA.\n"
+"You can make a donation to its author to support further development of this "
+"and other free projects.\n"
+"Do you want to donate now? Choose one of the available payment methods. You "
+"will be redirected to the corresponding website to complete a donation"
+msgstr ""
+"{name} е безплатна добавка за NVDA.\n"
+"Можете да направите дарение на нейния разработчик, за да подкрепите по-"
+"нататъшното развитие на този и други безплатни проекти.\n"
+"Желаете ли да дарите сега? Изберете един от наличните методи за плащане. Ще "
+"бъдете пренасочени към съответния уеб сайт, за да завършите дарението."
 
 #. Translators: name of the dialog.
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on to be shown on installation and add-on information.
 msgid "Instant Translate"
-msgstr "Незабавен превод"
+msgstr "Незабавен превод (Instant Translate)"
 
 #. Translators: Help message for a dialog.
 msgid "Select translation source and target language:"
@@ -167,6 +193,14 @@ msgid ""
 msgstr ""
 "Замяна на долните черти с интервали (може да осигури по-добри резултати при "
 "превод в зависимост от контекста)"
+
+#. Translators: A setting in addon settings dialog.
+msgid "Use mirror (Mainly for chinese users)"
+msgstr "Използвай огледален сървър (основно за потребители от Китай)"
+
+#. Translators: A setting in addon settings dialog.
+msgid "Support an author..."
+msgstr "Подкрепа за разработчика"
 
 #. Translators: An option to automatically detect source language for translation.
 msgid "Automatically detect language"
@@ -248,27 +282,6 @@ msgstr "тагалог"
 msgid "Yiddish"
 msgstr "идиш"
 
-msgid "unavailable"
-msgstr "недостъпен"
-
-#. We have probably been blocked, so stop trying to translate.
-#. log.exception("Instant translate: Can not translate text '%s'" %chunk)
-#. raise e
-msgid "Translation failed"
-msgstr "Превеждането е неуспешно"
-
-#. Translators: the label of a message box dialog.
-msgid ""
-"You have installed an old and incompatible version of this addon. Do you "
-"want to uninstall the old version?"
-msgstr ""
-"Най-вероятно имате инсталирана стара и несъвместима версия на тази добавка. "
-"Желаете ли да деинсталирате старата версия?"
-
-#. Translators: the title of a message box dialog.
-msgid "Uninstall incompatible add-on"
-msgstr "Деинсталиране на несъвместима добавка"
-
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid ""
@@ -277,6 +290,19 @@ msgid ""
 msgstr ""
 "Тази добавка превежда маркиран или намиращ се в клипборда текст чрез "
 "услугата Google Translate и ви го предоставя."
+
+#~ msgid "unavailable"
+#~ msgstr "недостъпен"
+
+#~ msgid ""
+#~ "You have installed an old and incompatible version of this addon. Do you "
+#~ "want to uninstall the old version?"
+#~ msgstr ""
+#~ "Най-вероятно имате инсталирана стара и несъвместима версия на тази "
+#~ "добавка. Желаете ли да деинсталирате старата версия?"
+
+#~ msgid "Uninstall incompatible add-on"
+#~ msgstr "Деинсталиране на несъвместима добавка"
 
 #~ msgid "Instant &Translate Settings..."
 #~ msgstr "Незабавен &превод..."

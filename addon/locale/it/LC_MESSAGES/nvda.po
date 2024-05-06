@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: 'InstantTranslate' '3.0'\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2013-02-09 18:30+0100\n"
-"PO-Revision-Date: 2022-07-14 11:01+0100\n"
+"PO-Revision-Date: 2023-04-28 10:50+0100\n"
 "Last-Translator: Simone Dal Maso <simone.dalmaso@gmail.com>\n"
 "Language-Team: Alberto Buffolino, Simone Dal Maso <a.buffolino@gmail.com, "
 "simone.dalmaso@gmail.com>\n"
@@ -25,15 +25,11 @@ msgid ""
 "the language of selected text, l translates last spoken text, o opens "
 "translation setting dialog."
 msgstr ""
-"Comandi a livello di Instant Translate. t traduce il testo selezionato, shift"
-"+t il testo negli appunti, a annuncia la configurazione corrente delle "
+"Comandi a livello di Instant Translate. t traduce il testo selezionato, "
+"shift+t il testo negli appunti, a annuncia la configurazione corrente delle "
 "lingue, s scambia le lingue di origine e di destinazione, c copia l'ultimo "
 "risultato negli appunti, i identifica la lingua del testo selezionato, l "
 "traduce l'ultimo testo annunciato, o apre le impostazioni di traduzione."
-
-#. Translators: message presented when user presses the shortcut key for translating clipboard text but the clipboard is empty.
-msgid "There is no text on the clipboard"
-msgstr "Non è presente testo negli appunti."
 
 #. Translators: message presented in input help mode, when user presses the shortcut keys for this addon.
 msgid ""
@@ -43,10 +39,9 @@ msgstr ""
 "Traduce il testo presente negli appunti da una lingua ad un'altra tramite "
 "Google Translate"
 
-#. Translators: user has pressed the shortcut key for translating selected text, but no text was actually selected.
-#. Translators: user has pressed the shortcut key for identifying the language of selected text, but no text was actually selected.
-msgid "no selection"
-msgstr "Nessuna selezione"
+#. Translators: message presented when user presses the shortcut key for translating clipboard text but the clipboard is empty.
+msgid "There is no text on the clipboard"
+msgstr "Non è presente testo negli appunti."
 
 #. Translators: message presented in input help mode, when user presses the shortcut keys for this addon.
 msgid ""
@@ -54,6 +49,17 @@ msgid ""
 msgstr ""
 "Traduce il testo selezionato da una lingua ad un'altra tramite Google "
 "Translate"
+
+#. Translators: user has pressed the shortcut key for translating selected text, but no text was actually selected.
+msgid "no selection"
+msgstr "Nessuna selezione"
+
+msgid "Translation failed"
+msgstr "Traduzione fallita"
+
+#. Translators: Presented in input help mode.
+msgid "It swaps source and target languages."
+msgstr "scambia le lingue di origine e di destinazione."
 
 #. Translators: message presented to announce that the source and target languages have been swapped.
 msgid "Languages swapped"
@@ -63,10 +69,6 @@ msgstr "Lingue scambiate"
 #, python-brace-format
 msgid "Translate: from {lang1} to {lang2}"
 msgstr "Traduce: da {lang1} a {lang2}"
-
-#. Translators: Presented in input help mode.
-msgid "It swaps source and target languages."
-msgstr "scambia le lingue di origine e di destinazione."
 
 #. Translators: Presented in input help mode.
 msgid "It announces the current source and target languages."
@@ -84,16 +86,20 @@ msgstr "Nessuna traduzione in memoria"
 msgid "It copies the last translation to clipboard"
 msgstr "copia l'ultimo risultato negli appunti"
 
-msgid "Language is..."
-msgstr "La lingua è..."
-
 #. Translators: Presented in input help mode.
 msgid "It identifies the language of selected text"
 msgstr "Identifica la lingua del testo selezionato"
 
+msgid "Language is..."
+msgstr "La lingua è..."
+
 #. Translators: Presented in input help mode.
 msgid "It translates the last spoken text"
 msgstr "Traduce l'ultimo testo letto dalla sintesi vocale"
+
+#. Translators: Presented in input help mode.
+msgid "Announces all available layered commands"
+msgstr "Annuncia tutti i comandi disponibili"
 
 msgid ""
 "t translates selected text, shift+t translates clipboard text, a announces "
@@ -109,12 +115,32 @@ msgstr ""
 "impostazioni di traduzione, h visualizza questo messaggio."
 
 #. Translators: Presented in input help mode.
-msgid "Announces all available layered commands"
-msgstr "Annuncia tutti i comandi disponibili"
-
-#. Translators: Presented in input help mode.
 msgid "Opens Instant Translate settings dialog."
 msgstr "Apre le impostazioni di Instant Translate"
+
+msgid "Donate via Paypal"
+msgstr "Dona tramite Paypal"
+
+msgid "Donate via Yoomoney"
+msgstr "Dona tramite Yoomoney"
+
+#, python-brace-format
+msgid "Request for contributions to {name}"
+msgstr "Richiesta di contributi a {name}"
+
+#, python-brace-format
+msgid ""
+"{name} is a free add-on for NVDA.\n"
+"You can make a donation to its author to support further development of this "
+"and other free projects.\n"
+"Do you want to donate now? Choose one of the available payment methods. You "
+"will be redirected to the corresponding website to complete a donation"
+msgstr ""
+"{name} è un componente aggiuntivo gratuito per NVDA.\n"
+"Puoi effettuare una donazione all'autore per supportare lo sviluppo di "
+"questo e altri progetti gratuiti.\n"
+"Vuoi donare adesso? Scegli uno dei metodi di pagamento disponibili. Verrai "
+"reindirizzato al sito Web corrispondente per completare una donazione"
 
 #. Translators: name of the dialog.
 #. Add-on summary, usually the user visible name of the addon.
@@ -158,6 +184,14 @@ msgid ""
 msgstr ""
 "Sostituisci i sottolineati con spazi (può fornire risultati di traduzione "
 "migliori a seconda del contesto)"
+
+#. Translators: A setting in addon settings dialog.
+msgid "Use mirror (Mainly for chinese users)"
+msgstr ""
+
+#. Translators: A setting in addon settings dialog.
+msgid "Support an author..."
+msgstr "Sostieni un autore..."
 
 #. Translators: An option to automatically detect source language for translation.
 msgid "Automatically detect language"
@@ -239,27 +273,6 @@ msgstr "Tagalog"
 msgid "Yiddish"
 msgstr "Yiddish"
 
-msgid "unavailable"
-msgstr "non disponibile"
-
-#. We have probably been blocked, so stop trying to translate.
-#. log.exception("Instant translate: Can not translate text '%s'" %chunk)
-#. raise e
-msgid "Translation failed"
-msgstr "Traduzione fallita"
-
-#. Translators: the label of a message box dialog.
-msgid ""
-"You have installed an old and incompatible version of this addon. Do you "
-"want to uninstall the old version?"
-msgstr ""
-"È stata installata una versione vecchia e incompatibile di questo componente "
-"aggiuntivo. Vuoi disinstallare la vecchia versione?"
-
-#. Translators: the title of a message box dialog.
-msgid "Uninstall incompatible add-on"
-msgstr "Disinstallazione componente aggiuntivo incompatibile"
-
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid ""
@@ -268,6 +281,19 @@ msgid ""
 msgstr ""
 "Questo componente aggiuntivo traduce e annuncia il testo selezionato o "
 "presente negli appunti utilizzando il servizio Google Translate."
+
+#~ msgid "unavailable"
+#~ msgstr "non disponibile"
+
+#~ msgid ""
+#~ "You have installed an old and incompatible version of this addon. Do you "
+#~ "want to uninstall the old version?"
+#~ msgstr ""
+#~ "È stata installata una versione vecchia e incompatibile di questo "
+#~ "componente aggiuntivo. Vuoi disinstallare la vecchia versione?"
+
+#~ msgid "Uninstall incompatible add-on"
+#~ msgstr "Disinstallazione componente aggiuntivo incompatibile"
 
 #~ msgid "Instant &Translate Settings..."
 #~ msgstr "Instant &Translate - Impostazioni..."
