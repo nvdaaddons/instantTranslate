@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: 'instantTranslate' '4.4.3'\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
 "POT-Creation-Date: 2022-05-19 11:38+0400\n"
-"PO-Revision-Date: 2022-05-19 12:20+0400\n"
+"PO-Revision-Date: 2024-05-09 13:38+0300\n"
 "Last-Translator: Dragan Ratkovich\n"
 "Language-Team: \n"
 "Language: ru\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
-"X-Generator: Poedit 3.0.1\n"
+"X-Generator: Poedit 3.4.2\n"
 
 msgid ""
 "Instant Translate layer commands. t translates selected text, shift+t "
@@ -121,14 +121,14 @@ msgid "Opens Instant Translate settings dialog."
 msgstr "Открывает диалоговое окно настроек Instant Translate."
 
 msgid "Donate via Paypal"
-msgstr ""
+msgstr "Пожертвовать через Paypal"
 
 msgid "Donate via Yoomoney"
-msgstr ""
+msgstr "Пожертвовать через Yoomoney"
 
 #, python-brace-format
 msgid "Request for contributions to {name}"
-msgstr ""
+msgstr "Просьба поддержать {name}"
 
 #, python-brace-format
 msgid ""
@@ -138,6 +138,12 @@ msgid ""
 "Do you want to donate now? Choose one of the available payment methods. You "
 "will be redirected to the corresponding website to complete a donation"
 msgstr ""
+"{name} - это бесплатное дополнение для NVDA.\n"
+"Вы можете сделать пожертвование его автору, чтобы поддержать дальнейшее "
+"развитие этого и других бесплатных проектов.\n"
+"Вы хотите сделать пожертвование сейчас? Выберите один из доступных способов "
+"оплаты. Вы будете перенаправлены на соответствующий веб-сайт для совершения "
+"пожертвования"
 
 #. Translators: name of the dialog.
 #. Add-on summary, usually the user visible name of the addon.
@@ -183,11 +189,11 @@ msgstr ""
 
 #. Translators: A setting in addon settings dialog.
 msgid "Use mirror (Mainly for chinese users)"
-msgstr ""
+msgstr "Использовать зеркало (в основном для китайских пользователей)"
 
 #. Translators: A setting in addon settings dialog.
 msgid "Support an author..."
-msgstr ""
+msgstr "Поддержать автора..."
 
 #. Translators: An option to automatically detect source language for translation.
 msgid "Automatically detect language"

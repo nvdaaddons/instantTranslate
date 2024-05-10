@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: instantTranslate 3.0\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2015-05-05 16:47+1000\n"
-"PO-Revision-Date: 2023-04-10 16:48+0300\n"
+"PO-Revision-Date: 2024-05-06 22:20+0300\n"
 "Last-Translator: Volodymyr Pyrih <vp88.mobile@gmail.com>\n"
 "Language-Team: \n"
 "Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.2.2\n"
+"X-Generator: Poedit 3.4.2\n"
 
 msgid ""
 "Instant Translate layer commands. t translates selected text, shift+t "
@@ -118,14 +118,14 @@ msgid "Opens Instant Translate settings dialog."
 msgstr "Відкриває діалог налаштування Instant Translate."
 
 msgid "Donate via Paypal"
-msgstr ""
+msgstr "Пожертвувати через Paypal"
 
 msgid "Donate via Yoomoney"
-msgstr ""
+msgstr "Пожертвувати через Yoomoney"
 
 #, python-brace-format
 msgid "Request for contributions to {name}"
-msgstr ""
+msgstr "Запит на підтримку для {name}"
 
 #, python-brace-format
 msgid ""
@@ -135,6 +135,11 @@ msgid ""
 "Do you want to donate now? Choose one of the available payment methods. You "
 "will be redirected to the corresponding website to complete a donation"
 msgstr ""
+"{name} це безплатний додаток для NVDA.\n"
+"Ви можете здійснити пожертву його автору щоб підтримати подальшу розробку "
+"цього й інших безплатних проєктів.\n"
+"Хочете пожертвувати зараз? Оберіть один з доступних методів оплати. Вас буде "
+"переспрямовано на відповідний сайт для завершення пожертви"
 
 #. Translators: name of the dialog.
 #. Add-on summary, usually the user visible name of the addon.
@@ -180,11 +185,11 @@ msgstr ""
 
 #. Translators: A setting in addon settings dialog.
 msgid "Use mirror (Mainly for chinese users)"
-msgstr ""
+msgstr "Використовувати дзеркало (переважно для користувачів з Китаю)"
 
 #. Translators: A setting in addon settings dialog.
 msgid "Support an author..."
-msgstr ""
+msgstr "Підтримати автора…"
 
 #. Translators: An option to automatically detect source language for translation.
 msgid "Automatically detect language"
