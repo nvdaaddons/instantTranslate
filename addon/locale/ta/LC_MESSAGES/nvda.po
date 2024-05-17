@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: 'Instant-Translate' '2.1'\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2013-02-09 18:30+0100\n"
-"PO-Revision-Date: 2022-05-28 11:49+0530\n"
+"PO-Revision-Date: 2024-05-11 19:19+0530\n"
 "Last-Translator: DINAKAR T.D. <td.dinkar@gmail.com>\n"
 "Language-Team: Tamil <td.dinkar@gmail.com>\n"
 "Language: ta_IN\n"
@@ -66,7 +66,6 @@ msgid "Languages swapped"
 msgstr "மொழிகள் இடைமாற்றப்பட்டுள்ளன"
 
 #. Translators: message presented to announce the current source and target languages.
-#, python-brace-format
 msgid "Translate: from {lang1} to {lang2}"
 msgstr "{lang1} மொழியிலிருந்து {lang2} மொழிக்கு மொழிபெயர்க்கப்பட்டது"
 
@@ -120,16 +119,14 @@ msgid "Opens Instant Translate settings dialog."
 msgstr "உடனடி மொழிபெயர்ப்பு அமைப்புகளை திறக்கிறது."
 
 msgid "Donate via Paypal"
-msgstr ""
+msgstr "பேபால் வாயிலாக நன்கொடையளியுங்கள்"
 
 msgid "Donate via Yoomoney"
-msgstr ""
+msgstr "யுமனி வாயிலாக நன்கொடையளியுங்கள்"
 
-#, python-brace-format
 msgid "Request for contributions to {name}"
-msgstr ""
+msgstr "{name} பங்களிப்புகளுக்கான கோரிக்கை"
 
-#, python-brace-format
 msgid ""
 "{name} is a free add-on for NVDA.\n"
 "You can make a donation to its author to support further development of this "
@@ -137,6 +134,12 @@ msgid ""
 "Do you want to donate now? Choose one of the available payment methods. You "
 "will be redirected to the corresponding website to complete a donation"
 msgstr ""
+"{name}, என்விடிஏவிற்கான இலவச நீட்சிநிரலாகும்.\n"
+"இந்த மற்றும் பிற இலவசத் திட்டங்களின் தொடர்ந்த மேம்பாட்டிற்கு ஆதரவளிக்க, அவைகளின் "
+"படைப்பாளருக்கு நன்கொடையளிக்கலாம்.\n"
+"இப்பொழுது நன்கொடையளிக்க விரும்புகிறீர்களா? கிடைப்பிலிருக்கும் கட்டண முறைகளில் ஒன்றைத் "
+"தேர்ந்தெடுக்கவும். நன்கொடையை முடிக்க தொடர்புடைய இணையதளத்திற்கு நீங்கள் திருப்பி "
+"விடப்படுவீர்கள்."
 
 #. Translators: name of the dialog.
 #. Add-on summary, usually the user visible name of the addon.
@@ -182,11 +185,11 @@ msgstr ""
 
 #. Translators: A setting in addon settings dialog.
 msgid "Use mirror (Mainly for chinese users)"
-msgstr ""
+msgstr "மிரரைப் பயன்படுத்துக (பிரதானமாக சீனப் பயனர்களுக்கு)"
 
 #. Translators: A setting in addon settings dialog.
 msgid "Support an author..."
-msgstr ""
+msgstr "ஒரு படைப்பாளரை  ஆதரித்திடுக..."
 
 #. Translators: An option to automatically detect source language for translation.
 msgid "Automatically detect language"
