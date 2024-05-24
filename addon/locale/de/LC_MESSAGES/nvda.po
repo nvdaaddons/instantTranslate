@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: 'Instant-Translate' '2.1'\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2013-02-09 18:30+0100\n"
-"PO-Revision-Date: 2023-05-03 22:48+0200\n"
-"Last-Translator: Bernd Dorer <mail@bdorer.de>\n"
+"PO-Revision-Date: 2024-05-18 06:37+0200\n"
+"Last-Translator: René Linke <rene.linke@hamburg.de>\n"
 "Language-Team: \n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.2.2\n"
+"X-Generator: Poedit 3.4.4\n"
 
 msgid ""
 "Instant Translate layer commands. t translates selected text, shift+t "
@@ -188,7 +188,7 @@ msgstr ""
 
 #. Translators: A setting in addon settings dialog.
 msgid "Use mirror (Mainly for chinese users)"
-msgstr ""
+msgstr "Mirror verwenden (hauptsächlich für chinesische Benutzer)"
 
 #. Translators: A setting in addon settings dialog.
 msgid "Support an author..."

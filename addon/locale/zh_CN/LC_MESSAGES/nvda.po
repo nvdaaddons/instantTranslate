@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: instantTranslate\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
 "POT-Creation-Date: 2021-06-13 16:30+0800\n"
-"PO-Revision-Date: 2022-05-21 10:58+0800\n"
+"PO-Revision-Date: 2024-05-18 17:59+0800\n"
 "Last-Translator: dingpengyu <dingpengyu06@gmail.com>\n"
 "Language-Team: Cary-Rowen <manchen_0528@outlook.com>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.4.3\n"
-"X-Poedit-SourceCharset: UTF-8\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 3.4.4\n"
+"X-Poedit-SourceCharset: UTF-8\n"
 
 msgid ""
 "Instant Translate layer commands. t translates selected text, shift+t "
@@ -34,7 +34,7 @@ msgstr ""
 msgid ""
 "Translates clipboard text from one language to another using Google "
 "Translate."
-msgstr "翻译剪贴板文本"
+msgstr "使用 Google 翻译将剪贴板中的文本从一种语言翻译为另一种语言。"
 
 #. Translators: message presented when user presses the shortcut key for translating clipboard text but the clipboard is empty.
 msgid "There is no text on the clipboard"
@@ -58,7 +58,7 @@ msgstr "切换源语言和目标语言。"
 
 #. Translators: message presented to announce that the source and target languages have been swapped.
 msgid "Languages swapped"
-msgstr "已切换语言。"
+msgstr "切换语言"
 
 #. Translators: message presented to announce the current source and target languages.
 #, python-brace-format
@@ -109,17 +109,17 @@ msgstr ""
 
 #. Translators: Presented in input help mode.
 msgid "Opens Instant Translate settings dialog."
-msgstr "打开即时翻译设置对话框"
+msgstr "打开即时翻译设置对话框。"
 
 msgid "Donate via Paypal"
-msgstr ""
+msgstr "通过 Paypal 捐款"
 
 msgid "Donate via Yoomoney"
-msgstr ""
+msgstr "通过 Yoomoney 捐款"
 
 #, python-brace-format
 msgid "Request for contributions to {name}"
-msgstr ""
+msgstr "给 {name} 捐款"
 
 #, python-brace-format
 msgid ""
@@ -129,6 +129,9 @@ msgid ""
 "Do you want to donate now? Choose one of the available payment methods. You "
 "will be redirected to the corresponding website to complete a donation"
 msgstr ""
+"{name} 是 NVDA 的免费插件。\n"
+"您可以向其作者捐款，以支持此项目和其他免费项目的持续开发。\n"
+"你想现在捐款吗？选择一种可用的付款方式。您将被重定向到相应的网站以完成捐款"
 
 #. Translators: name of the dialog.
 #. Add-on summary, usually the user visible name of the addon.
@@ -150,7 +153,7 @@ msgstr "目标语言："
 
 #. Translators: A setting in addon settings dialog, shown if source language is on auto.
 msgid "Language for swapping:"
-msgstr "语言切换"
+msgstr "切换语言："
 
 #. Translators: A setting in addon settings dialog, shown if source language is on auto.
 msgid ""
@@ -170,11 +173,11 @@ msgstr "用空格替换下划线（可能会根据上下文提供更好的翻译
 
 #. Translators: A setting in addon settings dialog.
 msgid "Use mirror (Mainly for chinese users)"
-msgstr ""
+msgstr "使用镜像（适用于中文社区用户）"
 
 #. Translators: A setting in addon settings dialog.
 msgid "Support an author..."
-msgstr ""
+msgstr "支持作者..."
 
 #. Translators: An option to automatically detect source language for translation.
 msgid "Automatically detect language"
