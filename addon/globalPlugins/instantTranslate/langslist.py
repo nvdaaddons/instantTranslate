@@ -10,8 +10,14 @@ from languageHandler import getLanguageDescription
 import addonHandler
 addonHandler.initTranslation()
 
-def g(code):
-	"""Return an NVDA language description for code, if one is available. Otherwise, return the one from needed_codes. If that fails, return the code."""
+def g(code, short=False):
+	"""Return an NVDA language description for code, if one is available. Otherwise, return the one from needed_codes. If that fails, return the code.
+	If short is True, returns a more compact description for the "auto" special code.
+	"""
+	if short and code == "auto":
+		# Translators: A short description for "Automatically detect language" language choice, reported when
+		# the user requests or swaps the current configuration.
+		return _("Automatic")
 	res = getLanguageDescription(code)
 	if res is not None: return res
 	if code in needed_codes:

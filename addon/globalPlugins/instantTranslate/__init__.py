@@ -260,7 +260,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# Translators: message presented to announce that the source and target languages have been swapped.
 		ui.message(_("Languages swapped"))
 		# Translators: message presented to announce the current source and target languages.
-		ui.message(_("Translate: from {lang1} to {lang2}").format(lang1=self.lang_from, lang2=self.lang_to))
+		ui.message(_("Translate: from {lang1} to {lang2}").format(lang1=g(self.lang_from, short=True), lang2=g(self.lang_to, short=True)))
 		try:
 			# NVDA 2024.1+
 			shouldTranslate = speech.getState().speechMode != speech.SpeechMode.onDemand
@@ -277,7 +277,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	)
 	def script_announceLanguages(self, gesture):
 		# Translators: message presented to announce the current source and target languages.
-		ui.message(_("Translate: from {lang1} to {lang2}").format(lang1=self.lang_from, lang2=self.lang_to))
+		ui.message(_("Translate: from {lang1} to {lang2}").format(lang1=g(self.lang_from, short=True), lang2=g(self.lang_to, short=True)))
 
 	@scriptHandler.script(
 	)
