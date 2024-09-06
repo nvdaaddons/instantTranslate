@@ -17,20 +17,36 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 3.4.2\n"
 
-msgid "Instant Translate layer commands. t translates selected text, shift+t translates clipboard text, a announces current swap configuration, s swaps source and target languages, c copies last result to clipboard, i identify the language of selected text, l translates last spoken text, o opens translation setting dialog."
-msgstr "فرمان‌های لایه‌ایِ مترجمِ سریع. T متنِ انتخاب‌شده را ترجمه میکند، Shift+T متنِ داخلِ کلیپ‌برد را ترجمه میکند، A تنظیماتِ فعلیِ جابجایی را اعلام میکند، S جایِ زبانِ مبدأ را با مقصد عوض میکند، C آخرین نتیجه را در کلیپ‌برد کپی میکند، I زبانِ متنِ انتخاب‌شده را مشخص میکند، L آخرین متنِ خوانده‌شده را ترجمه میکند، O پنجره‌ی تنظیماتِ مترجم را باز میکند."
+msgid ""
+"Instant Translate layer commands. t translates selected text, shift+t "
+"translates clipboard text, a announces current swap configuration, s swaps "
+"source and target languages, c copies last result to clipboard, i identify "
+"the language of selected text, l translates last spoken text, o opens "
+"translation setting dialog."
+msgstr ""
+"فرمان‌های لایه‌ایِ مترجمِ سریع. T متنِ انتخاب‌شده را ترجمه میکند، Shift+T متنِ داخلِ "
+"کلیپ‌برد را ترجمه میکند، A تنظیماتِ فعلیِ جابجایی را اعلام میکند، S جایِ زبانِ "
+"مبدأ را با مقصد عوض میکند، C آخرین نتیجه را در کلیپ‌برد کپی میکند، I زبانِ متنِ "
+"انتخاب‌شده را مشخص میکند، L آخرین متنِ خوانده‌شده را ترجمه میکند، O پنجره‌ی "
+"تنظیماتِ مترجم را باز میکند."
 
 #. Translators: message presented in input help mode, when user presses the shortcut keys for this addon.
-msgid "Translates clipboard text from one language to another using Google Translate."
-msgstr "با استفاده از مترجمِ گوگل، متنِ داخل کلیپ‌برد را از زبانی به زبانِ دیگر ترجمه میکند."
+msgid ""
+"Translates clipboard text from one language to another using Google "
+"Translate."
+msgstr ""
+"با استفاده از مترجمِ گوگل، متنِ داخل کلیپ‌برد را از زبانی به زبانِ دیگر ترجمه "
+"میکند."
 
 #. Translators: message presented when user presses the shortcut key for translating clipboard text but the clipboard is empty.
 msgid "There is no text on the clipboard"
 msgstr "متنی در کلیپ‌برد نیست"
 
 #. Translators: message presented in input help mode, when user presses the shortcut keys for this addon.
-msgid "Translates selected text from one language to another using Google Translate."
-msgstr "با استفاده از مترجمِ گوگل، متنِ انتخاب‌شده را از زبانی به زبانِ دیگر ترجمه میکند."
+msgid ""
+"Translates selected text from one language to another using Google Translate."
+msgstr ""
+"با استفاده از مترجمِ گوگل، متنِ انتخاب‌شده را از زبانی به زبانِ دیگر ترجمه میکند."
 
 #. Translators: user has pressed the shortcut key for translating selected text, but no text was actually selected.
 msgid "no selection"
@@ -83,8 +99,18 @@ msgstr "آخرین متنِ خوانده‌شده را ترجمه میکند"
 msgid "Announces all available layered commands"
 msgstr "همه‌ی فرمان‌های لایه‌دار را اعلام میکند"
 
-msgid "t translates selected text, shift+t translates clipboard text, a announces current swap configuration, s swaps source and target languages, c copies last result to clipboard, i identify the language of selected text, l translates last spoken text, o open translation settings dialog, h displays this message."
-msgstr "فرمان‌های لایه‌ایِ مترجمِ سریع. T متنِ انتخاب‌شده را ترجمه میکند، Shift+T متنِ داخلِ کلیپ‌برد را ترجمه میکند، A تنظیماتِ فعلیِ جابجایی را اعلام میکند، S جایِ زبانِ مبدأ را با مقصد عوض میکند، C آخرین نتیجه را در کلیپ‌برد کپی میکند، I زبانِ متنِ انتخاب‌شده را مشخص میکند، L آخرین متنِ خوانده‌شده را ترجمه میکند، O پنجره‌ی تنظیماتِ مترجم را باز میکند، H این پیام را نمایش میدهد."
+msgid ""
+"t translates selected text, shift+t translates clipboard text, a announces "
+"current swap configuration, s swaps source and target languages, c copies "
+"last result to clipboard, i identify the language of selected text, l "
+"translates last spoken text, o open translation settings dialog, h displays "
+"this message."
+msgstr ""
+"فرمان‌های لایه‌ایِ مترجمِ سریع. T متنِ انتخاب‌شده را ترجمه میکند، Shift+T متنِ داخلِ "
+"کلیپ‌برد را ترجمه میکند، A تنظیماتِ فعلیِ جابجایی را اعلام میکند، S جایِ زبانِ "
+"مبدأ را با مقصد عوض میکند، C آخرین نتیجه را در کلیپ‌برد کپی میکند، I زبانِ متنِ "
+"انتخاب‌شده را مشخص میکند، L آخرین متنِ خوانده‌شده را ترجمه میکند، O پنجره‌ی "
+"تنظیماتِ مترجم را باز میکند، H این پیام را نمایش میدهد."
 
 #. Translators: Presented in input help mode.
 msgid "Opens Instant Translate settings dialog."
@@ -101,12 +127,18 @@ msgid "Request for contributions to {name}"
 msgstr "درخواست برای مشارکت در {name}"
 
 #, python-brace-format
-msgid "{name} is a free add-on for NVDA.\n"
-"You can make a donation to its author to support further development of this and other free projects.\n"
-"Do you want to donate now? Choose one of the available payment methods. You will be redirected to the corresponding website to complete a donation"
-msgstr "{name} یک افزونه‌ی رایگان برای NVDA است.\n"
-"میتوانید برای حمایت از توسعه‌ی بیشتر این افزونه و پروژه‌های رایگانِ دیگر، به نویسنده‌ی افزونه کمک مالی کنید.\n"
-"میخواهید حالا کمک کنید؟ یکی از روش‌های پرداختِ موجود را انتخاب کنید. برای تکمیلِ کمکِ مالی به وب‌سایتِ مربوطه هدایت خواهید شد"
+msgid ""
+"{name} is a free add-on for NVDA.\n"
+"You can make a donation to its author to support further development of this "
+"and other free projects.\n"
+"Do you want to donate now? Choose one of the available payment methods. You "
+"will be redirected to the corresponding website to complete a donation"
+msgstr ""
+"{name} یک افزونه‌ی رایگان برای NVDA است.\n"
+"میتوانید برای حمایت از توسعه‌ی بیشتر این افزونه و پروژه‌های رایگانِ دیگر، به "
+"نویسنده‌ی افزونه کمک مالی کنید.\n"
+"میخواهید حالا کمک کنید؟ یکی از روش‌های پرداختِ موجود را انتخاب کنید. برای "
+"تکمیلِ کمکِ مالی به وب‌سایتِ مربوطه هدایت خواهید شد"
 
 #. Translators: name of the dialog.
 #. Add-on summary, usually the user visible name of the addon.
@@ -131,7 +163,9 @@ msgid "Language for swapping:"
 msgstr "زبان برای تعویض:"
 
 #. Translators: A setting in addon settings dialog, shown if source language is on auto.
-msgid "Activate the auto-swap if recognized source is equal to the target (experimental)"
+msgid ""
+"Activate the auto-swap if recognized source is equal to the target "
+"(experimental)"
 msgstr "فعال کردنِ جابجاییِ خودکار اگر مبدأ برابر با مقصد باشد (آزمایشی)"
 
 #. Translators: A setting in addon settings dialog.
@@ -139,8 +173,12 @@ msgid "Copy translation result to clipboard"
 msgstr "کپی کردنِ نتیجه‌ی ترجمه در کلیپ‌برد"
 
 #. Translators: A setting in addon settings dialog.
-msgid "Replace underscores with spaces (May provide better translation results depending on context)"
-msgstr "جاگذاریِ زیرخط‌ها با فاصله‌ها (ممکن است بسته به زمینه، نتایج بهتری در ترجمه ارائه کند)."
+msgid ""
+"Replace underscores with spaces (May provide better translation results "
+"depending on context)"
+msgstr ""
+"جاگذاریِ زیرخط‌ها با فاصله‌ها (ممکن است بسته به زمینه، نتایج بهتری در ترجمه "
+"ارائه کند)."
 
 #. Translators: A setting in addon settings dialog.
 msgid "Use mirror (Mainly for chinese users)"
@@ -150,18 +188,63 @@ msgstr "استفاده از سِروِرِ جایگزین (عمدتا برای �
 msgid "Support an author..."
 msgstr "حمایت از نویسنده..."
 
+#. Translators: A short description for "Automatically detect language" language choice, reported when
+#. the user requests or swaps the current configuration.
+msgid "Automatic"
+msgstr ""
+
+#. Translators: The name of a language supported by this add-on.
+#, fuzzy
+msgid "Kurdish (Sorani)"
+msgstr "کُردی"
+
 #. Translators: An option to automatically detect source language for translation.
 msgid "Automatically detect language"
 msgstr "بازشناسیِ خودکارِ زبان"
 
 #. Translators: The name of a language supported by this add-on.
+msgid "Twi (Akan)"
+msgstr ""
+
+#. Missing, tested on Windows 10 22H2
+#. Translators: The name of a language supported by this add-on.
+msgid "Aymara"
+msgstr ""
+
+#. Missing, tested on Windows 10 22H2
+#. Translators: The name of a language supported by this add-on.
+msgid "Bhojpuri"
+msgstr ""
+
+#. Missing, tested on Windows 10 22H2
+#. Translators: The name of a language supported by this add-on.
+msgid "Bambara"
+msgstr ""
+
+#. Missing, tested on Windows 10 22H2
+#. Translators: The name of a language supported by this add-on.
 msgid "Cebuano"
 msgstr "چِبوانو"
 
 #. Translators: The name of a language supported by this add-on.
+msgid "Dogri"
+msgstr ""
+
+#. Missing, tested on Windows 10 22H2
+#. Translators: The name of a language supported by this add-on.
+msgid "Ewe"
+msgstr ""
+
+#. Missing, tested on Windows 10 22H2
+#. Translators: The name of a language supported by this add-on.
 msgid "Esperanto"
 msgstr "اسپرانتو"
 
+#. Translators: The name of a language supported by this add-on.
+msgid "Konkani"
+msgstr ""
+
+#. Missing, tested on Windows 10 22H2
 #. Translators: The name of a language supported by this add-on.
 msgid "Hawaiian"
 msgstr "هاوایی"
@@ -175,9 +258,19 @@ msgid "Creole Haiti"
 msgstr "هایتی کریول"
 
 #. Translators: The name of a language supported by this add-on.
+msgid "Ilocano"
+msgstr ""
+
+#. Missing, tested on Windows 10 22H2
+#. Translators: The name of a language supported by this add-on.
 msgid "Javanese"
 msgstr "جاوه‌ای"
 
+#. Translators: The name of a language supported by this add-on.
+msgid "Krio"
+msgstr ""
+
+#. Missing, tested on Windows 10 22H2
 #. Translators: The name of a language supported by this add-on.
 msgid "Kurdish"
 msgstr "کُردی"
@@ -187,9 +280,34 @@ msgid "Latin"
 msgstr "لاتین"
 
 #. Translators: The name of a language supported by this add-on.
+msgid "Luganda"
+msgstr ""
+
+#. Missing, tested on Windows 10 22H2
+#. Translators: The name of a language supported by this add-on.
+msgid "Lingala"
+msgstr ""
+
+#. Missing, tested on Windows 10 22H2
+#. Translators: The name of a language supported by this add-on.
+msgid "Mizo"
+msgstr ""
+
+#. Missing, tested on Windows 10 22H2
+#. Translators: The name of a language supported by this add-on.
+msgid "Maithili"
+msgstr ""
+
+#. Missing, tested on Windows 10 22H2
+#. Translators: The name of a language supported by this add-on.
 msgid "Malagasy"
 msgstr "مالاگاسی"
 
+#. Translators: The name of a language supported by this add-on.
+msgid "Meiteilon (Manipuri)"
+msgstr ""
+
+#. Missing, tested on Windows 10 22H2
 #. Translators: The name of a language supported by this add-on.
 msgid "Myanmar (Burmese)"
 msgstr "میانمار (برمه‌ای)"
@@ -232,8 +350,12 @@ msgstr "عِبریِ آلمانی"
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
-msgid "This addon translates selected or clipboard text using the Google Translate service and presents it."
-msgstr "این افزونه متنِ انتخاب‌شده یا موجود در کلیپ‌برد را با استفاده از خدمتِ مترجمِ گوگل ترجمه کرده، ارائه میدهد."
+msgid ""
+"This addon translates selected or clipboard text using the Google Translate "
+"service and presents it."
+msgstr ""
+"این افزونه متنِ انتخاب‌شده یا موجود در کلیپ‌برد را با استفاده از خدمتِ مترجمِ "
+"گوگل ترجمه کرده، ارائه میدهد."
 
 #~ msgid "unavailable"
 #~ msgstr "موجود نیست"

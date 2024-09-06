@@ -193,18 +193,63 @@ msgstr "Utilizar espelho (principalmente para utilizadores chineses)"
 msgid "Support an author..."
 msgstr "Apoiar um autor..."
 
+#. Translators: A short description for "Automatically detect language" language choice, reported when
+#. the user requests or swaps the current configuration.
+msgid "Automatic"
+msgstr ""
+
+#. Translators: The name of a language supported by this add-on.
+#, fuzzy
+msgid "Kurdish (Sorani)"
+msgstr "Curdo"
+
 #. Translators: An option to automatically detect source language for translation.
 msgid "Automatically detect language"
 msgstr "Detectar automaticamente o idioma"
 
 #. Translators: The name of a language supported by this add-on.
+msgid "Twi (Akan)"
+msgstr ""
+
+#. Missing, tested on Windows 10 22H2
+#. Translators: The name of a language supported by this add-on.
+msgid "Aymara"
+msgstr ""
+
+#. Missing, tested on Windows 10 22H2
+#. Translators: The name of a language supported by this add-on.
+msgid "Bhojpuri"
+msgstr ""
+
+#. Missing, tested on Windows 10 22H2
+#. Translators: The name of a language supported by this add-on.
+msgid "Bambara"
+msgstr ""
+
+#. Missing, tested on Windows 10 22H2
+#. Translators: The name of a language supported by this add-on.
 msgid "Cebuano"
 msgstr "Cebuano"
 
 #. Translators: The name of a language supported by this add-on.
+msgid "Dogri"
+msgstr ""
+
+#. Missing, tested on Windows 10 22H2
+#. Translators: The name of a language supported by this add-on.
+msgid "Ewe"
+msgstr ""
+
+#. Missing, tested on Windows 10 22H2
+#. Translators: The name of a language supported by this add-on.
 msgid "Esperanto"
 msgstr "Esperanto"
 
+#. Translators: The name of a language supported by this add-on.
+msgid "Konkani"
+msgstr ""
+
+#. Missing, tested on Windows 10 22H2
 #. Translators: The name of a language supported by this add-on.
 msgid "Hawaiian"
 msgstr "Havaiano"
@@ -218,9 +263,19 @@ msgid "Creole Haiti"
 msgstr "Creoulo Haiti"
 
 #. Translators: The name of a language supported by this add-on.
+msgid "Ilocano"
+msgstr ""
+
+#. Missing, tested on Windows 10 22H2
+#. Translators: The name of a language supported by this add-on.
 msgid "Javanese"
 msgstr "Javanês"
 
+#. Translators: The name of a language supported by this add-on.
+msgid "Krio"
+msgstr ""
+
+#. Missing, tested on Windows 10 22H2
 #. Translators: The name of a language supported by this add-on.
 msgid "Kurdish"
 msgstr "Curdo"
@@ -230,9 +285,34 @@ msgid "Latin"
 msgstr "Latim"
 
 #. Translators: The name of a language supported by this add-on.
+msgid "Luganda"
+msgstr ""
+
+#. Missing, tested on Windows 10 22H2
+#. Translators: The name of a language supported by this add-on.
+msgid "Lingala"
+msgstr ""
+
+#. Missing, tested on Windows 10 22H2
+#. Translators: The name of a language supported by this add-on.
+msgid "Mizo"
+msgstr ""
+
+#. Missing, tested on Windows 10 22H2
+#. Translators: The name of a language supported by this add-on.
+msgid "Maithili"
+msgstr ""
+
+#. Missing, tested on Windows 10 22H2
+#. Translators: The name of a language supported by this add-on.
 msgid "Malagasy"
 msgstr "Malagasy"
 
+#. Translators: The name of a language supported by this add-on.
+msgid "Meiteilon (Manipuri)"
+msgstr ""
+
+#. Missing, tested on Windows 10 22H2
 #. Translators: The name of a language supported by this add-on.
 msgid "Myanmar (Burmese)"
 msgstr "Myanmar (Burmese)"
