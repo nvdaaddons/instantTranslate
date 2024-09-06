@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: instantTranslate\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
 "POT-Creation-Date: 2021-06-13 16:30+0800\n"
-"PO-Revision-Date: 2022-05-21 10:58+0800\n"
+"PO-Revision-Date: 2024-05-18 17:59+0800\n"
 "Last-Translator: dingpengyu <dingpengyu06@gmail.com>\n"
 "Language-Team: Cary-Rowen <manchen_0528@outlook.com>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.4.3\n"
-"X-Poedit-SourceCharset: UTF-8\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 3.4.4\n"
+"X-Poedit-SourceCharset: UTF-8\n"
 
 msgid ""
 "Instant Translate layer commands. t translates selected text, shift+t "
@@ -30,38 +30,40 @@ msgstr ""
 "配置， s 切换来源和目标语言， c 复制最后一次的翻译结果到剪贴板， i 显示当前文"
 "本的语言， l 翻译最后朗读的文本， o 打开翻译设置对话框， h 显示此帮助信息。"
 
+#. Translators: message presented in input help mode, when user presses the shortcut keys for this addon.
+msgid ""
+"Translates clipboard text from one language to another using Google "
+"Translate."
+msgstr "使用 Google 翻译将剪贴板中的文本从一种语言翻译为另一种语言。"
+
 #. Translators: message presented when user presses the shortcut key for translating clipboard text but the clipboard is empty.
 msgid "There is no text on the clipboard"
 msgstr "剪贴板内无文本"
 
 #. Translators: message presented in input help mode, when user presses the shortcut keys for this addon.
 msgid ""
-"Translates clipboard text from one language to another using Google "
-"Translate."
-msgstr "翻译剪贴板文本"
-
-#. Translators: user has pressed the shortcut key for translating selected text, but no text was actually selected.
-#. Translators: user has pressed the shortcut key for identifying the language of selected text, but no text was actually selected.
-msgid "no selection"
-msgstr "未选择文本"
-
-#. Translators: message presented in input help mode, when user presses the shortcut keys for this addon.
-msgid ""
 "Translates selected text from one language to another using Google Translate."
 msgstr "翻译所选文本。"
 
+#. Translators: user has pressed the shortcut key for translating selected text, but no text was actually selected.
+msgid "no selection"
+msgstr "未选择文本"
+
+msgid "Translation failed"
+msgstr "翻译失败"
+
+#. Translators: Presented in input help mode.
+msgid "It swaps source and target languages."
+msgstr "切换源语言和目标语言。"
+
 #. Translators: message presented to announce that the source and target languages have been swapped.
 msgid "Languages swapped"
-msgstr "已切换语言。"
+msgstr "切换语言"
 
 #. Translators: message presented to announce the current source and target languages.
 #, python-brace-format
 msgid "Translate: from {lang1} to {lang2}"
 msgstr "翻译：从{lang1}到{lang2}"
-
-#. Translators: Presented in input help mode.
-msgid "It swaps source and target languages."
-msgstr "切换源语言和目标语言。"
 
 #. Translators: Presented in input help mode.
 msgid "It announces the current source and target languages."
@@ -79,16 +81,20 @@ msgstr "未保存翻译结果"
 msgid "It copies the last translation to clipboard"
 msgstr "拷贝翻译结果到剪贴板"
 
-msgid "Language is..."
-msgstr "语言是..."
-
 #. Translators: Presented in input help mode.
 msgid "It identifies the language of selected text"
 msgstr "读出所选文本的语言"
 
+msgid "Language is..."
+msgstr "语言是..."
+
 #. Translators: Presented in input help mode.
 msgid "It translates the last spoken text"
 msgstr "翻译最后一次朗读的文本"
+
+#. Translators: Presented in input help mode.
+msgid "Announces all available layered commands"
+msgstr "读出所有可用的快捷键"
 
 msgid ""
 "t translates selected text, shift+t translates clipboard text, a announces "
@@ -102,12 +108,30 @@ msgstr ""
 "次朗读的文本， o 打开翻译设置对话框， h 读出此帮助信息。"
 
 #. Translators: Presented in input help mode.
-msgid "Announces all available layered commands"
-msgstr "读出所有可用的快捷键"
-
-#. Translators: Presented in input help mode.
 msgid "Opens Instant Translate settings dialog."
-msgstr "打开即时翻译设置对话框"
+msgstr "打开即时翻译设置对话框。"
+
+msgid "Donate via Paypal"
+msgstr "通过 Paypal 捐款"
+
+msgid "Donate via Yoomoney"
+msgstr "通过 Yoomoney 捐款"
+
+#, python-brace-format
+msgid "Request for contributions to {name}"
+msgstr "给 {name} 捐款"
+
+#, python-brace-format
+msgid ""
+"{name} is a free add-on for NVDA.\n"
+"You can make a donation to its author to support further development of this "
+"and other free projects.\n"
+"Do you want to donate now? Choose one of the available payment methods. You "
+"will be redirected to the corresponding website to complete a donation"
+msgstr ""
+"{name} 是 NVDA 的免费插件。\n"
+"您可以向其作者捐款，以支持此项目和其他免费项目的持续开发。\n"
+"你想现在捐款吗？选择一种可用的付款方式。您将被重定向到相应的网站以完成捐款"
 
 #. Translators: name of the dialog.
 #. Add-on summary, usually the user visible name of the addon.
@@ -129,7 +153,7 @@ msgstr "目标语言："
 
 #. Translators: A setting in addon settings dialog, shown if source language is on auto.
 msgid "Language for swapping:"
-msgstr "语言切换"
+msgstr "切换语言："
 
 #. Translators: A setting in addon settings dialog, shown if source language is on auto.
 msgid ""
@@ -146,6 +170,14 @@ msgid ""
 "Replace underscores with spaces (May provide better translation results "
 "depending on context)"
 msgstr "用空格替换下划线（可能会根据上下文提供更好的翻译结果）"
+
+#. Translators: A setting in addon settings dialog.
+msgid "Use mirror (Mainly for chinese users)"
+msgstr "使用镜像（适用于中文社区用户）"
+
+#. Translators: A setting in addon settings dialog.
+msgid "Support an author..."
+msgstr "支持作者..."
 
 #. Translators: An option to automatically detect source language for translation.
 msgid "Automatically detect language"
@@ -227,25 +259,6 @@ msgstr "塔加拉族语"
 msgid "Yiddish"
 msgstr "意第绪语"
 
-msgid "unavailable"
-msgstr "不可用"
-
-#. We have probably been blocked, so stop trying to translate.
-#. log.exception("Instant translate: Can not translate text '%s'" %chunk)
-#. raise e
-msgid "Translation failed"
-msgstr "翻译失败"
-
-#. Translators: the label of a message box dialog.
-msgid ""
-"You have installed an old and incompatible version of this addon. Do you "
-"want to uninstall the old version?"
-msgstr "您已经安装了一个不兼容的旧版插件。请问您要卸载旧版吗？"
-
-#. Translators: the title of a message box dialog.
-msgid "Uninstall incompatible add-on"
-msgstr "卸载不兼容的插件"
-
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid ""
@@ -254,6 +267,17 @@ msgid ""
 msgstr ""
 "该插件使用 google 服务翻译所选文本或剪贴板文本以及NVDA最后一次朗读的文本，并"
 "在翻译后将其读出。"
+
+#~ msgid "unavailable"
+#~ msgstr "不可用"
+
+#~ msgid ""
+#~ "You have installed an old and incompatible version of this addon. Do you "
+#~ "want to uninstall the old version?"
+#~ msgstr "您已经安装了一个不兼容的旧版插件。请问您要卸载旧版吗？"
+
+#~ msgid "Uninstall incompatible add-on"
+#~ msgstr "卸载不兼容的插件"
 
 #~ msgid "Instant &Translate Settings..."
 #~ msgstr "及时翻译设置(&T)..."

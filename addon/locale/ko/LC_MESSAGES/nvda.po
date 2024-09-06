@@ -30,10 +30,6 @@ msgstr ""
 "번역 결과를 클립보드에 복사합니다. I키는 선택된 텍스트의 언어를 식별합니다. "
 "L 키는 마지막으로 읽은 내용을 번역합니다. O키는 번역 설정 대화상자를 엽니다."
 
-#. Translators: message presented when user presses the shortcut key for translating clipboard text but the clipboard is empty.
-msgid "There is no text on the clipboard"
-msgstr "클립보드에 텍스트 없음"
-
 #. Translators: message presented in input help mode, when user presses the shortcut keys for this addon.
 msgid ""
 "Translates clipboard text from one language to another using Google "
@@ -41,15 +37,25 @@ msgid ""
 msgstr ""
 "클립보드에 있는 텍스트를 구글 번역기를 사용하여 다름 언어로 번역합니다."
 
-#. Translators: user has pressed the shortcut key for translating selected text, but no text was actually selected.
-#. Translators: user has pressed the shortcut key for identifying the language of selected text, but no text was actually selected.
-msgid "no selection"
-msgstr "선택한 텍스트 없음"
+#. Translators: message presented when user presses the shortcut key for translating clipboard text but the clipboard is empty.
+msgid "There is no text on the clipboard"
+msgstr "클립보드에 텍스트 없음"
 
 #. Translators: message presented in input help mode, when user presses the shortcut keys for this addon.
 msgid ""
 "Translates selected text from one language to another using Google Translate."
 msgstr "선택한 텍스트를 구글 번역기를 사용하여 다른 언어로 번역합니다."
+
+#. Translators: user has pressed the shortcut key for translating selected text, but no text was actually selected.
+msgid "no selection"
+msgstr "선택한 텍스트 없음"
+
+msgid "Translation failed"
+msgstr "번역 실패"
+
+#. Translators: Presented in input help mode.
+msgid "It swaps source and target languages."
+msgstr "입력  원어와 번역 언어를 전환합니다."
 
 #. Translators: message presented to announce that the source and target languages have been swapped.
 msgid "Languages swapped"
@@ -59,10 +65,6 @@ msgstr "언어 변경됨"
 #, python-brace-format
 msgid "Translate: from {lang1} to {lang2}"
 msgstr "{lang1}에서 {lang2}로 번역"
-
-#. Translators: Presented in input help mode.
-msgid "It swaps source and target languages."
-msgstr "입력  원어와 번역 언어를 전환합니다."
 
 #. Translators: Presented in input help mode.
 msgid "It announces the current source and target languages."
@@ -80,16 +82,20 @@ msgstr "저장된 번역 내용 없음"
 msgid "It copies the last translation to clipboard"
 msgstr "마지막 번역 내용을 클립보드로 복사합니다"
 
-msgid "Language is..."
-msgstr "언어는..."
-
 #. Translators: Presented in input help mode.
 msgid "It identifies the language of selected text"
 msgstr "선택된 텍스트의 언어를 식별합니다"
 
+msgid "Language is..."
+msgstr "언어는..."
+
 #. Translators: Presented in input help mode.
 msgid "It translates the last spoken text"
 msgstr "마지막으로 읽은 내용을 번역합니다"
+
+#. Translators: Presented in input help mode.
+msgid "Announces all available layered commands"
+msgstr "사용가능한 레이어 명령을 알립니다"
 
 msgid ""
 "t translates selected text, shift+t translates clipboard text, a announces "
@@ -105,12 +111,27 @@ msgstr ""
 "정 대화상자를 엽니다. H키는 이 도움말을 출력합니다."
 
 #. Translators: Presented in input help mode.
-msgid "Announces all available layered commands"
-msgstr "사용가능한 레이어 명령을 알립니다"
-
-#. Translators: Presented in input help mode.
 msgid "Opens Instant Translate settings dialog."
 msgstr "간편 번역기 설정을 엽니다."
+
+msgid "Donate via Paypal"
+msgstr ""
+
+msgid "Donate via Yoomoney"
+msgstr ""
+
+#, python-brace-format
+msgid "Request for contributions to {name}"
+msgstr ""
+
+#, python-brace-format
+msgid ""
+"{name} is a free add-on for NVDA.\n"
+"You can make a donation to its author to support further development of this "
+"and other free projects.\n"
+"Do you want to donate now? Choose one of the available payment methods. You "
+"will be redirected to the corresponding website to complete a donation"
+msgstr ""
 
 #. Translators: name of the dialog.
 #. Add-on summary, usually the user visible name of the addon.
@@ -148,6 +169,14 @@ msgstr "번역된 내용을 클립보드에 복사"
 msgid ""
 "Replace underscores with spaces (May provide better translation results "
 "depending on context)"
+msgstr ""
+
+#. Translators: A setting in addon settings dialog.
+msgid "Use mirror (Mainly for chinese users)"
+msgstr ""
+
+#. Translators: A setting in addon settings dialog.
+msgid "Support an author..."
 msgstr ""
 
 #. Translators: An option to automatically detect source language for translation.
@@ -230,33 +259,25 @@ msgstr "타갈로그어"
 msgid "Yiddish"
 msgstr "이디시어"
 
-msgid "unavailable"
-msgstr "사용할 수 없음"
-
-#. We have probably been blocked, so stop trying to translate.
-#. log.exception("Instant translate: Can not translate text '%s'" %chunk)
-#. raise e
-msgid "Translation failed"
-msgstr "번역 실패"
-
-#. Translators: the label of a message box dialog.
-msgid ""
-"You have installed an old and incompatible version of this addon. Do you "
-"want to uninstall the old version?"
-msgstr ""
-"설치하고자 하는 버전과 호환이 되지않는 버전이 이미 설치되어 ㅣㅇㅆ습니다. 새 "
-"버전 설치를 계속하시겠습니까?"
-
-#. Translators: the title of a message box dialog.
-msgid "Uninstall incompatible add-on"
-msgstr "이전 버전 제거"
-
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid ""
 "This addon translates selected or clipboard text using the Google Translate "
 "service and presents it."
 msgstr "구글 번역을 사용하여 선택된 텍스트나 클립보드 내용을 번역합니다."
+
+#~ msgid "unavailable"
+#~ msgstr "사용할 수 없음"
+
+#~ msgid ""
+#~ "You have installed an old and incompatible version of this addon. Do you "
+#~ "want to uninstall the old version?"
+#~ msgstr ""
+#~ "설치하고자 하는 버전과 호환이 되지않는 버전이 이미 설치되어 ㅣㅇㅆ습니다. "
+#~ "새 버전 설치를 계속하시겠습니까?"
+
+#~ msgid "Uninstall incompatible add-on"
+#~ msgstr "이전 버전 제거"
 
 #~ msgid "Instant &Translate Settings..."
 #~ msgstr "인스턴트 번역기 설정 (&T)..."

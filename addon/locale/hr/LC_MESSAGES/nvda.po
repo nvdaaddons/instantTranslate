@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: instantTranslate 2.2beta1\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2013-03-13 14:03+0100\n"
-"PO-Revision-Date: 2022-05-30 16:33+0200\n"
+"PO-Revision-Date: 2024-05-19 15:58+0200\n"
 "Last-Translator: Milo Ivir <mail@milotype.de>\n"
 "Language-Team: hr <LL@li.org>\n"
 "Language: hr\n"
@@ -32,10 +32,6 @@ msgstr ""
 "jezika, „s” zamijenjuje izvorni i ciljani jezik, „c” kopira zadnji rezultat "
 "u međuspremnik, „i” identificira jezik označenog teksta."
 
-#. Translators: message presented when user presses the shortcut key for translating clipboard text but the clipboard is empty.
-msgid "There is no text on the clipboard"
-msgstr "U međuspremniku nema teksta"
-
 #. Translators: message presented in input help mode, when user presses the shortcut keys for this addon.
 msgid ""
 "Translates clipboard text from one language to another using Google "
@@ -44,16 +40,26 @@ msgstr ""
 "Prevodi tekst u međuspremniku s jednog jezika na drugi pomoću Google "
 "prevoditelja."
 
-#. Translators: user has pressed the shortcut key for translating selected text, but no text was actually selected.
-#. Translators: user has pressed the shortcut key for identifying the language of selected text, but no text was actually selected.
-msgid "no selection"
-msgstr "nema odabira"
+#. Translators: message presented when user presses the shortcut key for translating clipboard text but the clipboard is empty.
+msgid "There is no text on the clipboard"
+msgstr "U međuspremniku nema teksta"
 
 #. Translators: message presented in input help mode, when user presses the shortcut keys for this addon.
 msgid ""
 "Translates selected text from one language to another using Google Translate."
 msgstr ""
 "Prevodi odabrani tekst s jednog jezika na drugi pomoću Google prevoditelja."
+
+#. Translators: user has pressed the shortcut key for translating selected text, but no text was actually selected.
+msgid "no selection"
+msgstr "nema odabira"
+
+msgid "Translation failed"
+msgstr "Prijevod neuspio"
+
+#. Translators: Presented in input help mode.
+msgid "It swaps source and target languages."
+msgstr "Mijenja izvorni i ciljani jezik."
 
 #. Translators: message presented to announce that the source and target languages have been swapped.
 msgid "Languages swapped"
@@ -63,10 +69,6 @@ msgstr "Zamijenjeni jezici"
 #, python-brace-format
 msgid "Translate: from {lang1} to {lang2}"
 msgstr "Prevedi: {lang1} na {lang2}"
-
-#. Translators: Presented in input help mode.
-msgid "It swaps source and target languages."
-msgstr "Mijenja izvorni i ciljani jezik."
 
 #. Translators: Presented in input help mode.
 msgid "It announces the current source and target languages."
@@ -84,16 +86,20 @@ msgstr "Nema spremljenog prijevoda"
 msgid "It copies the last translation to clipboard"
 msgstr "Kopira zadnji prijevod u međuspremnik"
 
-msgid "Language is..."
-msgstr "Jezik je …"
-
 #. Translators: Presented in input help mode.
 msgid "It identifies the language of selected text"
 msgstr "Identificira jezik označenog teksta"
 
+msgid "Language is..."
+msgstr "Jezik je …"
+
 #. Translators: Presented in input help mode.
 msgid "It translates the last spoken text"
 msgstr "Prevodi zadnji izgovoreni tekst"
+
+#. Translators: Presented in input help mode.
+msgid "Announces all available layered commands"
+msgstr "Najavljuje sve dostupne slojevne naredbe"
 
 msgid ""
 "t translates selected text, shift+t translates clipboard text, a announces "
@@ -109,18 +115,38 @@ msgstr ""
 "„o” otvara dijaloški okvir postavki prevođenja, „h” prikazuje ovu poruku."
 
 #. Translators: Presented in input help mode.
-msgid "Announces all available layered commands"
-msgstr "Najavljuje sve dostupne slojevne naredbe"
-
-#. Translators: Presented in input help mode.
 msgid "Opens Instant Translate settings dialog."
 msgstr "Otvara dijaloški okvir postavki za izravno prevođenje."
+
+msgid "Donate via Paypal"
+msgstr "Doniraj putem PayPal"
+
+msgid "Donate via Yoomoney"
+msgstr "Doniraj putem Yoomoney"
+
+#, python-brace-format
+msgid "Request for contributions to {name}"
+msgstr "Zahtijev za doprinos za {name}"
+
+#, python-brace-format
+msgid ""
+"{name} is a free add-on for NVDA.\n"
+"You can make a donation to its author to support further development of this "
+"and other free projects.\n"
+"Do you want to donate now? Choose one of the available payment methods. You "
+"will be redirected to the corresponding website to complete a donation"
+msgstr ""
+"{name} je besplatni dodatak za NVDA.\n"
+"Možeš donirati njegovom autoru za podržavanje daljnjeg razvoja ovog i drugih "
+"besplatnih projekata.\n"
+"Želiš li sada donirati? Odaberi jedan od dostupnih načina plaćanja. Za "
+"dovršavanje donacije, preusmjerit ćemo te na odgovarajuću web stranicu"
 
 #. Translators: name of the dialog.
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on to be shown on installation and add-on information.
 msgid "Instant Translate"
-msgstr "Brzo prevođenje"
+msgstr "Izravno prevođenje"
 
 #. Translators: Help message for a dialog.
 msgid "Select translation source and target language:"
@@ -157,6 +183,14 @@ msgid ""
 msgstr ""
 "Zamijeni podvlake razmacima (može dati bolje rezultate prijevoda ovisno o "
 "kontekstu)"
+
+#. Translators: A setting in addon settings dialog.
+msgid "Use mirror (Mainly for chinese users)"
+msgstr "Koristi replikaciju (uglavnom za kineske korisnike)"
+
+#. Translators: A setting in addon settings dialog.
+msgid "Support an author..."
+msgstr "Podrži autora …"
 
 #. Translators: An option to automatically detect source language for translation.
 msgid "Automatically detect language"
@@ -238,27 +272,6 @@ msgstr "Tagaloški"
 msgid "Yiddish"
 msgstr "Jidiš"
 
-msgid "unavailable"
-msgstr "nedostupno"
-
-#. We have probably been blocked, so stop trying to translate.
-#. log.exception("Instant translate: Can not translate text '%s'" %chunk)
-#. raise e
-msgid "Translation failed"
-msgstr "Prijevod neuspio"
-
-#. Translators: the label of a message box dialog.
-msgid ""
-"You have installed an old and incompatible version of this addon. Do you "
-"want to uninstall the old version?"
-msgstr ""
-"Instalirana je stara i nekompatibilna verzija ovog dodatka. Želiš li "
-"deinstalirati staru verziju?"
-
-#. Translators: the title of a message box dialog.
-msgid "Uninstall incompatible add-on"
-msgstr "Deinstaliraj nekompatibilni dodatak"
-
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid ""
@@ -267,6 +280,19 @@ msgid ""
 msgstr ""
 "Ovaj dodatak prevodi odabrani tekst ili tekst u međuspremniku pomoću Google "
 "prevoditelja te ga predstavlja."
+
+#~ msgid "unavailable"
+#~ msgstr "nedostupno"
+
+#~ msgid ""
+#~ "You have installed an old and incompatible version of this addon. Do you "
+#~ "want to uninstall the old version?"
+#~ msgstr ""
+#~ "Instalirana je stara i nekompatibilna verzija ovog dodatka. Želiš li "
+#~ "deinstalirati staru verziju?"
+
+#~ msgid "Uninstall incompatible add-on"
+#~ msgstr "Deinstaliraj nekompatibilni dodatak"
 
 #~ msgid "Instant &Translate Settings..."
 #~ msgstr "Pos&tavke za brzo prevođenje …"

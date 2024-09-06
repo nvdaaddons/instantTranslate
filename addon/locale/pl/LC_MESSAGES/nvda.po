@@ -32,10 +32,6 @@ msgstr ""
 "schowka, i wymawia tekst tłumaczonego tekstu, l tłumaczy ostatnio wymówiony "
 "tekst, o otwiera ustawienia tłumaczenia."
 
-#. Translators: message presented when user presses the shortcut key for translating clipboard text but the clipboard is empty.
-msgid "There is no text on the clipboard"
-msgstr "Brak tekstu w schowku"
-
 #. Translators: message presented in input help mode, when user presses the shortcut keys for this addon.
 msgid ""
 "Translates clipboard text from one language to another using Google "
@@ -43,16 +39,26 @@ msgid ""
 msgstr ""
 "Tłumaczy tekst schowka z jednego języka na drugi za pomocą Tłumacza Google."
 
-#. Translators: user has pressed the shortcut key for translating selected text, but no text was actually selected.
-#. Translators: user has pressed the shortcut key for identifying the language of selected text, but no text was actually selected.
-msgid "no selection"
-msgstr "brak zaznaczenia"
+#. Translators: message presented when user presses the shortcut key for translating clipboard text but the clipboard is empty.
+msgid "There is no text on the clipboard"
+msgstr "Brak tekstu w schowku"
 
 #. Translators: message presented in input help mode, when user presses the shortcut keys for this addon.
 msgid ""
 "Translates selected text from one language to another using Google Translate."
 msgstr ""
 "Tłumaczy wybrany tekst z jednego języka na drugi za pomocą Tłumacza Google."
+
+#. Translators: user has pressed the shortcut key for translating selected text, but no text was actually selected.
+msgid "no selection"
+msgstr "brak zaznaczenia"
+
+msgid "Translation failed"
+msgstr "Tłumaczenie nie powiodło się"
+
+#. Translators: Presented in input help mode.
+msgid "It swaps source and target languages."
+msgstr "Zamienia języki źródłowe i docelowe."
 
 #. Translators: message presented to announce that the source and target languages have been swapped.
 msgid "Languages swapped"
@@ -62,10 +68,6 @@ msgstr "Języki zamienione"
 #, python-brace-format
 msgid "Translate: from {lang1} to {lang2}"
 msgstr "Tłumacz: z {lang1} na {lang2}"
-
-#. Translators: Presented in input help mode.
-msgid "It swaps source and target languages."
-msgstr "Zamienia języki źródłowe i docelowe."
 
 #. Translators: Presented in input help mode.
 msgid "It announces the current source and target languages."
@@ -83,16 +85,20 @@ msgstr "Brak zapisanego tłumaczenia"
 msgid "It copies the last translation to clipboard"
 msgstr "Kopiuje ostatnie tłumaczenie do schowka"
 
-msgid "Language is..."
-msgstr "Język to..."
-
 #. Translators: Presented in input help mode.
 msgid "It identifies the language of selected text"
 msgstr "Identyfikuje język zaznaczonego tekstu"
 
+msgid "Language is..."
+msgstr "Język to..."
+
 #. Translators: Presented in input help mode.
 msgid "It translates the last spoken text"
 msgstr "Tłumaczy ostatnio wymówiony tekst"
+
+#. Translators: Presented in input help mode.
+msgid "Announces all available layered commands"
+msgstr "Wymawia wszystkie wielowarstwowe polecenia"
 
 msgid ""
 "t translates selected text, shift+t translates clipboard text, a announces "
@@ -108,12 +114,27 @@ msgstr ""
 "tłumaczenia, h wyświetla tą wiadomość."
 
 #. Translators: Presented in input help mode.
-msgid "Announces all available layered commands"
-msgstr "Wymawia wszystkie wielowarstwowe polecenia"
-
-#. Translators: Presented in input help mode.
 msgid "Opens Instant Translate settings dialog."
 msgstr "Otwiera okno dialogowe ustawień tłumaczenia."
+
+msgid "Donate via Paypal"
+msgstr ""
+
+msgid "Donate via Yoomoney"
+msgstr ""
+
+#, python-brace-format
+msgid "Request for contributions to {name}"
+msgstr ""
+
+#, python-brace-format
+msgid ""
+"{name} is a free add-on for NVDA.\n"
+"You can make a donation to its author to support further development of this "
+"and other free projects.\n"
+"Do you want to donate now? Choose one of the available payment methods. You "
+"will be redirected to the corresponding website to complete a donation"
+msgstr ""
 
 #. Translators: name of the dialog.
 #. Add-on summary, usually the user visible name of the addon.
@@ -156,6 +177,14 @@ msgid ""
 msgstr ""
 "Zastępowanie podkreśleń spacjami (może zapewnić lepsze wyniki tłumaczenia w "
 "zależności od kontekstu)"
+
+#. Translators: A setting in addon settings dialog.
+msgid "Use mirror (Mainly for chinese users)"
+msgstr ""
+
+#. Translators: A setting in addon settings dialog.
+msgid "Support an author..."
+msgstr ""
 
 #. Translators: An option to automatically detect source language for translation.
 msgid "Automatically detect language"
@@ -237,27 +266,6 @@ msgstr "Tagalski"
 msgid "Yiddish"
 msgstr "Jidysz"
 
-msgid "unavailable"
-msgstr "niedostępne"
-
-#. We have probably been blocked, so stop trying to translate.
-#. log.exception("Instant translate: Can not translate text '%s'" %chunk)
-#. raise e
-msgid "Translation failed"
-msgstr "Tłumaczenie nie powiodło się"
-
-#. Translators: the label of a message box dialog.
-msgid ""
-"You have installed an old and incompatible version of this addon. Do you "
-"want to uninstall the old version?"
-msgstr ""
-"Zainstalowałeś starą i niekompatybilną wersję tego dodatku. Czy chcesz "
-"odinstalować starą wersję?"
-
-#. Translators: the title of a message box dialog.
-msgid "Uninstall incompatible add-on"
-msgstr "Odinstaluj niekompatybilny dodatek"
-
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid ""
@@ -266,6 +274,19 @@ msgid ""
 msgstr ""
 "Ten dodatek tłumaczy zaznaczony tekst lub schowek za pomocą usługi Tłumacz "
 "Google i prezentuje go."
+
+#~ msgid "unavailable"
+#~ msgstr "niedostępne"
+
+#~ msgid ""
+#~ "You have installed an old and incompatible version of this addon. Do you "
+#~ "want to uninstall the old version?"
+#~ msgstr ""
+#~ "Zainstalowałeś starą i niekompatybilną wersję tego dodatku. Czy chcesz "
+#~ "odinstalować starą wersję?"
+
+#~ msgid "Uninstall incompatible add-on"
+#~ msgstr "Odinstaluj niekompatybilny dodatek"
 
 #~ msgid "Instant &Translate Settings..."
 #~ msgstr "ustawienia &Instant translate"

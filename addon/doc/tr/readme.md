@@ -63,7 +63,7 @@ dosyası aracılığıyla manuel olarak değiştirmeniz gerekir (örneğimizde
 
 En azından konuşma ayarları kategorisinde (NVDA Menüsü >> Tercihler >> ayarlar iletişim kutusu), "destekleniyorsa konuşma dilini otomatik olarak değiştir" seçeneğini işaretlemek isteyebilirsiniz. Bu şekilde, çok dilli bir sentezleyici kullanıyorsanız çeviri, sentezleyicinin hedef dil sesi kullanılarak söylenir.\n
 
-## kullanarak ##
+## Kullanma ##
 Bu eklentiyi üç şekilde kullanabilirsiniz:
 
 1. Seçim komutlarını kullanarak bir metin seçin (örneğin, shift tuşuyla
@@ -86,10 +86,11 @@ sonra kullanılabilir:
 * O: çeviri ayarları iletişim kutusunu aç
 * H: mevcut tüm katman komutlarını duyurur.
 
-## Changes for 4.4.3 ##
-* Added the ability to replace underscores with spaces, may provide better
-  translation results depending on context (thanks to Beka Gozalishvili)
-* Added compatibility for NVDA 2022.1
+## 4.4.3 için değişiklikler ##
+* Alt çizgileri boşluklarla değiştirme özelliği eklendi, bağlama bağlı
+  olarak daha iyi çeviri sonuçları sağlayabilir (Beka Gozalishvili'ye
+  teşekkürler)
+* NVDA 2022.1 için uyumluluk eklendi
 
 ## 4.4.2 için değişiklikler ##
 * Dil algılama ve otomatik dil değiştirme restore edildi (Düzeltme için
@@ -106,7 +107,7 @@ sonra kullanılabilir:
 
 ## 4.2 için değişiklikler ##
 * Daha yeni nvda sürümleriyle çalışması sağlandı.
-* Otomatik dil algılama özelliği  restore edildi
+* Otomatik dil algılama özelliği düzeltildi.
 
 ## 4.1 için değişiklikler ##
 * Anında Çeviri, artık Google yerine Yandex çeviri hizmetiyle yeniden
@@ -129,7 +130,7 @@ sonra kullanılabilir:
 * Anında Çeviri Ayarlar menü öğesi eklendi kısayol t
 * Otomatik seçeneği yalnızca kaynak dil seçim kutusunda bulunuyor.
 * Çeviri sonuçlarının kopyalanmasıyla ilgili bir onay kutusu eklendi.
-* Yapılandırma dosyasını konfigürasyon dizininin kökünde bulundur
+* Yapılandırma dosyasını ayarlar klasörünün kök dizininde sakla.
 * Kaynak ve hedef diller, Google Çeviri'nin şu anda sundukları ile
   senkronize edildi (22 Nisan 2015).
 
@@ -138,7 +139,7 @@ sonra kullanılabilir:
 * NVDA + shift + y basılınca Şimdi eklenti panodaki metni çevirebilir.
 
 ## 2.0 için değişiklikler ##
-* kaynak ve hedef dil seçebileceğiniz gui yapılandırıcı eklendi.
+* Kaynak ve hedef dilleri seçebileceğiniz gui yapılandırıcı eklendi.
 * Tercihler menüsü altına eklenti menü öğesi eklendi.
 * Ayarlar şimdi ayrı bir yapılandırma dosyasına yazılıyor.
 * Çeviri sonuçları artık otomatik olarak gelecek kullanımlar için panoya
@@ -150,6 +151,6 @@ sonra kullanılabilir:
 
 [[!tag dev stable]]
 
-[1]: https://addons.nvda-project.org/files/get.php?file=instantTranslate
+[1]: https://www.nvaccess.org/addonStore/legacy?file=instantTranslate
 
-[2]: https://addons.nvda-project.org/files/get.php?file=it-dev
+[2]: https://www.nvaccess.org/addonStore/legacy?file=it-dev

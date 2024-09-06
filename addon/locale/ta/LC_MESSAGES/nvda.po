@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: 'Instant-Translate' '2.1'\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2013-02-09 18:30+0100\n"
-"PO-Revision-Date: 2022-05-28 11:49+0530\n"
+"PO-Revision-Date: 2024-05-11 19:19+0530\n"
 "Last-Translator: DINAKAR T.D. <td.dinkar@gmail.com>\n"
 "Language-Team: Tamil <td.dinkar@gmail.com>\n"
 "Language: ta_IN\n"
@@ -31,10 +31,6 @@ msgstr ""
 "செய்யப்பட்டிருக்கும் உரையின் மொழியை இனங்காண்கிறது, l இறுதியாகப் பேசப்பட்ட உரையை "
 "மொழிபெயர்க்கிறது, o மொழிபெயர்ப்பு அமைப்புகள் உரையாடலைத் திறக்கிறது."
 
-#. Translators: message presented when user presses the shortcut key for translating clipboard text but the clipboard is empty.
-msgid "There is no text on the clipboard"
-msgstr "பிடிப்புப்பலகையில் எந்த உரையும் இல்லை"
-
 #. Translators: message presented in input help mode, when user presses the shortcut keys for this addon.
 msgid ""
 "Translates clipboard text from one language to another using Google "
@@ -43,10 +39,9 @@ msgstr ""
 "பிடிப்புப்பலகையிலிருக்கும் உரையை, கூகுள் மொழிபெயர்ப்பு வசதியை பயன்படுத்தி, ஒரு "
 "மொழியிலிருந்து மற்றொரு மொழிக்கு மொழிபெயர்க்கும்;"
 
-#. Translators: user has pressed the shortcut key for translating selected text, but no text was actually selected.
-#. Translators: user has pressed the shortcut key for identifying the language of selected text, but no text was actually selected.
-msgid "no selection"
-msgstr "தெரிவு ஏதுமில்லை"
+#. Translators: message presented when user presses the shortcut key for translating clipboard text but the clipboard is empty.
+msgid "There is no text on the clipboard"
+msgstr "பிடிப்புப்பலகையில் எந்த உரையும் இல்லை"
 
 #. Translators: message presented in input help mode, when user presses the shortcut keys for this addon.
 msgid ""
@@ -55,6 +50,17 @@ msgstr ""
 "தெரிவாகியிருக்கும் உரையை, கூகுள் மொழிபெயர்ப்பு வசதியை பயன்படுத்தி, ஒரு "
 "மொழியிலிருந்து மற்றொரு மொழிக்கு மொழிபெயர்க்கும்"
 
+#. Translators: user has pressed the shortcut key for translating selected text, but no text was actually selected.
+msgid "no selection"
+msgstr "தெரிவு ஏதுமில்லை"
+
+msgid "Translation failed"
+msgstr "மொழிபெயர்ப்பு தோல்வியடைந்தது"
+
+#. Translators: Presented in input help mode.
+msgid "It swaps source and target languages."
+msgstr "தருமொழியையும், பெறுமொழியையும் இடைமாற்றுகிறது."
+
 #. Translators: message presented to announce that the source and target languages have been swapped.
 msgid "Languages swapped"
 msgstr "மொழிகள் இடைமாற்றப்பட்டுள்ளன"
@@ -62,10 +68,6 @@ msgstr "மொழிகள் இடைமாற்றப்பட்டுள�
 #. Translators: message presented to announce the current source and target languages.
 msgid "Translate: from {lang1} to {lang2}"
 msgstr "{lang1} மொழியிலிருந்து {lang2} மொழிக்கு மொழிபெயர்க்கப்பட்டது"
-
-#. Translators: Presented in input help mode.
-msgid "It swaps source and target languages."
-msgstr "தருமொழியையும், பெறுமொழியையும் இடைமாற்றுகிறது."
 
 #. Translators: Presented in input help mode.
 msgid "It announces the current source and target languages."
@@ -83,16 +85,20 @@ msgstr "சேமிக்கப்பட்ட மொழிபெயர்ப�
 msgid "It copies the last translation to clipboard"
 msgstr "இறுதியான மொழிபெயர்ப்பை பிடிப்புப்பலகைக்குப் படியெடுக்கிறது"
 
-msgid "Language is..."
-msgstr "மொழிகள்..."
-
 #. Translators: Presented in input help mode.
 msgid "It identifies the language of selected text"
 msgstr "தெரிவுச்செய்யப்பட்டிருக்கும் உரையின் மொழியை இனங்காண்கிறது"
 
+msgid "Language is..."
+msgstr "மொழிகள்..."
+
 #. Translators: Presented in input help mode.
 msgid "It translates the last spoken text"
 msgstr "இறுதியாகப் பேசப்பட்ட உரையை மொழிபெயர்க்கிறது"
+
+#. Translators: Presented in input help mode.
+msgid "Announces all available layered commands"
+msgstr "கிடைப்பிலிருக்கும் எல்லா அடுக்குக் கட்டளைகளையும் அறிவிக்கிறது"
 
 msgid ""
 "t translates selected text, shift+t translates clipboard text, a announces "
@@ -109,12 +115,31 @@ msgstr ""
 "மொழிபெயர்ப்பு அமைப்புகள் உரையாடலைத் திறக்கிறது, h இத்தகவலைக் காட்சிப்படுத்துகிறது."
 
 #. Translators: Presented in input help mode.
-msgid "Announces all available layered commands"
-msgstr "கிடைப்பிலிருக்கும் எல்லா அடுக்குக் கட்டளைகளையும் அறிவிக்கிறது"
-
-#. Translators: Presented in input help mode.
 msgid "Opens Instant Translate settings dialog."
 msgstr "உடனடி மொழிபெயர்ப்பு அமைப்புகளை திறக்கிறது."
+
+msgid "Donate via Paypal"
+msgstr "பேபால் வாயிலாக நன்கொடையளியுங்கள்"
+
+msgid "Donate via Yoomoney"
+msgstr "யுமனி வாயிலாக நன்கொடையளியுங்கள்"
+
+msgid "Request for contributions to {name}"
+msgstr "{name} பங்களிப்புகளுக்கான கோரிக்கை"
+
+msgid ""
+"{name} is a free add-on for NVDA.\n"
+"You can make a donation to its author to support further development of this "
+"and other free projects.\n"
+"Do you want to donate now? Choose one of the available payment methods. You "
+"will be redirected to the corresponding website to complete a donation"
+msgstr ""
+"{name}, என்விடிஏவிற்கான இலவச நீட்சிநிரலாகும்.\n"
+"இந்த மற்றும் பிற இலவசத் திட்டங்களின் தொடர்ந்த மேம்பாட்டிற்கு ஆதரவளிக்க, அவைகளின் "
+"படைப்பாளருக்கு நன்கொடையளிக்கலாம்.\n"
+"இப்பொழுது நன்கொடையளிக்க விரும்புகிறீர்களா? கிடைப்பிலிருக்கும் கட்டண முறைகளில் ஒன்றைத் "
+"தேர்ந்தெடுக்கவும். நன்கொடையை முடிக்க தொடர்புடைய இணையதளத்திற்கு நீங்கள் திருப்பி "
+"விடப்படுவீர்கள்."
 
 #. Translators: name of the dialog.
 #. Add-on summary, usually the user visible name of the addon.
@@ -157,6 +182,14 @@ msgid ""
 msgstr ""
 "அடிக்கோடுகளுக்கு மாற்றாக இடைவெளிகளைப் பயன்படுத்துக (சூழலைப் பொறுத்து மொழிபெயர்ப்பு "
 "முடிவுகள் மேம்பட வாய்ப்புள்ளது)"
+
+#. Translators: A setting in addon settings dialog.
+msgid "Use mirror (Mainly for chinese users)"
+msgstr "மிரரைப் பயன்படுத்துக (பிரதானமாக சீனப் பயனர்களுக்கு)"
+
+#. Translators: A setting in addon settings dialog.
+msgid "Support an author..."
+msgstr "ஒரு படைப்பாளரை  ஆதரித்திடுக..."
 
 #. Translators: An option to automatically detect source language for translation.
 msgid "Automatically detect language"
@@ -238,27 +271,6 @@ msgstr "Tagalog"
 msgid "Yiddish"
 msgstr "Yiddish"
 
-msgid "unavailable"
-msgstr "கிடைப்பிலில்லை"
-
-#. We have probably been blocked, so stop trying to translate.
-#. log.exception("Instant translate: Can not translate text '%s'" %chunk)
-#. raise e
-msgid "Translation failed"
-msgstr "மொழிபெயர்ப்பு தோல்வியடைந்தது"
-
-#. Translators: the label of a message box dialog.
-msgid ""
-"You have installed an old and incompatible version of this addon. Do you "
-"want to uninstall the old version?"
-msgstr ""
-"இக்கூட்டுறுப்பிற்கு பொருத்தமில்லாத பழைய பதிப்பை நிறுவியுள்ளீர்கள். . பழைய பதிப்பை நிறுவு "
-"நீக்க வேண்டுமா?"
-
-#. Translators: the title of a message box dialog.
-msgid "Uninstall incompatible add-on"
-msgstr "பொருத்தமில்லாத கூட்டுறுப்பின் நிறுவு நீக்கம்"
-
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid ""
@@ -267,6 +279,19 @@ msgid ""
 msgstr ""
 "உடனடி மொழிபெயர்ப்பு - கூகுள் மொழிபெயர்ப்பு வசதியைக் கொண்டு, தெரிவு செய்யப்பட்டுள்ள "
 "உரையை, அல்லது பிடிப்புப்பலகையிலுள்ள  உரையை மொழிபெயர்க்கிறது. "
+
+#~ msgid "unavailable"
+#~ msgstr "கிடைப்பிலில்லை"
+
+#~ msgid ""
+#~ "You have installed an old and incompatible version of this addon. Do you "
+#~ "want to uninstall the old version?"
+#~ msgstr ""
+#~ "இக்கூட்டுறுப்பிற்கு பொருத்தமில்லாத பழைய பதிப்பை நிறுவியுள்ளீர்கள். . பழைய பதிப்பை "
+#~ "நிறுவு நீக்க வேண்டுமா?"
+
+#~ msgid "Uninstall incompatible add-on"
+#~ msgstr "பொருத்தமில்லாத கூட்டுறுப்பின் நிறுவு நீக்கம்"
 
 #~ msgid "Instant &Translate Settings..."
 #~ msgstr "உடனடி மொழிபெயர்ப்பு அமைப்புகள்..."

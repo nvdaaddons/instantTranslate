@@ -34,10 +34,6 @@ msgstr ""
 "texto selecionado, l traduz o último texto falado, o abre o diálogo de "
 "configuração de tradução."
 
-#. Translators: message presented when user presses the shortcut key for translating clipboard text but the clipboard is empty.
-msgid "There is no text on the clipboard"
-msgstr "Não há texto na área de transferência"
-
 #. Translators: message presented in input help mode, when user presses the shortcut keys for this addon.
 msgid ""
 "Translates clipboard text from one language to another using Google "
@@ -46,16 +42,26 @@ msgstr ""
 "Traduz o texto da área de transferência de um idioma para outro usando o "
 "Google Tradutor."
 
-#. Translators: user has pressed the shortcut key for translating selected text, but no text was actually selected.
-#. Translators: user has pressed the shortcut key for identifying the language of selected text, but no text was actually selected.
-msgid "no selection"
-msgstr "sem seleção"
+#. Translators: message presented when user presses the shortcut key for translating clipboard text but the clipboard is empty.
+msgid "There is no text on the clipboard"
+msgstr "Não há texto na área de transferência"
 
 #. Translators: message presented in input help mode, when user presses the shortcut keys for this addon.
 msgid ""
 "Translates selected text from one language to another using Google Translate."
 msgstr ""
 "Traduz o texto selecionado de um idioma para outro usando o Google Tradutor."
+
+#. Translators: user has pressed the shortcut key for translating selected text, but no text was actually selected.
+msgid "no selection"
+msgstr "sem seleção"
+
+msgid "Translation failed"
+msgstr "Tradução falhou"
+
+#. Translators: Presented in input help mode.
+msgid "It swaps source and target languages."
+msgstr "Alterna os idiomas de origem e de destino."
 
 #. Translators: message presented to announce that the source and target languages have been swapped.
 msgid "Languages swapped"
@@ -65,10 +71,6 @@ msgstr "Idiomas trocados"
 #, python-brace-format
 msgid "Translate: from {lang1} to {lang2}"
 msgstr "Traduzir: de {lang1} para {lang2}"
-
-#. Translators: Presented in input help mode.
-msgid "It swaps source and target languages."
-msgstr "Alterna os idiomas de origem e de destino."
 
 #. Translators: Presented in input help mode.
 msgid "It announces the current source and target languages."
@@ -86,16 +88,20 @@ msgstr "Nenhuma tradução armazenada"
 msgid "It copies the last translation to clipboard"
 msgstr "Copia a última tradução para a área de transferência"
 
-msgid "Language is..."
-msgstr "Idioma é..."
-
 #. Translators: Presented in input help mode.
 msgid "It identifies the language of selected text"
 msgstr "Identifica o idioma do texto selecionado"
 
+msgid "Language is..."
+msgstr "Idioma é..."
+
 #. Translators: Presented in input help mode.
 msgid "It translates the last spoken text"
 msgstr "Traduz o último texto falado"
+
+#. Translators: Presented in input help mode.
+msgid "Announces all available layered commands"
+msgstr "Anuncia todos os comandos disponíveis de camadas"
 
 msgid ""
 "t translates selected text, shift+t translates clipboard text, a announces "
@@ -112,12 +118,27 @@ msgstr ""
 "mensagem."
 
 #. Translators: Presented in input help mode.
-msgid "Announces all available layered commands"
-msgstr "Anuncia todos os comandos disponíveis de camadas"
-
-#. Translators: Presented in input help mode.
 msgid "Opens Instant Translate settings dialog."
 msgstr "Abre o diálogo de configurações do Tradutor Instantâneo."
+
+msgid "Donate via Paypal"
+msgstr ""
+
+msgid "Donate via Yoomoney"
+msgstr ""
+
+#, python-brace-format
+msgid "Request for contributions to {name}"
+msgstr ""
+
+#, python-brace-format
+msgid ""
+"{name} is a free add-on for NVDA.\n"
+"You can make a donation to its author to support further development of this "
+"and other free projects.\n"
+"Do you want to donate now? Choose one of the available payment methods. You "
+"will be redirected to the corresponding website to complete a donation"
+msgstr ""
 
 #. Translators: name of the dialog.
 #. Add-on summary, usually the user visible name of the addon.
@@ -157,6 +178,14 @@ msgstr "Copiar resultado da tradução para a área de transferência"
 msgid ""
 "Replace underscores with spaces (May provide better translation results "
 "depending on context)"
+msgstr ""
+
+#. Translators: A setting in addon settings dialog.
+msgid "Use mirror (Mainly for chinese users)"
+msgstr ""
+
+#. Translators: A setting in addon settings dialog.
+msgid "Support an author..."
 msgstr ""
 
 #. Translators: An option to automatically detect source language for translation.
@@ -239,27 +268,6 @@ msgstr "Tagalo"
 msgid "Yiddish"
 msgstr "Iídiche"
 
-msgid "unavailable"
-msgstr "indisponível"
-
-#. We have probably been blocked, so stop trying to translate.
-#. log.exception("Instant translate: Can not translate text '%s'" %chunk)
-#. raise e
-msgid "Translation failed"
-msgstr "Tradução falhou"
-
-#. Translators: the label of a message box dialog.
-msgid ""
-"You have installed an old and incompatible version of this addon. Do you "
-"want to uninstall the old version?"
-msgstr ""
-"Você tem instalada uma versão antiga e incompatível deste complemento. Quer "
-"desinstalar a versão antiga?"
-
-#. Translators: the title of a message box dialog.
-msgid "Uninstall incompatible add-on"
-msgstr "Desinstalar complemento incompatível"
-
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid ""
@@ -268,6 +276,19 @@ msgid ""
 msgstr ""
 "Este complemento traduz um texto selecionado ou da área de transferência "
 "usando o serviço Google Tradutor e o apresenta."
+
+#~ msgid "unavailable"
+#~ msgstr "indisponível"
+
+#~ msgid ""
+#~ "You have installed an old and incompatible version of this addon. Do you "
+#~ "want to uninstall the old version?"
+#~ msgstr ""
+#~ "Você tem instalada uma versão antiga e incompatível deste complemento. "
+#~ "Quer desinstalar a versão antiga?"
+
+#~ msgid "Uninstall incompatible add-on"
+#~ msgstr "Desinstalar complemento incompatível"
 
 #~ msgid "Instant &Translate Settings..."
 #~ msgstr "Opções do &Tradutor Instantâneo..."
