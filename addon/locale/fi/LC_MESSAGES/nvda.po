@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Instant-Translate\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2013-02-09 18:30+0100\n"
-"PO-Revision-Date: 2024-04-30 22:49+0300\n"
+"PO-Revision-Date: 2024-09-08 20:29+0300\n"
 "Last-Translator: Jani Kinnunen <janikinnunen340@gmail.com>\n"
 "Language-Team: Jani Kinnunen <jani.kinnunen@wippies.fi>\n"
 "Language: fi\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.4.2\n"
+"X-Generator: Poedit 3.5\n"
 
 msgid ""
 "Instant Translate layer commands. t translates selected text, shift+t "
@@ -195,12 +195,11 @@ msgstr "Tue tekijää..."
 #. Translators: A short description for "Automatically detect language" language choice, reported when
 #. the user requests or swaps the current configuration.
 msgid "Automatic"
-msgstr ""
+msgstr "automaattinen"
 
 #. Translators: The name of a language supported by this add-on.
-#, fuzzy
 msgid "Kurdish (Sorani)"
-msgstr "kurdi"
+msgstr "kurdi (sorani)"
 
 #. Translators: An option to automatically detect source language for translation.
 msgid "Automatically detect language"
@@ -208,22 +207,22 @@ msgstr "Tunnista automaattisesti"
 
 #. Translators: The name of a language supported by this add-on.
 msgid "Twi (Akan)"
-msgstr ""
+msgstr "twi (akan)"
 
 #. Missing, tested on Windows 10 22H2
 #. Translators: The name of a language supported by this add-on.
 msgid "Aymara"
-msgstr ""
+msgstr "aymara"
 
 #. Missing, tested on Windows 10 22H2
 #. Translators: The name of a language supported by this add-on.
 msgid "Bhojpuri"
-msgstr ""
+msgstr "bhojpuri"
 
 #. Missing, tested on Windows 10 22H2
 #. Translators: The name of a language supported by this add-on.
 msgid "Bambara"
-msgstr ""
+msgstr "bambara"
 
 #. Missing, tested on Windows 10 22H2
 #. Translators: The name of a language supported by this add-on.
@@ -232,12 +231,12 @@ msgstr "cebuano"
 
 #. Translators: The name of a language supported by this add-on.
 msgid "Dogri"
-msgstr ""
+msgstr "dogri"
 
 #. Missing, tested on Windows 10 22H2
 #. Translators: The name of a language supported by this add-on.
 msgid "Ewe"
-msgstr ""
+msgstr "ewe"
 
 #. Missing, tested on Windows 10 22H2
 #. Translators: The name of a language supported by this add-on.
@@ -246,7 +245,7 @@ msgstr "Esperanto"
 
 #. Translators: The name of a language supported by this add-on.
 msgid "Konkani"
-msgstr ""
+msgstr "konkani"
 
 #. Missing, tested on Windows 10 22H2
 #. Translators: The name of a language supported by this add-on.
@@ -263,7 +262,7 @@ msgstr "Haitin kreoli"
 
 #. Translators: The name of a language supported by this add-on.
 msgid "Ilocano"
-msgstr ""
+msgstr "ilocano"
 
 #. Missing, tested on Windows 10 22H2
 #. Translators: The name of a language supported by this add-on.
@@ -272,7 +271,7 @@ msgstr "jaava"
 
 #. Translators: The name of a language supported by this add-on.
 msgid "Krio"
-msgstr ""
+msgstr "krio"
 
 #. Missing, tested on Windows 10 22H2
 #. Translators: The name of a language supported by this add-on.
@@ -285,22 +284,22 @@ msgstr "Latina"
 
 #. Translators: The name of a language supported by this add-on.
 msgid "Luganda"
-msgstr ""
+msgstr "luganda"
 
 #. Missing, tested on Windows 10 22H2
 #. Translators: The name of a language supported by this add-on.
 msgid "Lingala"
-msgstr ""
+msgstr "lingala"
 
 #. Missing, tested on Windows 10 22H2
 #. Translators: The name of a language supported by this add-on.
 msgid "Mizo"
-msgstr ""
+msgstr "mizo"
 
 #. Missing, tested on Windows 10 22H2
 #. Translators: The name of a language supported by this add-on.
 msgid "Maithili"
-msgstr ""
+msgstr "maithili"
 
 #. Missing, tested on Windows 10 22H2
 #. Translators: The name of a language supported by this add-on.
@@ -309,7 +308,7 @@ msgstr "malaiji"
 
 #. Translators: The name of a language supported by this add-on.
 msgid "Meiteilon (Manipuri)"
-msgstr ""
+msgstr "meiteilon (manipuri)"
 
 #. Missing, tested on Windows 10 22H2
 #. Translators: The name of a language supported by this add-on.

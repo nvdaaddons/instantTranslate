@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: 'Instant-Translate' '2.1'\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2013-02-09 18:30+0100\n"
-"PO-Revision-Date: 2024-05-11 19:19+0530\n"
+"PO-Revision-Date: 2024-09-07 19:39+0530\n"
 "Last-Translator: DINAKAR T.D. <td.dinkar@gmail.com>\n"
 "Language-Team: Tamil <td.dinkar@gmail.com>\n"
 "Language: ta_IN\n"
@@ -66,7 +66,6 @@ msgid "Languages swapped"
 msgstr "மொழிகள் இடைமாற்றப்பட்டுள்ளன"
 
 #. Translators: message presented to announce the current source and target languages.
-#, python-brace-format
 msgid "Translate: from {lang1} to {lang2}"
 msgstr "{lang1} மொழியிலிருந்து {lang2} மொழிக்கு மொழிபெயர்க்கப்பட்டது"
 
@@ -125,11 +124,9 @@ msgstr "பேபால் வாயிலாக நன்கொடையளி�
 msgid "Donate via Yoomoney"
 msgstr "யுமனி வாயிலாக நன்கொடையளியுங்கள்"
 
-#, python-brace-format
 msgid "Request for contributions to {name}"
 msgstr "{name} பங்களிப்புகளுக்கான கோரிக்கை"
 
-#, python-brace-format
 msgid ""
 "{name} is a free add-on for NVDA.\n"
 "You can make a donation to its author to support further development of this "
@@ -197,12 +194,11 @@ msgstr "ஒரு படைப்பாளரை  ஆதரித்திடு
 #. Translators: A short description for "Automatically detect language" language choice, reported when
 #. the user requests or swaps the current configuration.
 msgid "Automatic"
-msgstr ""
+msgstr "தன்னியக்கம்"
 
 #. Translators: The name of a language supported by this add-on.
-#, fuzzy
 msgid "Kurdish (Sorani)"
-msgstr "Kurdish"
+msgstr "Kurdish (Sorani)"
 
 #. Translators: An option to automatically detect source language for translation.
 msgid "Automatically detect language"
@@ -210,22 +206,22 @@ msgstr "மொழியைத் தானாக கண்டறி"
 
 #. Translators: The name of a language supported by this add-on.
 msgid "Twi (Akan)"
-msgstr ""
+msgstr "Twi (Akan)"
 
 #. Missing, tested on Windows 10 22H2
 #. Translators: The name of a language supported by this add-on.
 msgid "Aymara"
-msgstr ""
+msgstr "Aymara"
 
 #. Missing, tested on Windows 10 22H2
 #. Translators: The name of a language supported by this add-on.
 msgid "Bhojpuri"
-msgstr ""
+msgstr "Bhojpuri"
 
 #. Missing, tested on Windows 10 22H2
 #. Translators: The name of a language supported by this add-on.
 msgid "Bambara"
-msgstr ""
+msgstr "Bambara"
 
 #. Missing, tested on Windows 10 22H2
 #. Translators: The name of a language supported by this add-on.
@@ -234,12 +230,12 @@ msgstr "Cebuano"
 
 #. Translators: The name of a language supported by this add-on.
 msgid "Dogri"
-msgstr ""
+msgstr "Dogri"
 
 #. Missing, tested on Windows 10 22H2
 #. Translators: The name of a language supported by this add-on.
 msgid "Ewe"
-msgstr ""
+msgstr "Ewe"
 
 #. Missing, tested on Windows 10 22H2
 #. Translators: The name of a language supported by this add-on.
@@ -248,7 +244,7 @@ msgstr "Esperanto"
 
 #. Translators: The name of a language supported by this add-on.
 msgid "Konkani"
-msgstr ""
+msgstr "Konkani"
 
 #. Missing, tested on Windows 10 22H2
 #. Translators: The name of a language supported by this add-on.
@@ -265,7 +261,7 @@ msgstr "Creole Haiti"
 
 #. Translators: The name of a language supported by this add-on.
 msgid "Ilocano"
-msgstr ""
+msgstr "Ilocano"
 
 #. Missing, tested on Windows 10 22H2
 #. Translators: The name of a language supported by this add-on.
@@ -274,7 +270,7 @@ msgstr "Japanese"
 
 #. Translators: The name of a language supported by this add-on.
 msgid "Krio"
-msgstr ""
+msgstr "Krio"
 
 #. Missing, tested on Windows 10 22H2
 #. Translators: The name of a language supported by this add-on.
@@ -287,22 +283,22 @@ msgstr "Latin"
 
 #. Translators: The name of a language supported by this add-on.
 msgid "Luganda"
-msgstr ""
+msgstr "Luganda"
 
 #. Missing, tested on Windows 10 22H2
 #. Translators: The name of a language supported by this add-on.
 msgid "Lingala"
-msgstr ""
+msgstr "Lingala"
 
 #. Missing, tested on Windows 10 22H2
 #. Translators: The name of a language supported by this add-on.
 msgid "Mizo"
-msgstr ""
+msgstr "Mizo"
 
 #. Missing, tested on Windows 10 22H2
 #. Translators: The name of a language supported by this add-on.
 msgid "Maithili"
-msgstr ""
+msgstr "Maithili"
 
 #. Missing, tested on Windows 10 22H2
 #. Translators: The name of a language supported by this add-on.
@@ -311,7 +307,7 @@ msgstr "Malagasy"
 
 #. Translators: The name of a language supported by this add-on.
 msgid "Meiteilon (Manipuri)"
-msgstr ""
+msgstr "Meiteilon (Manipuri)"
 
 #. Missing, tested on Windows 10 22H2
 #. Translators: The name of a language supported by this add-on.

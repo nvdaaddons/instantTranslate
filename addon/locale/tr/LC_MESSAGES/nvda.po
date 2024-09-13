@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Anında Çeviri\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2013-02-09 18:30+0100\n"
-"PO-Revision-Date: 2024-04-30 19:17+0300\n"
+"PO-Revision-Date: 2024-09-06 13:49+0300\n"
 "Last-Translator: Umut KORKMAZ <umutkork@gmail.com>\n"
 "Language-Team: TR <cagrid@hotmail.com>\n"
 "Language: tr_TR\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.4.2\n"
+"X-Generator: Poedit 3.5\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-Basepath: ../../..\n"
 "X-Poedit-SearchPath-0: __pycache__\n"
@@ -195,12 +195,11 @@ msgstr "Geliştiriciyi Destekle..."
 #. Translators: A short description for "Automatically detect language" language choice, reported when
 #. the user requests or swaps the current configuration.
 msgid "Automatic"
-msgstr ""
+msgstr "Otomatik"
 
 #. Translators: The name of a language supported by this add-on.
-#, fuzzy
 msgid "Kurdish (Sorani)"
-msgstr "Kürtçe"
+msgstr "Kürtçe (Sorani)"
 
 #. Translators: An option to automatically detect source language for translation.
 msgid "Automatically detect language"
@@ -208,22 +207,22 @@ msgstr "Dili otomatik olarak belirle"
 
 #. Translators: The name of a language supported by this add-on.
 msgid "Twi (Akan)"
-msgstr ""
+msgstr "Twi (Akan dili)"
 
 #. Missing, tested on Windows 10 22H2
 #. Translators: The name of a language supported by this add-on.
 msgid "Aymara"
-msgstr ""
+msgstr "Aymara dili"
 
 #. Missing, tested on Windows 10 22H2
 #. Translators: The name of a language supported by this add-on.
 msgid "Bhojpuri"
-msgstr ""
+msgstr "Bhojpuri"
 
 #. Missing, tested on Windows 10 22H2
 #. Translators: The name of a language supported by this add-on.
 msgid "Bambara"
-msgstr ""
+msgstr "Bambara"
 
 #. Missing, tested on Windows 10 22H2
 #. Translators: The name of a language supported by this add-on.
@@ -232,12 +231,12 @@ msgstr "Cebuano"
 
 #. Translators: The name of a language supported by this add-on.
 msgid "Dogri"
-msgstr ""
+msgstr "Dogri"
 
 #. Missing, tested on Windows 10 22H2
 #. Translators: The name of a language supported by this add-on.
 msgid "Ewe"
-msgstr ""
+msgstr "Ewe"
 
 #. Missing, tested on Windows 10 22H2
 #. Translators: The name of a language supported by this add-on.
@@ -246,7 +245,7 @@ msgstr "Esperanto"
 
 #. Translators: The name of a language supported by this add-on.
 msgid "Konkani"
-msgstr ""
+msgstr "Konkani"
 
 #. Missing, tested on Windows 10 22H2
 #. Translators: The name of a language supported by this add-on.
@@ -263,7 +262,7 @@ msgstr "Creole Haiti"
 
 #. Translators: The name of a language supported by this add-on.
 msgid "Ilocano"
-msgstr ""
+msgstr "Ilocano"
 
 #. Missing, tested on Windows 10 22H2
 #. Translators: The name of a language supported by this add-on.
@@ -272,7 +271,7 @@ msgstr "Javanese"
 
 #. Translators: The name of a language supported by this add-on.
 msgid "Krio"
-msgstr ""
+msgstr "Krio"
 
 #. Missing, tested on Windows 10 22H2
 #. Translators: The name of a language supported by this add-on.
@@ -285,23 +284,22 @@ msgstr "Latin"
 
 #. Translators: The name of a language supported by this add-on.
 msgid "Luganda"
-msgstr ""
+msgstr "Luganda"
 
 #. Missing, tested on Windows 10 22H2
 #. Translators: The name of a language supported by this add-on.
 msgid "Lingala"
-msgstr ""
+msgstr "Lingala"
 
 #. Missing, tested on Windows 10 22H2
 #. Translators: The name of a language supported by this add-on.
 msgid "Mizo"
-msgstr ""
+msgstr "Mizo"
 
 #. Missing, tested on Windows 10 22H2
 #. Translators: The name of a language supported by this add-on.
-#, fuzzy
 msgid "Maithili"
-msgstr "Swahili"
+msgstr "Maithili"
 
 #. Missing, tested on Windows 10 22H2
 #. Translators: The name of a language supported by this add-on.
@@ -310,7 +308,7 @@ msgstr "Malagasy"
 
 #. Translators: The name of a language supported by this add-on.
 msgid "Meiteilon (Manipuri)"
-msgstr ""
+msgstr "Meiteilon (Manipuri)"
 
 #. Missing, tested on Windows 10 22H2
 #. Translators: The name of a language supported by this add-on.
