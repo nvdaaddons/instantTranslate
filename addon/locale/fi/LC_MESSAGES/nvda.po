@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Instant-Translate\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2013-02-09 18:30+0100\n"
-"PO-Revision-Date: 2024-09-08 20:29+0300\n"
+"PO-Revision-Date: 2024-11-23 21:50+0200\n"
 "Last-Translator: Jani Kinnunen <janikinnunen340@gmail.com>\n"
 "Language-Team: Jani Kinnunen <jani.kinnunen@wippies.fi>\n"
 "Language: fi\n"
@@ -42,7 +42,7 @@ msgstr ""
 
 #. Translators: message presented when user presses the shortcut key for translating clipboard text but the clipboard is empty.
 msgid "There is no text on the clipboard"
-msgstr "Leikepöydällä ei ole tekstiä."
+msgstr "Leikepöydällä ei ole tekstiä"
 
 #. Translators: message presented in input help mode, when user presses the shortcut keys for this addon.
 msgid ""
@@ -83,22 +83,22 @@ msgstr "Ei tallennettua käännöstä"
 
 #. Translators: Presented in input help mode.
 msgid "It copies the last translation to clipboard"
-msgstr "Kopioi viimeisimmän käännöksen leikepöydälle."
+msgstr "Kopioi viimeisimmän käännöksen leikepöydälle"
 
 #. Translators: Presented in input help mode.
 msgid "It identifies the language of selected text"
-msgstr "Tunnistaa valitun tekstin kielen."
+msgstr "Tunnistaa valitun tekstin kielen"
 
 msgid "Language is..."
 msgstr "Language is..."
 
 #. Translators: Presented in input help mode.
 msgid "It translates the last spoken text"
-msgstr "Kääntää viimeksi puhutun tekstin."
+msgstr "Kääntää viimeksi puhutun tekstin"
 
 #. Translators: Presented in input help mode.
 msgid "Announces all available layered commands"
-msgstr "Puhuu kaikki komentokerroksen komennot."
+msgstr "Puhuu kaikki komentokerroksen komennot"
 
 msgid ""
 "t translates selected text, shift+t translates clipboard text, a announces "
