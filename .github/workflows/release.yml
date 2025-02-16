@@ -10,7 +10,6 @@ jobs:
     permissions:
       contents: write
     runs-on: ubuntu-latest
-
     steps:
     - name: Checkout
       uses: actions/checkout@v4
@@ -30,44 +29,32 @@ jobs:
     - name: Build addon
       run: scons
 
-    - name: Extract addon info
-      id: extract_addon_info
-      run: |
-        import os
-        import sys
-        sys.path.append('.')
-        from buildVars import addon_info
-        addon_name = addon_info['addon_name']
-        addon_version = addon_info['addon_version']
-        addon_updateChannel = addon_info.get('addon_updateChannel') or 'stable'
-        with open(os.environ['GITHUB_OUTPUT'], 'a') as f:
-            f.write(f'addon_name={addon_name}\n')
-            f.write(f'addon_version={addon_version}\n')
-            f.write(f'addon_updateChannel={addon_updateChannel}\n')
-      shell: python
-
     - name: Upload release
       id: release
       uses: softprops/action-gh-release@v2
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
         tag_name: ${{ github.ref_name }}
-        files: "*.nvda-addon"
+        files: |
+          *.nvda-addon
         generate_release_notes: true
         prerelease: false
 
-    - name: Submit addon
-      id: submit_addon
+    - name: extract addon info
+      run: |
+        python3 -c 'from buildVars import addon_info
+        env = {
+            "ADDON_NAME": addon_info["addon_name"],
+            "ADDON_VERSION": addon_info["addon_version"],
+            "ADDON_CHANNEL": addon_info["addon_updateChannel"],
+        }
+        [print(f"{k}={v}") for k, v in env.items()]' > "$GITHUB_ENV"
+
+    - name: submit addon
       uses: beqabeqa473/submitNVDAAddon@v1
       with:
-        addon_name: ${{ steps.extract_addon_info.outputs.addon_name }}
-        addon_version: ${{ steps.extract_addon_info.outputs.addon_version }}
-        channel: ${{ steps.extract_addon_info.outputs.addon_updateChannel }}
-        channel: "Gozaltech"
+        addon_name: ${{ env.ADDON_NAME }}
+        addon_version: ${{ env.ADDON_VERSION }}
         download_url: ${{ fromJSON(steps.release.outputs.assets)[0].browser_download_url }}
-        token: ${{ secrets.REPO_TOKEN }}
-
-    - name: Print_issue_number
-      run: |
-        echo "Issue  with number ${{ steps.submit_addon.outputs.issue_number }} was created"
-      shell: bash
+        channel: ${{ env.ADDON_CHANNEL }}
+        token: ${{ secrets.USER_TOKEN }}

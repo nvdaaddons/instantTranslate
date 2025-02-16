@@ -1,38 +1,13 @@
 [tool.ruff]
-line-length = 110
-
 builtins = [
-	# translation lookup
-	"_",
-	# translation lookup
-	"ngettext",
-	# translation lookup
-	"pgettext",
-	# translation lookup
-	"npgettext",
+    "_",
+    "ngettext",
+    "pgettext",
+    "npgettext",
 ]
-
-include = [
-	"*.py",
-	"sconstruct",
-]
-
-exclude = [
-	".git",
-	"__pycache__",
-]
-
-[tool.ruff.format]
-indent-style = "tab"
-
-[tool.ruff.lint.mccabe]
-max-complexity = 15
-
 [tool.ruff.lint]
-ignore = [
-	# indentation contains tabs
-	"W191",
-]
+select = ["E4", "E7", "E9", "F"]
+ignore = ["N802", "N803"]
 
 [tool.ruff.lint.per-file-ignores]
 # sconstruct contains many inbuilt functions not recognised by the lint,
