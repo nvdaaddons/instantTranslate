@@ -117,6 +117,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		self.lastSpokenText = ''
 		self.settings = {"lang_from": "from", "lang_to": "into", "lang_swap": "swap", "copyTranslation": "copytranslatedtext", "autoSwap": "autoswap", "isAutoSwapped": "isautoswapped", "replaceUnderscores": "replaceUnderscores", "useMirror": "useMirror"}
 		[setattr(self.__class__, propertyMethod, property(lambda self, propertyName=propertyName: self.addonConf[propertyName], lambda self, value, propertyName=propertyName: self.addonConf.__setitem__(propertyName, value))) for propertyMethod, propertyName in self.settings.items()]
+		self.autoTranslate = False
 
 	def getScript(self, gesture):
 		if not self.toggling:
@@ -149,6 +150,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def terminate(self):
 		gui.settingsDialogs.NVDASettingsDialog.categoryClasses.remove(InstantTranslateSettingsPanel)
+		speechModule.speak = self._speak
 
 	@scriptHandler.script(
 		# Translators: message presented in input help mode, when user presses the shortcut keys for this addon.
@@ -231,7 +233,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				i = 0
 		myTranslator.join()
 		if myTranslator.error:
-			queueHandler.queueFunction(queueHandler.eventQueue, ui.message, _("Translation failed"))
+			if not self.autoTranslate:
+				queueHandler.queueFunction(queueHandler.eventQueue, ui.message, _("Translation failed"))
 			raise RuntimeError('Translation failure')
 		return myTranslator
 
@@ -307,7 +310,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		ui.message(_("Language is..."))
 		myTranslator.start()
 		i=0
-		while  myTranslator.is_alive():
+		while myTranslator.is_alive():
 			sleep(0.1)
 			i+=1
 			if i == 10:
@@ -318,8 +321,29 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		queueHandler.queueFunction(queueHandler.eventQueue, ui.message, g(language))
 
 	def _localSpeak(self, sequence, *args, **kwargs):
-		self._speak(sequence, *args, **kwargs)
-		self.lastSpokenText = speechViewer.SPEECH_ITEM_SEPARATOR.join([x for x in sequence if isinstance(x, str)])
+		text_items = [x for x in sequence if isinstance(x, str)]
+		self.lastSpokenText = speechViewer.SPEECH_ITEM_SEPARATOR.join(text_items)
+		if self.autoTranslate and text_items:
+			text_to_translate = self.lastSpokenText
+			if self.replaceUnderscores:
+				text_to_translate = text_to_translate.replace("_", " ")
+			# Perform translation synchronously
+			try:
+				result = self.translateAndCache(text_to_translate, self.lang_from, self.lang_to)
+				translated_text = result.translation
+				# Create a new sequence with the translated text
+				new_sequence = []
+				if config.conf['speech']['autoLanguageSwitching']:
+					new_sequence.append(LangChangeCommand(result.lang_to))
+				new_sequence.append(translated_text)
+				self._speak(new_sequence, *args, **kwargs)
+				# Optionally, copy the result
+				self.copyResult(translated_text)
+			except RuntimeError:
+				# If translation fails, speak the original sequence
+				self._speak(sequence, *args, **kwargs)
+		else:
+			self._speak(sequence, *args, **kwargs)
 
 	@scriptHandler.script(
 		# Translators: Presented in input help mode.
@@ -327,7 +351,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		**speakOnDemand,
 	)
 	def script_translateLastSpokenText(self, gesture):
-		self.lastSpokenText and threading.Thread(target=self.translate, args=(self.lastSpokenText, self.lang_from, self.lang_to)).start()
+		if self.lastSpokenText:
+			threading.Thread(target=self.translate, args=(self.lastSpokenText, self.lang_from, self.lang_to)).start()
 
 	@scriptHandler.script(
 		# Translators: Presented in input help mode.
@@ -335,7 +360,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		**speakOnDemand,
 	)
 	def script_displayHelp(self, gesture):
-		ui.message(_("t translates selected text, shift+t translates clipboard text, a announces current swap configuration, s swaps source and target languages, c copies last result to clipboard, i identify the language of selected text, l translates last spoken text, o open translation settings dialog, h displays this message."))
+		ui.message(_("t translates selected text, shift+t translates clipboard text, a announces current swap configuration, s swaps source and target languages, c copies last result to clipboard, i identify the language of selected text, l translates last spoken text, o open translation settings dialog, v toggles automatic translation, h displays this message."))
 
 	@scriptHandler.script(
 		# Translators: Presented in input help mode.
@@ -344,16 +369,30 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	def script_showSettings(self, gesture):
 		wx.CallAfter(gui.mainFrame._popupSettingsDialog, gui.settingsDialogs.NVDASettingsDialog, InstantTranslateSettingsPanel)
 
-	__ITGestures={
-		"kb:t":"translateSelection",
-		"kb:shift+t":"translateClipboardText",
-		"kb:s":"swapLanguages",
-		"kb:a":"announceLanguages",
-		"kb:c":"copyLastResult",
-		"kb:i":"identifyLanguage",
-		"kb:l":"translateLastSpokenText",
-		"kb:o":"showSettings",
-		"kb:h":"displayHelp",
+	@scriptHandler.script(
+		# Translators: Presented in input help mode.
+		description=_("Toggle automatic translation of speech output."),
+	)
+	def script_toggleAutoTranslate(self, gesture):
+		self.autoTranslate = not self.autoTranslate
+		if self.autoTranslate:
+			# Translators: message presented to announce that automatic translation is enabled.
+			ui.message(_("Automatic translation enabled"))
+		else:
+			# Translators: message presented to announce that automatic translation is disabled.
+			ui.message(_("Automatic translation disabled"))
+
+	__ITGestures = {
+		"kb:t": "translateSelection",
+		"kb:shift+t": "translateClipboardText",
+		"kb:s": "swapLanguages",
+		"kb:a": "announceLanguages",
+		"kb:c": "copyLastResult",
+		"kb:i": "identifyLanguage",
+		"kb:l": "translateLastSpokenText",
+		"kb:o": "showSettings",
+		"kb:h": "displayHelp",
+		"kb:v": "toggleAutoTranslate",
 	}
 
 	__gestures = {

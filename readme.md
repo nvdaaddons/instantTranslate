@@ -29,11 +29,12 @@ Anyway, this is a temporary configuration; if this option has no effect (it's ex
 At least, in the speech settings parameters dialog (NVDA Menu >> Preferences >> Speech), you may want to check the "Automatic language switching (when supported)" option. This way, if you are using a multi-lingual synthesizer, the translation will be announced using the target language voice of the synthesizer.
 
 ## Using ##
-You can use this add-on in three ways:
+You can use this add-on in four ways:
 
 1. Select some text using selection commands (shift with arrow keys, for example) and press associated key to translate. translation result will be read with synthesizer which you are using.
 2. You can also translate text from the Clipboard.
 3. Press the dedicated shortcut key to translate the last spoken text.
+4. Enable automatic translation to translate every speech output of NVDA
 
 ## Shortcuts ##
 All following commands must be pressed after modifier key "NVDA+Shift+t":
@@ -45,7 +46,8 @@ All following commands must be pressed after modifier key "NVDA+Shift+t":
 * C: copy last result to clipboard,
 * I: identify the language of selected text,
 * L: translate the last spoken text,
-* O: open translation settings dialog
+* V: toggle automatic translation of speech output,
+* O: open translation settings dialog,
 * H: announces all available layered commands.
 
 ## Changes for 4.7 ##
