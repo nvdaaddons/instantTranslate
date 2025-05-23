@@ -137,7 +137,7 @@ msgstr ""
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on to be shown on installation and add-on information.
 msgid "Instant Translate"
-msgstr "及时翻译"
+msgstr "即时翻译"
 
 #. Translators: Help message for a dialog.
 msgid "Select translation source and target language:"
@@ -359,7 +359,7 @@ msgstr ""
 #~ msgstr "卸载不兼容的插件"
 
 #~ msgid "Instant &Translate Settings..."
-#~ msgstr "及时翻译设置(&T)..."
+#~ msgstr "即时翻译设置(&T)..."
 
 #~ msgid "Select languages to be used for translation."
 #~ msgstr "选择需要翻译的语言。"
