@@ -136,7 +136,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		tones.beep(120, 100)
 
 	@scriptHandler.script(
-		description=_("Instant Translate layer commands. t translates selected text, shift+t translates clipboard text, a announces current swap configuration, s swaps source and target languages, c copies last result to clipboard, i identify the language of selected text, l translates last spoken text, o opens translation setting dialog.")
+		description=_("Instant Translate layer commands. Then press h to list available commands.")
 	)
 	def script_ITLayer(self, gesture):
 		# A run-time binding will occur from which we can perform various layered translation commands.
