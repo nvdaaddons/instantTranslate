@@ -3,14 +3,15 @@
 # This file is distributed under the same license as the NVDA package.
 # Cleverson Casarin Uliana <clever97@gmail.com>, 2013, 2015-2017.
 # Tiago Melo Casal <tcasal@intervox.nce.ufrj.br>, 2021.
+# Josevan Barbosa Fernandes <josevanfernandes@yahoo.com.br>, 2024.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: instantTranslate\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2013-02-09 18:30+0100\n"
-"PO-Revision-Date: 2021-07-12 21:54-0300\n"
-"Last-Translator: Tiago Melo Casal <tcasal@intervox.nce.ufrj.br>\n"
+"PO-Revision-Date: 2024-12-27 15:11-0300\n"
+"Last-Translator: Josevan Fernandes <josevanfernandes@yahoo.com.br>\n"
 "Language-Team: NVDA Brazilian Portuguese translation team (Equipe de "
 "tradução do NVDA para Português Brasileiro) <clever97@gmail.com>\n"
 "Language: pt_BR\n"
@@ -18,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Generator: Poedit 3.0\n"
+"X-Generator: Poedit 3.5\n"
 
 msgid ""
 "Instant Translate layer commands. t translates selected text, shift+t "
@@ -122,14 +123,14 @@ msgid "Opens Instant Translate settings dialog."
 msgstr "Abre o diálogo de configurações do Tradutor Instantâneo."
 
 msgid "Donate via Paypal"
-msgstr ""
+msgstr "Doação via Paypal"
 
 msgid "Donate via Yoomoney"
-msgstr ""
+msgstr "Doação via dinheiro"
 
 #, python-brace-format
 msgid "Request for contributions to {name}"
-msgstr ""
+msgstr "Solicitação de contribuições para {name}"
 
 #, python-brace-format
 msgid ""
@@ -139,6 +140,12 @@ msgid ""
 "Do you want to donate now? Choose one of the available payment methods. You "
 "will be redirected to the corresponding website to complete a donation"
 msgstr ""
+"{name} é um complemento gratuito para o NVDA.\n"
+"Você pode fazer uma doação ao seu autor para apoiar o desenvolvimento desse "
+"e de outros projetos gratuitos.\n"
+"Deseja fazer uma doação agora? Escolha um dos métodos de pagamento "
+"disponíveis. Você será redirecionado para o site correspondente para "
+"concluir a doação"
 
 #. Translators: name of the dialog.
 #. Add-on summary, usually the user visible name of the addon.
@@ -179,27 +186,73 @@ msgid ""
 "Replace underscores with spaces (May provide better translation results "
 "depending on context)"
 msgstr ""
+"Substitua os sublinhados por espaços (pode fornecer melhores resultados de "
+"tradução, dependendo do contexto)"
 
 #. Translators: A setting in addon settings dialog.
 msgid "Use mirror (Mainly for chinese users)"
-msgstr ""
+msgstr "Use o espelho (principalmente para usuários chineses)"
 
 #. Translators: A setting in addon settings dialog.
 msgid "Support an author..."
-msgstr ""
+msgstr "Apoie um autor..."
+
+#. Translators: A short description for "Automatically detect language" language choice, reported when
+#. the user requests or swaps the current configuration.
+msgid "Automatic"
+msgstr "Automático"
+
+#. Translators: The name of a language supported by this add-on.
+msgid "Kurdish (Sorani)"
+msgstr "(Curdo)"
 
 #. Translators: An option to automatically detect source language for translation.
 msgid "Automatically detect language"
 msgstr "Detectar idioma automaticamente"
 
 #. Translators: The name of a language supported by this add-on.
+msgid "Twi (Akan)"
+msgstr "Twi (Akan)"
+
+#. Missing, tested on Windows 10 22H2
+#. Translators: The name of a language supported by this add-on.
+msgid "Aymara"
+msgstr "Aymara"
+
+#. Missing, tested on Windows 10 22H2
+#. Translators: The name of a language supported by this add-on.
+msgid "Bhojpuri"
+msgstr "Bhojpuri"
+
+#. Missing, tested on Windows 10 22H2
+#. Translators: The name of a language supported by this add-on.
+msgid "Bambara"
+msgstr "Bambara"
+
+#. Missing, tested on Windows 10 22H2
+#. Translators: The name of a language supported by this add-on.
 msgid "Cebuano"
 msgstr "Cebuano"
 
 #. Translators: The name of a language supported by this add-on.
+msgid "Dogri"
+msgstr "Dogri"
+
+#. Missing, tested on Windows 10 22H2
+#. Translators: The name of a language supported by this add-on.
+msgid "Ewe"
+msgstr "Ewe"
+
+#. Missing, tested on Windows 10 22H2
+#. Translators: The name of a language supported by this add-on.
 msgid "Esperanto"
 msgstr "Esperanto"
 
+#. Translators: The name of a language supported by this add-on.
+msgid "Konkani"
+msgstr "Konkani"
+
+#. Missing, tested on Windows 10 22H2
 #. Translators: The name of a language supported by this add-on.
 msgid "Hawaiian"
 msgstr "Havaiano"
@@ -213,9 +266,19 @@ msgid "Creole Haiti"
 msgstr "Crioulo Haitiano"
 
 #. Translators: The name of a language supported by this add-on.
+msgid "Ilocano"
+msgstr "Ilocano"
+
+#. Missing, tested on Windows 10 22H2
+#. Translators: The name of a language supported by this add-on.
 msgid "Javanese"
 msgstr "Javanês"
 
+#. Translators: The name of a language supported by this add-on.
+msgid "Krio"
+msgstr "Krio"
+
+#. Missing, tested on Windows 10 22H2
 #. Translators: The name of a language supported by this add-on.
 msgid "Kurdish"
 msgstr "Curdo"
@@ -225,9 +288,34 @@ msgid "Latin"
 msgstr "Latim"
 
 #. Translators: The name of a language supported by this add-on.
+msgid "Luganda"
+msgstr "Luganda"
+
+#. Missing, tested on Windows 10 22H2
+#. Translators: The name of a language supported by this add-on.
+msgid "Lingala"
+msgstr "Lingala"
+
+#. Missing, tested on Windows 10 22H2
+#. Translators: The name of a language supported by this add-on.
+msgid "Mizo"
+msgstr "Mizo"
+
+#. Missing, tested on Windows 10 22H2
+#. Translators: The name of a language supported by this add-on.
+msgid "Maithili"
+msgstr "Maithili"
+
+#. Missing, tested on Windows 10 22H2
+#. Translators: The name of a language supported by this add-on.
 msgid "Malagasy"
 msgstr "Malgaxe"
 
+#. Translators: The name of a language supported by this add-on.
+msgid "Meiteilon (Manipuri)"
+msgstr "Meiteilon (Manipuri)"
+
+#. Missing, tested on Windows 10 22H2
 #. Translators: The name of a language supported by this add-on.
 msgid "Myanmar (Burmese)"
 msgstr "Mianmar (Birmanês)"

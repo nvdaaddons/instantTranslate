@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: 'Instant-Translate' '3.0'\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2013-02-09 18:30+0100\n"
-"PO-Revision-Date: 2024-05-02 11:51+0200\n"
+"PO-Revision-Date: 2024-09-06 12:59+0200\n"
 "Last-Translator: Rémy Ruiz <remyruiz@gmail.com>\n"
 "Language-Team: \n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.4.2\n"
+"X-Generator: Poedit 3.5\n"
 
 msgid ""
 "Instant Translate layer commands. t translates selected text, shift+t "
@@ -193,18 +193,62 @@ msgstr "Utiliser le miroir (principalement pour les utilisateurs chinois)"
 msgid "Support an author..."
 msgstr "Soutenir un auteur..."
 
+#. Translators: A short description for "Automatically detect language" language choice, reported when
+#. the user requests or swaps the current configuration.
+msgid "Automatic"
+msgstr "Automatique"
+
+#. Translators: The name of a language supported by this add-on.
+msgid "Kurdish (Sorani)"
+msgstr "Kurde (Sorani)"
+
 #. Translators: An option to automatically detect source language for translation.
 msgid "Automatically detect language"
 msgstr "Détecter la langue automatiquement"
 
 #. Translators: The name of a language supported by this add-on.
+msgid "Twi (Akan)"
+msgstr "Twi (Akan)"
+
+#. Missing, tested on Windows 10 22H2
+#. Translators: The name of a language supported by this add-on.
+msgid "Aymara"
+msgstr "Aymara"
+
+#. Missing, tested on Windows 10 22H2
+#. Translators: The name of a language supported by this add-on.
+msgid "Bhojpuri"
+msgstr "Bhodjpouri"
+
+#. Missing, tested on Windows 10 22H2
+#. Translators: The name of a language supported by this add-on.
+msgid "Bambara"
+msgstr "Bambara"
+
+#. Missing, tested on Windows 10 22H2
+#. Translators: The name of a language supported by this add-on.
 msgid "Cebuano"
 msgstr "Cébouano"
 
 #. Translators: The name of a language supported by this add-on.
+msgid "Dogri"
+msgstr "Dogri"
+
+#. Missing, tested on Windows 10 22H2
+#. Translators: The name of a language supported by this add-on.
+msgid "Ewe"
+msgstr "Ewe"
+
+#. Missing, tested on Windows 10 22H2
+#. Translators: The name of a language supported by this add-on.
 msgid "Esperanto"
 msgstr "Espéranto"
 
+#. Translators: The name of a language supported by this add-on.
+msgid "Konkani"
+msgstr "Konkani"
+
+#. Missing, tested on Windows 10 22H2
 #. Translators: The name of a language supported by this add-on.
 msgid "Hawaiian"
 msgstr "Hawaïen"
@@ -218,9 +262,19 @@ msgid "Creole Haiti"
 msgstr "Créole haïtien"
 
 #. Translators: The name of a language supported by this add-on.
+msgid "Ilocano"
+msgstr "Ilocano"
+
+#. Missing, tested on Windows 10 22H2
+#. Translators: The name of a language supported by this add-on.
 msgid "Javanese"
 msgstr "Javanais"
 
+#. Translators: The name of a language supported by this add-on.
+msgid "Krio"
+msgstr "Krio"
+
+#. Missing, tested on Windows 10 22H2
 #. Translators: The name of a language supported by this add-on.
 msgid "Kurdish"
 msgstr "Kurde"
@@ -230,9 +284,34 @@ msgid "Latin"
 msgstr "Latin"
 
 #. Translators: The name of a language supported by this add-on.
+msgid "Luganda"
+msgstr "Luganda"
+
+#. Missing, tested on Windows 10 22H2
+#. Translators: The name of a language supported by this add-on.
+msgid "Lingala"
+msgstr "Lingala"
+
+#. Missing, tested on Windows 10 22H2
+#. Translators: The name of a language supported by this add-on.
+msgid "Mizo"
+msgstr "Mizo"
+
+#. Missing, tested on Windows 10 22H2
+#. Translators: The name of a language supported by this add-on.
+msgid "Maithili"
+msgstr "Maïthili"
+
+#. Missing, tested on Windows 10 22H2
+#. Translators: The name of a language supported by this add-on.
 msgid "Malagasy"
 msgstr "Malgache"
 
+#. Translators: The name of a language supported by this add-on.
+msgid "Meiteilon (Manipuri)"
+msgstr "Meitei (Manipuri)  non sélectionné  1 sur 2"
+
+#. Missing, tested on Windows 10 22H2
 #. Translators: The name of a language supported by this add-on.
 msgid "Myanmar (Burmese)"
 msgstr "Myanmar (Birman)"
