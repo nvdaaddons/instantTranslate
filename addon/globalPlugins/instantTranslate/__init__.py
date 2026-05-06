@@ -11,7 +11,7 @@ from functools import wraps, lru_cache
 from .interface import InstantTranslateSettingsPanel
 from .langslist import g
 from .speechOnDemand import getSpeechOnDemandParameter, executeWithSpeakOnDemand
-from locale import getdefaultlocale
+from locale import getlocale
 from time import sleep
 from tones import beep
 from .translator import Translator
@@ -36,29 +36,32 @@ except:
 	from speech import LangChangeCommand
 import braille
 import wx
-import speech
 import speechViewer
-from versionInfo import version_year
+try:
+	# For NVDA 2021.1 and above
+	from speech import speech
+except ImportError:
+	# For NVDA 2020.4 and below
+	import speech
+
 
 _curAddon = addonHandler.getCodeAddon()
 addonName = _curAddon.name.lower()
 _addonSummary = _curAddon.manifest['summary']
 addonHandler.initTranslation()
 
-lo_lang = getdefaultlocale()
-s = lo_lang[0]
-if s == "zh_HK":
-	lo_lang = "zh-TW"
-elif s.startswith("zh"):
-	lo_lang = s.replace('_', '-')
-else:
-	lo_lang = s[0:s.find("_")]
-
-speechModule = speech.speech if version_year>=2021 else speech
+def getLocaleLanguage():
+	lang, _unused = getlocale()
+	if lang == "zh_HK":
+		return "zh-TW"
+	elif lang.startswith("zh"):
+		return lang.replace('_', '-')
+	else:
+		return lang.split("_")[0]
 
 confspec = {
 "from": "string(default=auto)",
-"into": f"string(default={lo_lang})",
+"into": f"string(default={getLocaleLanguage()})",
 "swap": "string(default=en)",
 "copytranslatedtext": "boolean(default=true)",
 "autoswap": "boolean(default=true)",
@@ -112,8 +115,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		self.lastTranslation = None
 		InstantTranslateSettingsPanel.addonConf = self.addonConf
 		gui.settingsDialogs.NVDASettingsDialog.categoryClasses.append(InstantTranslateSettingsPanel)
-		self._speak = speechModule.speak
-		speechModule.speak = self._localSpeak
+		self._speak = speech.speak
+		speech.speak = self._localSpeak
 		self.lastSpokenText = ''
 		self.settings = {"lang_from": "from", "lang_to": "into", "lang_swap": "swap", "copyTranslation": "copytranslatedtext", "autoSwap": "autoswap", "isAutoSwapped": "isautoswapped", "replaceUnderscores": "replaceUnderscores", "useMirror": "useMirror"}
 		[setattr(self.__class__, propertyMethod, property(lambda self, propertyName=propertyName: self.addonConf[propertyName], lambda self, value, propertyName=propertyName: self.addonConf.__setitem__(propertyName, value))) for propertyMethod, propertyName in self.settings.items()]
@@ -150,7 +153,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def terminate(self):
 		gui.settingsDialogs.NVDASettingsDialog.categoryClasses.remove(InstantTranslateSettingsPanel)
-		speechModule.speak = self._speak
+		speech.speak = self._speak
 
 	@scriptHandler.script(
 		# Translators: message presented in input help mode, when user presses the shortcut keys for this addon.
@@ -367,7 +370,13 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		description=_("Opens Instant Translate settings dialog."),
 	)
 	def script_showSettings(self, gesture):
-		wx.CallAfter(gui.mainFrame._popupSettingsDialog, gui.settingsDialogs.NVDASettingsDialog, InstantTranslateSettingsPanel)
+		try:
+			# NVDA version >= 2023.2
+			popupSettingsDialog = gui.mainFrame.popupSettingsDialog
+		except:
+			# NVDA version < 2023.2
+			popupSettingsDialog = gui.mainFrame._popupSettingsDialog
+		wx.CallAfter(popupSettingsDialog, gui.settingsDialogs.NVDASettingsDialog, InstantTranslateSettingsPanel)
 
 	@scriptHandler.script(
 		# Translators: Presented in input help mode.

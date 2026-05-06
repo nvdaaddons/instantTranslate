@@ -5,18 +5,26 @@
 
 import addonHandler
 import gui
+try:
+    # NVDA version >= 2025.1
+    from gui.message import MessageDialog, DialogType
+    DIALOG_TYPE_WARNING = DialogType.WARNING
+except ImportError:
+    # NVDA version < 2025.1
+    from gui.nvdaControls import MessageDialog
+    DIALOG_TYPE_WARNING = MessageDialog.DIALOG_TYPE_WARNING
 import webbrowser
 import wx
 
 addonHandler.initTranslation()
 
 
-class DonationDialog(gui.nvdaControls.MessageDialog):
+class DonationDialog(MessageDialog):
     YOOMONEY_URL = "https://yoomoney.ru/to/4100117727255296"
     PAYPAL_URL = "https://paypal.me/gozaltech"
 
     def __init__(self, parent, title, message):
-        super().__init__(parent, title, message, dialogType=gui.nvdaControls.MessageDialog.DIALOG_TYPE_WARNING)
+        super().__init__(parent, title, message, dialogType=DIALOG_TYPE_WARNING)
 
     def _addButtons(self, buttonHelper):
         paypalBtn = buttonHelper.addButton(self, label=_("Donate via Paypal"), name="PAYPAL_URL")
