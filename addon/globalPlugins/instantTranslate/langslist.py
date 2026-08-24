@@ -1,14 +1,19 @@
 #langslist.py
-# Copyright (C) 2012-2016 Aleksey Sadovoy AKA Lex <lex@progger.ru>,
+# Copyright (C) 2012-2024 Aleksey Sadovoy AKA Lex <lex@progger.ru>,
 #ruslan <ru2020slan@yandex.ru>,
-#beqa <beqaprogger@gmail.com>
+#Beka Gozalishvili <beqaprogger@gmail.com>
 #other nvda contributors
 #This file is covered by the GNU General Public License.
 #See the file COPYING for more details.
 
+from locale import strxfrm
+
 from languageHandler import getLanguageDescription
 from logHandler import log
 import addonHandler
+
+from .googleTranslator import languageCache
+
 addonHandler.initTranslation()
 
 def g(code, short=False):
@@ -108,7 +113,7 @@ needed_codes = {
 	"yi":_("Yiddish"),
 }
 
-langcodes = [
+fallback_codes = [
 	"auto",
 	"af",
 	"ak",
@@ -246,11 +251,44 @@ langcodes = [
 	"zu",
 ]
 
-langslist = {}
-for code in langcodes:
-	name = g(code)
-	try:
-		oldName = langslist[name]
-		log.error(f'Unable to add "{name}" (code "{code}"): this language name already exists for code "{oldName}".')
-	except KeyError:
-		langslist[name] = code
+SOURCE_ONLY_CODES = frozenset(["auto"])
+TARGET_ONLY_CODES = frozenset(["zh-TW"])
+
+
+def getLanguages(kind):
+	if kind not in ("source", "target"):
+		raise ValueError('kind has to be "source" or "target", got %r' % (kind,))
+	languages = languageCache.get()
+	codes = languages.get(kind) if languages else None
+	if not codes:
+		excluded = TARGET_ONLY_CODES if kind == "source" else SOURCE_ONLY_CODES
+		codes = {code: None for code in fallback_codes if code not in excluded}
+	return _byName(codes)
+
+
+def _byName(codes):
+	byName = {}
+	for code, backEndName in codes.items():
+		name = g(code)
+		if name == code and backEndName:
+			name = backEndName
+		if name in byName:
+			log.error(
+				'Unable to add "%s" (code "%s"): this language name already exists for code "%s".'
+				% (name, code, byName[name])
+			)
+			continue
+		byName[name] = code
+	return dict(sorted(byName.items(), key=lambda item: strxfrm(item[0])))
+
+
+def getLanguageName(code, short=False):
+	name = g(code, short=short)
+	if name != code:
+		return name
+	languages = languageCache.get(refresh=False) or {}
+	for kind in ("target", "source"):
+		backEndName = (languages.get(kind) or {}).get(code)
+		if backEndName:
+			return backEndName
+	return code

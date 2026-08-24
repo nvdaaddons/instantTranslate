@@ -14,6 +14,8 @@ There are two comboboxes labeled "Source language" and "Target language", and a 
 
 In addition, if you selected auto option (the first choice) from "Source language" combobox, there are also a combobox labeled "Language for swapping" and a checkbox about the auto-swap.
 
+The "Language pairs..." button opens a dialog where you can store up to ten source and target language pairs. Each pair is bound to a key of the Instant Translate layer, the first one to 1 and the tenth one to 0, so that pressing that key switches the source and target languages to that pair. Use the Add, Edit and Remove buttons to manage the list, and Move up and Move down to change which key activates a pair.
+
 The meaning of two first comboboxes and checkbox for copy is clear, but some words about the rest are necessary. Remember always that the explanations below assume the source language set on the auto option.
 
 The "Language for swapping" combobox is useful when you swap via script (see below) the source and target language; in fact, a target language set on the auto option has no sense, so the addon sets it to value of combobox above.
@@ -39,16 +41,20 @@ You can use this add-on in four ways:
 ## Shortcuts ##
 All following commands must be pressed after modifier key "NVDA+Shift+t":
 
-* T: Translate selected text,
-* Shift+t: translate text from the Clipboard,
-* S: swap source and target languages,
-* A: announce current configuration,
-* C: copy last result to clipboard,
-* I: identify the language of selected text,
-* L: translate the last spoken text,
-* V: toggle automatic translation of speech output,
-* O: open translation settings dialog,
-* H: announces all available layered commands.
+* T: Translates the selected text,
+* Shift+t: Translates the clipboard text,
+* S: Swaps the source and target languages,
+* 1 to 0: Switches to one of the configured language pairs,
+* A: Announces the current source and target languages,
+* C: Copies the last translation to the clipboard,
+* I: Identifies the language of the selected text,
+* L: Translates the last spoken text,
+* V: Toggles automatic translation of speech output,
+* X: Stops the translations in progress,
+* P: Announces how far the translation in progress has got,
+* R: Clears the cache of recent translations,
+* O: Opens the Instant Translate settings dialog,
+* H: Announces all available layer commands.
 
 ## Changes for 4.7 ##
 * Updated to be compatible with python3.11 and nvda 2024.1
