@@ -68,7 +68,7 @@ class Translator(threading.Thread):
 		self._stopEvent.set()
 
 	def run(self):
-		urlTemplate = "https://translate.googleapis.com/translate_a/single?client=gtx&sl={lang_from}&tl={lang_to}&dt=t&q={text}&dj=1"
+		urlTemplate = "https://translate.googleapis.com/translate_a/single?client=dict-chrome-ex&sl={lang_from}&tl={lang_to}&dt=t&q={text}&dj=1"
 		if self.useMirror:
 			urlTemplate = "https://translate.googleapis.mirror.nvdadr.com/translate_a/single?client=gtx&sl={lang_from}&tl={lang_to}&dt=t&q={text}&dj=1"
 		for chunk in splitChunks(self.text, self.chunksize):
